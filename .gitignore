@@ -3,3 +3,6 @@
 alembic
 cache
 allembic.ini
+__pycache__/
+data/*.html
+testes/

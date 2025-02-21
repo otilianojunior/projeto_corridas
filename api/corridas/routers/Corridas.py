@@ -125,7 +125,8 @@ async def solicitar_corrida(corrida_data: CorridaCreate, db: AsyncSession = Depe
 
         # ✅ Calcular a rota mais curta com base nas coordenadas fornecidas
         try:
-            _, coordenadas_rota, distancia_km = await calcular_rota_mais_curta(
+            # Agora a função é síncrona
+            _, coordenadas_rota, distancia_km = calcular_rota_mais_curta(
                 cidade="Vitória da Conquista, Brasil",
                 origem_longitude=origem.longitude,
                 origem_latitude=origem.latitude,

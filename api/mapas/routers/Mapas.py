@@ -79,7 +79,7 @@ async def selecionar_coordenadas_aleatorias(cidade: str):
     if not os.path.exists(csv_path):
         raise HTTPException(status_code=404, detail="Arquivo de localizações não encontrado para a cidade especificada.")
 
-    df_nodes = pd.read_csv(csv_path)
+    df_nodes = await asyncio.to_thread(pd.read_csv, csv_path)
     df_nodes_filtrado = df_nodes[df_nodes["bairro"] != "Desconhecido"]
 
     if df_nodes_filtrado.empty:

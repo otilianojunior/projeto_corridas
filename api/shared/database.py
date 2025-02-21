@@ -16,7 +16,7 @@ database = os.getenv("SQLALCHEMY_DATABASE")
 SQLALCHEMY_DATABASE_URL = f"mysql+aiomysql://{user}:{password}@{host}/{database}"
 
 # 🚀 Criando o engine assíncrono
-engine = create_async_engine(SQLALCHEMY_DATABASE_URL, echo=True)
+engine = create_async_engine(SQLALCHEMY_DATABASE_URL, echo=False)
 
 # 🔄 Criando a sessão assíncrona
 SessionLocal = sessionmaker(

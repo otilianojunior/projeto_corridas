@@ -1,128 +1,108 @@
-import requests
+import asyncio
+import aiohttp
 import random
 import urllib.parse
+import time
 from datetime import datetime, timedelta
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# Configuração da API e quantidade de corridas
+# 🔥 Configuração da API
 API_URL = "http://127.0.0.1:8000"
-NUM_CORRIDAS = 2000
+NUM_CORRIDAS = 200  # Número total de corridas
 CITY = "Vitória da Conquista"
+TIMEOUT = 120  # Timeout para requisições
+MAX_CONCURRENT_REQUESTS = 5  # 🔄 Limite de requisições simultâneas
 
+# 🔄 Semáforo para controle de concorrência
+semaphore = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
 
-def obter_clientes():
-    """Obtém a lista de clientes da API."""
-    url = f"{API_URL}/clientes/listar/"
-    try:
-        response = requests.get(url)
-        if response.status_code == 200:
-            data = response.json()
-            # Se a resposta indicar que não há clientes, retorna lista vazia.
-            if isinstance(data, dict) and data.get("mensagem"):
+async def obter_clientes(session):
+    """Obtém a lista de clientes disponíveis na API."""
+    url = f"{API_URL}/clientes/listar_sem_corrida/"
+    async with session.get(url, timeout=TIMEOUT) as response:
+        if response.status == 200:
+            clientes = await response.json()
+            if isinstance(clientes, dict) and clientes.get("mensagem"):
                 return []
-            return data
+            return clientes
         else:
-            print(f"Erro ao buscar clientes: {response.status_code} - {response.text}")
+            print(f"⚠️ Erro ao buscar clientes: {response.status} - {await response.text()}")
             return []
-    except Exception as e:
-        print(f"Exceção ao buscar clientes: {e}")
-        return []
 
 
-def obter_coordenadas_aleatorias():
-    """Obtém coordenadas de origem e destino aleatórias da API."""
-    # Codifica a cidade para ser usada na URL (para tratar espaços etc.)
-    city_encoded = urllib.parse.quote(CITY)
-    url = f"{API_URL}/mapas/selecionar_coordenadas_aleatorias?cidade={city_encoded}"
-    try:
-        response = requests.get(url)
-        if response.status_code == 200:
-            return response.json()
+async def obter_coordenadas_aleatorias(session):
+    """Obtém coordenadas aleatórias de origem e destino da API."""
+    url = f"{API_URL}/mapas/selecionar_coordenadas_aleatorias?cidade={urllib.parse.quote(CITY)}"
+    async with session.get(url, timeout=TIMEOUT) as response:
+        if response.status == 200:
+            return await response.json()
         else:
-            print(f"Erro ao buscar coordenadas: {response.status_code} - {response.text}")
+            print(f"⚠️ Erro ao buscar coordenadas: {response.status} - {await response.text()}")
             return None
-    except Exception as e:
-        print(f"Exceção ao buscar coordenadas: {e}")
-        return None
 
 
 def gerar_horario_pedido():
-    """
-    Gera um horário aleatório para o dia 2024-06-01, distribuindo os 86.400 segundos do dia.
-    """
+    """Gera um horário aleatório para o dia 2024-06-01."""
     base_date = datetime(2024, 6, 1)
-    seconds = random.randint(0, 86399)  # 0 a 86399 segundos
-    pedido_time = base_date + timedelta(seconds=seconds)
-    return pedido_time.isoformat()
+    return (base_date + timedelta(seconds=random.randint(0, 86399))).isoformat()
 
 
-def solicitar_corrida(id_cliente):
+async def solicitar_corrida(session, id_cliente):
     """Solicita uma corrida para um cliente específico."""
-    coordenadas = obter_coordenadas_aleatorias()
-    if not coordenadas:
-        print(f"❌ Não foi possível obter coordenadas para o cliente {id_cliente}")
-        return
+    async with semaphore:  # 🔥 Controle de concorrência
+        coordenadas = await obter_coordenadas_aleatorias(session)
+        if not coordenadas:
+            return False
 
-    origem = coordenadas.get("origem")
-    destino = coordenadas.get("destino")
-    if not origem or not destino:
-        print(f"❌ Dados incompletos de coordenadas para o cliente {id_cliente}")
-        return
+        origem, destino = coordenadas.get("origem"), coordenadas.get("destino")
+        if not origem or not destino:
+            return False
 
-    corrida_data = {
-        "cliente": {"id_cliente": id_cliente},
-        "origem": {
-            "latitude": origem["latitude"],
-            "longitude": origem["longitude"],
-            "nome_rua": origem["nome_rua"],
-            "bairro": origem["bairro"]
-        },
-        "destino": {
-            "latitude": destino["latitude"],
-            "longitude": destino["longitude"],
-            "nome_rua": destino["nome_rua"],
-            "bairro": destino["bairro"]
-        },
-        "horario_pedido": gerar_horario_pedido()
-    }
+        corrida_data = {
+            "cliente": {"id_cliente": id_cliente},
+            "origem": origem,
+            "destino": destino,
+            "horario_pedido": gerar_horario_pedido()
+        }
 
-    url = f"{API_URL}/corridas/solicitar"
-    try:
-        response = requests.post(url, json=corrida_data)
-        if response.status_code == 201:
-            print(f"✔️ Corrida solicitada para o cliente {id_cliente}")
-        else:
-            try:
-                error_detail = response.json()
-            except Exception:
-                error_detail = response.text
-            print(f"❌ Erro ao solicitar corrida para o cliente {id_cliente}: {response.status_code} - {error_detail}")
-    except Exception as e:
-        print(f"Exceção ao solicitar corrida para o cliente {id_cliente}: {e}")
+        url = f"{API_URL}/corridas/solicitar"
+        async with session.post(url, json=corrida_data, timeout=TIMEOUT) as response:
+            if response.status == 201:
+                return True
+            else:
+                print(f"❌ Erro ao solicitar corrida para cliente {id_cliente}: {response.status} - {await response.text()}")
+                return False
 
 
-def simular_corridas():
-    """Executa a simulação de 2.000 corridas distribuídas ao longo do dia."""
-    clientes = obter_clientes()
-    if not clientes:
-        print("⚠️ Nenhum cliente encontrado. Simulação abortada.")
-        return
+async def processar_solicitacoes_corrida():
+    """Executa a simulação das corridas."""
+    print("\n🚀 Iniciando simulação de corridas...")
 
-    # Cria um pool de threads (limite de 100 threads concorrentes, por exemplo)
-    with ThreadPoolExecutor(max_workers=100) as executor:
-        futures = []
-        for _ in range(NUM_CORRIDAS):
-            cliente = random.choice(clientes)
-            id_cliente = cliente.get("id")
-            futures.append(executor.submit(solicitar_corrida, id_cliente))
+    start_time = time.time()  # ⏳ Medição do tempo total
 
-        # Aguarda a conclusão de todas as tarefas (opcional)
-        for future in as_completed(futures):
-            try:
-                future.result()
-            except Exception as e:
-                print(f"Erro na execução: {e}")
+    async with aiohttp.ClientSession() as session:
+        clientes = await obter_clientes(session)
+        if not clientes:
+            print("⚠️ Nenhum cliente disponível. Simulação abortada.")
+            return
+
+        # Seleciona clientes aleatoriamente
+        clientes_selecionados = random.sample(clientes, min(NUM_CORRIDAS, len(clientes)))
+
+        # Processa todas as corridas em paralelo
+        tarefas = [solicitar_corrida(session, cliente["id"]) for cliente in clientes_selecionados]
+        resultados = await asyncio.gather(*tarefas)
+
+        total_sucessos = sum(resultados)
+
+    elapsed_time = time.time() - start_time  # ⏳ Tempo total
+    minutes, seconds = divmod(elapsed_time, 60)
+
+    print("\n✅ Resumo da Simulação:")
+    print(f"✔️ {total_sucessos}/{NUM_CORRIDAS} corridas solicitadas com sucesso.")
+    print(f"\n⏳ Tempo total de execução: {int(minutes)} min {seconds:.2f} seg.")
+
+    print("\n🏁 Simulação concluída!")
 
 
 if __name__ == "__main__":
-    simular_corridas()
+    asyncio.run(processar_solicitacoes_corrida())

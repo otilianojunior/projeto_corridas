@@ -31,6 +31,30 @@ async def listar_clientes(db: AsyncSession = Depends(get_db)):
     return [{"id": c.id, "nome": c.nome, "cpf": c.cpf, "telefone": c.telefone, "email": c.email} for c in clientes]
 
 
+@router.get("/listar_sem_corrida/", summary="Listar Clientes sem corridas ativas")
+async def listar_clientes_sem_corrida(db: AsyncSession = Depends(get_db)):
+    """Lista clientes que não possuem corridas ativas"""
+    from corridas.models.CorridaModel import CorridaModel  # Importação dentro da função para evitar importações circulares
+
+    # Seleciona clientes que não possuem corridas nos status "solicitado" ou "aceita"
+    query = select(ClienteModel).where(
+        ~ClienteModel.id.in_(
+            select(CorridaModel.id_cliente).where(CorridaModel.status.in_(["solicitado", "aceita"]))
+        )
+    )
+
+    result = await db.execute(query)
+    clientes_disponiveis = result.scalars().all()
+
+    if not clientes_disponiveis:
+        return {"mensagem": "Nenhum cliente disponível para solicitar corrida."}
+
+    return [
+        {"id": c.id, "nome": c.nome, "cpf": c.cpf, "telefone": c.telefone, "email": c.email}
+        for c in clientes_disponiveis
+    ]
+
+
 def validar_cpf(cpf: str):
     """Remove formatação e valida CPF"""
     cpf_limpo = re.sub(r"\D", "", cpf)  # Remove tudo que não é número

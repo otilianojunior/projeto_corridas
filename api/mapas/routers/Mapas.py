@@ -1,4 +1,5 @@
 import os
+import asyncio
 import time
 from concurrent.futures import ThreadPoolExecutor
 
@@ -11,20 +12,27 @@ from unidecode import unidecode
 router = APIRouter(prefix="/mapas", tags=["Mapas"])
 
 
-def obter_nome_rua_bairro(coordenada):
+async def obter_nome_rua_bairro(coordenada):
+    """Obtém nome da rua e bairro a partir das coordenadas."""
     geolocator = Nominatim(user_agent="mapa_interativo")
-    location = geolocator.reverse(coordenada, language='pt', exactly_one=True)
-    time.sleep(1)
-    if location:
-        address = location.raw.get("address", {})
-        return address.get("road", "Desconhecido"), address.get("suburb", "Desconhecido")
-    return "Desconhecido", "Desconhecido"
+
+    async def reverse_geocode():
+        try:
+            location = geolocator.reverse(coordenada, language='pt', exactly_one=True)
+            if location:
+                address = location.raw.get("address", {})
+                return address.get("road", "Desconhecido"), address.get("suburb", "Desconhecido")
+        except Exception:
+            return "Desconhecido", "Desconhecido"
+
+    return await asyncio.to_thread(reverse_geocode)
 
 
-def processar_no(node, grafo, nodes_data):
+async def processar_no(node, grafo, nodes_data):
+    """Processa um nó do grafo e adiciona os dados na lista compartilhada."""
     latitude = grafo.nodes[node]["y"]
     longitude = grafo.nodes[node]["x"]
-    nome_rua, bairro = obter_nome_rua_bairro((latitude, longitude))
+    nome_rua, bairro = await obter_nome_rua_bairro((latitude, longitude))
 
     nodes_data["node_id"].append(node)
     nodes_data["latitude"].append(latitude)
@@ -35,25 +43,28 @@ def processar_no(node, grafo, nodes_data):
 
 @router.get("/gerar_mapa", status_code=status.HTTP_200_OK)
 async def gerar_dados_mapa(cidade: str):
+    """Gera o grafo da cidade e armazena informações de localização."""
     nome_cidade = unidecode(cidade.split(",")[0].strip().lower().replace(" ", "-"))
     graphml_path = f"data/{nome_cidade}-map.graphml"
     csv_path = f"data/{nome_cidade}-localizacoes.csv"
 
-    # Verifica se os arquivos já existem
     if os.path.exists(graphml_path) and os.path.exists(csv_path):
         return {"message": "Arquivos existentes encontrados."}
 
-    # Gera o grafo da cidade
     try:
-        grafo = ox.graph_from_place(cidade, network_type="drive")
-        ox.save_graphml(grafo, filepath=graphml_path)
+        grafo = await asyncio.to_thread(ox.graph_from_place, cidade, network_type="drive")
+        await asyncio.to_thread(ox.save_graphml, grafo, filepath=graphml_path)
 
         nodes_data = {"node_id": [], "latitude": [], "longitude": [], "nome_rua": [], "bairro": []}
 
-        with ThreadPoolExecutor(max_workers=10) as executor:
-            executor.map(lambda node: processar_no(node, grafo, nodes_data), grafo.nodes)
+        tasks = [processar_no(node, grafo, nodes_data) for node in grafo.nodes]
+        await asyncio.gather(*tasks)
 
-        pd.DataFrame(nodes_data).to_csv(csv_path, index=False)
+        df = pd.DataFrame(nodes_data)
+        await asyncio.to_thread(df.to_csv, csv_path, index=False)
+
+        return {"message": "Dados do mapa gerados com sucesso!"}
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao processar dados do mapa: {str(e)}")
 
@@ -61,6 +72,7 @@ async def gerar_dados_mapa(cidade: str):
 @router.get("/selecionar_coordenadas_aleatorias", status_code=status.HTTP_200_OK,
             summary="Selecionar coordenadas aleatórias para pontos de origem e destino")
 async def selecionar_coordenadas_aleatorias(cidade: str):
+    """Seleciona pontos de origem e destino aleatórios para uma cidade."""
     nome_cidade = unidecode(cidade.strip().lower().replace(" ", "-"))
     csv_path = f"data/{nome_cidade}-localizacoes.csv"
 
@@ -68,19 +80,16 @@ async def selecionar_coordenadas_aleatorias(cidade: str):
         raise HTTPException(status_code=404,
                             detail="Arquivo de localizações não encontrado para a cidade especificada.")
 
-    df_nodes = pd.read_csv(csv_path)
+    df_nodes = await asyncio.to_thread(pd.read_csv, csv_path)
     df_nodes_filtrado = df_nodes[df_nodes["bairro"] != "Desconhecido"]
 
     if df_nodes_filtrado.empty:
         raise HTTPException(status_code=400,
                             detail="Não há locais com bairros válidos para selecionar.")
 
-    origem = df_nodes_filtrado.sample(n=1).iloc[0]
-    destino = df_nodes_filtrado.sample(n=1).iloc[0]
-
-    # Garante que os pontos de origem e destino sejam distintos
-    while origem["node_id"] == destino["node_id"]:
-        destino = df_nodes_filtrado.sample(n=1).iloc[0]
+    origem, destino = await asyncio.to_thread(df_nodes_filtrado.sample, n=2)
+    origem = origem.iloc[0]
+    destino = destino.iloc[0]
 
     origem_info = {
         "latitude": origem["latitude"],

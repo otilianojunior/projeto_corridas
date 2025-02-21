@@ -3,7 +3,7 @@ from datetime import datetime
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel
 from sqlalchemy.future import select
-from sqlalchemy.orm import Session
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from corridas.models.CorridaModel import CorridaModel
 from corridas.services.tracar_rota import calcular_rota_mais_curta
@@ -15,7 +15,6 @@ router = APIRouter(prefix="/corridas", tags=["Corridas"])
 
 
 # Modelos Pydantic para requisições e respostas
-
 class Endereco(BaseModel):
     latitude: float
     longitude: float
@@ -76,47 +75,46 @@ class CorridaResponse(BaseModel):
         from_attributes = True
 
 
-# Endpoints
+# 📌 Endpoints
 
 @router.get("/disponiveis", summary="Listar corridas disponíveis")
-async def listar_corridas_disponiveis(db: Session = Depends(get_db)):
+async def listar_corridas_disponiveis(db: AsyncSession = Depends(get_db)):
+    """Lista todas as corridas disponíveis no status 'solicitado'"""
     query = select(CorridaModel).where(CorridaModel.status == "solicitado")
-    result = db.execute(query)
+    result = await db.execute(query)  # 🔄 Agora é assíncrono
     corridas_disponiveis = result.scalars().all()
 
     if not corridas_disponiveis:
         return {"mensagem": "Sem corridas disponíveis no momento."}
 
-    lista_corridas = [
-        {
-            "id": corrida.id,
-            "origem_rua": corrida.origem_rua,
-            "origem_bairro": corrida.origem_bairro,
-            "destino_rua": corrida.destino_rua,
-            "destino_bairro": corrida.destino_bairro,
-            "nome_cliente": corrida.cliente.nome,
-            "distancia_km": corrida.distancia_km
-        }
-        for corrida in corridas_disponiveis
-    ]
-
-    return {"corridas_disponiveis": lista_corridas}
+    return {
+        "corridas_disponiveis": [
+            {
+                "id": corrida.id,
+                "origem_rua": corrida.origem_rua,
+                "origem_bairro": corrida.origem_bairro,
+                "destino_rua": corrida.destino_rua,
+                "destino_bairro": corrida.destino_bairro,
+                "nome_cliente": corrida.cliente.nome,
+                "distancia_km": corrida.distancia_km
+            }
+            for corrida in corridas_disponiveis
+        ]
+    }
 
 
 @router.post("/solicitar", response_model=CorridaResponse, status_code=status.HTTP_201_CREATED,
              summary="Solicitar nova corrida")
-async def solicitar_corrida(corrida_data: CorridaCreate, db: Session = Depends(get_db)):
+async def solicitar_corrida(corrida_data: CorridaCreate, db: AsyncSession = Depends(get_db)):
+    """Solicita uma nova corrida na API"""
     try:
         origem = corrida_data.origem
         destino = corrida_data.destino
-        cliente = corrida_data.cliente
-        horario_pedido = corrida_data.horario_pedido
+        id_cliente = corrida_data.cliente.id_cliente
 
-        id_cliente = cliente.id_cliente
-
-        # Verificar se já existe uma corrida ativa para o cliente
+        # ✅ Verificar se já existe uma corrida ativa para o cliente
         query = select(CorridaModel).where(CorridaModel.id_cliente == id_cliente)
-        result = db.execute(query)
+        result = await db.execute(query)  # 🔄 Agora é assíncrono
         corrida_existente = result.scalars().first()
 
         if corrida_existente and corrida_existente.status in ["solicitado", "aceita"]:
@@ -125,9 +123,9 @@ async def solicitar_corrida(corrida_data: CorridaCreate, db: Session = Depends(g
                 detail="Já existe uma corrida solicitada ou aceita para este cliente."
             )
 
-        # Calcular a rota mais curta com base nas coordenadas fornecidas
+        # ✅ Calcular a rota mais curta com base nas coordenadas fornecidas
         try:
-            _, coordenadas_rota, distancia_km = calcular_rota_mais_curta(
+            _, coordenadas_rota, distancia_km = await calcular_rota_mais_curta(
                 cidade="Vitória da Conquista, Brasil",
                 origem_longitude=origem.longitude,
                 origem_latitude=origem.latitude,
@@ -145,8 +143,8 @@ async def solicitar_corrida(corrida_data: CorridaCreate, db: Session = Depends(g
                 detail=f"Erro nos parâmetros de coordenadas: {str(e)}"
             )
 
-        # Calcular o preço parcial da corrida
-        preco_parcial = calcular_valor_base(distancia_km)
+        # ✅ Calcular o preço parcial da corrida
+        preco_parcial = await calcular_valor_base(distancia_km)
 
         nova_corrida = CorridaModel(
             origem_rua=origem.nome_rua,
@@ -157,7 +155,7 @@ async def solicitar_corrida(corrida_data: CorridaCreate, db: Session = Depends(g
             destino_bairro=destino.bairro,
             destino_longitude=destino.longitude,
             destino_latitude=destino.latitude,
-            horario_pedido=horario_pedido,
+            horario_pedido=corrida_data.horario_pedido,
             cordenadas_rota="|".join([f"{lat},{lon}" for lat, lon in coordenadas_rota]),
             distancia_km=distancia_km,
             preco_parcial=preco_parcial,
@@ -166,8 +164,8 @@ async def solicitar_corrida(corrida_data: CorridaCreate, db: Session = Depends(g
         )
 
         db.add(nova_corrida)
-        db.commit()
-        db.refresh(nova_corrida)
+        await db.commit()  # 🔄 Agora é assíncrono
+        await db.refresh(nova_corrida)  # 🔄 Agora é assíncrono
 
         return nova_corrida
     except Exception as e:
@@ -175,61 +173,3 @@ async def solicitar_corrida(corrida_data: CorridaCreate, db: Session = Depends(g
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=f"Erro ao processar a solicitação: {str(e)}"
         )
-
-
-@router.post("/simular", status_code=status.HTTP_200_OK, summary="Simular valores da corrida")
-async def simular_corrida(
-        corrida_id: int,
-        id_motorista: int,
-        status_corrida: str,
-        taxa_noturna: float,
-        taxa_manutencao: float,
-        taxa_pico: float,
-        taxa_excesso_corridas: float,
-        taxa_limpeza: float,
-        taxa_cancelamento: float,
-        db: Session = Depends(get_db)
-):
-    # Buscar a corrida pelo ID
-    corrida = db.query(CorridaModel).filter(CorridaModel.id == corrida_id).first()
-
-    if not corrida:
-        raise HTTPException(status_code=404, detail="Corrida não encontrada")
-
-    if corrida.status != "solicitado":
-        raise HTTPException(status_code=400, detail="Corrida não pode ser simulada no status atual")
-
-    # Buscar o motorista pelo ID
-    motorista = db.query(MotoristaModel).filter(MotoristaModel.id == id_motorista).first()
-
-    if not motorista:
-        raise HTTPException(status_code=404, detail="Motorista não encontrado")
-
-    distancia_km = corrida.distancia_km
-    preco_km = calcular_preco_km(distancia_km)
-
-    preco_total = calcular_preco_corrida(
-        valor_base=corrida.preco_parcial,
-        taxa_noturna=taxa_noturna,
-        taxa_pico=taxa_pico,
-        taxa_excesso_corridas=taxa_excesso_corridas,
-        taxa_limpeza=taxa_limpeza,
-        taxa_cancelamento=taxa_cancelamento
-    )
-
-    # Atualizar os dados da corrida com a simulação
-    corrida.id_motorista = id_motorista
-    corrida.status = status_corrida
-    corrida.taxa_noturna = taxa_noturna
-    corrida.taxa_manutencao = taxa_manutencao
-    corrida.taxa_pico = taxa_pico
-    corrida.taxa_excesso_corridas = taxa_excesso_corridas
-    corrida.taxa_limpeza = taxa_limpeza
-    corrida.taxa_cancelamento = taxa_cancelamento
-    corrida.preco_km = preco_km
-    corrida.preco_total = preco_total
-
-    db.commit()
-    db.refresh(corrida)
-
-    return {"status": "OK", "corrida": corrida}

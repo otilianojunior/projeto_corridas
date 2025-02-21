@@ -1,9 +1,21 @@
-.venv
-venv
-.idea
-alembic
-cache
+# Ignorar ambientes virtuais
+.venv/
+venv/
+
+# Ignorar configurações do PyCharm e IDEs
+.idea/
+
+# Ignorar diretórios de migração do Alembic
+alembic/
 allembic.ini
+
+# Ignorar diretórios de cache do Python
+cache/
 __pycache__/
+**/__pycache__/
+
+# Ignorar arquivos HTML da pasta 'data'
 data/*.html
+
+# Ignorar a pasta de testes
 testes/

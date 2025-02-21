@@ -23,7 +23,7 @@ def gerar_dados_pessoa():
         "email": fake.email()
     }
 
-def criar_pessoas(endpoint, total, tipo):
+def criar_pessoas(endpoint, total):
     """Cria clientes ou motoristas na API e garante que o número total seja atingido"""
     criados = 0
 
@@ -38,26 +38,27 @@ def criar_pessoas(endpoint, total, tipo):
         else:
             continue  # Outros erros, tenta novamente
 
-        if criados % 500 == 0:  # Mostra progresso a cada 500 criados
-            print(f"✔️ {criados}/{total} {tipo}s cadastrados...")
-
     return criados
 
 if __name__ == "__main__":
     start_time = time.time()  # Inicia o contador de tempo
 
+    # Criar motoristas
     print("🔄 Criando motoristas...")
-    motoristas_criados = criar_pessoas("motoristas", NUM_MOTORISTAS, "motorista")
+    motoristas_criados = criar_pessoas("motoristas", NUM_MOTORISTAS)
 
-    print("\n🔄 Criando clientes...")
-    clientes_criados = criar_pessoas("clientes", NUM_CLIENTES, "cliente")
+    # Criar clientes
+    print("🔄 Criando clientes...")
+    clientes_criados = criar_pessoas("clientes", NUM_CLIENTES)
 
     elapsed_time = time.time() - start_time  # Calcula o tempo total
     minutes, seconds = divmod(elapsed_time, 60)
 
+    # Exibir resultado final
     print("\n✅ Resumo do cadastro:")
     print(f"✔️ {motoristas_criados}/{NUM_MOTORISTAS} motoristas cadastrados com sucesso.")
     print(f"✔️ {clientes_criados}/{NUM_CLIENTES} clientes cadastrados com sucesso.")
     print(f"\n⏳ Tempo total de execução: {int(minutes)} min {seconds:.2f} seg.")
 
     print("\n🎉 Processo finalizado!")
+

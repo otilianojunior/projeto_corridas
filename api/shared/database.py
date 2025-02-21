@@ -1,22 +1,29 @@
 import os
-
 from dotenv import load_dotenv
-from sqlalchemy import create_engine
+from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 load_dotenv()
 
+# 🔄 Configuração do banco de dados a partir do .env
 user = os.getenv("SQLALCHEMY_USER")
 password = os.getenv("SQLALCHEMY_PASSWORD")
 host = os.getenv("SQLALCHEMY_HOST")
 database = os.getenv("SQLALCHEMY_DATABASE")
 
-SQLALCHEMY_DATABASE_URL = f"mysql+mysqldb://{user}:{password}@{host}/{database}"
+# 🔥 Alterando para conexão assíncrona
+SQLALCHEMY_DATABASE_URL = f"mysql+aiomysql://{user}:{password}@{host}/{database}"
 
-engine = create_engine(
-    SQLALCHEMY_DATABASE_URL,
+# 🚀 Criando o engine assíncrono
+engine = create_async_engine(SQLALCHEMY_DATABASE_URL, echo=True)
+
+# 🔄 Criando a sessão assíncrona
+SessionLocal = sessionmaker(
+    bind=engine,
+    class_=AsyncSession,
+    expire_on_commit=False,
 )
 
-Session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+# 📌 Base declarativa para os modelos
 Base = declarative_base()

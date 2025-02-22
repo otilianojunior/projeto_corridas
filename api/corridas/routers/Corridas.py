@@ -13,6 +13,17 @@ from shared.dependencies import get_db
 
 router = APIRouter(prefix="/corridas", tags=["Corridas"])
 
+# Modelo para receber as taxas e valores finais no request
+class TaxasAtualizadas(BaseModel):
+    taxa_noturna: float = 0.0
+    taxa_manutencao: float = 0.0
+    taxa_pico: float = 0.0
+    taxa_excesso_corridas: float = 0.0
+    taxa_limpeza: float = 0.0
+    taxa_cancelamento: float = 0.0
+    preco_km: float  # Preço por quilômetro definido no sistema
+    valor_motorista: float  # Valor destinado ao motorista
+    preco_total: float  # Preço total já calculado externamente
 
 # Modelos Pydantic para requisições e respostas
 class Endereco(BaseModel):
@@ -174,3 +185,42 @@ async def solicitar_corrida(corrida_data: CorridaCreate, db: AsyncSession = Depe
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=f"Erro ao processar a solicitação: {str(e)}"
         )
+
+
+@router.put("/finalizar_corrida/{corrida_id}", status_code=status.HTTP_200_OK, summary="Aplicar taxas e finalizar corrida")
+async def finalizar_corrida(corrida_id: int, taxas: TaxasAtualizadas, db: AsyncSession = Depends(get_db)):
+    """Aplica taxas, atualiza o valor total e finaliza a corrida."""
+
+    # Buscar corrida no banco de dados
+    query = select(CorridaModel).where(CorridaModel.id == corrida_id, CorridaModel.status == "solicitado")
+    result = await db.execute(query)
+    corrida = result.scalars().first()
+
+    if not corrida:
+        raise HTTPException(status_code=404, detail="Corrida não encontrada ou não está no estado 'solicitado'.")
+
+    # Atualizar os valores na corrida com os dados recebidos
+    corrida.taxa_noturna = taxas.taxa_noturna
+    corrida.taxa_manutencao = taxas.taxa_manutencao
+    corrida.taxa_pico = taxas.taxa_pico
+    corrida.taxa_excesso_corridas = taxas.taxa_excesso_corridas
+    corrida.taxa_limpeza = taxas.taxa_limpeza
+    corrida.taxa_cancelamento = taxas.taxa_cancelamento
+    corrida.preco_km = taxas.preco_km
+    corrida.valor_motorista = taxas.valor_motorista
+    corrida.preco_total = taxas.preco_total
+
+    # Atualizar status da corrida para "finalizada"
+    corrida.status = "finalizada"
+
+    await db.commit()
+    await db.refresh(corrida)
+
+    return {
+        "mensagem": "Corrida finalizada com sucesso.",
+        "corrida_id": corrida.id,
+        "status": corrida.status,
+        "preco_total": corrida.preco_total,
+        "valor_motorista": corrida.valor_motorista,
+        "taxas_aplicadas": taxas.dict()
+    }

@@ -1,13 +1,21 @@
 import os
-import asyncio
-import time
-from concurrent.futures import ThreadPoolExecutor
+import io
 
 import osmnx as ox
 import pandas as pd
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, status, Depends
+from fastapi.responses import StreamingResponse
 from geopy.geocoders import Nominatim
+from sqlalchemy.orm import Session
+from sqlalchemy.future import select
 from unidecode import unidecode
+
+from corridas.models.CorridaModel import CorridaModel
+# Importe a função get_db de onde ela estiver definida, por exemplo:
+from shared.dependencies import get_db
+# Certifique-se de que a função criar_mapa_interativo esteja importada corretamente:
+from mapas.services.visualizar import criar_mapa_interativo
+
 
 router = APIRouter(prefix="/mapas", tags=["Mapas"])
 
@@ -69,7 +77,6 @@ async def gerar_dados_mapa(cidade: str):
         raise HTTPException(status_code=500, detail=f"Erro ao processar dados do mapa: {str(e)}")
 
 
-
 @router.get("/selecionar_coordenadas_aleatorias", status_code=status.HTTP_200_OK)
 async def selecionar_coordenadas_aleatorias(cidade: str):
     """Seleciona pontos de origem e destino aleatórios para uma cidade."""
@@ -77,7 +84,8 @@ async def selecionar_coordenadas_aleatorias(cidade: str):
     csv_path = f"data/{nome_cidade}-localizacoes.csv"
 
     if not os.path.exists(csv_path):
-        raise HTTPException(status_code=404, detail="Arquivo de localizações não encontrado para a cidade especificada.")
+        raise HTTPException(status_code=404,
+                            detail="Arquivo de localizações não encontrado para a cidade especificada.")
 
     df_nodes = await asyncio.to_thread(pd.read_csv, csv_path)
     df_nodes_filtrado = df_nodes[df_nodes["bairro"] != "Desconhecido"]
@@ -104,3 +112,57 @@ async def selecionar_coordenadas_aleatorias(cidade: str):
             "bairro": destino["bairro"]
         }
     }
+
+
+
+
+@router.get("/visualizar_mapa_corrida", status_code=status.HTTP_200_OK,
+            summary="Gerar e visualizar mapa interativo da corrida")
+async def visualizar_mapa_corrida(corrida_id: int, db: Session = Depends(get_db)):
+    # Buscar a corrida pelo ID usando execução assíncrona
+    query = select(CorridaModel).filter(CorridaModel.id == corrida_id)
+    result = await db.execute(query)  # Executar a consulta de forma assíncrona
+    corrida = result.scalars().first()
+
+    if not corrida:
+        raise HTTPException(status_code=404, detail="Corrida não encontrada")
+
+    # Verificar se existem coordenadas de rota armazenadas
+    if not corrida.cordenadas_rota:
+        raise HTTPException(status_code=400, detail="Nenhuma rota disponível para esta corrida")
+
+    # Converter a string de coordenadas para lista de tuplas
+    try:
+        coordenadas_rota = [
+            (float(lat), float(lon))
+            for point in corrida.cordenadas_rota.split("|")
+            for lat, lon in [point.split(",")]
+        ]
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Erro ao processar coordenadas da rota: {str(e)}"
+        )
+
+    # Gerar o mapa interativo em memória (a função deve retornar uma string com o HTML)
+    html_conteudo = criar_mapa_interativo(
+        origem=(corrida.origem_latitude, corrida.origem_longitude),
+        destino=(corrida.destino_latitude, corrida.destino_longitude),
+        coordenadas_rota=coordenadas_rota,
+        distancia_km=corrida.distancia_km,
+        origem_info={
+            "nome_rua": corrida.origem_rua,
+            "bairro": corrida.origem_bairro
+        },
+        destino_info={
+            "nome_rua": corrida.destino_rua,
+            "bairro": corrida.destino_bairro
+        }
+    )
+
+    # Converter o conteúdo HTML para um stream de bytes (ou string)
+    stream = io.StringIO(html_conteudo)
+
+    # Retornar a resposta para download sem salvar arquivo físico
+    headers = {"Content-Disposition": f"attachment; filename=mapa-corrida-{corrida_id}.html"}
+    return StreamingResponse(stream, media_type="text/html", headers=headers)

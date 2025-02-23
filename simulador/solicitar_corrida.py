@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 
 # 🔥 Configuração da API
 API_URL = "http://127.0.0.1:8000"
-NUM_CORRIDAS = 2000  # Número total de corridas
+NUM_CORRIDAS = 200  # Número total de corridas
 CITY = "Vitória da Conquista"
 TIMEOUT = 120  # Timeout para requisições
 MAX_CONCURRENT_REQUESTS = 5  # 🔄 Limite de requisições simultâneas

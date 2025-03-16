@@ -15,14 +15,14 @@ NUM_CORRIDAS_PROCESSAR = 10  # 🔥 Defina quantas corridas deseja processar
 semaphore = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
 
 def gerar_taxas_por_nivel(nivel):
-    """Retorna as taxas conforme o nível escolhido, sem a taxa de pico."""
+    """Retorna as taxas conforme o nível escolhido, incluindo a taxa de cancelamento para o nível 6."""
     niveis_taxas = {
-        1: {"taxa_manutencao": 1.00, "taxa_limpeza": 0,},
-        2: {"taxa_manutencao": 1.00, "taxa_limpeza": 2.00},
-        3: {"taxa_manutencao": 1.50, "taxa_limpeza": 5.00},
-        4: {"taxa_manutencao": 2.00, "taxa_limpeza": 7.00},
-        5: {"taxa_manutencao": 3.00, "taxa_limpeza": 10.00},
-        6: {"taxa_manutencao": 1.00, "taxa_cancelamento": 4.00, "taxa_limpeza": 0}  # Adicionando taxa_cancelamento ao nível 6
+        1: {"taxa_manutencao": 1.00, "taxa_limpeza": 0, "taxa_pico": 0, "taxa_noturna": 0, "taxa_excesso_corridas": 0},
+        2: {"taxa_manutencao": 1.00, "taxa_limpeza": 2.00, "taxa_pico": 1.50, "taxa_noturna": 3.00, "taxa_excesso_corridas": 2.00},
+        3: {"taxa_manutencao": 1.50, "taxa_limpeza": 5.00, "taxa_pico": 3.00, "taxa_noturna": 3.50, "taxa_excesso_corridas": 3.00},
+        4: {"taxa_manutencao": 2.00, "taxa_limpeza": 7.00, "taxa_pico": 5.00, "taxa_noturna": 4.00, "taxa_excesso_corridas": 4.00},
+        5: {"taxa_manutencao": 3.00, "taxa_limpeza": 10.00, "taxa_pico": 7.00, "taxa_noturna": 5.00, "taxa_excesso_corridas": 5.00},
+        6: {"taxa_manutencao": 1.00, "taxa_cancelamento": 4.00, "taxa_limpeza": 0, "taxa_pico": 0, "taxa_noturna": 0, "taxa_excesso_corridas": 0}
     }
     return niveis_taxas.get(nivel, niveis_taxas[3])  # Padrão: nível 3
 
@@ -72,23 +72,13 @@ def is_horario_noturno(horario_pedido):
         return True
     return False
 
+
 # Função para verificar excesso de corridas no mesmo horário
 def verificar_excesso_corridas(horario_pedido, corridas_disponiveis):
     """Verifica se há excesso de corridas no mesmo horário (ex: mais de 3 corridas no mesmo horário)."""
-    limite_corridas = 3  # Defina o limite de corridas por horário
+    limite_corridas = 10  # Defina o limite de corridas por horário
     contagem = sum(1 for corrida in corridas_disponiveis if corrida["horario_pedido"] == horario_pedido)
     return contagem > limite_corridas  # Se houver mais corridas no mesmo horário, aplica a taxa
-
-async def obter_motoristas(session):
-    """Obtém a lista de motoristas disponíveis na API."""
-    url = f"{API_URL}/motoristas/listar"
-    async with session.get(url, timeout=TIMEOUT) as response:
-        if response.status == 200:
-            motoristas = await response.json()
-            return motoristas  # Retorna a lista diretamente
-        else:
-            print(f"⚠️ Erro ao buscar motoristas: {response.status} - {await response.text()}")
-            return []
 
 
 async def obter_corridas_disponiveis(session):
@@ -129,30 +119,21 @@ async def aplicar_taxas_corrida(session, corrida, corridas_disponiveis):
         # Calcular o preço por km
         preco_km = await calcular_preco_km(distancia_km)
 
-        # Adiciona a taxa de pico de R$ 2,00, se for horário de pico
+        # Adiciona a taxa de pico se for horário de pico (somente se for parte do nível)
         if is_horario_pico(horario_pedido):
-            preco_km += Decimal("2.00")  # Taxa de pico fixa de R$ 2,00
+            preco_km += Decimal(str(taxas["taxa_pico"]))  # Convertendo para Decimal
 
-        # Adiciona a taxa noturna de R$ 3,00, se for horário noturno
+        # Adiciona a taxa noturna se for horário noturno (somente se for parte do nível)
         if is_horario_noturno(horario_pedido):
-            preco_km += Decimal("3.00")  # Taxa noturna fixa de R$ 3,00
+            preco_km += Decimal(str(taxas["taxa_noturna"]))  # Convertendo para Decimal
 
         # Verifica se há excesso de corridas no mesmo horário e aplica a taxa de excesso de corridas
         if verificar_excesso_corridas(horario_pedido, corridas_disponiveis):
-            preco_km += Decimal("2.00")  # Taxa de excesso de corridas de R$ 2,00
-
-        # Obter um motorista aleatório
-        motoristas = await obter_motoristas(session)
-        if motoristas:
-            motorista = random.choice(motoristas)
-            id_motorista = motorista["id"]
-        else:
-            id_motorista = None
-            print("⚠️ Nenhum motorista disponível.")
+            preco_km += Decimal(str(taxas["taxa_excesso_corridas"]))  # Convertendo para Decimal
 
         # Verifica se o nível é 6, aplica apenas taxa_manutencao e taxa_cancelamento
         if nivel_taxa == 6:
-            total_taxas = Decimal(taxas["taxa_manutencao"]) + Decimal(taxas.get("taxa_cancelamento", 0))  # Usando .get() para evitar KeyError
+            total_taxas = Decimal(str(taxas["taxa_manutencao"])) + Decimal(str(taxas.get("taxa_cancelamento", 0)))  # Usando .get() para evitar KeyError
             preco_total = total_taxas  # No nível 6, o preco_total será igual a total_taxas
         else:
             # 🔹 Calcula o total das taxas aplicadas para outros níveis
@@ -172,8 +153,7 @@ async def aplicar_taxas_corrida(session, corrida, corridas_disponiveis):
             "valor_motorista": float(valor_motorista),  # Convertendo para float
             "preco_total": float(preco_total),  # Convertendo para float
             "preco_km": float(preco_km),  # Adicionando preco_km ao payload
-            "nivel_taxa": nivel_taxa,
-            "id_motorista": id_motorista,  # Adicionando o id_motorista
+            "nivel_taxa": nivel_taxa
         }
 
         # 🔹 Envia os dados para a API

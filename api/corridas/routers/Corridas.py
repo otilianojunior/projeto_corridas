@@ -9,6 +9,7 @@ from shared.dependencies import get_db
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.orm import joinedload
+import random
 
 router = APIRouter(prefix="/corridas", tags=["Corridas"])
 
@@ -63,6 +64,9 @@ class CorridaCreate(BaseModel):
                 "cliente": {
                     "id_cliente": 0
                 },
+                "motorista": {
+                    "id_motorista": 0
+                },
                 "horario_pedido": "2025-02-06T14:29:14.112Z"
             }
         }
@@ -80,6 +84,7 @@ class CorridaResponse(BaseModel):
     destino_latitude: float
     horario_pedido: datetime
     id_cliente: int
+    id_motorista: int
     distancia_km: float
     cordenadas_rota: str
 
@@ -88,7 +93,6 @@ class CorridaResponse(BaseModel):
 
 
 # 📌 Endpoints
-
 
 @router.get("/disponiveis", summary="Listar corridas disponíveis")
 async def listar_corridas_disponiveis(db: AsyncSession = Depends(get_db)):
@@ -111,6 +115,132 @@ async def listar_corridas_disponiveis(db: AsyncSession = Depends(get_db)):
                 "destino_rua": corrida.destino_rua,
                 "destino_bairro": corrida.destino_bairro,
                 "nome_cliente": corrida.cliente.nome if corrida.cliente else "Cliente Desconhecido",
+                "distancia_km": corrida.distancia_km,
+                "horario_pedido": corrida.horario_pedido,
+            }
+            for corrida in corridas_disponiveis
+        ]
+    }
+
+
+from datetime import datetime
+
+from corridas.models.CorridaModel import CorridaModel
+from corridas.services.tracar_rota import calcular_rota_mais_curta
+from fastapi import APIRouter, Depends, HTTPException, status
+from motoristas.models.MotoristaModel import MotoristaModel
+from pydantic import BaseModel
+from shared.dependencies import get_db
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.future import select
+from sqlalchemy.orm import joinedload
+import random
+
+router = APIRouter(prefix="/corridas", tags=["Corridas"])
+
+
+# Modelo para receber as taxas e valores finais no request
+class TaxasAtualizadas(BaseModel):
+    taxa_noturna: float = 0.0
+    taxa_manutencao: float = 0.0
+    taxa_pico: float = 0.0
+    taxa_excesso_corridas: float = 0.0
+    taxa_limpeza: float = 0.0
+    taxa_cancelamento: float = 0.0
+    preco_km: float
+    valor_motorista: float
+    preco_total: float
+    nivel_taxa: int
+
+
+# Modelos Pydantic para requisições e respostas
+class Endereco(BaseModel):
+    latitude: float
+    longitude: float
+    nome_rua: str = "Desconhecido"
+    bairro: str = "Desconhecido"
+
+
+class Cliente(BaseModel):
+    id_cliente: int
+
+
+class CorridaCreate(BaseModel):
+    origem: Endereco
+    destino: Endereco
+    cliente: Cliente
+    horario_pedido: datetime
+
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "origem": {
+                    "latitude": -14.8744823,
+                    "longitude": -40.8827484,
+                    "nome_rua": "Desconhecido",
+                    "bairro": "Campinhos"
+                },
+                "destino": {
+                    "latitude": -14.8440731,
+                    "longitude": -40.8737567,
+                    "nome_rua": "Caminho Dez",
+                    "bairro": "Zabelê"
+                },
+                "cliente": {
+                    "id_cliente": 0
+                },
+                "motorista": {
+                    "id_motorista": 0
+                },
+                "horario_pedido": "2025-02-06T14:29:14.112Z"
+            }
+        }
+
+
+class CorridaResponse(BaseModel):
+    id: int
+    origem_rua: str
+    origem_bairro: str
+    origem_longitude: float
+    origem_latitude: float
+    destino_rua: str
+    destino_bairro: str
+    destino_longitude: float
+    destino_latitude: float
+    horario_pedido: datetime
+    id_cliente: int
+    id_motorista: int
+    distancia_km: float
+    cordenadas_rota: str
+
+    class Config:
+        from_attributes = True
+
+
+# 📌 Endpoints
+
+@router.get("/disponiveis", summary="Listar corridas disponíveis")
+async def listar_corridas_disponiveis(db: AsyncSession = Depends(get_db)):
+    """Lista todas as corridas disponíveis no status 'solicitado'"""
+
+    query = select(CorridaModel).where(CorridaModel.status == "solicitado").options(joinedload(CorridaModel.cliente), joinedload(CorridaModel.motorista))
+
+    result = await db.execute(query)  # 🔄 Agora é assíncrono
+    corridas_disponiveis = result.scalars().all()
+
+    if not corridas_disponiveis:
+        return {"mensagem": "Sem corridas disponíveis no momento."}
+
+    return {
+        "corridas_disponiveis": [
+            {
+                "id": corrida.id,
+                "origem_rua": corrida.origem_rua,
+                "origem_bairro": corrida.origem_bairro,
+                "destino_rua": corrida.destino_rua,
+                "destino_bairro": corrida.destino_bairro,
+                "nome_cliente": corrida.cliente.nome if corrida.cliente else "Cliente Desconhecido",
+                "id_motorista": corrida.motorista.id if corrida.motorista else None,  # Corrigido para acessar o id corretamente
                 "distancia_km": corrida.distancia_km,
                 "horario_pedido": corrida.horario_pedido,
             }
@@ -160,6 +290,22 @@ async def solicitar_corrida(corrida_data: CorridaCreate, db: AsyncSession = Depe
                 detail=f"Erro nos parâmetros de coordenadas: {str(e)}"
             )
 
+        # Obter um motorista aleatório
+        motoristas_query = select(MotoristaModel).where(
+            MotoristaModel.status == "disponivel")  # Ou qualquer outro critério de seleção
+        motoristas_result = await db.execute(motoristas_query)
+        motoristas = motoristas_result.scalars().all()
+
+        if motoristas:
+            motorista = random.choice(motoristas)
+            id_motorista = motorista.id  # Atribuindo o id do motorista disponível
+
+            # Atualizar o status do motorista para "ocupado"
+            motorista.status = "ocupado"
+            await db.commit()  # Commit para salvar a mudança no status
+        else:
+            id_motorista = None  # Nenhum motorista disponível, pode lançar erro ou deixar como None
+
         nova_corrida = CorridaModel(
             origem_rua=origem.nome_rua,
             origem_bairro=origem.bairro,
@@ -173,7 +319,8 @@ async def solicitar_corrida(corrida_data: CorridaCreate, db: AsyncSession = Depe
             cordenadas_rota="|".join([f"{lat},{lon}" for lat, lon in coordenadas_rota]),
             distancia_km=distancia_km,
             status='solicitado',
-            id_cliente=id_cliente
+            id_cliente=id_cliente,
+            id_motorista=id_motorista
         )
 
         db.add(nova_corrida)
@@ -186,6 +333,7 @@ async def solicitar_corrida(corrida_data: CorridaCreate, db: AsyncSession = Depe
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=f"Erro ao processar a solicitação: {str(e)}"
         )
+
 
 @router.put("/finalizar_corrida/{corrida_id}", status_code=status.HTTP_200_OK,
             summary="Aplicar taxas e finalizar corrida")
@@ -220,8 +368,22 @@ async def finalizar_corrida(corrida_id: int, taxas: TaxasAtualizadas, db: AsyncS
     # Atualizar status da corrida para "finalizada"
     corrida.status = "finalizada"
 
+    # Atualizar status do motorista para "disponível"
+    if corrida.id_motorista:  # Verifica se há motorista associado
+        motorista_query = select(MotoristaModel).where(MotoristaModel.id == corrida.id_motorista)
+        motorista_result = await db.execute(motorista_query)
+        motorista = motorista_result.scalars().first()
+
+        if motorista:
+            motorista.status = "disponivel"  # Atualiza status para disponível
+
+            # Commit para salvar a alteração no status do motorista
+            await db.commit()
+            await db.refresh(motorista)  # Refresca os dados do motorista
+
+    # Commit para salvar a finalização da corrida
     await db.commit()
-    await db.refresh(corrida)
+    await db.refresh(corrida)  # Refresca os dados da corrida após o commit
 
     return {
         "mensagem": "Corrida finalizada com sucesso.",
@@ -229,6 +391,6 @@ async def finalizar_corrida(corrida_id: int, taxas: TaxasAtualizadas, db: AsyncS
         "status": corrida.status,
         "preco_total": corrida.preco_total,
         "valor_motorista": corrida.valor_motorista,
-        "nivel_taxa": corrida.nivel_taxa,
-        "id_motorista": corrida.id_motorista
+        "nivel_taxa": corrida.nivel_taxa
     }
+

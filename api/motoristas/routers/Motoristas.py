@@ -16,6 +16,7 @@ class MotoristaCreate(BaseModel):
     email: str
     telefone: str
     cpf: str
+    status: str
 
 
 @router.get("/listar/", summary="Listar Motoristas")
@@ -28,7 +29,7 @@ async def listar_motoristas(db: AsyncSession = Depends(get_db)):
     if not motoristas:
         return {"mensagem": "Nenhum motorista cadastrado."}
 
-    return [{"id": m.id, "nome": m.nome, "cpf": m.cpf, "telefone": m.telefone, "email": m.email} for m in motoristas]
+    return [{"id": m.id, "nome": m.nome, "cpf": m.cpf, "telefone": m.telefone, "email": m.email, "status": m.status} for m in motoristas]
 
 
 @router.post("/", status_code=status.HTTP_201_CREATED, summary="Criar Motorista")
@@ -36,11 +37,27 @@ async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends
     """Cria um novo motorista na API"""
     motorista.cpf = re.sub(r"\D", "", motorista.cpf)  # Remove formatação do CPF
 
+    # Verificar se o motorista com o mesmo CPF, telefone ou email já existe
+    query = select(MotoristaModel).where(
+        (MotoristaModel.cpf == motorista.cpf) |
+        (MotoristaModel.telefone == motorista.telefone) |
+        (MotoristaModel.email == motorista.email)
+    )
+    result = await db.execute(query)
+    existing_motorista = result.scalars().first()
+
+    if existing_motorista:
+        raise HTTPException(
+            status_code=400,
+            detail="Motorista com CPF, telefone ou email já cadastrado."
+        )
+
     novo_motorista = MotoristaModel(
         nome=motorista.nome,
         email=motorista.email,
         telefone=motorista.telefone,
-        cpf=motorista.cpf
+        cpf=motorista.cpf,
+        status="disponivel"
     )
 
     try:
@@ -53,7 +70,8 @@ async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends
             "nome": novo_motorista.nome,
             "email": novo_motorista.email,
             "telefone": novo_motorista.telefone,
-            "cpf": novo_motorista.cpf
+            "cpf": novo_motorista.cpf,
+            "status": novo_motorista.status
         }}
     except IntegrityError:
         await db.rollback()

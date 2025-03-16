@@ -1,19 +1,33 @@
 import asyncio
-import aiohttp
 import random
-import urllib.parse
 import time
+import urllib.parse
 from datetime import datetime, timedelta
+
+import aiohttp
 
 # 🔥 Configuração da API
 API_URL = "http://127.0.0.1:8000"
-NUM_CORRIDAS = 200  # Número total de corridas
+NUM_CORRIDAS = 10
 CITY = "Vitória da Conquista"
-TIMEOUT = 120  # Timeout para requisições
-MAX_CONCURRENT_REQUESTS = 5  # 🔄 Limite de requisições simultâneas
+TIMEOUT = 120
+MAX_CONCURRENT_REQUESTS = 5
 
 # 🔄 Semáforo para controle de concorrência
 semaphore = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
+
+
+async def obter_motoristas(session):
+    """Obtém a lista de motoristas disponíveis na API."""
+    url = f"{API_URL}/motoristas/listar/"
+    async with session.get(url, timeout=TIMEOUT) as response:
+        if response.status == 200:
+            motoristas = await response.json()
+            return motoristas  # Retorna a lista de motoristas
+        else:
+            print(f"⚠️ Erro ao buscar motoristas: {response.status} - {await response.text()}")
+            return []  # Retorna uma lista vazia caso a requisição falhe
+
 
 async def obter_clientes(session):
     """Obtém a lista de clientes disponíveis na API."""
@@ -40,7 +54,6 @@ async def obter_coordenadas_aleatorias(session):
             return None
 
 
-
 def gerar_horario_pedido():
     """Gera um horário aleatório para o dia 2024-06-01 com possibilidade de cair nos horários de pico."""
     base_date = datetime(2024, 6, 1)
@@ -53,7 +66,7 @@ def gerar_horario_pedido():
     ]
 
     # Probabilidade de gerar um horário no intervalo de pico (exemplo: 50%)
-    chance_pico = 0.15  # 50% de chance de cair no horário de pico
+    chance_pico = 0.15  # 15% de chance de cair no horário de pico
 
     # Decide aleatoriamente se o horário será dentro de um intervalo de pico
     if random.random() < chance_pico:
@@ -94,8 +107,21 @@ async def solicitar_corrida(session, id_cliente):
         if not origem or not destino:
             return False
 
+        # Buscar motoristas disponíveis e escolher um aleatório
+        motoristas = await obter_motoristas(session)
+        if motoristas:
+            motorista = random.choice(motoristas)
+            id_motorista = motorista["id"]  # Atribui o id do motorista aleatório
+
+            # Atualiza o status do motorista para "ocupado"
+            motorista["status"] = "ocupado"  # Atualiza o status do motorista
+        else:
+            print(f"⚠️ Nenhum motorista disponível para o cliente {id_cliente}.")
+            id_motorista = None  # Nenhum motorista disponível
+
         corrida_data = {
             "cliente": {"id_cliente": id_cliente},
+            "motorista": {"id_motorista": id_motorista},
             "origem": origem,
             "destino": destino,
             "horario_pedido": gerar_horario_pedido()
@@ -106,20 +132,21 @@ async def solicitar_corrida(session, id_cliente):
             if response.status == 201:
                 return True
             else:
-                print(f"❌ Erro ao solicitar corrida para cliente {id_cliente}: {response.status} - {await response.text()}")
+                print(
+                    f"❌ Erro ao solicitar corrida para cliente {id_cliente}: {response.status} - {await response.text()}")
                 return False
 
 
 async def processar_solicitacoes_corrida():
-    """Executa a simulação das corridas."""
-    print("\n🚀 Iniciando simulação de corridas...")
+    """Executa a solicitacoes das corridas."""
+    print("\n🚀 Iniciando solicitacoes de corridas...")
 
     start_time = time.time()  # ⏳ Medição do tempo total
 
     async with aiohttp.ClientSession() as session:
         clientes = await obter_clientes(session)
         if not clientes:
-            print("⚠️ Nenhum cliente disponível. Simulação abortada.")
+            print("⚠️ Nenhum cliente disponível. Solicitacao abortada.")
             return
 
         # Seleciona clientes aleatoriamente

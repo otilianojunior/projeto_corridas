@@ -1,21 +1,20 @@
-import os
+import asyncio
 import io
+import os
 
 import osmnx as ox
 import pandas as pd
+from corridas.models.CorridaModel import CorridaModel
 from fastapi import APIRouter, HTTPException, status, Depends
 from fastapi.responses import StreamingResponse
 from geopy.geocoders import Nominatim
-from sqlalchemy.orm import Session
-from sqlalchemy.future import select
-from unidecode import unidecode
-
-from corridas.models.CorridaModel import CorridaModel
-# Importe a função get_db de onde ela estiver definida, por exemplo:
-from shared.dependencies import get_db
 # Certifique-se de que a função criar_mapa_interativo esteja importada corretamente:
 from mapas.services.visualizar import criar_mapa_interativo
-
+# Importe a função get_db de onde ela estiver definida, por exemplo:
+from shared.dependencies import get_db
+from sqlalchemy.future import select
+from sqlalchemy.orm import Session
+from unidecode import unidecode
 
 router = APIRouter(prefix="/mapas", tags=["Mapas"])
 
@@ -112,8 +111,6 @@ async def selecionar_coordenadas_aleatorias(cidade: str):
             "bairro": destino["bairro"]
         }
     }
-
-
 
 
 @router.get("/visualizar_mapa_corrida", status_code=status.HTTP_200_OK,

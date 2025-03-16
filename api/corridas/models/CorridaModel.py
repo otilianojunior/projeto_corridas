@@ -26,7 +26,7 @@ class CorridaModel(Base):
     taxa_cancelamento = Column(String(255), nullable=True)
     valor_motorista = Column(Numeric(10, 2), nullable=True)
     preco_km = Column(Numeric(10, 2), nullable=True)
-    preco_parcial = Column(Numeric(10, 2), nullable=True)
+    nivel_taxa = Column(Integer, nullable=True)
     preco_total = Column(Numeric(10, 2), nullable=True)
     status = Column(String(255), nullable=False)
 

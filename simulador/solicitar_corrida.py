@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 
 # 🔥 Configuração da API
 API_URL = "http://127.0.0.1:8000"
-NUM_CORRIDAS = 2000  # Número total de corridas
+NUM_CORRIDAS = 200  # Número total de corridas
 CITY = "Vitória da Conquista"
 TIMEOUT = 120  # Timeout para requisições
 MAX_CONCURRENT_REQUESTS = 5  # 🔄 Limite de requisições simultâneas
@@ -40,10 +40,47 @@ async def obter_coordenadas_aleatorias(session):
             return None
 
 
+
 def gerar_horario_pedido():
-    """Gera um horário aleatório para o dia 2024-06-01."""
+    """Gera um horário aleatório para o dia 2024-06-01 com possibilidade de cair nos horários de pico."""
     base_date = datetime(2024, 6, 1)
-    return (base_date + timedelta(seconds=random.randint(0, 86399))).isoformat()
+
+    # Definir os intervalos de pico (7:00-8:00, 12:00-13:00, 17:30-18:30)
+    intervalos_pico = [
+        {"inicio": "07:00:00", "fim": "08:00:00"},
+        {"inicio": "12:00:00", "fim": "13:00:00"},
+        {"inicio": "17:30:00", "fim": "18:30:00"}
+    ]
+
+    # Probabilidade de gerar um horário no intervalo de pico (exemplo: 50%)
+    chance_pico = 0.15  # 50% de chance de cair no horário de pico
+
+    # Decide aleatoriamente se o horário será dentro de um intervalo de pico
+    if random.random() < chance_pico:
+        # Escolher aleatoriamente um intervalo de pico
+        intervalo_escolhido = random.choice(intervalos_pico)
+
+        # Converter os horários de início e fim para objetos datetime
+        inicio_intervalo = datetime.strptime(f"{base_date.date()} {intervalo_escolhido['inicio']}", "%Y-%m-%d %H:%M:%S")
+        fim_intervalo = datetime.strptime(f"{base_date.date()} {intervalo_escolhido['fim']}", "%Y-%m-%d %H:%M:%S")
+
+        # Calcular a diferença entre o início e o fim do intervalo
+        delta = fim_intervalo - inicio_intervalo
+
+        # Gerar um horário aleatório dentro do intervalo de pico
+        segundos_aleatorios = random.randint(0, int(delta.total_seconds()))
+        horario_aleatorio = inicio_intervalo + timedelta(seconds=segundos_aleatorios)
+    else:
+        # Gerar horário aleatório durante o dia
+        # Intervalo completo do dia (00:00:00 até 23:59:59)
+        inicio_dia = datetime.strptime(f"{base_date.date()} 00:00:00", "%Y-%m-%d %H:%M:%S")
+        fim_dia = datetime.strptime(f"{base_date.date()} 23:59:59", "%Y-%m-%d %H:%M:%S")
+
+        delta = fim_dia - inicio_dia
+        segundos_aleatorios = random.randint(0, int(delta.total_seconds()))
+        horario_aleatorio = inicio_dia + timedelta(seconds=segundos_aleatorios)
+
+    return horario_aleatorio.isoformat()
 
 
 async def solicitar_corrida(session, id_cliente):

@@ -1,17 +1,17 @@
 from datetime import datetime
 
-from fastapi import APIRouter, Depends, HTTPException, status
-from pydantic import BaseModel
-from sqlalchemy.future import select
-from sqlalchemy.ext.asyncio import AsyncSession
-
 from corridas.models.CorridaModel import CorridaModel
 from corridas.services.tracar_rota import calcular_rota_mais_curta
-from corridas.services.valor_corrida import calcular_valor_base, calcular_preco_corrida, calcular_preco_km
+from fastapi import APIRouter, Depends, HTTPException, status
 from motoristas.models.MotoristaModel import MotoristaModel
+from pydantic import BaseModel
 from shared.dependencies import get_db
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.future import select
+from sqlalchemy.orm import joinedload
 
 router = APIRouter(prefix="/corridas", tags=["Corridas"])
+
 
 # Modelo para receber as taxas e valores finais no request
 class TaxasAtualizadas(BaseModel):
@@ -21,9 +21,11 @@ class TaxasAtualizadas(BaseModel):
     taxa_excesso_corridas: float = 0.0
     taxa_limpeza: float = 0.0
     taxa_cancelamento: float = 0.0
-    preco_km: float  # Preço por quilômetro definido no sistema
-    valor_motorista: float  # Valor destinado ao motorista
-    preco_total: float  # Preço total já calculado externamente
+    preco_km: float
+    valor_motorista: float
+    preco_total: float
+    nivel_taxa: int
+
 
 # Modelos Pydantic para requisições e respostas
 class Endereco(BaseModel):
@@ -80,7 +82,6 @@ class CorridaResponse(BaseModel):
     id_cliente: int
     distancia_km: float
     cordenadas_rota: str
-    preco_parcial: float
 
     class Config:
         from_attributes = True
@@ -88,10 +89,13 @@ class CorridaResponse(BaseModel):
 
 # 📌 Endpoints
 
+
 @router.get("/disponiveis", summary="Listar corridas disponíveis")
 async def listar_corridas_disponiveis(db: AsyncSession = Depends(get_db)):
     """Lista todas as corridas disponíveis no status 'solicitado'"""
-    query = select(CorridaModel).where(CorridaModel.status == "solicitado")
+
+    query = select(CorridaModel).where(CorridaModel.status == "solicitado").options(joinedload(CorridaModel.cliente))
+
     result = await db.execute(query)  # 🔄 Agora é assíncrono
     corridas_disponiveis = result.scalars().all()
 
@@ -106,8 +110,9 @@ async def listar_corridas_disponiveis(db: AsyncSession = Depends(get_db)):
                 "origem_bairro": corrida.origem_bairro,
                 "destino_rua": corrida.destino_rua,
                 "destino_bairro": corrida.destino_bairro,
-                "nome_cliente": corrida.cliente.nome,
-                "distancia_km": corrida.distancia_km
+                "nome_cliente": corrida.cliente.nome if corrida.cliente else "Cliente Desconhecido",
+                "distancia_km": corrida.distancia_km,
+                "horario_pedido": corrida.horario_pedido,
             }
             for corrida in corridas_disponiveis
         ]
@@ -155,9 +160,6 @@ async def solicitar_corrida(corrida_data: CorridaCreate, db: AsyncSession = Depe
                 detail=f"Erro nos parâmetros de coordenadas: {str(e)}"
             )
 
-        # ✅ Calcular o preço parcial da corrida
-        preco_parcial = await calcular_valor_base(distancia_km)
-
         nova_corrida = CorridaModel(
             origem_rua=origem.nome_rua,
             origem_bairro=origem.bairro,
@@ -170,7 +172,6 @@ async def solicitar_corrida(corrida_data: CorridaCreate, db: AsyncSession = Depe
             horario_pedido=corrida_data.horario_pedido,
             cordenadas_rota="|".join([f"{lat},{lon}" for lat, lon in coordenadas_rota]),
             distancia_km=distancia_km,
-            preco_parcial=preco_parcial,
             status='solicitado',
             id_cliente=id_cliente
         )
@@ -186,8 +187,8 @@ async def solicitar_corrida(corrida_data: CorridaCreate, db: AsyncSession = Depe
             detail=f"Erro ao processar a solicitação: {str(e)}"
         )
 
-
-@router.put("/finalizar_corrida/{corrida_id}", status_code=status.HTTP_200_OK, summary="Aplicar taxas e finalizar corrida")
+@router.put("/finalizar_corrida/{corrida_id}", status_code=status.HTTP_200_OK,
+            summary="Aplicar taxas e finalizar corrida")
 async def finalizar_corrida(corrida_id: int, taxas: TaxasAtualizadas, db: AsyncSession = Depends(get_db)):
     """Aplica taxas, atualiza o valor total e finaliza a corrida."""
 
@@ -208,6 +209,12 @@ async def finalizar_corrida(corrida_id: int, taxas: TaxasAtualizadas, db: AsyncS
     corrida.taxa_cancelamento = taxas.taxa_cancelamento
     corrida.preco_km = taxas.preco_km
     corrida.valor_motorista = taxas.valor_motorista
+
+    # Atualizar o nível de taxa
+    if taxas.nivel_taxa is not None:
+        corrida.nivel_taxa = taxas.nivel_taxa
+
+    # O preco_total agora será o valor recebido na requisição
     corrida.preco_total = taxas.preco_total
 
     # Atualizar status da corrida para "finalizada"
@@ -222,5 +229,6 @@ async def finalizar_corrida(corrida_id: int, taxas: TaxasAtualizadas, db: AsyncS
         "status": corrida.status,
         "preco_total": corrida.preco_total,
         "valor_motorista": corrida.valor_motorista,
-        "taxas_aplicadas": taxas.dict()
+        "nivel_taxa": corrida.nivel_taxa,
+        "id_motorista": corrida.id_motorista
     }

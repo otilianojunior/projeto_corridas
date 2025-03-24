@@ -11,7 +11,7 @@ allembic.ini
 
 # Ignorar diretórios de cache do Python
 cache/
-__pycache__/
+__pycache__
 **/__pycache__/
 
 # Ignorar arquivos HTML da pasta 'data'

@@ -5,8 +5,8 @@ from faker import Faker
 
 # Configuração da API
 API_URL = "http://127.0.0.1:8000"
-NUM_MOTORISTAS = 30
-NUM_CLIENTES = 100
+NUM_MOTORISTAS = 1000
+NUM_CLIENTES = 5000
 
 fake = Faker("pt_BR")
 

@@ -1,53 +1,82 @@
 import pandas as pd
-import os
-import glob
 
-def tratar_colunas(df):
-    # Padroniza nomes de colunas
-    df.columns = [col.strip().lower().replace(" ", "_") for col in df.columns]
 
-    # Remover colunas indesejadas (mesmo que tenham variações de nome)
-    colunas_para_remover = [
-        "emissões_no_escapamento",
-        "poluentes_gás_efeito_estufa_consumo_energético_(mj/km)",
-        "classificação_pbe",
-        "selo_conpet_de_eficiência_energética",
-        "página"
-    ]
-    df = df[[col for col in df.columns if col not in colunas_para_remover]]
+def tratar_arquivo_modelo_I(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
+    # Carrega o arquivo
+    df = pd.read_csv(caminho_entrada)
 
-    # Remover linhas completamente vazias
-    df.dropna(how="all", inplace=True)
+    # Remove linhas vazias
+    df = df.dropna(how='all')
 
-    # Corrigir duplicação da coluna categoria (manter a da esquerda)
-    categorias = [col for col in df.columns if col.startswith("categoria")]
-    if len(categorias) > 1:
-        col_a_manter = categorias[0]
-        colunas_a_excluir = categorias[1:]
-        df.drop(columns=colunas_a_excluir, inplace=True)
+    # Remove linhas com cabeçalhos repetidos
+    df = df[~df['marca'].isin(['Marca(?)'])]
 
-    # Converter colunas numéricas quando possível
-    for col in df.columns:
-        df[col] = pd.to_numeric(df[col], errors='ignore')
+    # Corrige a coluna 'categoria' com valores da última coluna, se necessário
+    df['categoria'] = df['categoria'].fillna(df['Unnamed: 14'])
 
-    # Limpar caracteres como \ e -
-    df.replace(r"[\\\-]", "", regex=True, inplace=True)
+    # Remove coluna desnecessária
+    df = df.drop(columns=['Unnamed: 14'])
+
+    # Remove linhas com dados essenciais ausentes
+    colunas_essenciais = ['marca', 'modelo', 'motor', 'versao']
+    for coluna in colunas_essenciais:
+        df = df[df[coluna].notna()]
+
+    # Resetar índice
+    df = df.reset_index(drop=True)
+
+    # Salvar, se necessário
+    if caminho_saida:
+        df.to_csv(caminho_saida, index=False)
 
     return df
 
-# Caminho onde estão os CSVs gerados
-caminho_csvs = "./"
-arquivos = glob.glob(os.path.join(caminho_csvs, "tabela_PBEV_*.csv"))
 
-dfs = []
-for arq in arquivos:
-    df = pd.read_csv(arq)
-    df = tratar_colunas(df)
-    dfs.append(df)
+import pandas as pd
 
-# Unificar todos os CSVs tratados
-df_total = pd.concat(dfs, ignore_index=True)
 
-# Exportar CSV final tratado
-df_total.to_csv("dados_tratados_PBEV.csv", index=False)
-print("✅ Arquivo final tratado salvo como: dados_tratados_PBEV.csv")
+def tratar_arquivo_modelo_II(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
+    """
+    Lê, trata e retorna um DataFrame limpo para arquivos com estrutura modelo II (ex: PBEV 2017).
+
+    Parâmetros:
+    - caminho_entrada: str -> Caminho do arquivo CSV original.
+    - caminho_saida: str -> Caminho do arquivo CSV tratado (opcional).
+
+    Retorna:
+    - pd.DataFrame com os dados tratados.
+    """
+    # Carregar o arquivo
+    df = pd.read_csv(caminho_entrada)
+
+    # Remover linhas totalmente vazias
+    df = df.dropna(how='all')
+
+    # Remover linhas com títulos desnecessários
+    palavras_chave = [
+        'Marca', 'Modelo', 'Versão', 'Motor', 'Transmissão',
+        'Velocidades', 'Ar', 'Direção', 'Combustível',
+        'Cidade', 'Estrada', 'Gasolina', 'Diesel'
+    ]
+    filtro = ~df.apply(lambda row: any(str(cell).strip().startswith(tuple(palavras_chave)) for cell in row), axis=1)
+    df = df[filtro]
+
+    # Remover linhas com valores ausentes nas colunas essenciais
+    colunas_essenciais = ['marca', 'modelo', 'motor', 'versao']
+    for coluna in colunas_essenciais:
+        df = df[df[coluna].notna()]
+
+    # Resetar índice
+    df = df.reset_index(drop=True)
+
+    # Salvar, se for desejado
+    if caminho_saida:
+        df.to_csv(caminho_saida, index=False)
+
+    return df
+
+
+if __name__ == '__main__':
+    tratar_arquivo_modelo_I("tabela_PBEV_2015.csv", "tabela_PBEV_2015_tratada.csv")
+    tratar_arquivo_modelo_I("tabela_PBEV_2016.csv", "tabela_PBEV_2016_tratada.csv")
+    tratar_arquivo_modelo_II("tabela_PBEV_2017.csv", "tabela_PBEV_2017_tratada.csv")

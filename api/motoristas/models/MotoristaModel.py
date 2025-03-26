@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from shared.database import Base
 
@@ -14,3 +14,7 @@ class MotoristaModel(Base):
 
     # Relacionamento com CorridaModel
     corridas = relationship("CorridaModel", back_populates="motorista")
+
+    # Relacionamento com CarroModel (motorista tem um carro)
+    id_carro = Column(Integer, ForeignKey("tb_carro.id"), nullable=False)
+    carro = relationship("CarroModel", back_populates="motoristas")

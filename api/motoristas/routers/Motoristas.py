@@ -17,6 +17,7 @@ class MotoristaCreate(BaseModel):
     telefone: str
     cpf: str
     status: str
+    id_carro: int
 
 
 @router.get("/listar/", summary="Listar Motoristas")
@@ -30,7 +31,6 @@ async def listar_motoristas(db: AsyncSession = Depends(get_db)):
         return {"mensagem": "Nenhum motorista cadastrado."}
 
     return [{"id": m.id, "nome": m.nome, "cpf": m.cpf, "telefone": m.telefone, "email": m.email, "status": m.status} for m in motoristas]
-
 
 @router.post("/", status_code=status.HTTP_201_CREATED, summary="Criar Motorista")
 async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends(get_db)):
@@ -52,6 +52,15 @@ async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends
             detail="Motorista com CPF, telefone ou email já cadastrado."
         )
 
+    # Verificar se o carro com o id fornecido existe
+    carro_query = select(CarroModel).where(CarroModel.id == motorista.id_carro)
+    carro_result = await db.execute(carro_query)
+    carro = carro_result.scalars().first()
+
+    if not carro:
+        raise HTTPException(status_code=400, detail="Carro não encontrado.")
+
+    # Criar novo motorista e associá-lo ao carro
     novo_motorista = MotoristaModel(
         nome=motorista.nome,
         email=motorista.email,
@@ -60,10 +69,15 @@ async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends
         status="disponivel"
     )
 
+    # Adicionar o motorista ao banco de dados
     try:
         db.add(novo_motorista)
         await db.commit()  # 🔄 Agora é assíncrono
         await db.refresh(novo_motorista)  # 🔄 Agora é assíncrono
+
+        # Associar o motorista ao carro
+        carro.motoristas.append(novo_motorista)
+        await db.commit()
 
         return {"status": "OK", "motorista": {
             "id": novo_motorista.id,
@@ -71,7 +85,12 @@ async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends
             "email": novo_motorista.email,
             "telefone": novo_motorista.telefone,
             "cpf": novo_motorista.cpf,
-            "status": novo_motorista.status
+            "status": novo_motorista.status,
+            "carro": {
+                "id": carro.id,
+                "marca": carro.marca,
+                "modelo": carro.modelo
+            }
         }}
     except IntegrityError:
         await db.rollback()

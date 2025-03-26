@@ -146,7 +146,7 @@ def unir_tabelas_tratadas(arquivos_csv: list, caminho_saida: str = "dados_tratad
     return df_final
 
 
-def limpar_e_padronizar_dados(caminho_entrada: str, caminho_saida: str = "dados_tratados_limpos.csv") -> pd.DataFrame:
+def limpar_e_padronizar_dados(caminho_entrada: str, caminho_saida: str = "dados_tratados.csv") -> pd.DataFrame:
     df = pd.read_csv(caminho_entrada)
 
     # 1. Remover linhas com combustivel "E", "Elétrico" ou "ELÉTRICO"
@@ -220,5 +220,5 @@ if __name__ == '__main__':
         func(entrada, saida)
         arquivos_tratados.append(saida)
 
-    unir_tabelas_tratadas(arquivos_tratados, "dados_tratados.csv")
-    limpar_e_padronizar_dados("dados_tratados.csv")
+    unir_tabelas_tratadas(arquivos_tratados, "tabela_PBEV_unida.csv")
+    limpar_e_padronizar_dados("tabela_PBEV_unida.csv")

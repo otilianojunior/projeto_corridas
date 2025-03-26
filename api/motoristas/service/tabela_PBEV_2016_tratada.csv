@@ -1,5 +1,7 @@
 categoria,marca,modelo,motor,versao,transmissao,ar_cond,direcao,combustivel,km_etanol_cidade,km_etanol_estrada,km_gasolina_cidade,km_gasolina_estrada,ano
 "MICRO
+COMPACTO",CHERY,New QQ,1.0­12V,"QQ 1,0",M­5,S,H,G,\,\,"12,3","13,8",2016
+"MICRO
 COMPACTO",CHERY,New QQ,1.0­12V,"QQ 1,0 Act",M­5,S,H,G,\,\,"12,3","13,8",2016
 "MICRO
 COMPACTO",CHERY,New QQ (2017),1.0­12V,Look,M­5,S,H,G,\,\,"11,9","13,1",2016

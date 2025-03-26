@@ -1,4 +1,4 @@
-categoria,marca,modelo,motor,versao,transmissao,ar_cond,direcao,combustivel,km_etanol_cidade,km_etanol_estrada,km_gasolina_cidade,km_gasolina_estrada,ano
+categoria,marca,modelo,versao,motor,transmissao,ar_cond,direcao,combustivel,km_etanol_cidade,km_etanol_estrada,km_gasolina_cidade,km_gasolina_estrada,ano
 Sub Compacto,CAOA CHERY,NEW QQ,"1.0 LOOK / 1.0 LOOK PLUS / 1.0
 SMILE / 1.0 SMILE PLUS / 1.0 ACT /
 1.0 ACT PLUS",1.0 - 12V,M-5,S,H,F,"8,9","9,9","12,9","14,4",2019

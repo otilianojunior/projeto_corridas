@@ -1,4 +1,4 @@
-categoria,marca,modelo,motor,versao,transmissao,ar_cond,direcao,combustivel,km_etanol_cidade,km_etanol_estrada,km_gasolina_cidade,km_gasolina_estrada,ano
+categoria,marca,modelo,versao,motor,transmissao,ar_cond,direcao,combustivel,km_etanol_cidade,km_etanol_estrada,km_gasolina_cidade,km_gasolina_estrada,ano
 "Micro
 Compacto",KIA,PICANTO,EX4/LX4 1.0 MT FF,1.0 - 12V,M-5,S,E,F,"8,2","10,0","11,7","14,3",2017
 "Micro

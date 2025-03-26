@@ -1,14 +1,14 @@
-categoria,marca,modelo,versao,motor,transmissao,ar_cond,direcao,combustivel,km_etanol_cidade,km_etanol_estrada,km_gasolina_cidade,km_gasolina_estrada,ano
+categoria,marca,modelo,motor,versao,transmissao,ar_cond,direcao,combustivel,km_etanol_cidade,km_etanol_estrada,km_gasolina_cidade,km_gasolina_estrada,ano
 "Micro
 Compacto",VW,up!,"take /
 move",1.0-12V,M-5,S,E,F,"9,6","10,6","14,2","15,3",2018
 "Micro
-Compacto",VW,up!,move (I-Motion),1.0-12V,MTA-5,S,E,F,"9,4","10,6",14,"15,8",2018
+Compacto",VW,up!,move (I-Motion),1.0-12V,MTA-5,S,E,F,"9,4","10,6","14,0","15,8",2018
 "Micro
-Compacto",VW,up! TSI,"move (Rodas aro 14"")",1.0-12V,M-5,S,E,F,10,"11,5","14,3","16,3",2018
+Compacto",VW,up! TSI,"move (Rodas aro 14"")",1.0-12V,M-5,S,E,F,"10,0","11,5","14,3","16,3",2018
 "Micro
 Compacto",VW,up! TSI,"move (Rodas aro 15"")
-/ pepper",1.0-12V,M-5,S,E,F,"9,6","11,1","14,1",16,2018
+/ pepper",1.0-12V,M-5,S,E,F,"9,6","11,1","14,1","16,0",2018
 "Micro
 Compacto",VW,up! TSI,cross,1.0-12V,M-5,S,E,F,"9,5","10,4","13,7","14,7",2018
 "Micro
@@ -16,11 +16,11 @@ Compacto",CHERY,NEW QQ,"1.0 LOOK / 1.0 LOOK PLUS / 1.0
 SMILE / 1.0 SMILE PLUS / 1.0 ACT /
 1.0 ACT PLUS",1.0 - 12V,M-5,S,H,F,"8,9","9,9","12,9","14,4",2018
 "Micro
-Compacto",FIAT,500,Cult,1.4-8V,M-5,S,E,F,8,9,"11,4",13,2018
+Compacto",FIAT,500,Cult,1.4-8V,M-5,S,E,F,"8,0","9,0","11,4","13,0",2018
 "Micro
 Compacto",FIAT,Mobi,DRIVE,1.0-6V,M-5,S,E,F,"9,6","11,3","13,7","16,1",2018
 "Micro
-Compacto",FIAT,Mobi,DRIVE GSR,1.0-6V,MTA-5,S,E,F,"9,8","11,1",14,"15,9",2018
+Compacto",FIAT,Mobi,DRIVE GSR,1.0-6V,MTA-5,S,E,F,"9,8","11,1","14,0","15,9",2018
 "Micro
 Compacto",FIAT,Mobi,EASY,1.0-8V,M-5,N,H,F,"9,2","10,2","13,5","15,2",2018
 "Micro
@@ -28,17 +28,17 @@ Compacto",FIAT,Mobi,LIKE,1.0-8V,M-5,S,H,F,"8,8","9,9","12,7","14,3",2018
 "Micro
 Compacto",FIAT,Mobi,WAY,1.0-8V,M-5,S,H,F,"8,7","9,7","12,6","14,2",2018
 "Micro
-Compacto",Renault,Twizy,Intense,Elétrico,AUT,N,M,G,\,\,"45,8",43,2018
+Compacto",Renault,Twizy,Intense,Elétrico,AUT,N,M,G,\,\,"45,8","43,0",2018
 "Micro
-Compacto",KIA,PICANTO,EX5/ LX5 1.0 FF MT,1.0 - 12V,M-5,S,E,F,"7,9","10,3","11,6",15,2018
+Compacto",KIA,PICANTO,EX5/ LX5 1.0 FF MT,1.0 - 12V,M-5,S,E,F,"7,9","10,3","11,6","15,0",2018
 "Micro
 Compacto",KIA,PICANTO,EX5/ LX5 1.0 FF AT,1.0 - 12V,A-4,S,E,F,"8,1","9,9","11,4","14,7",2018
 Sub Compacto,FIAT,Novo Uno,Drive,1.0-6V,M-5,S,E,F,"9,1","10,6","13,2","15,2",2018
-Sub Compacto,FIAT,Novo Uno,Sporting,1.3-8V,M-5,S,E,F,"9,3",11,13,15,2018
+Sub Compacto,FIAT,Novo Uno,Sporting,1.3-8V,M-5,S,E,F,"9,3","11,0","13,0","15,0",2018
 Sub Compacto,FIAT,Novo Uno,Sporting GSR,1.3-8V,MTA-5,S,E,F,"9,2","10,5","13,2","14,4",2018
 Sub Compacto,FIAT,Novo Uno,WAY,1.0-6V,M-5,S,E,F,"9,1","10,6","13,2","15,2",2018
-Sub Compacto,FIAT,NOVO UNO,ATTRACTIVE,1.0-8V,M-5,S,H,F,8,"9,4","11,6","13,4",2018
-Compacto,NISSAN,NEW MARCH,10 Conforto / 10 S / 10 SV,1.0 - 12V,M-5,S,E,F,"8,8","10,5","12,9",15,2018
+Sub Compacto,FIAT,NOVO UNO,ATTRACTIVE,1.0-8V,M-5,S,H,F,"8,0","9,4","11,6","13,4",2018
+Compacto,NISSAN,NEW MARCH,10 Conforto / 10 S / 10 SV,1.0 - 12V,M-5,S,E,F,"8,8","10,5","12,9","15,0",2018
 Compacto,NISSAN,NEW MARCH,16 S / 16 SV / 16 SL,1.6 - 16V,M-5,S,E,F,"8,5","9,9","12,6","14,4",2018
 Compacto,NISSAN,NEW MARCH,16 SV / 16 SL,1.6 - 16V,CVT,S,E,F,"7,8","9,8","11,7","14,5",2018
 Compacto,TOYOTA,"ETIOS
@@ -55,20 +55,20 @@ Compacto,HONDA,Fit,DX / LX,1.5-16V,M-5,S,E,F,"8,3","9,5","11,6","13,6",2018
 Compacto,HONDA,Fit,DX / LX / EX / EXL / PERSONAL,1.5-16V,CVT,S,E,F,"8,3","9,9","12,3","14,1",2018
 Compacto,VW,Gol,"Trendline
 / City",1.0-12V,M-5,S,H,F,"8,9","10,4","13,1","14,9",2018
-Compacto,VW,Gol,Track,1.0-12V,M-5,S,H,F,"8,6",10,"12,7","14,3",2018
-Compacto,VW,Gol,Trendline,1.6-8V,M-5,S,H,F,"7,9","9,7","11,5",14,2018
+Compacto,VW,Gol,Track,1.0-12V,M-5,S,H,F,"8,6","10,0","12,7","14,3",2018
+Compacto,VW,Gol,Trendline,1.6-8V,M-5,S,H,F,"7,9","9,7","11,5","14,0",2018
 Compacto,VW,Gol,Comfortline,1.6-8V,M-5,S,H,F,"7,8","9,5","11,1","13,6",2018
 Compacto,VW,Gol,Comfortline (I-Motion),1.6-8V,MTA-5,S,H,F,"7,7","9,2","11,1","13,1",2018
 Compacto,VW,Gol (2019),(Rodas aro 14),1.0-12V,M-5,S,H,F,"9,1","10,1","13,3","14,4",2018
-Compacto,VW,Gol (2019),(Rodas aro 15),1.0-12V,M-5,S,H,F,9,"9,9","12,9","14,2",2018
+Compacto,VW,Gol (2019),(Rodas aro 15),1.0-12V,M-5,S,H,F,"9,0","9,9","12,9","14,2",2018
 Compacto,VW,Fox,Connect,1.6-8V,M-5,S,E,F,"7,8","9,7","11,6","13,9",2018
-Compacto,VW,Fox,Connect (I-Motion),1.6-8V,MTA-5,S,E,F,"7,8",9,"11,2","12,7",2018
+Compacto,VW,Fox,Connect (I-Motion),1.6-8V,MTA-5,S,E,F,"7,8","9,0","11,2","12,7",2018
 Compacto,VW,Fox,Xtreme,1.6-8V,M-5,S,E,F,"7,7","9,2","11,3","13,3",2018
 Compacto,Peugeot,208,GT,"1.6 THP
-16V Flex",M-6,S,E,F,"8,2","9,5",12,"13,8",2018
-Compacto,Peugeot,208,Sport MT / Griffe MT,1.6 16v,M-5,S,E,F,"8,5",10,"12,3",14,2018
+16V Flex",M-6,S,E,F,"8,2","9,5","12,0","13,8",2018
+Compacto,Peugeot,208,Sport MT / Griffe MT,1.6 16v,M-5,S,E,F,"8,5","10,0","12,3","14,0",2018
 Compacto,Peugeot,208,"GRIFFE EAT6 / ALLURE EAT6 /
-UBTECH EAT6",1.6 16v,A-6,S,E,F,"7,7","9,3",11,"13,2",2018
+UBTECH EAT6",1.6 16v,A-6,S,E,F,"7,7","9,3","11,0","13,2",2018
 Compacto,Peugeot,208,Active MT / Act Pack MT / Allure MT,1.2,M-5,S,E,F,"9,6","10,7","13,9","15,5",2018
 Compacto,Citroën,DS3,Sport Chic,"1.6 THP
 16v",M-6,S,E,G,\,\,"10,9","14,2",2018
@@ -78,19 +78,19 @@ Compacto,Citroën,C3,"Origine / Attraction / Tendance / M
 Style / Urban Tech",1.2,M-5,S,E,F,"9,3","10,1","13,2","14,8",2018
 Compacto,FIAT,ARGO,Drive,1.0-6V,M-5,S,E,F,"9,9","10,7","14,2","15,1",2018
 Compacto,FIAT,ARGO,Drive,1.3-8V,M-5,S,E,F,"9,2","10,2","12,9","14,3",2018
-Compacto,FIAT,ARGO,Drive GSR,1.3-8V,MTA-5,S,E,F,"8,9",10,"12,7","14,4",2018
-Compacto,FIAT,ARGO,HGT,1.8-16V,A-6,S,E,F,"6,9","9,1",10,"12,8",2018
+Compacto,FIAT,ARGO,Drive GSR,1.3-8V,MTA-5,S,E,F,"8,9","10,0","12,7","14,4",2018
+Compacto,FIAT,ARGO,HGT,1.8-16V,A-6,S,E,F,"6,9","9,1","10,0","12,8",2018
 Compacto,FIAT,ARGO,HGT,1.8-16V,M-5,S,E,F,"7,8","9,2","11,4","13,3",2018
 Compacto,FIAT,ARGO,Precision,1.8-16V,A-6,S,E,F,"7,1","9,5","10,1","13,2",2018
-Compacto,FIAT,ARGO,Precision,1.8-16V,M-5,S,E,F,8,"9,6","11,5","13,8",2018
+Compacto,FIAT,ARGO,Precision,1.8-16V,M-5,S,E,F,"8,0","9,6","11,5","13,8",2018
 Compacto,FIAT,Novo Palio,Attractive,1.0-8V,M-5,S,H,F,"7,9","9,3","11,2","13,2",2018
-Compacto,FIAT,ARGO (2019),1.0,1.0-6V,M-5,S,E,F,"9,1","10,4",13,"14,7",2018
-Compacto,FIAT,ARGO (2019),Drive,1.0-6V,M-5,S,E,F,"9,1","10,4",13,"14,7",2018
-Compacto,FIAT,ARGO (2019),Drive,1.3-8V,M-5,S,E,F,"8,7",10,"12,6","14,7",2018
+Compacto,FIAT,ARGO (2019),1.0,1.0-6V,M-5,S,E,F,"9,1","10,4","13,0","14,7",2018
+Compacto,FIAT,ARGO (2019),Drive,1.0-6V,M-5,S,E,F,"9,1","10,4","13,0","14,7",2018
+Compacto,FIAT,ARGO (2019),Drive,1.3-8V,M-5,S,E,F,"8,7","10,0","12,6","14,7",2018
 Compacto,Renault,Sandero,Authentique / Expression,1.0-12V,M5,S,E-H,F,"9,5","9,6","14,2","14,1",2018
 Compacto,Renault,Sandero,Dynamique / Expression,1.6-16V,M5,S,E-H,F,"8,6","9,2","12,8","13,4",2018
 Compacto,Renault,Sandero,Expression / Dynamique,1.6-16V,MTA-5,S,E-H,F,"8,1","8,8","11,8","12,8",2018
-Compacto,Renault,Sandero,GT Line,1.6-16V,M5,S,E-H,F,"8,4","8,9","12,5",13,2018
+Compacto,Renault,Sandero,GT Line,1.6-16V,M5,S,E-H,F,"8,4","8,9","12,5","13,0",2018
 Compacto,Renault,Sandero RS,2.0 RS,2.0-16V,M6,S,E-H,F,"6,9","7,7","9,9","11,1",2018
 Compacto,MINI,Cooper,-,1.5 - 12v,A-6,S,E-H,G,\,\,"11,6","13,9",2018
 Compacto,MINI,Cooper,5P,1.5 - 12v,A-6,S,E-H,G,\,\,"11,1","13,7",2018
@@ -105,13 +105,13 @@ Compacto,CHEVROLET,ONIX (MY18),1.4AT LT / 1.4AT LTZ,1.4L - 8V,A-6,S,E,F,"7,9","9
 Compacto,CHEVROLET,ONIX (MY18),1.4MT ACT,1.4L - 8V,M-6,S,E,F,"8,3","9,4","12,4","13,8",2018
 Compacto,CHEVROLET,ONIX (MY18),1.4AT ACT,1.4L - 8V,A-6,S,E,F,"7,7","8,6","11,2","12,6",2018
 Compacto,CHEVROLET,ONIX (MY19),1.4AT ACT,1.4L - 8V,A-6,S,E,F,"7,6","8,7","11,1","12,7",2018
-Compacto,CHEVROLET,ONIX (MY19),1.4AT LTZ,1.4L - 8V,A-6,S,E,F,"7,9","9,7","11,6",14,2018
+Compacto,CHEVROLET,ONIX (MY19),1.4AT LTZ,1.4L - 8V,A-6,S,E,F,"7,9","9,7","11,6","14,0",2018
 Compacto,CHEVROLET,ONIX (MY19),1.4MT ACT,1.4L - 8V,M-6,S,E,F,"8,3","9,4","12,2","13,7",2018
 Compacto,CHEVROLET,ONIX (MY19),1.4MT EFF,1.4L - 8V,M-6,S,E,F,"8,5","10,3","12,4","14,9",2018
 Compacto,CHEVROLET,ONIX (MY19),1.0MT LS,1.0L - 8V,M-6,S,E,F,"8,8","10,5","12,9","15,3",2018
 Compacto,CHEVROLET,ONIX (MY19),1.0MT LT,1.0L - 8V,M-6,S,E,F,"8,8","10,5","12,9","15,3",2018
-Compacto,CHEVROLET,ONIX (MY19),1.4AT ADV,1.4L - 8V,A-6,S,E,F,"7,9","9,7","11,6",14,2018
-Compacto,CHEVROLET,ONIX (MY19),1.4AT LT,1.4L - 8V,A-6,S,E,F,"7,9","9,7","11,6",14,2018
+Compacto,CHEVROLET,ONIX (MY19),1.4AT ADV,1.4L - 8V,A-6,S,E,F,"7,9","9,7","11,6","14,0",2018
+Compacto,CHEVROLET,ONIX (MY19),1.4AT LT,1.4L - 8V,A-6,S,E,F,"7,9","9,7","11,6","14,0",2018
 Compacto,CHEVROLET,ONIX (MY19),1.4MT LT,1.4L - 8V,M-6,S,E,F,"8,5","10,3","12,4","14,9",2018
 Compacto,CHEVROLET,ONIX (MY19),1.4MT LTZ,1.4L - 8V,M-6,S,E,F,"8,5","10,3","12,4","14,9",2018
 Compacto,CHEVROLET,"ONIX JOY
@@ -122,21 +122,21 @@ Compacto,FORD,KA (5 Portas),SE / SE Plus / SEL,1.5-16V,M-5,S,E,F,"8,1","9,6","11
 Compacto,FORD,"New Fiesta
 Hatch",SEL GTDI,1.0-12V,DCT-6,S,E,G,\,\,"12,1","14,9",2018
 Compacto,FORD,"New Fiesta
-Hatch",SE / SEL,1.6-16V,M-5,S,E,F,"8,2",10,12,"14,6",2018
+Hatch",SE / SEL,1.6-16V,M-5,S,E,F,"8,2","10,0","12,0","14,6",2018
 Compacto,FORD,"New Fiesta
 Hatch",SE / SEL / Titanium,1.6-16V,DCT-6,S,E,F,"7,8","10,3","11,2","14,9",2018
 Compacto,FORD,KA hatch (2019),S / SE / SE Plus,1.0-12V,M-5,S,E,F,"9,2","10,7","13,4","15,5",2018
-Compacto,FORD,KA hatch (2019),SE / SE Plus,1.5-12V,M-5,S,E,F,"8,4","10,3","12,5",15,2018
-Compacto,FORD,KA hatch (2019),SE / SE Plus,1.5-12V,A-6,S,E,F,"7,8","10,1",11,"14,2",2018
-Compacto,FORD,KA hatch (2019),Titanium,1.5-12V,A-6,S,E,F,"7,6","10,1","10,9",14,2018
+Compacto,FORD,KA hatch (2019),SE / SE Plus,1.5-12V,M-5,S,E,F,"8,4","10,3","12,5","15,0",2018
+Compacto,FORD,KA hatch (2019),SE / SE Plus,1.5-12V,A-6,S,E,F,"7,8","10,1","11,0","14,2",2018
+Compacto,FORD,KA hatch (2019),Titanium,1.5-12V,A-6,S,E,F,"7,6","10,1","10,9","14,0",2018
 Compacto,Hyundai,HB20,Comfort / Plus / Style,1.0-12V,M-5,S,H,F,"8,5","9,9","12,5","14,1",2018
 Compacto,Hyundai,HB20,Plus / Style,1.6-16V,M-6,S,H,F,"8,1","9,9","11,6","13,8",2018
 Compacto,Hyundai,HB20,Plus / Style,1.6-16V,A-6,S,H,F,"7,1","9,4","9,9","12,5",2018
 Compacto,Hyundai,HB20,Plus / Style,"1.0-12V
 Turbo",M-6,S,H,F,"8,2","10,1","11,6","14,3",2018
 Médio,NISSAN,NEW VERSA,10 Conforto / 10 S,1.0 - 12V,M-5,S,E,F,"8,8","10,5","12,9","15,3",2018
-Médio,NISSAN,NEW VERSA,16 S / 16 SV / 16 SL,1.6 - 16V,M-5,S,E,F,"8,4",10,"12,6","14,4",2018
-Médio,NISSAN,NEW VERSA,16 SV / 16 SL / 16 UNIQUE,1.6 - 16V,CVT,S,E,F,"7,8",10,"11,6","14,1",2018
+Médio,NISSAN,NEW VERSA,16 S / 16 SV / 16 SL,1.6 - 16V,M-5,S,E,F,"8,4","10,0","12,6","14,4",2018
+Médio,NISSAN,NEW VERSA,16 SV / 16 SL / 16 UNIQUE,1.6 - 16V,CVT,S,E,F,"7,8","10,0","11,6","14,1",2018
 Médio,VOLVO,V40,"CC T4 Kinetic / CC T4 Momentum /
 T4 Ccountry",2.0 -16V,A-6,S,E,G,\,\,"10,4","12,6",2018
 Médio,VOLVO,V40,"2.0 T5 Comfort / 2.0 T5 Dynamic /
@@ -150,34 +150,34 @@ T4 Momentum / T4 R-Design /
 T4 Summum",2.0 - 16V,DCT-6,S,E,G,\,\,"10,1","12,9",2018
 Médio,SSANGYONG,XLV,G DLX / G STD,1.6-16V,A-6,S,E,G,\,\,"9,1","11,8",2018
 Médio,SSANGYONG,TIVOLI,G DLX / G STD,1.6-16V,A-6,S,E,G,\,\,"8,9","11,7",2018
-Médio,TOYOTA,ETIOS SEDÃ,X / XS / XLS / XPLUS / PLATINUM,1.5-16V,M-6,S,E,F,"8,5","10,3","12,5",15,2018
+Médio,TOYOTA,ETIOS SEDÃ,X / XS / XLS / XPLUS / PLATINUM,1.5-16V,M-6,S,E,F,"8,5","10,3","12,5","15,0",2018
 Médio,TOYOTA,ETIOS SEDÃ,X / XS / XLS / XPLUS / PLATINUM,1.5-16V,A-4,S,E,F,"8,4","10,4","12,2","14,9",2018
-Médio,TOYOTA,YARIS,XL,1.3 - 16V,M-6,S,E,F,"8,4",10,"12,1","14,2",2018
-Médio,TOYOTA,YARIS,XL / XPLUS,1.3 - 16V,CVT,S,E,F,9,"9,9","13,1","14,2",2018
+Médio,TOYOTA,YARIS,XL,1.3 - 16V,M-6,S,E,F,"8,4","10,0","12,1","14,2",2018
+Médio,TOYOTA,YARIS,XL / XPLUS,1.3 - 16V,CVT,S,E,F,"9,0","9,9","13,1","14,2",2018
 Médio,TOYOTA,YARIS,XS,1.5 - 16V,M-6,S,E,F,"8,2","9,8","11,8","14,1",2018
-Médio,TOYOTA,YARIS,XS / XLS,1.5 - 16V,CVT,S,E,F,"8,8",10,"12,6","13,8",2018
-Médio,TOYOTA,YARIS,XS / XL,1.5 - 16V,M-6,S,E,F,"8,3","10,1",12,"14,6",2018
-Médio,TOYOTA,YARIS,XS / XL / XLS / XPLUS,1.5 - 16V,CVT,S,E,F,9,"10,6",13,"14,5",2018
-Médio,TOYOTA,PRIUS,NGA / NGA Top,1.8-16V,CVT,S,E,G,\,\,"18,9",17,2018
+Médio,TOYOTA,YARIS,XS / XLS,1.5 - 16V,CVT,S,E,F,"8,8","10,0","12,6","13,8",2018
+Médio,TOYOTA,YARIS,XS / XL,1.5 - 16V,M-6,S,E,F,"8,3","10,1","12,0","14,6",2018
+Médio,TOYOTA,YARIS,XS / XL / XLS / XPLUS,1.5 - 16V,CVT,S,E,F,"9,0","10,6","13,0","14,5",2018
+Médio,TOYOTA,PRIUS,NGA / NGA Top,1.8-16V,CVT,S,E,G,\,\,"18,9","17,0",2018
 Médio,LEXUS,CT200H,CT200H / F SPORT,1.8-16V,CVT,S,E,G,\,\,"15,7","14,2",2018
 Médio,HONDA,City,DX,1.5-16V,M-5,S,E,F,"8,6","10,3","12,4","14,6",2018
 Médio,HONDA,City,DX / LX / EX / EXL / PERSONAL,1.5-16V,CVT,S,E,F,"8,5","10,3","12,3","14,5",2018
 Médio,VW,Voyage,"Trendline
 / City",1.0-12V,M-5,S,H,F,"8,9","10,7","13,1","15,3",2018
 Médio,VW,Voyage,Comfortline,1.0-12V,M-5,S,H,F,"8,6","10,2","12,7","14,8",2018
-Médio,VW,Voyage,Trendline,1.6-8V,M-5,S,H,F,"7,9",10,"11,5","14,5",2018
+Médio,VW,Voyage,Trendline,1.6-8V,M-5,S,H,F,"7,9","10,0","11,5","14,5",2018
 Médio,VW,Voyage,"Comfortline
-/ Highline",1.6-8V,M-5,S,H,F,8,"9,9","11,6","14,1",2018
+/ Highline",1.6-8V,M-5,S,H,F,"8,0","9,9","11,6","14,1",2018
 Médio,VW,Voyage,"Comfortline (I-Motion)
 / Highline (I-Motion)",1.6-8V,MTA-5,S,H,F,"7,8","9,5","11,2","13,5",2018
 Médio,VW,Voyage (2019),(Rodas aro 14),1.0-12V,M-5,S,H,F,"8,9","10,6","13,4","15,6",2018
 Médio,VW,Voyage (2019),(Rodas aro 15),1.0-12V,M-5,S,H,F,"9,1","10,6","13,1","15,1",2018
-Médio,VW,GOLF,COMFORTLINE,1.0-12V,A-6,S,E,F,8,"10,2","11,4","14,2",2018
+Médio,VW,GOLF,COMFORTLINE,1.0-12V,A-6,S,E,F,"8,0","10,2","11,4","14,2",2018
 Médio,VW,GOLF,HIGHLINE,1.4-16V,A-6,S,E,F,"7,5","9,4","11,4","13,8",2018
 Médio,VW,GOLF,GTI,2.0-16V,DCT-6,S,E,G,\,\,"9,9","12,2",2018
 Médio,VW,Spacefox,Trendline,1.6-8V,M-5,S,E,F,"7,8","9,5","11,1","13,6",2018
 Médio,VW,Spacefox,Trendline (I-Motion),1.6-8V,MTA-5,S,E,F,"7,7","9,3","11,1","13,2",2018
-Médio,VW,Polo,"200 TSI Comfortline (R15"")",1.0-12V,A-6,S,E,F,8,"9,8","11,6","14,1",2018
+Médio,VW,Polo,"200 TSI Comfortline (R15"")",1.0-12V,A-6,S,E,F,"8,0","9,8","11,6","14,1",2018
 Médio,VW,Polo,"200 TSI Comfortline (R16"") /
 200 TSI Highline",1.0-12V,A-6,S,E,F,"7,9","9,5","11,4","13,9",2018
 Médio,VW,Virtus,"200 TSI Comfortline /
@@ -196,38 +196,40 @@ Médio,AUDI,A3 Sportback,Attraction / Ambiente,1.4-16V,DCT-7,S,E,G,\,\,"11,6","1
 Médio,AUDI,RS3 Sportback,-,2.5-20V,DCT-7,S,E,G,\,\,"7,6","9,9",2018
 Médio,FIAT,Cronos,DRIVE,1.3 – 8V,M-5,S,E,F,"8,5","10,3","12,4","14,8",2018
 Médio,FIAT,Cronos,DRIVE GSR,1.3 – 8V,MTA-5,S,E,F,"8,8","10,4","12,7","14,8",2018
-Médio,FIAT,Cronos,Precision,1.8 - 16V,M-5,S,E,F,8,"9,6","11,6","13,8",2018
+Médio,FIAT,Cronos,Precision,1.8 - 16V,M-5,S,E,F,"8,0","9,6","11,6","13,8",2018
 Médio,FIAT,Cronos,Precision,1.8 - 16V,A-6,S,E,F,"7,2","9,6","10,3","13,3",2018
-Médio,FIAT,Dobló,Essence,1.8-16V,M-5,S,H,F,"6,4",7,"9,3","10,2",2018
+Médio,FIAT,Dobló,Essence,1.8-16V,M-5,S,H,F,"6,4","7,0","9,3","10,2",2018
 Médio,FIAT,Grand Siena,1.6 / Essence Dualogic,1.6-16V,MTA-5,S,H,F,"6,6","8,1","9,6","11,8",2018
 Médio,FIAT,Grand Siena,Attractive,1.0-8V,M-5,S,H,F,"7,9","9,5","11,2","13,6",2018
 Médio,FIAT,Grand Siena,Attractive,1.4-8V,M-5,S,H,F,"7,7","9,4","11,1","13,5",2018
 Médio,FIAT,Grand Siena,1.6 / Essence,1.6-16V,M-5,S,H,F,"6,8","8,4","9,9","12,1",2018
-Médio,FIAT,Weekend,Attractive,1.4-8V,M-5,S,H,F,"7,1","8,3","10,4",12,2018
+Médio,FIAT,Weekend,Attractive,1.4-8V,M-5,S,H,F,"7,1","8,3","10,4","12,0",2018
 Médio,FIAT,CRONOS,DRIVE,1.8 - 16V,A-6,S,E,F,"7,2","9,6","10,3","13,3",2018
 Médio,Renault,Logan,Dynamique / Expression,1.6-16V,MTA-5,S,E-H,F,"7,9","9,1","11,8","13,4",2018
-Médio,Renault,Logan,Authentique / Expression,1.0-12V,M5,S,E-H,F,"9,4","10,2",14,"14,9",2018
-Médio,Renault,Logan,Dynamique / Expression,1.6-16V,M5,S,E-H,F,"8,7","9,7",13,"14,1",2018
+Médio,Renault,Logan,Authentique / Expression,1.0-12V,M5,S,E-H,F,"9,4","10,2","14,0","14,9",2018
+Médio,Renault,Logan,Dynamique / Expression,1.6-16V,M5,S,E-H,F,"8,7","9,7","13,0","14,1",2018
 Médio,Renault,ZOE NR,Intens / Life,Elétrico,AUT,S,E,G,\,\,"32,2","26,7",2018
 Médio,Renault,ZOE LR,Intens LR / Life LR / ULT LR,Elétrico,AUT,S,E,G,\,\,"31,9","26,9",2018
 Médio,BMW,220i,CAT ActiveFlex,2.0 - 16v,A-8,S,E-H,F,"7,1","8,7","10,5","12,9",2018
 Médio,MINI,Cooper,S Clubman,2.0 - 16v,A-8,S,E-H,G,\,\,"10,5","12,6",2018
-Médio,BMW,M140i,-,3.0 - 24v,A-8,S,E-H,G,\,\,"9,4",12,2018
-Médio,MINI,Countryman,Cooper S,2.0 - 16v,A-8,S,E-H,G,\,\,"10,2",12,2018
+Médio,BMW,M140i,-,3.0 - 24v,A-8,S,E-H,G,\,\,"9,4","12,0",2018
+Médio,MINI,Countryman,Cooper S,2.0 - 16v,A-8,S,E-H,G,\,\,"10,2","12,0",2018
 Médio,MINI,Countryman,Cooper S ALL4,2.0 - 16v,A-8,S,E-H,G,\,\,"9,4","11,5",2018
 Médio,MINI,Countryman,Cooper,1.5 - 12v,A-6,S,E-H,G,\,\,"10,1","10,6",2018
 Médio,MINI,Countryman,JCW,2.0 - 16v,A-8,S,E-H,G,\,\,"9,3","11,3",2018
+Médio,BMW,120i,Gasolina,2.0 - 16v,A-8,S,E-H,G,\,\,"10,6","12,9",2018
+Médio,BMW,125i,Gasolina,2.0 - 16v,A-8,S,E-H,G,\,\,"10,2","12,2",2018
 Médio,BMW,i3,REX 94Ah,0.65 - 8v,A-1,S,E-H,G,\,\,"24,9","21,5",2018
 Médio,CHEVROLET,"COBALT
 (MY18)",1.4 LT/LTZ,1.4L-8V,M-6,S,E,F,"8,5","10,4","12,5","15,1",2018
 Médio,CHEVROLET,"COBALT
 (MY18)",1.8M LTZ / 1.8M LT,1.8L-8V,M-6,S,E,F,"8,3","10,4","12,1","15,1",2018
 Médio,CHEVROLET,"COBALT
-(MY18)",18A LTZ/18 A ELI / 1.8 A LT,1.8L-8V,A-6,S,E,F,"7,6",10,"11,1","14,4",2018
+(MY18)",18A LTZ/18 A ELI / 1.8 A LT,1.8L-8V,A-6,S,E,F,"7,6","10,0","11,1","14,4",2018
 Médio,CHEVROLET,SPIN (MY18),1.8L MT LT (5L),1.8L-8V,M-6,S,E,F,"8,1","9,4","11,8","13,7",2018
 Médio,CHEVROLET,SPIN (MY18),1.8L MT LS E (5L),1.8L-8V,M-6,S,E,F,"8,1","9,4","11,8","13,7",2018
 Médio,CHEVROLET,SPIN (MY18),1.8L AT LT ADV (5L),1.8L-8V,A-6,S,E,F,"7,5","9,2","10,9","13,1",2018
-Médio,CHEVROLET,SPIN (MY18),1.8L AT ACT (5L),1.8L-8V,A-6,S,E,F,"6,9","8,4","10,1",12,2018
+Médio,CHEVROLET,SPIN (MY18),1.8L AT ACT (5L),1.8L-8V,A-6,S,E,F,"6,9","8,4","10,1","12,0",2018
 Médio,CHEVROLET,"PRISMA
 (MY18)",1.0MT LT,1.0L - 8V,M-6,S,E,F,"8,9","10,8","13,1","15,8",2018
 Médio,CHEVROLET,"PRISMA
@@ -241,33 +243,33 @@ Médio,CHEVROLET,"COBALT
 Médio,CHEVROLET,"COBALT
 (MY19)",1.4 LTZ,1.4L-8V,M-6,S,E,F,"8,5","10,4","12,5","15,1",2018
 Médio,CHEVROLET,"COBALT
-(MY19)",1.8 AT ELITE,1.8L-8V,A-6,S,E,F,"7,6",10,"11,1","14,4",2018
+(MY19)",1.8 AT ELITE,1.8L-8V,A-6,S,E,F,"7,6","10,0","11,1","14,4",2018
 Médio,CHEVROLET,"COBALT
-(MY19)",1.8 AT LT,1.8L-8V,A-6,S,E,F,"7,6",10,"11,1","14,4",2018
+(MY19)",1.8 AT LT,1.8L-8V,A-6,S,E,F,"7,6","10,0","11,1","14,4",2018
 Médio,CHEVROLET,"COBALT
-(MY19)",1.8 AT LTZ,1.8L-8V,A-6,S,E,F,"7,6",10,"11,1","14,4",2018
+(MY19)",1.8 AT LTZ,1.8L-8V,A-6,S,E,F,"7,6","10,0","11,1","14,4",2018
 Médio,CHEVROLET,"COBALT
 (MY19)",1.8M LT,1.8L-8V,M-6,S,E,F,"8,3","10,4","12,1","15,1",2018
 Médio,CHEVROLET,"COBALT
 (MY19)",1.8M LTZ,1.8L-8V,M-6,S,E,F,"8,3","10,4","12,1","15,1",2018
 Médio,CHEVROLET,"PRISMA
-(MY19)",1.4AT LTZ,1.4L - 8V,A-6,S,E,F,8,10,"11,7","14,6",2018
+(MY19)",1.4AT LTZ,1.4L - 8V,A-6,S,E,F,"8,0","10,0","11,7","14,6",2018
 Médio,CHEVROLET,"PRISMA
 (MY19)",1.4MT LTZ,1.4L - 8V,M-6,S,E,F,"8,5","10,5","12,5","15,3",2018
 Médio,CHEVROLET,"PRISMA
 (MY19)",1.0MT LT,1.0L - 8V,M-6,S,E,F,"8,9","10,8","13,1","15,8",2018
 Médio,CHEVROLET,"PRISMA
-(MY19)",1.4AT ADV,1.4L - 8V,A-6,S,E,F,8,10,"11,7","14,6",2018
+(MY19)",1.4AT ADV,1.4L - 8V,A-6,S,E,F,"8,0","10,0","11,7","14,6",2018
 Médio,CHEVROLET,"PRISMA
-(MY19)",1.4AT LT,1.4L - 8V,A-6,S,E,F,8,10,"11,7","14,6",2018
+(MY19)",1.4AT LT,1.4L - 8V,A-6,S,E,F,"8,0","10,0","11,7","14,6",2018
 Médio,CHEVROLET,"PRISMA
 (MY19)",1.4MT LT,1.4L - 8V,M-6,S,E,F,"8,5","10,5","12,5","15,3",2018
 Médio,CHEVROLET,"PRISMA JOY
 (MY19)",10MT JOYE,1.0L - 8V,M-6,S,E,F,"8,7","10,9","12,9","15,6",2018
-Médio,CHEVROLET,Spin (MY19),1.8L MT LT (5L),1.8L-8V,M-6,S,E,F,8,"9,3","11,7","13,6",2018
-Médio,CHEVROLET,Spin (MY19),1.8L MT LS E (5L),1.8L-8V,M-6,S,E,F,8,"9,3","11,7","13,6",2018
-Médio,CHEVROLET,Spin (MY19),AT ACT (5L),1.8L-8V,A-6,S,E,F,7,"8,3","10,3",12,2018
-Médio,CHEVROLET,Spin (MY19),AT LT (5L),1.8L-8V,A-6,S,E,F,"7,3",9,"10,7","13,1",2018
+Médio,CHEVROLET,Spin (MY19),1.8L MT LT (5L),1.8L-8V,M-6,S,E,F,"8,0","9,3","11,7","13,6",2018
+Médio,CHEVROLET,Spin (MY19),1.8L MT LS E (5L),1.8L-8V,M-6,S,E,F,"8,0","9,3","11,7","13,6",2018
+Médio,CHEVROLET,Spin (MY19),AT ACT (5L),1.8L-8V,A-6,S,E,F,"7,0","8,3","10,3","12,0",2018
+Médio,CHEVROLET,Spin (MY19),AT LT (5L),1.8L-8V,A-6,S,E,F,"7,3","9,0","10,7","13,1",2018
 Médio,FORD,KA+ (4 Portas),SE / SEL,1.0-12V,M-5,S,E,F,"9,3","10,7","13,2","15,3",2018
 Médio,FORD,KA+ (4 Portas),SE / SEL / Advance,1.5-16V,M-5,S,E,F,"8,1","9,6","11,7","13,8",2018
 Médio,FORD,"New Fiesta
@@ -277,17 +279,17 @@ Sedan",SEL / Titanium,1.6-16V,DCT-6,S,E,F,"7,6","9,8","11,1","14,3",2018
 Médio,FORD,"KA sedan
 (2019)",SE / SE Plus,1.0-12V,M-5,S,E,F,"9,2","10,7","13,4","15,5",2018
 Médio,FORD,"KA sedan
-(2019)",SE / SE Plus / SEL,1.5-12V,M-5,S,E,F,"8,4","10,3","12,5",15,2018
+(2019)",SE / SE Plus / SEL,1.5-12V,M-5,S,E,F,"8,4","10,3","12,5","15,0",2018
 Médio,FORD,"KA sedan
-(2019)",SE / SE Plus,1.5-12V,A-6,S,E,F,"7,8","10,1",11,"14,2",2018
+(2019)",SE / SE Plus,1.5-12V,A-6,S,E,F,"7,8","10,1","11,0","14,2",2018
 Médio,FORD,"KA sedan
-(2019)",Titanium,1.5-12V,A-6,S,E,F,"7,6","10,1","10,9",14,2018
-Médio,Hyundai,HB20S,Plus / Style,1.0-12V,M-5,S,H,F,"8,5","9,8",12,14,2018
-Médio,Hyundai,HB20S,Plus / Style,1.6-16V,M-6,S,H,F,"8,1","9,8","11,5",14,2018
-Médio,Hyundai,HB20S,Plus / Style / Premium,1.6-16V,A-6,S,H,F,7,"9,3","10,2","12,9",2018
+(2019)",Titanium,1.5-12V,A-6,S,E,F,"7,6","10,1","10,9","14,0",2018
+Médio,Hyundai,HB20S,Plus / Style,1.0-12V,M-5,S,H,F,"8,5","9,8","12,0","14,0",2018
+Médio,Hyundai,HB20S,Plus / Style,1.6-16V,M-6,S,H,F,"8,1","9,8","11,5","14,0",2018
+Médio,Hyundai,HB20S,Plus / Style / Premium,1.6-16V,A-6,S,H,F,"7,0","9,3","10,2","12,9",2018
 Médio,Hyundai,HB20S,Plus / Style,"1.0-12V
 Turbo",M-6,S,H,F,"8,4","10,5","11,9","15,2",2018
-Médio,KIA,RIO,EX / LX 1.6 FF MT HB,1.6 - 16V,M-6,S,E,F,7,"9,4","10,2","13,8",2018
+Médio,KIA,RIO,EX / LX 1.6 FF MT HB,1.6 - 16V,M-6,S,E,F,"7,0","9,4","10,2","13,8",2018
 Médio,KIA,RIO,EX / LX 1.6 FF AT HB,1.6 - 16V,A-6,S,E,F,"7,2","9,3","10,5","13,4",2018
 Médio,Mercedes-Benz,A250,SPORT,2.0 - 16V,DCT 7,S,E,G,\,\,"10,1","12,4",2018
 Grande,NISSAN,NOVO SENTRA,20 S / 20 SV / 20 SL,2.0 - 16V,CVT,S,E,F,"6,7","9,1","9,9","12,6",2018
@@ -295,25 +297,25 @@ Grande,Mitsubishi,Lancer,HL,2.0-16V,CVT,S,H,G,\,\,"10,2","11,7",2018
 Grande,TOYOTA,COROLLA,GLI,1.8-16V,M-6,S,E,F,"7,3","9,1","10,7","13,2",2018
 Grande,TOYOTA,COROLLA,GLI,1.8-16V,CVT,S,E,F,"7,8","9,2","11,4","13,2",2018
 Grande,TOYOTA,COROLLA,ALTIS / XEI / XRS,2.0-16V,CVT,S,E,F,"7,2","8,8","10,6","12,6",2018
-Grande,LEXUS,IS200,LUXURY / F SPORT,2.0-16V,A-8,S,E,G,\,\,8,"10,6",2018
+Grande,LEXUS,IS200,LUXURY / F SPORT,2.0-16V,A-8,S,E,G,\,\,"8,0","10,6",2018
 Grande,HONDA,Civic,SPORT,2.0-16V,M-6,S,E,F,"7,1","9,2","10,2","13,4",2018
-Grande,HONDA,Civic,EX / EX-L / SPORT,2.0-16V,CVT,S,E,F,"7,2","8,9","10,5",13,2018
+Grande,HONDA,Civic,EX / EX-L / SPORT,2.0-16V,CVT,S,E,F,"7,2","8,9","10,5","13,0",2018
 Grande,HONDA,Civic,TOURING,1.5T-16V,CVT,S,E,G,\,\,"11,8","14,4",2018
 Grande,HONDA,CIVIC,Coupe Si,1.5T-16V,M-6,S,E,G,\,\,"11,2","13,7",2018
 Grande,VW,"GOLF
 VARIANT","COMFORTLINE /
-HIGHLINE",1.4-16V,A-6,S,E,F,"7,5","8,8","11,1",13,2018
+HIGHLINE",1.4-16V,A-6,S,E,F,"7,5","8,8","11,1","13,0",2018
 Grande,VW,Jetta,Comfortline,1.4-16V,A-6,S,E,G,\,\,"10,4","13,8",2018
 Grande,VW,Jetta,Highline,2.0-16V,DCT-6,S,E,G,\,\,"9,4","12,5",2018
 Grande,VOLKSWAGEN,JETTA,"250 TSI/
 COMFORTLINE 250 TSI /
-R-LINE 250 TSI",1.4-16V,A-6,S,E,F,"7,4","9,6","10,9",14,2018
+R-LINE 250 TSI",1.4-16V,A-6,S,E,F,"7,4","9,6","10,9","14,0",2018
 Grande,Citroën,C4 Lounge,THP LIVE / THP FEEL / THP SHINE,"1.6 THP
-16v Flex",A-6,S,E-H,F,"7,1",9,"10,5","13,2",2018
+16v Flex",A-6,S,E-H,F,"7,1","9,0","10,5","13,2",2018
 Grande,Citroën,C4 Lounge,THP LIVE,"1.6 THP
-16v Flex",M-6,S,E-H,F,"7,3",9,"10,9","13,2",2018
+16v Flex",M-6,S,E-H,F,"7,3","9,0","10,9","13,2",2018
 Grande,Citroën,DS5,Be Chic / So Chic,"1.6 THP
-16v",A-6,S,E-H,G,\,\,9,"11,8",2018
+16v",A-6,S,E-H,G,\,\,"9,0","11,8",2018
 Grande,Citroën,C4 Picasso,Seduction / Intensive,"1.6 THP
 16v",A-6,S,E-H,G,\,\,"9,9","12,2",2018
 Grande,AUDI,A3 Cabriolet,-,2.0-16V,DCT-7,S,E,G,\,\,"9,9","11,6",2018
@@ -331,38 +333,38 @@ Grande,Renault,Fluence,Dynamique Plus,2.0-16V,CVT,S,E,F,"6,1","7,4","8,7","10,7"
 Grande,BMW,320i,ActiveFlex,2.0 - 16v,A-8,S,E-H,F,"6,7","8,8","9,8","12,8",2018
 Grande,BMW,328i,ActiveFlex,2.0 - 16v,A-8,S,E-H,F,"6,4","8,5","9,8","12,5",2018
 Grande,BMW,430i,Gran Coupe,2.0 - 16v,A-8,S,E-H,G,\,\,"9,9","12,2",2018
-Grande,BMW,X1,sDrive20i ActiveFlex,2.0 - 16v,A-8,S,E-H,F,"6,9","8,4",10,"12,1",2018
+Grande,BMW,X1,sDrive20i ActiveFlex,2.0 - 16v,A-8,S,E-H,F,"6,9","8,4","10,0","12,1",2018
 Grande,BMW,X1,xDrive25i ActiveFlex,2.0 - 16v,A-8,S,E-H,F,"6,6","8,1","9,4","11,4",2018
 Grande,BMW,X2,sDrive 20i,2.0 - 16v,DCT-7,S,E-H,G,\,\,"10,2","12,4",2018
 Grande,BMW,X2,sDrive 18i Active Flex,1.5 - 12v,A-6,S,E-H,F,"7,4","8,7","10,6","12,5",2018
 Grande,BMW,X2,sDrive 20i Active Flex,2.0 - 16v,A-8,S,E-H,F,"6,8","8,8","10,4","13,1",2018
 Grande,CHEVROLET,"Novo Cruze
 (MY18)","LT NB AT
-LTZ NB AT",1.4T-16V,A-6,S,E,F,"7,6","9,6","11,2",14,2018
+LTZ NB AT",1.4T-16V,A-6,S,E,F,"7,6","9,6","11,2","14,0",2018
 Grande,CHEVROLET,"Novo Cruze
 Sport6 (MY18)","LT HB AT
 LTZ HB AT",1 . 4 T - 1 6 V,A - 6,S,E,F,"7,6","9,3","11,3","13,6",2018
 Grande,CHEVROLET,"Novo Cruze
-Sport6 (MY18)",LT HB MT,1.4T-16V,M-6,S,E,F,8,"9,2","11,7","13,5",2018
+Sport6 (MY18)",LT HB MT,1.4T-16V,M-6,S,E,F,"8,0","9,2","11,7","13,5",2018
 Grande,CHEVROLET,Cruze (MY19),LT NB AT,1.4T-16V,A-6,S,E,F,"7,8","10,1","11,5","14,6",2018
 Grande,CHEVROLET,Cruze (MY19),LTZ NB AT,1.4T-16V,A-6,S,E,F,"7,6","9,9","11,1","14,2",2018
 Grande,CHEVROLET,"Novo Cruze
 Sport6 (MY19)",LT HB AT,1.4T-16V,A-6,S,E,F,"7,6","9,3","11,3","13,6",2018
 Grande,CHEVROLET,"Novo Cruze
-Sport6 (MY19)",LT HB MT,1.4T-16V,M-6,S,E,F,8,"9,2","11,7","13,5",2018
+Sport6 (MY19)",LT HB MT,1.4T-16V,M-6,S,E,F,"8,0","9,2","11,7","13,5",2018
 Grande,CHEVROLET,"Novo Cruze
 Sport6 (MY19)",LTZ HB AT,1.4T-16V,A-6,S,E,F,"7,6","9,3","11,3","13,6",2018
-Grande,FORD,Focus Hatch,SE,1.6-16V,DCT-6,S,H,F,"7,2",9,"10,4",13,2018
+Grande,FORD,Focus Hatch,SE,1.6-16V,DCT-6,S,H,F,"7,2","9,0","10,4","13,0",2018
 Grande,FORD,Focus Hatch,SE,1.6-16V,M-5,S,E,F,"7,5","9,3","10,8","13,6",2018
-Grande,FORD,Focus Hatch,SE / Titanium,2.0-16V,DCT-6,S,E,F,"6,7","9,2","9,7",13,2018
-Grande,FORD,Focus Fastback,SE / Titanium,2.0-16V,DCT-6,S,E,F,"6,7","9,2","9,7",13,2018
+Grande,FORD,Focus Hatch,SE / Titanium,2.0-16V,DCT-6,S,E,F,"6,7","9,2","9,7","13,0",2018
+Grande,FORD,Focus Fastback,SE / Titanium,2.0-16V,DCT-6,S,E,F,"6,7","9,2","9,7","13,0",2018
 Grande,SUBARU,WRX,2.0,2.0-16V,CVT,S,E,G,\,\,"8,5","11,1",2018
 Grande,SUBARU,WRX,STI 2.5,2.5-16V,M-6,S,E,G,\,\,"6,2","7,9",2018
 Grande,HYUNDAI,ELANTRA,B,2.0-16V,A-6,S,E,F,"6,9","9,7","10,1","13,8",2018
-Grande,KIA,CERATO,FF EX4/ LX4/ SX4 ATNB,1.6 - 16V,A-6,S,E,F,7,"9,3","10,1","12,6",2018
-Grande,Mercedes-Benz,GLA200 FF,STYLE,1.6 - 16V,DCT 7,S,E,F,"6,9","8,8",10,"12,7",2018
+Grande,KIA,CERATO,FF EX4/ LX4/ SX4 ATNB,1.6 - 16V,A-6,S,E,F,"7,0","9,3","10,1","12,6",2018
+Grande,Mercedes-Benz,GLA200 FF,STYLE,1.6 - 16V,DCT 7,S,E,F,"6,9","8,8","10,0","12,7",2018
 Extra Grande,VOLVO,"S60 (aro18"")","T4 Inscription / T4 Kinetic /
-T4 Momentum / T4 R-Design",2.0 - 16V,DCT-6,S,E,G,\,\,"9,4",12,2018
+T4 Momentum / T4 R-Design",2.0 - 16V,DCT-6,S,E,G,\,\,"9,4","12,0",2018
 Extra Grande,VOLVO,"S60 (aro17"")","T4 Inscription / T4 Kinetic /
 T4 Momentum",2.0-16V,DCT-6,S,E,G,\,\,"10,5","12,6",2018
 Extra Grande,VOLVO,"V60 (aro 18"")","T4 Inscription / T4 Kinetic /
@@ -377,7 +379,7 @@ T8 R-DESIGN",2.0-16V,A-8,S,E,G,\,\,"21,3","25,6",2018
 Extra Grande,JAGUAR,XF,"P250 PRESTIGE / P250 R-SPORT /
 P250 PURE",2.0 - 16V,A-8,S,E,G,\,\,"8,5","11,9",2018
 Extra Grande,JAGUAR,XF,"2.0T PRESTIG/ 2.0T PURE TC/ 2.0T
-PURE/ 2.0T R-SPORT",2.0 - 16 V,A- 8,S,E,G,\,\,"8,3",11,2018
+PURE/ 2.0T R-SPORT",2.0 - 16 V,A- 8,S,E,G,\,\,"8,3","11,0",2018
 Extra Grande,JAGUAR,XF,V6 PORTFOLIO,3.0 - 24 V,A- 8,S,E,G,\,\,"6,7","10,1",2018
 Extra Grande,JAGUAR,XF,V6 380CV S,3.0 - 24 V,A- 8,S,E,G,\,\,"6,6","10,1",2018
 Extra Grande,JAGUAR,XE,P250 R-SPORT / P250 PURE,2.0 - 16V,A-8,S,E,G,\,\,"8,5","11,2",2018
@@ -389,19 +391,19 @@ Extra Grande,TOYOTA,CAMRY,XLE,3.5-24V,A-8,S,E,G,\,\,"8,3","11,5",2018
 Extra Grande,TOYOTA,RAV4 4X2,2.0 4X2,2.0-16V,CVT,S,E,G,\,\,"9,5","10,9",2018
 Extra Grande,TOYOTA,RAV4 4X4,4X4,2.0-16V,CVT,S,E,G,\,\,"9,5","10,9",2018
 Extra Grande,TOYOTA,RAV4 4X4,4X4,2.5-16V,A-6,S,E,G,\,\,"8,7","10,9",2018
-Extra Grande,LEXUS,ES350,-,3.5-24V,A-6,S,E,G,\,\,"7,7",11,2018
-Extra Grande,LEXUS,NX200 4X4,LUXURY / F SPORT,2.0-16V,A-6,S,E,G,\,\,"8,3",10,2018
+Extra Grande,LEXUS,ES350,-,3.5-24V,A-6,S,E,G,\,\,"7,7","11,0",2018
+Extra Grande,LEXUS,NX200 4X4,LUXURY / F SPORT,2.0-16V,A-6,S,E,G,\,\,"8,3","10,0",2018
 Extra Grande,LEXUS,LS460,-,4.6-32V,A-8,S,E,G,\,\,"5,9","9,2",2018
-Extra Grande,LEXUS,NX300 4X4,LUXURY / F SPORT / DYNAMIC,2.0-16V,A-6,S,E,G,\,\,"8,3",10,2018
+Extra Grande,LEXUS,NX300 4X4,LUXURY / F SPORT / DYNAMIC,2.0-16V,A-6,S,E,G,\,\,"8,3","10,0",2018
 Extra Grande,LEXUS,NX300H,LUXURY / F-SPORT / DYNAMIC,2.5 - 16V,CVT,S,E,G,\,\,"12,6","11,1",2018
 Extra Grande,VW,Passat,Comfortline / Highline,2.0-16V,DCT-6,S,E,G,\,\,"10,4","12,9",2018
 Extra Grande,VW,Tiguan,"Allspace 250 TSI /
-Allspace Comfortline 250 TSI",1.4-16V,DCT-6,S,E,F,"6,8",8,"10,1","11,7",2018
+Allspace Comfortline 250 TSI",1.4-16V,DCT-6,S,E,F,"6,8","8,0","10,1","11,7",2018
 Extra Grande,VW,Tiguan,Allspace R-Line 350 TSI,2.0-16V,DCT-7,S,E,G,\,\,"8,3","9,6",2018
 Extra Grande,Peugeot,408,"Griffe THP A / Allure THP A / GRIFFE
 RG / BUSINESS","1.6 THP
-16V Flex",A-6,S,E-H,F,"7,3","9,2","10,6",13,2018
-Extra Grande,AUDI,A4 Sedan,Attraction / Ambiente,2.0-16V,DCT-7,S,E,G,\,\,11,"14,3",2018
+16V Flex",A-6,S,E-H,F,"7,3","9,2","10,6","13,0",2018
+Extra Grande,AUDI,A4 Sedan,Attraction / Ambiente,2.0-16V,DCT-7,S,E,G,\,\,"11,0","14,3",2018
 Extra Grande,AUDI,A4 Sedan,Ambition,2.0-16V,DCT-7,S,E,G,\,\,"9,7","12,3",2018
 Extra Grande,AUDI,A4 Avant,Attraction / Ambiente,2.0-16V,DCT-7,S,E,G,\,\,"10,5","13,5",2018
 Extra Grande,AUDI,A6 Sedan,Ambiente,2.0-16V,DCT-7,S,E-H,G,\,\,"8,3","9,5",2018
@@ -411,11 +413,11 @@ Extra Grande,AUDI,A7 Sportback,Ambiente,3.0-24V,DCT-7,S,E-H,G,\,\,"7,7","10,6",2
 Extra Grande,AUDI,A8 Sedan,-,4.0-32V,A-8,S,E,G,\,\,"7,1","10,3",2018
 Extra Grande,AUDI,A8 Longo,-,6.3-48V,A-8,S,E,G,\,\,"5,5","7,4",2018
 Extra Grande,AUDI,S8 Plus,Sedan,4.0-32V,A - 8,S,E,G,\,\,"6,4","8,8",2018
-Extra Grande,AUDI,SQ5,-,3.0-24V,A-8,S,E,G,\,\,7,"9,7",2018
-Extra Grande,AUDI,A5 Sportback,Attraction / Ambiente,2.0-16V,DCT-7,S,E,G,\,\,11,"13,4",2018
+Extra Grande,AUDI,SQ5,-,3.0-24V,A-8,S,E,G,\,\,"7,0","9,7",2018
+Extra Grande,AUDI,A5 Sportback,Attraction / Ambiente,2.0-16V,DCT-7,S,E,G,\,\,"11,0","13,4",2018
 Extra Grande,AUDI,A5 Sportback,Ambition,2.0-16V,DCT-7,S,E,G,\,\,"9,3","11,9",2018
 Extra Grande,AUDI,Q5,Blindada,2.0-16V,DCT-7,S,E,G,\,\,"7,8","9,2",2018
-Extra Grande,DODGE,Durango,Limited,3.6-24V,A-8,S,H,G,\,\,7,"9,4",2018
+Extra Grande,DODGE,Durango,Limited,3.6-24V,A-8,S,H,G,\,\,"7,0","9,4",2018
 Extra Grande,CHRYSLER,300C,300C,3.6-24V,A-8,S,H,G,\,\,"7,1","10,1",2018
 Extra Grande,BMW,M3,Sedan,3.0 - 24v,DCT-7,S,E-H,G,\,\,"7,2","9,2",2018
 Extra Grande,BMW,M6,Gran Coupe,4.4 - 32v,DCT-7,S,E-H,G,\,\,"6,2","8,3",2018
@@ -426,7 +428,7 @@ Extra Grande,BMW,M5,-,4.4 - 32v,A-8,S,E-H,G,\,\,"6,5","8,5",2018
 Extra Grande,BMW,M4,CS,3.0 - 24v,A-7,S,E-H,G,\,\,"7,4","9,2",2018
 Extra Grande,FORD,FUSION,FWD SEL / FWD Titanium,2.0-16V,A-6,S,E,G,\,\,"8,6","11,7",2018
 Extra Grande,FORD,FUSION,AWD Titanium,2.0-16V,A-6,S,E,G,\,\,"8,2","11,1",2018
-Extra Grande,FORD,FUSION,Flex SE,2.5-16V,A-6,S,E,F,6,"8,5","8,6","12,3",2018
+Extra Grande,FORD,FUSION,Flex SE,2.5-16V,A-6,S,E,F,"6,0","8,5","8,6","12,3",2018
 Extra Grande,FORD,FUSION,Hybrid,2.0-16V,eCVT,S,E,G,\,\,"16,8","15,1",2018
 Extra Grande,FORD,EDGE,AWD Titanium,3.5-24V,A-6,S,E,G,\,\,"6,7","9,5",2018
 Extra Grande,Maserati,Ghibli,Euro 6,3.0-24V,A-8,S,H,G,\,\,"6,3","9,3",2018
@@ -450,7 +452,7 @@ Extra Grande,AUDI,A6 Sedan,-,3.0-24V,DCT-7,S,E,G,\,\,"8,3","10,3",2018
 Extra Grande,AUDI,A7 Sportback,-,3.0-24V,DCT-7,S,E,G,\,\,"8,3","10,4",2018
 "Utilitário
 Esportivo
-Compacto",NISSAN,KICKS,16 S,1.6 - 16V,M-5,S,E,F,"7,8",9,"11,1",13,2018
+Compacto",NISSAN,KICKS,16 S,1.6 - 16V,M-5,S,E,F,"7,8","9,0","11,1","13,0",2018
 "Utilitário
 Esportivo
 Compacto",NISSAN,KICKS,16 S / 16 SV / 16 SL,1.6 - 16V,CVT,S,E,F,"7,7","9,4","11,4","13,7",2018
@@ -459,7 +461,7 @@ Esportivo
 Compacto",Mitsubishi,ASX,4X2,2.0-16V,CVT,S,E,F,"6,9","9,1","9,8","12,6",2018
 "Utilitário
 Esportivo
-Compacto",SUZUKI,Vitara,4ALL,1.6-16V,M-5,S,E,G,\,\,"12,2",13,2018
+Compacto",SUZUKI,Vitara,4ALL,1.6-16V,M-5,S,E,G,\,\,"12,2","13,0",2018
 "Utilitário
 Esportivo
 Compacto",SUZUKI,Vitara,4ALL,1.6-16V,A-6,S,E,G,\,\,"11,6","13,2",2018
@@ -468,31 +470,31 @@ Esportivo
 Compacto",SUZUKI,Vitara,4YOU,1.6-16V,A-6,S,E,G,\,\,"11,6","13,2",2018
 "Utilitário
 Esportivo
-Compacto",SUZUKI,Vitara,4SPORT,1.4-16V,A-6,S,E,G,\,\,12,"13,7",2018
+Compacto",SUZUKI,Vitara,4SPORT,1.4-16V,A-6,S,E,G,\,\,"12,0","13,7",2018
 "Utilitário
 Esportivo
 Compacto",SUZUKI,S-CROSS,4YOU,1.6-16V,A-6,S,E,G,\,\,"11,6","13,2",2018
 "Utilitário
 Esportivo
-Compacto",SUZUKI,S-CROSS,4STYLE,1.4-16V,A-6,S,E,G,\,\,"12,2",14,2018
+Compacto",SUZUKI,S-CROSS,4STYLE,1.4-16V,A-6,S,E,G,\,\,"12,2","14,0",2018
 "Utilitário
 Esportivo
-Compacto",JAC,T5,1.5 JETFLEX,1.5 - 16V,M-6,S,E,F,8,"9,2","11,2","13,2",2018
+Compacto",JAC,T5,1.5 JETFLEX,1.5 - 16V,M-6,S,E,F,"8,0","9,2","11,2","13,2",2018
 "Utilitário
 Esportivo
-Compacto",JAC,T5,1.5 JETFLEX CVT (MY17),1.5 - 16V,CVT,S,E,F,"7,9",8,"11,5","11,4",2018
+Compacto",JAC,T5,1.5 JETFLEX CVT (MY17),1.5 - 16V,CVT,S,E,F,"7,9","8,0","11,5","11,4",2018
 "Utilitário
 Esportivo
 Compacto",JAC,T40,1.5 JETFLEX,1.5-16V,M-5,S,E,F,"8,1","8,7","11,9","12,8",2018
 "Utilitário
 Esportivo
-Compacto",HONDA,HR-V,LX,1.8-16V,M-6,S,E,F,"6,7","8,6",10,"12,6",2018
+Compacto",HONDA,HR-V,LX,1.8-16V,M-6,S,E,F,"6,7","8,6","10,0","12,6",2018
 "Utilitário
 Esportivo
-Compacto",HONDA,HR-V,LX / EX / EXL/TOURING,1.8-16V,CVT,S,E,F,"7,7","8,6",11,"12,3",2018
+Compacto",HONDA,HR-V,LX / EX / EXL/TOURING,1.8-16V,CVT,S,E,F,"7,7","8,6","11,0","12,3",2018
 "Utilitário
 Esportivo
-Compacto",HONDA,HR-V,EX,1.8-16V,CVT,S,E,F,"7,7","8,6",11,"12,3",2018
+Compacto",HONDA,HR-V,EX,1.8-16V,CVT,S,E,F,"7,7","8,6","11,0","12,3",2018
 "Utilitário
 Esportivo
 Compacto",HONDA,WR-V,EX / EXL,1.5-16V,CVT,S,E,F,"8,1","8,8","11,7","12,4",2018
@@ -504,7 +506,7 @@ SMILE",1.5 - 16V,M-5,S,H,F,"7,7","8,8","10,9","12,3",2018
 "Utilitário
 Esportivo
 Compacto",CHERY,TIGGO 2,"1.5 AT ACT / 1.5 AT EX / 1.5 AT
-LOOK",1.5-16V,A-4,S,H,F,"6,9","8,2",10,"11,9",2018
+LOOK",1.5-16V,A-4,S,H,F,"6,9","8,2","10,0","11,9",2018
 "Utilitário
 Esportivo
 Compacto",Peugeot,2008,Allure MT / Griffe MT,1.6 16v,M-5,S,E,F,"8,3","8,9","11,6","12,9",2018
@@ -515,7 +517,7 @@ Compacto",Peugeot,2008,Griffe THP M,"1.6 THP
 "Utilitário
 Esportivo
 Compacto",Peugeot,2008,"GRIFFE EAT6 / ALLURE EAT6 /
-CROSS EAT6 / UBTECH EAT6 / Style",1.6 16v,A-6,S,E,F,"7,5","9,2","10,7",13,2018
+CROSS EAT6 / UBTECH EAT6 / Style",1.6 16v,A-6,S,E,F,"7,5","9,2","10,7","13,0",2018
 "Utilitário
 Esportivo
 Compacto",Citroën,Aircross,"M Feel / START MT / M BUSIN / LIVE
@@ -525,10 +527,10 @@ Esportivo
 Compacto",Citroën,Aircross,SHINEAT/ FEEL AT / LIVE AT,1.6 16v,A-6,S,E,F,"7,3","8,7","10,5","12,5",2018
 "Utilitário
 Esportivo
-Compacto",Citroën,C4 Cactus,Live / Feel,1.6 16V,M-5,S,E,F,"7,7","8,9",11,"12,5",2018
+Compacto",Citroën,C4 Cactus,Live / Feel,1.6 16V,M-5,S,E,F,"7,7","8,9","11,0","12,5",2018
 "Utilitário
 Esportivo
-Compacto",Citroën,C4 Cactus,Shine A / Feel A,1.6 16V,A-6,S,E,F,"7,3","9,1","10,4",13,2018
+Compacto",Citroën,C4 Cactus,Shine A / Feel A,1.6 16V,A-6,S,E,F,"7,3","9,1","10,4","13,0",2018
 "Utilitário
 Esportivo
 Compacto",Citroën,C4 Cactus,Shine T,"1.6 THP
@@ -538,7 +540,7 @@ Esportivo
 Compacto",FIAT,Dobló,Adventure,1.8-16V,M-5,S,H,F,"6,4","6,7","9,2","9,8",2018
 "Utilitário
 Esportivo
-Compacto",FIAT,Novo Uno,WAY,1.3-8V,M-5,S,E,F,"9,3",11,13,15,2018
+Compacto",FIAT,Novo Uno,WAY,1.3-8V,M-5,S,E,F,"9,3","11,0","13,0","15,0",2018
 "Utilitário
 Esportivo
 Compacto",FIAT,Novo Uno,WAY GSR,1.3-8V,MTA-5,S,E,F,"9,2","10,5","13,2","14,4",2018
@@ -553,13 +555,13 @@ Esportivo
 Compacto",JEEP,Renegade,Custom / Sport,1.8-16V,M-5,S,E,F,"7,5","8,3","10,9","12,3",2018
 "Utilitário
 Esportivo
-Compacto",JEEP,Renegade,Sport,1.8-16V,A-6,S,E,F,7,"8,5","10,1","12,1",2018
+Compacto",JEEP,Renegade,Sport,1.8-16V,A-6,S,E,F,"7,0","8,5","10,1","12,1",2018
 "Utilitário
 Esportivo
 Compacto",JEEP,Renegade,Longitude / Limited / Night Eagle,1.8-16V,A-6,S,E,F,"6,5","7,6","9,5","10,9",2018
 "Utilitário
 Esportivo
-Compacto",Renault,Captur,Zen / Intens,1.6-16V,M5,S,E-H,F,"7,6",8,"10,9","11,3",2018
+Compacto",Renault,Captur,Zen / Intens,1.6-16V,M5,S,E-H,F,"7,6","8,0","10,9","11,3",2018
 "Utilitário
 Esportivo
 Compacto",Renault,Captur,Intens,2.0-16V,A4,S,E-H,F,"6,2","7,3","8,8","10,8",2018
@@ -569,11 +571,11 @@ Compacto",Renault,Duster,Dynamique (4X2),2.0-16V,M6,S,E-H,F,"7,3","7,9","10,6","
 "Utilitário
 Esportivo
 Compacto",Renault,"Sandero
-Stepway",Stepway,1.6-16V,M5,S,E-H,F,"8,3","8,5",12,"12,1",2018
+Stepway",Stepway,1.6-16V,M5,S,E-H,F,"8,3","8,5","12,0","12,1",2018
 "Utilitário
 Esportivo
 Compacto",Renault,"Sandero
-Stepway",Stepway,1.6-16V,MTA-5,S,E-H,F,"7,7","8,3","11,5",12,2018
+Stepway",Stepway,1.6-16V,MTA-5,S,E-H,F,"7,7","8,3","11,5","12,0",2018
 "Utilitário
 Esportivo
 Compacto",Renault,Duster,"Dynamique SCE/ Expression SCE /
@@ -624,16 +626,16 @@ Esportivo
 Compacto",FORD,KA (5 Portas),Trail,1.0-12V,M-5,S,E,F,"8,8","9,9","12,5","14,3",2018
 "Utilitário
 Esportivo
-Compacto",FORD,KA (5 Portas),Trail,1.5-16V,M-5,S,E,F,"7,5",9,"10,8","13,2",2018
+Compacto",FORD,KA (5 Portas),Trail,1.5-16V,M-5,S,E,F,"7,5","9,0","10,8","13,2",2018
 "Utilitário
 Esportivo
-Compacto",FORD,EcoSport,SE / FREESTYLE,1.5-12V,M-5,S,E,F,"8,3",9,"11,6","13,1",2018
+Compacto",FORD,EcoSport,SE / FREESTYLE,1.5-12V,M-5,S,E,F,"8,3","9,0","11,6","13,1",2018
 "Utilitário
 Esportivo
 Compacto",FORD,EcoSport,SE / FREESTYLE,1.5-12V,A-6,S,E,F,"7,1","8,9","10,4","12,8",2018
 "Utilitário
 Esportivo
-Compacto",FORD,EcoSport,TITANIUM,2.0-16V,A-6,S,E,F,"6,1","8,3","8,8",12,2018
+Compacto",FORD,EcoSport,TITANIUM,2.0-16V,A-6,S,E,F,"6,1","8,3","8,8","12,0",2018
 "Utilitário
 Esportivo
 Compacto",FORD,KA (5 Portas),FREESTYLE,1.5-12V,M-5,S,E,F,"8,4","9,9","11,9","14,4",2018
@@ -642,7 +644,7 @@ Esportivo
 Compacto",FORD,KA (5 Portas),FREESTYLE,1.5-12V,A-6,S,E,F,"7,5","9,4","10,7","13,5",2018
 "Utilitário
 Esportivo
-Compacto",FORD,EcoSport,Storm 4WD,2.0-16V,A-6,S,E,F,6,8,"8,5","11,4",2018
+Compacto",FORD,EcoSport,Storm 4WD,2.0-16V,A-6,S,E,F,"6,0","8,0","8,5","11,4",2018
 "Utilitário
 Esportivo
 Compacto",FORD,EcoSport (2019),SE / FREESTYLE,1.5-12V,A-6,S,E,F,"7,1","8,6","10,3","12,6",2018
@@ -660,13 +662,13 @@ Esportivo
 Compacto",Hyundai,CRETA,Attitude / Pulse / Smart,1.6-16V,A-6,S,E,F,"7,1","8,2","10,1","11,3",2018
 "Utilitário
 Esportivo
-Compacto",Hyundai,CRETA,Pulse / Prestige / Sport,2.0-16V,A-6,S,E,F,"6,9","8,2",10,"11,4",2018
+Compacto",Hyundai,CRETA,Pulse / Prestige / Sport,2.0-16V,A-6,S,E,F,"6,9","8,2","10,0","11,4",2018
 "Utilitário
 Esportivo
-Compacto",HYUNDAI,TUCSON,GLSB,2.0-16V,A-4,S,E,F,5,"5,8","7,4","8,6",2018
+Compacto",HYUNDAI,TUCSON,GLSB,2.0-16V,A-4,S,E,F,"5,0","5,8","7,4","8,6",2018
 "Utilitário
 Esportivo
-Compacto",KIA,NEW SOUL,EX2 / LX2 1.6 FF AT,1.6 - 16V,A-6,S,E,F,"7,3",8,"10,2",11,2018
+Compacto",KIA,NEW SOUL,EX2 / LX2 1.6 FF AT,1.6 - 16V,A-6,S,E,F,"7,3","8,0","10,2","11,0",2018
 "Utilitário
 Esportivo
 Compacto",JAC,T40,1.6 DVVT CVT,1.6-16V,CVT,S,E,G,\,\,"11,6","12,1",2018
@@ -687,7 +689,7 @@ Grande",VOLVO,XC40,"T4 / T4 INSCRIPT / T4 KINETIC / T4
 MOMENTUM",2.0-16V,A-8,S,E,G,\,\,"9,5","11,9",2018
 "Utilitário
 Esportivo
-Grande",SSANGYONG,KORANDO,DLX / STD,2.2-16V,A-6,S,E,D,\,\,"9,7",12,2018
+Grande",SSANGYONG,KORANDO,DLX / STD,2.2-16V,A-6,S,E,D,\,\,"9,7","12,0",2018
 "Utilitário
 Esportivo
 Grande",TOYOTA,SW4 FLEX 4X2,SR,2.7-16V,M-5,S,E,F,"4,6","5,6","6,7","8,2",2018
@@ -728,22 +730,22 @@ Esportivo
 Grande",HYUNDAI,SANTA FÉ,V6 5 / V6 7,3.3-24V,A-6,S,E,G,\,\,"7,1","9,2",2018
 "Utilitário
 Esportivo
-Grande",HYUNDAI,iX 35,"(roda aro 18"")",2.0-16V,A-6,S,E,F,"6,9",8,"10,3","11,6",2018
+Grande",HYUNDAI,iX 35,"(roda aro 18"")",2.0-16V,A-6,S,E,F,"6,9","8,0","10,3","11,6",2018
 "Utilitário
 Esportivo
-Grande",HYUNDAI,iX 35,"GL (roda aro 18"")",2.0-16V,A-6,S,E,F,"6,9",8,"10,3","11,6",2018
+Grande",HYUNDAI,iX 35,"GL (roda aro 18"")",2.0-16V,A-6,S,E,F,"6,9","8,0","10,3","11,6",2018
 "Utilitário
 Esportivo
 Grande",HYUNDAI,iX35,"GLS (roda aro 18"")",2.0-16V,A-6,S,E,F,"6,8","7,8","10,1","11,3",2018
 "Utilitário
 Esportivo
-Grande",HYUNDAI,iX35,"(roda aro 17"")",2.0-16V,A-6,S,E,F,7,8,"10,4","11,6",2018
+Grande",HYUNDAI,iX35,"(roda aro 17"")",2.0-16V,A-6,S,E,F,"7,0","8,0","10,4","11,6",2018
 "Utilitário
 Esportivo
-Grande",HYUNDAI,iX35,"GL (roda aro 17"")",2.0-16V,A-6,S,E,F,7,8,"10,4","11,6",2018
+Grande",HYUNDAI,iX35,"GL (roda aro 17"")",2.0-16V,A-6,S,E,F,"7,0","8,0","10,4","11,6",2018
 "Utilitário
 Esportivo
-Grande",HYUNDAI,iX35,"GLS (roda aro 17"")",2.0-16V,A-6,S,E,F,7,"8,1",10,"11,5",2018
+Grande",HYUNDAI,iX35,"GLS (roda aro 17"")",2.0-16V,A-6,S,E,F,"7,0","8,1","10,0","11,5",2018
 "Utilitário
 Esportivo
 Grande",HYUNDAI,"TUCSON
@@ -762,10 +764,10 @@ Grande",HYUNDAI,"TUCSON
 TURBO","LTD (roda aro 18"")",1.6-16V,A-7,S,E,G,\,\,"10,5","12,2",2018
 "Utilitário
 Esportivo
-Grande",KIA,SPORTAGE,EX2/ LX2 FFG3,2.0 - 16V,A-6,S,E,F,6,"7,5","8,6","10,6",2018
+Grande",KIA,SPORTAGE,EX2/ LX2 FFG3,2.0 - 16V,A-6,S,E,F,"6,0","7,5","8,6","10,6",2018
 "Utilitário
 Esportivo
-Grande",KIA,SORENTO,3.5 EX4 / LX4 G25 / G27,3.5 - 24V,A-6,S,E,G,\,\,"6,7",9,2018
+Grande",KIA,SORENTO,3.5 EX4 / LX4 G25 / G27,3.5 - 24V,A-6,S,E,G,\,\,"6,7","9,0",2018
 "Utilitário
 Esportivo
 Grande",KIA,SORENTO,2.4 EX3 / LX3 G25 / G27,2.4 - 16V,A-6,S,E,G,\,\,"7,5","9,8",2018
@@ -780,7 +782,7 @@ Esportivo
 Compacto 4x4",Mitsubishi,ASX,4X4,2.0-16V,CVT,S,E,F,"6,8","8,6","10,1","12,3",2018
 "Utilitário
 Esportivo
-Compacto 4x4",SUZUKI,Vitara,4YOU ALLGRIP,1.6-16V,A-6,S,E,G,\,\,11,"12,6",2018
+Compacto 4x4",SUZUKI,Vitara,4YOU ALLGRIP,1.6-16V,A-6,S,E,G,\,\,"11,0","12,6",2018
 "Utilitário
 Esportivo
 Compacto 4x4",SUZUKI,Vitara,4SPORT ALLGRIP,1.4-16V,A-6,S,E,G,\,\,"11,5","12,9",2018
@@ -794,7 +796,7 @@ Compacto 4x4",JEEP,Renegade,"Custom / Longitude / Limited / Night
 Eagle",2.0-16V,A-9,S,E,D,\,\,"9,4","11,5",2018
 "Utilitário
 Esportivo
-Compacto 4x4",Renault,Duster,Dynamique (4x4),2.0-16V,M6,S,E-H,F,"6,7","7,6","9,9",11,2018
+Compacto 4x4",Renault,Duster,Dynamique (4x4),2.0-16V,M6,S,E-H,F,"6,7","7,6","9,9","11,0",2018
 "Utilitário
 Esportivo
 Compacto 4x4",SUBARU,IMPREZA,XV,2.0-16V,CVT,S,E,G,\,\,"9,3","11,6",2018
@@ -809,7 +811,7 @@ Grande 4x4",VOLVO,"XC60 (Mod
 "Utilitário
 Esportivo
 Grande 4x4",VOLVO,XC90,"2.0 T6 Inscription / 2.0 T6 Kinetic /
-2.0 T6 Momentum / 2.0 R-Design",2.0 - 16V,A-8,S,E,G,\,\,"7,5",9,2018
+2.0 T6 Momentum / 2.0 R-Design",2.0 - 16V,A-8,S,E,G,\,\,"7,5","9,0",2018
 "Utilitário
 Esportivo
 Grande 4x4",VOLVO,"XC90 (Mod
@@ -823,7 +825,7 @@ T8 Momentum / T8 R-Design",2.0-16V,A-8,S,E,G,\,\,"16,4","18,9",2018
 "Utilitário
 Esportivo
 Grande 4x4",VOLVO,XC60,"T8 INSCRIPT
-T8 R-DESIGN",2.0-16V,A-8,S,E,G,\,\,"19,2",20,2018
+T8 R-DESIGN",2.0-16V,A-8,S,E,G,\,\,"19,2","20,0",2018
 "Utilitário
 Esportivo
 Grande 4x4",PORSCHE,Cayenne,V6,3.6 - 24V,A - 8,S,H,G,\,\,"7,1","8,4",2018
@@ -835,7 +837,7 @@ Esportivo
 Grande 4x4",PORSCHE,Cayenne,GTS,3.6 - 24V,A - 8,S,H,G,\,\,"6,4","8,8",2018
 "Utilitário
 Esportivo
-Grande 4x4",PORSCHE,Cayenne,Turbo,4.8 - 32V,A - 8,S,H,G,\,\,"5,5",8,2018
+Grande 4x4",PORSCHE,Cayenne,Turbo,4.8 - 32V,A - 8,S,H,G,\,\,"5,5","8,0",2018
 "Utilitário
 Esportivo
 Grande 4x4",PORSCHE,Cayenne,Turbo S,4.8 - 32V,A - 8,S,H,G,\,\,"5,2","7,9",2018
@@ -853,10 +855,10 @@ Grande 4x4",PORSCHE,"Cayenne
 "Utilitário
 Esportivo
 Grande 4x4",PORSCHE,"Cayenne
-(19MY)",Turbo,4.0-32V,A-8,S,E,G,\,\,"5,5",7,2018
+(19MY)",Turbo,4.0-32V,A-8,S,E,G,\,\,"5,5","7,0",2018
 "Utilitário
 Esportivo
-Grande 4x4",PORSCHE,Macan,***,2.0 - 16V,DCT - 7,S,E-H,G,\,\,8,9,2018
+Grande 4x4",PORSCHE,Macan,***,2.0 - 16V,DCT - 7,S,E-H,G,\,\,"8,0","9,0",2018
 "Utilitário
 Esportivo
 Grande 4x4",PORSCHE,Macan,S,3.0 - 24V,DCT - 7,S,E-H,G,\,\,"6,2","7,9",2018
@@ -868,10 +870,10 @@ Esportivo
 Grande 4x4",PORSCHE,Macan,Turbo,3.6 -24V,DCT - 7,S,E-H,G,\,\,"5,8","7,6",2018
 "Utilitário
 Esportivo
-Grande 4x4",JAGUAR,F-PACE,340CV RSPORT,3.0 - 24 V,A- 8,S,E,G,\,\,"6,9",9,2018
+Grande 4x4",JAGUAR,F-PACE,340CV RSPORT,3.0 - 24 V,A- 8,S,E,G,\,\,"6,9","9,0",2018
 "Utilitário
 Esportivo
-Grande 4x4",JAGUAR,F-PACE,380CV V6 FE / 380CV V6 S,3.0 - 24 V,A- 8,S,E,G,\,\,"6,8",9,2018
+Grande 4x4",JAGUAR,F-PACE,380CV V6 FE / 380CV V6 S,3.0 - 24 V,A- 8,S,E,G,\,\,"6,8","9,0",2018
 "Utilitário
 Esportivo
 Grande 4x4",JAGUAR,F-PACE,20TD PRESTIGE,2.0 - 16 V,A- 8,S,E,D,\,\,"10,6","12,5",2018
@@ -902,7 +904,7 @@ Grande 4x4",JEEP,Compass,Limited / Longitude,2.0-16V,A-9,S,E,D,\,\,"9,8","11,4",
 "Utilitário
 Esportivo
 Grande 4x4",JEEP,"Grand
-Cherokee",Laredo / Limited,3.6-24V,A-8,S,H,G,\,\,"7,1",9,2018
+Cherokee",Laredo / Limited,3.6-24V,A-8,S,H,G,\,\,"7,1","9,0",2018
 "Utilitário
 Esportivo
 Grande 4x4",BMW,X4,xDrive35i,3.0 - 24v,A-8,S,E-H,G,\,\,"7,2","8,6",2018
@@ -917,7 +919,7 @@ Esportivo
 Grande 4x4",BMW,X5,xDrive35i,3.0 - 24v,A-8,S,E,G,\,\,"6,6","8,4",2018
 "Utilitário
 Esportivo
-Grande 4x4",BMW,X4,xDrive28i,2.0 - 16v,A-8,S,E-H,G,\,\,8,"9,4",2018
+Grande 4x4",BMW,X4,xDrive28i,2.0 - 16v,A-8,S,E-H,G,\,\,"8,0","9,4",2018
 "Utilitário
 Esportivo
 Grande 4x4",BMW,X5,xDrive30D,3.0 - 24v,A-8,S,E-H,D,\,\,"9,1","10,6",2018
@@ -970,28 +972,28 @@ Esportivo
 Grande 4x4",SUBARU,FORESTER,XT,2.0-16V,CVT,S,E,G,\,\,"8,9","10,2",2018
 "Utilitário
 Esportivo
-Grande 4x4",SUBARU,OUTBACK,3.6 R-S,3.6-16V,CVT,S,E,G,\,\,"7,5",10,2018
+Grande 4x4",SUBARU,OUTBACK,3.6 R-S,3.6-16V,CVT,S,E,G,\,\,"7,5","10,0",2018
 "Utilitário
 Esportivo
-Grande 4x4",KIA,SORENTO,3.5 EX4 / LX4 G15 / G17,3.5 - 24V,A-6,S,E,G,\,\,"6,7",9,2018
+Grande 4x4",KIA,SORENTO,3.5 EX4 / LX4 G15 / G17,3.5 - 24V,A-6,S,E,G,\,\,"6,7","9,0",2018
 "Utilitário
 Esportivo
 Grande 4x4",KIA,MOHAVE,EX 3.0 VGT,3.0 - 24V,A-8,S,H,D,\,\,"7,2","10,3",2018
 "Utilitário
 Esportivo
-Grande 4x4",KIA,SPORTAGE,EX2/ LX2 FFG4,2.0 - 16V,A-6,S,E,F,6,"7,6","8,4","10,7",2018
+Grande 4x4",KIA,SPORTAGE,EX2/ LX2 FFG4,2.0 - 16V,A-6,S,E,F,"6,0","7,6","8,4","10,7",2018
 "Utilitário
 Esportivo
 Grande 4x4",KIA,SORENTO,2.4 EX3 / LX3 G15 / G17,2.4 - 16V,A-6,S,E,G,\,\,"7,5","9,8",2018
 "Utilitário
 Esportivo
-Grande 4x4",Mercedes-Benz,AMG GLC43,Coupé,3.0 - 24V,A 9,S,E,G,\,\,7,"8,9",2018
+Grande 4x4",Mercedes-Benz,AMG GLC43,Coupé,3.0 - 24V,A 9,S,E,G,\,\,"7,0","8,9",2018
 "Utilitário
 Esportivo
 Grande 4x4",Mercedes-Benz,AMG GLE 63,Coupé,5.5 - 32V,A 7,S,E,G,\,\,"5,5","6,8",2018
 "Utilitário
 Esportivo
-Grande 4x4",Mercedes-Benz,GLC 250 4M,Coupé,2.0 - 16V,A 9,S,E,G,\,\,"8,5",11,2018
+Grande 4x4",Mercedes-Benz,GLC 250 4M,Coupé,2.0 - 16V,A 9,S,E,G,\,\,"8,5","11,0",2018
 "Utilitário
 Esportivo
 Grande 4x4",Mercedes-Benz,GLE 400,Coupé,3.0 - 24V,A 9,S,E,G,\,\,"6,8","9,2",2018
@@ -1008,7 +1010,7 @@ Esportivo
 Grande 4x4",JAGUAR,FPACE,380CV V6 S,3.0-24V,A-8,S,E,G,\,\,"6,4","7,9",2018
 "Utilitário
 Esportivo
-Grande 4x4",JAGUAR,FPACE,300CVG PREST / 300CVG R SPT,2.0-16V,A-8,S,E,G,\,\,"7,2",9,2018
+Grande 4x4",JAGUAR,FPACE,300CVG PREST / 300CVG R SPT,2.0-16V,A-8,S,E,G,\,\,"7,2","9,0",2018
 "Utilitário
 Esportivo
 Grande 4x4",JAGUAR,EPACE,P300 HSE RDY / P300 SE RDY,2.0-16V,A-9,S,E,G,\,\,"6,3","8,8",2018
@@ -1022,7 +1024,7 @@ Esportivo
 Grande 4x4",Mitsubishi,Eclipse Cross,HPE-S S-AWC,1.5T-16V,CVT,S,E,G,\,\,"10,2","11,6",2018
 "Utilitário
 Esportivo
-Grande 4x4",AUDI,Q8,-,3.0-24V,A-8,S,E,G,\,\,"6,6",7,2018
+Grande 4x4",AUDI,Q8,-,3.0-24V,A-8,S,E,G,\,\,"6,6","7,0",2018
 Fora de Estrada,Mitsubishi,Outlander,GT 4WD,3.0-24V,A-6,S,E,G,\,\,"8,2","10,3",2018
 Fora de Estrada,Mitsubishi,Outlander,4WD,2.2-16V,A-6,S,E,D,\,\,"10,8","13,7",2018
 Fora de Estrada,Mitsubishi,Pajero,HPE,3.8-24V,A-5,S,H,G,\,\,"5,3","6,7",2018
@@ -1030,32 +1032,32 @@ Fora de Estrada,Mitsubishi,Pajero,HPE,3.2-16V,A-5,S,H,D,\,\,"8,3","9,9",2018
 Fora de Estrada,SUZUKI,Jimny 4X4,"4ALL / 4SPORT / 4WORK / 4WORK
 OFF ROAD / Canvas",1.3-16V,M-5,S,H,G,\,\,"10,3","10,4",2018
 Fora de Estrada,TOYOTA,"SW4
-GASOLINA 4X4",SRX,4.0-24V,A-6,S,E,G,\,\,6,"7,6",2018
+GASOLINA 4X4",SRX,4.0-24V,A-6,S,E,G,\,\,"6,0","7,6",2018
 Fora de Estrada,TOYOTA,"SW4 DIESEL
-4X4",SRV / SRX / SR / Diamond,2.8-16V,A-6,S,E,D,\,\,9,"10,5",2018
+4X4",SRV / SRX / SR / Diamond,2.8-16V,A-6,S,E,D,\,\,"9,0","10,5",2018
 Fora de Estrada,JEEP,Compass,Trailhawk,2.0-16V,A-9,S,E,D,\,\,"9,8","11,4",2018
 Fora de Estrada,JEEP,Renegade,Trailhawk,2.0-16V,A-9,S,E,D,\,\,"9,4","11,5",2018
 Fora de Estrada,JEEP,Wrangler,"Sport 2pt / Unlimited 4pt / Unlimited
 Sahara 4pt",3.6-24V,A-5,S,H,G,\,\,"5,8","6,8",2018
 Fora de Estrada,Troller,T4,XLT,3.2-20V,M-6,S,H,D,\,\,"7,7","7,5",2018
 Fora de Estrada,LAND ROVER,"RANGE
-ROVER SPORT",5.0 SC DYN / 5.0 SC AB/ 5.0 SC AB D,"5,0 - 32 V",A- 8,S,E,G,\,\,5,"7,3",2018
+ROVER SPORT",5.0 SC DYN / 5.0 SC AB/ 5.0 SC AB D,"5,0 - 32 V",A- 8,S,E,G,\,\,"5,0","7,3",2018
 Fora de Estrada,LAND ROVER,"RANGE
-ROVER SPORT",3.0 SC S / 3.0 SC SE /3.0 SE HSE,"3,0 - 24 V",A- 8,S,E,G,\,\,6,"8,4",2018
+ROVER SPORT",3.0 SC S / 3.0 SC SE /3.0 SE HSE,"3,0 - 24 V",A- 8,S,E,G,\,\,"6,0","8,4",2018
 Fora de Estrada,LAND ROVER,"RANGE
 ROVER SPORT",3.0 SC HST,"3,0 - 24 V",A- 8,S,E,G,\,\,"6,2","8,4",2018
 Fora de Estrada,LAND ROVER,"RANGE
-ROVER SPORT",SVR 550,"3,0 - 24 V",A- 8,S,E,G,\,\,5,"7,3",2018
+ROVER SPORT",SVR 550,"3,0 - 24 V",A- 8,S,E,G,\,\,"5,0","7,3",2018
 Fora de Estrada,LAND ROVER,EVOQUE,SI4 CABRIO,"2,0 - 16 V",A- 9,S,E,G,\,\,"7,6","11,1",2018
 Fora de Estrada,LAND ROVER,EVOQUE,"PURE / SE / SE DYNAMIC / HSE
-DYNAMIC / AB","2,0 - 16 V",A- 9,S,E,G,\,\,8,"11,3",2018
+DYNAMIC / AB","2,0 - 16 V",A- 9,S,E,G,\,\,"8,0","11,3",2018
 Fora de Estrada,LAND ROVER,EVOQUE,"PURE / SE / SE DYNAMIC / HSE
-DYNAMIC / AB","2,0 - 16 V",A- 9,S,E,G,\,\,8,"11,3",2018
+DYNAMIC / AB","2,0 - 16 V",A- 9,S,E,G,\,\,"8,0","11,3",2018
 Fora de Estrada,LAND ROVER,EVOQUE,"P240 HSE DYN / P240 PURE /
 P240 SE / P240 SE DYN /",2.0 - 16V,A-9,S,E,G,\,\,"8,1","11,2",2018
 Fora de Estrada,LAND ROVER,"DISCOVERY
 SPORT","SI4 S / SI4 SE / SI4 HSE / SI4 HSE L /
-SI4 SE 7L / HSE 7L / HSEL 7L","2,0 - 16 V",A- 9,S,E,G,\,\,"7,2",9,2018
+SI4 SE 7L / HSE 7L / HSEL 7L","2,0 - 16 V",A- 9,S,E,G,\,\,"7,2","9,0",2018
 Fora de Estrada,LAND ROVER,"DISCOVERY
 SPORT","P240 HSE / P240 HSE 7L /
 P240 HSEL / P240 HSEL 7L /
@@ -1068,12 +1070,12 @@ ROVER",V8SC SVAB,"5,0 - 32 V",A- 8,S,E,G,\,\,"4,9","7,3",2018
 Fora de Estrada,LAND ROVER,VELAR,"P250 STD / P250 S / P250 SE /
 P250 HSE / P250 STD RD /
 P250 S RDYN / P250 SE RDYN /
-P250 HSE RD /",2.0 - 16V,A-8,S,E,G,\,\,8,"9,9",2018
+P250 HSE RD /",2.0 - 16V,A-8,S,E,G,\,\,"8,0","9,9",2018
 Fora de Estrada,LAND ROVER,VELAR,"P380 FIRST ED / P380 HSE /
 P380 HSE RDYN / P380 S /
 P380 S RDYN / P380 SE /
 P380 SE RDYN / P380 STD /
-P380 STD RDYN /",3.0 - 16V,A-8,S,E,G,\,\,"6,8",9,2018
+P380 STD RDYN /",3.0 - 16V,A-8,S,E,G,\,\,"6,8","9,0",2018
 Fora de Estrada,LAND ROVER,EVOQUE,SE TD4 / HSE TD4,"2,0 - 16V",A- 9,S,E,D,\,\,"11,9","15,8",2018
 Fora de Estrada,LAND ROVER,EVOQUE,"D240 HB / D240 HSE DYN /
 D240 SE / D240 SE DYN /",2.0 - 16V,A-9,S,E,D,\,\,"11,6","14,2",2018
@@ -1088,7 +1090,7 @@ Fora de Estrada,LAND ROVER,"RANGE
 ROVER SPORT","3.0 TD HSE/ 3.0 TD S/ 3.0 TD SE /
 3.0 TD ABD","3,0- 24V",A- 8,S,E,D,\,\,"9,7","12,4",2018
 Fora de Estrada,LAND ROVER,"RANGE
-ROVER SPORT",4.4 HSE DYN,"4,4 - 32V",A- 8,S,E,D,\,\,8,"10,8",2018
+ROVER SPORT",4.4 HSE DYN,"4,4 - 32V",A- 8,S,E,D,\,\,"8,0","10,8",2018
 Fora de Estrada,LAND ROVER,"RANGE
 ROVER",TDV6 HSE / TDV6 VOGUE,"3,0 - 24V",A- 8,S,E,D,\,\,"9,8","12,3",2018
 Fora de Estrada,LAND ROVER,"RANGE
@@ -1102,7 +1104,7 @@ TD6 PURE7 / TD6 SE / TD6 SE 7",3.0 - 24V,A-8,S,E,D,\,\,"8,7","10,4",2018
 Fora de Estrada,LAND ROVER,DISC SPT,"P240FF HSE / P240FF HSEL /
 P240FF HSEL7 / P240FF HSE7L /
 P240FF S / P240FF SE / P240FF SE
-7L",2.0-16V,A-9,S,E,F,"4,1","5,8",7,"8,4",2018
+7L",2.0-16V,A-9,S,E,F,"4,1","5,8","7,0","8,4",2018
 Fora de Estrada,LAND ROVER,EVOQUE,"P240 PURE / P240 SE / P240 SE
 DYN / P240 HSE DYN",2.0-16V,A-9,S,E,G,\,\,"7,3","9,3",2018
 Fora de Estrada,LAND ROVER,EVOQUE,"P240 HSE DYN / P240 LANDMAR /
@@ -1119,31 +1121,31 @@ Fora de Estrada,LAND ROVER,RRSPT,P525 HSE DYN,5.0-32V,A-8,S,E,G,\,\,"5,6","7,7",
 Fora de Estrada,LAND ROVER,VELAR,"P300 HSE / P300 HSE RDYN / P300
 S / P300 S RDYN / P300 SE / P300
 SE RDYN / P300 STD / P300 STD
-RDYN",2.0-16V,A-8,S,E,G,\,\,"7,2",9,2018
+RDYN",2.0-16V,A-8,S,E,G,\,\,"7,2","9,0",2018
 Minivan,Citroën,"Grand C4
 Picasso",Seduction / Intensive,"1.6 THP
-16v",A-6,S,E-H,G,\,\,"9,9",12,2018
-Minivan,FIAT,Dobló,Essence 7L,1.8-16V,M-5,S,H,F,"6,4",7,"9,3","10,2",2018
+16v",A-6,S,E-H,G,\,\,"9,9","12,0",2018
+Minivan,FIAT,Dobló,Essence 7L,1.8-16V,M-5,S,H,F,"6,4","7,0","9,3","10,2",2018
 Minivan,DODGE,Journey,RT,3.6-24V,A-6,S,H,G,\,\,"6,4","8,6",2018
 Minivan,CHRYSLER,Town & Country,Touring / Limited,3.6-24V,A-6,S,H,G,\,\,"6,2","8,6",2018
 Minivan,CHEVROLET,SPIN (MY18),1.8L MT LTZ (7L),1.8L-8V,M-6,S,E,F,"8,1","9,4","11,8","13,7",2018
 Minivan,CHEVROLET,SPIN (MY18),1.8L AT LTZ (7L),1.8L-8V,A-6,S,E,F,"7,5","9,2","10,9","13,1",2018
 Minivan,CHEVROLET,Spin (MY19),1.8L AT LTZ (7L),1.8L-8V,A-6,S,E,F,"7,2","8,9","10,6","12,8",2018
-Minivan,CHEVROLET,Spin (MY19),1.8L MT LTZ (7L),1.8L-8V,M-6,S,E,F,"7,8",9,"11,4","13,2",2018
-Minivan,CHEVROLET,Spin (MY19),AT ACT7 (7L),1.8L-8V,A-6,S,E,F,7,"8,3","10,3",12,2018
+Minivan,CHEVROLET,Spin (MY19),1.8L MT LTZ (7L),1.8L-8V,M-6,S,E,F,"7,8","9,0","11,4","13,2",2018
+Minivan,CHEVROLET,Spin (MY19),AT ACT7 (7L),1.8L-8V,A-6,S,E,F,"7,0","8,3","10,3","12,0",2018
 Minivan,KIA,CARNIVAL,EX / LX 3.3 AT,3.3 - 24V,A-6,S,H,G,\,\,"6,4","8,4",2018
 Comercial,Peugeot,Boxer,"MINIBUS 330M 2.3 / FURGÃO 350LH
 2.3",2.3HDi,M-5,S,H,D,\,\,"7,9","9,6",2018
 Comercial,Peugeot,Expert,Business / Business Pack,1.6 TDI,M-6,S,E,D,\,\,"11,4","12,1",2018
-Comercial,Peugeot,Partner,Furgão / Furgão PL,1.6 16v,M-5,S,H,F,"6,7",7,"9,6",10,2018
+Comercial,Peugeot,Partner,Furgão / Furgão PL,1.6 16v,M-5,S,H,F,"6,7","7,0","9,6","10,0",2018
 Comercial,Peugeot,Expert,Minibus,1.6 TDI,M-6,S,E,D,\,\,"11,5","11,8",2018
 Comercial,Citroën,Jumper,"Minibus 2.3HDi 33M / Furgão 2.3HDi
 35LH",2.3 16v,M-5,S,H,D,\,\,"7,9","9,6",2018
 Comercial,Citroën,Jumpy,Furgão / Furgão Pack,"1.6 TDI
 16V",M-6,S,E,D,\,\,"11,4","12,1",2018
-Comercial,Citroën,Berlingo,Furgão / Furgão PL,1.6 16v,M-5,S,H,F,"6,7",7,"9,6",10,2018
+Comercial,Citroën,Berlingo,Furgão / Furgão PL,1.6 16v,M-5,S,H,F,"6,7","7,0","9,6","10,0",2018
 Comercial,Citroën,Jumpy,Minibus,1.6 TDI,M-6,S,E,D,\,\,"11,5","11,8",2018
-Comercial,FIAT,Fiorino,"1,4",1.4-8V,M-5,N,H,F,"7,6","8,8",11,"13,2",2018
+Comercial,FIAT,Fiorino,"1,4",1.4-8V,M-5,N,H,F,"7,6","8,8","11,0","13,2",2018
 Comercial,FIAT,Fiorino,Hard Working,1.4-8V,M-5,S,H,F,"7,3","8,3","10,7","12,3",2018
 Comercial,FIAT,DUCATO,CHASSI,2.3-16V,M-6,S,H,D,\,\,"8,9","9,4",2018
 Comercial,FIAT,DUCATO,CARGO 8M³,2.3-16V,M-6,S,H,D,\,\,"8,7","10,1",2018
@@ -1168,7 +1170,7 @@ Compacta",VW,Saveiro CE,Cross,1.6-16V,M-5,S,H,F,"7,3","9,1","10,6","13,1",2018
 "Picape
 Compacta",VW,Saveiro CD,Cross,1.6-16V,M-5,S,H,F,"7,2","8,6","10,4","12,4",2018
 "Picape
-Compacta",FIAT,Strada,Adventure CE / Adventure CD,1.8-16V,M-5,S,H,F,"6,7","7,5","9,6",11,2018
+Compacta",FIAT,Strada,Adventure CE / Adventure CD,1.8-16V,M-5,S,H,F,"6,7","7,5","9,6","11,0",2018
 "Picape
 Compacta",FIAT,Strada,"Hard Working CS / Hard Working CE /
 Hard Working CD",1.4-8V,M-5,S,H,F,"7,4","8,5","10,8","12,3",2018
@@ -1179,9 +1181,9 @@ Compacta",FIAT,Strada,Working Plus CS,1.4-8V,M-5,N,H,F,"7,6","9,2","10,9","13,2"
 "Picape
 Compacta",FIAT,STRADA,FREEDOM,1.4-8V,M-5,S,H,F,"7,4","8,5","10,8","12,3",2018
 "Picape
-Compacta",Renault,Oroch,Dynamique,2.0-16V,M6,S,E-H,F,7,"7,4",10,"10,9",2018
+Compacta",Renault,Oroch,Dynamique,2.0-16V,M6,S,E-H,F,"7,0","7,4","10,0","10,9",2018
 "Picape
-Compacta",Renault,Oroch,Dynamique (4X2),2.0-16V,A4,S,E-H,F,"5,9",7,"8,6","10,3",2018
+Compacta",Renault,Oroch,Dynamique (4X2),2.0-16V,A4,S,E-H,F,"5,9","7,0","8,6","10,3",2018
 "Picape
 Compacta",Renault,Oroch,4X2 / Dynamique / Expression,1.6-16V,M5,S,E-H,F,"7,6","7,7","11,1","11,2",2018
 "Picape
@@ -1192,7 +1194,7 @@ Compacta",CHEVROLET,"MONTANA
 (MY18)",SPORT / LS2,1.4L-8V,MT-5,S,H,F,"7,5","8,4","11,3","12,6",2018
 "Picape
 Compacta",CHEVROLET,"MONTANA
-(MY19)",LS1,1.4L-8V,MT-5,N,H,F,"7,7",9,"11,4","13,2",2018
+(MY19)",LS1,1.4L-8V,MT-5,N,H,F,"7,7","9,0","11,4","13,2",2018
 "Picape
 Compacta",CHEVROLET,"MONTANA
 (MY19)",LS2,1.4L-8V,MT-5,S,H,F,"7,6","8,6","11,1","12,5",2018
@@ -1213,11 +1215,11 @@ Picape,TOYOTA,"HILUX FLEX
 Picape,TOYOTA,"HILUX FLEX
 4X2",CD SRV / CD SR / CHALLENGE,2.7-16V,A-6,S,E,F,"4,8","5,6","6,9","8,1",2018
 Picape,TOYOTA,"HILUX DIESEL
-4X4",SRX / SRV / SR / CHALLENGE,2.8-16V,A-6,S,E,D,\,\,9,"10,5",2018
+4X4",SRX / SRV / SR / CHALLENGE,2.8-16V,A-6,S,E,D,\,\,"9,0","10,5",2018
 Picape,TOYOTA,"HILUX DIESEL
 4X4",STD / SC / CC/ NARROW,2.8-16V,M-6,S,E,D,\,\,"9,3","11,2",2018
 Picape,TOYOTA,"HILUX FLEX
-4X2",SR / SRV,2.7-16V,M-5,S,E,F,"4,6","5,6","6,6",8,2018
+4X2",SR / SRV,2.7-16V,M-5,S,E,F,"4,6","5,6","6,6","8,0",2018
 Picape,VW,Amarok,S,2.0-16V,M-6,S,H,D,\,\,"7,9","8,7",2018
 Picape,VW,Amarok,SE,2.0-16V,M-6,S,H,D,\,\,"8,5","9,3",2018
 Picape,VW,Amarok,Trendline / Highline / Extreme,2.0-16V,A-8,S,H,D,\,\,"8,2","8,4",2018
@@ -1227,27 +1229,27 @@ Picape,FIAT,TORO,FREEDOM,1.8-16V,A-6,S,E,F,"6,4","7,8","9,5","11,2",2018
 Picape,FIAT,TORO,FREEDOM,2.4 -16V,A-9,S,E,F,"5,9","7,4","8,6","10,8",2018
 Picape,FIAT,TORO,FREEDOM 4X2,2.0-16V,M-6,S,E,D,\,\,"10,8","12,5",2018
 Picape,FIAT,TORO,FREEDOM 4X4,2.0-16V,M-6,S,E,D,\,\,"10,3","12,1",2018
-Picape,FIAT,TORO,FREEDOM 4X4,2.0-16V,A-9,S,E,D,\,\,9,"11,2",2018
-Picape,FIAT,TORO,VOLCANO 4X4,2.0-16V,A-9,S,E,D,\,\,9,"11,2",2018
+Picape,FIAT,TORO,FREEDOM 4X4,2.0-16V,A-9,S,E,D,\,\,"9,0","11,2",2018
+Picape,FIAT,TORO,VOLCANO 4X4,2.0-16V,A-9,S,E,D,\,\,"9,0","11,2",2018
 Picape,FIAT,TORO,ENDURANCE,1.8-16V,A-6,S,E,F,"6,4","7,8","9,5","11,2",2018
-Picape,FIAT,TORO (2019),FREEDOM 4X4,2.0-16V,A-9,S,E,D,\,\,10,"12,6",2018
-Picape,FIAT,TORO (2019),VOLCANO 4X4,2.0-16V,A-9,S,E,D,\,\,10,"12,6",2018
-Picape,FIAT,TORO (2019),RANCH,2.0-16V,A-9,S,E,D,\,\,10,"12,6",2018
-Picape,FIAT,TORO (2019),VOLCANO / BLACKJACK,2.4-16V,A-9,S,E,F,6,"7,7","8,7","10,8",2018
+Picape,FIAT,TORO (2019),FREEDOM 4X4,2.0-16V,A-9,S,E,D,\,\,"10,0","12,6",2018
+Picape,FIAT,TORO (2019),VOLCANO 4X4,2.0-16V,A-9,S,E,D,\,\,"10,0","12,6",2018
+Picape,FIAT,TORO (2019),RANCH,2.0-16V,A-9,S,E,D,\,\,"10,0","12,6",2018
+Picape,FIAT,TORO (2019),VOLCANO / BLACKJACK,2.4-16V,A-9,S,E,F,"6,0","7,7","8,7","10,8",2018
 Picape,CHEVROLET,S10,"LS / LT Cabine Dupla Diesel 4x4
-LT Cabine Dupla Diesel 4x2",2.8-16V,M-6,S,E,D,\,\,"9,1",11,2018
+LT Cabine Dupla Diesel 4x2",2.8-16V,M-6,S,E,D,\,\,"9,1","11,0",2018
 Picape,CHEVROLET,S10,LTZ / LT Cabine Dupla Diesel 4x2,2.8-16V,A-6,S,E,D,\,\,"8,8","10,8",2018
 Picape,CHEVROLET,S10,"100Y / High Country / LTZ / LT Cabine
 Dupla Diesel 4x4",2.8-16V,A-6,S,E,D,\,\,"8,7","10,6",2018
 Picape,CHEVROLET,S10,MIDNIGHT Cabine Dupla Diesel 4x4,2.8-16V,A-6,S,E,D,\,\,"8,7","10,6",2018
-Picape,CHEVROLET,S10,LS Flex Cabine Simples 4x2,2.5-16V,M-6,S,E,F,"5,6",6,"8,2","8,8",2018
+Picape,CHEVROLET,S10,LS Flex Cabine Simples 4x2,2.5-16V,M-6,S,E,F,"5,6","6,0","8,2","8,8",2018
 Picape,CHEVROLET,S10,LS / LT / LTZ Flex Cabine Dupla 4x2,2.5-16V,M-6,S,E,F,"5,6","6,4","8,4","9,5",2018
 Picape,CHEVROLET,S10,ADV Flex Cabine Dupla 4x2,2.5-16V,M-6,S,E,F,"5,6","6,4","8,4","9,5",2018
 Picape,CHEVROLET,S10,LT/ LTZ Flex Cabine Dupla 4x4,2.5-16V,M-6,S,E,F,"5,3","6,1","8,1","9,1",2018
 Picape,CHEVROLET,S10,High Country Flex Cabine Dupla 4x2,2.5-16V,M-6,S,E,F,"5,5","6,4","8,3","9,5",2018
-Picape,CHEVROLET,S10,High Country Flex Cabine Dupla 4x4,2.5-16V,M-6,S,E,F,"5,3","6,1",8,9,2018
+Picape,CHEVROLET,S10,High Country Flex Cabine Dupla 4x4,2.5-16V,M-6,S,E,F,"5,3","6,1","8,0","9,0",2018
 Picape,CHEVROLET,S10,LT / LTZ Flex Cabine Dupla 4x2,2.5-16V,A-6,S,E,F,"5,3","6,4","7,9","9,4",2018
-Picape,CHEVROLET,S10,LT / LTZ Flex Cabine Dupla 4x4,2.5-16V,A-6,S,E,F,5,"6,2","7,4",9,2018
+Picape,CHEVROLET,S10,LT / LTZ Flex Cabine Dupla 4x4,2.5-16V,A-6,S,E,F,"5,0","6,2","7,4","9,0",2018
 Picape,CHEVROLET,S10,High Country Flex Cabine Dupla 4x2,2.5-16V,A-6,S,E,F,"5,3","6,4","7,8","9,5",2018
 Picape,CHEVROLET,S10,High Country Flex Cabine Dupla 4x4,2.5-16V,A-6,S,E,F,"5,1","6,2","7,5","9,1",2018
 Picape,CHEVROLET,S10,LS Diesel Cabine Chassis 4x4,2.8-16V,M-6,S,E,D,\,\,"8,8","10,4",2018
@@ -1261,7 +1263,7 @@ Simples",XLS,2.5-16V,M-5,S,E,F,"4,8","5,7","7,1","8,3",2018
 Picape,FORD,"Ranger 4x4 C.
 Dupla",XLT / Limited,3.2-20V,A-6,S,E,D,\,\,"8,5","10,1",2018
 Picape,FORD,"Ranger 4x4 C.
-Dupla",XLT,3.2-20V,M-6,S,E,D,\,\,9,"10,6",2018
+Dupla",XLT,3.2-20V,M-6,S,E,D,\,\,"9,0","10,6",2018
 Picape,FORD,"Ranger 4x4 C.
 Dupla",XLS,2.2-16V,A-6,S,E,D,\,\,"8,4","10,4",2018
 Picape,FORD,"Ranger 4x4 C.
@@ -1273,11 +1275,11 @@ Picape,FORD,"Ranger 4x2 C.
 Dupla",XLS,2.2-16V,M-6,S,E,D,\,\,"10,5","12,2",2018
 Picape,FORD,"Ranger 4x2 C.
 Dupla",XLS,2.2-16V,A-6,S,E,D,\,\,"9,5","11,5",2018
-Esportivo,NISSAN,GT-R,Premium,3.8 - 24V,DCT-6,S,H,G,\,\,"6,2",8,2018
+Esportivo,NISSAN,GT-R,Premium,3.8 - 24V,DCT-6,S,H,G,\,\,"6,2","8,0",2018
 Esportivo,PORSCHE,911,Carrera / Carrera Cabriolet,3.0 - 24V,DCT-7,S,E-H,G,\,\,"8,2","10,8",2018
 Esportivo,PORSCHE,911,"Carrera S / Carrera S Cabriolet /
 Carrera 4S / Carrera 4S Cabriolet/
-Targa 4 S",3.0 - 24V,DCT-7,S,E-H,G,\,\,"8,2",11,2018
+Targa 4 S",3.0 - 24V,DCT-7,S,E-H,G,\,\,"8,2","11,0",2018
 Esportivo,PORSCHE,911,"Carrera 4 / Carrera 4 Cabriolet / Targa
 4",3.0 - 24V,DCT-7,S,E-H,G,\,\,"8,2","10,8",2018
 Esportivo,PORSCHE,911,Turbo / Turbo Cabriolet,3.8 - 24V,DCT-7,S,E-H,G,\,\,"7,1","9,2",2018
@@ -1288,10 +1290,10 @@ Esportivo,PORSCHE,911,Carrera T,3.0-24V,DCT-7,S,E,G,\,\,"8,1","10,4",2018
 Esportivo,PORSCHE,911,Carrera T,3.0-24V,M-7,S,E,G,\,\,"6,5","10,1",2018
 Esportivo,PORSCHE,911,GT2 RS,3.8-24V,DCT-7,S,E,G,\,\,"6,3","8,7",2018
 Esportivo,PORSCHE,911,GT3 RS,4.0-24V,DCT-7,S,E,G,\,\,"5,7","7,7",2018
-Esportivo,PORSCHE,Boxster,***,2.0 - 16V,DCT-7,S,E-H,G,\,\,9,"12,2",2018
+Esportivo,PORSCHE,Boxster,***,2.0 - 16V,DCT-7,S,E-H,G,\,\,"9,0","12,2",2018
 Esportivo,PORSCHE,Boxster,S,2.5 - 16V,DCT-7,S,E-H,G,\,\,"8,7","11,4",2018
 Esportivo,PORSCHE,Boxster,GTS,2.5-16V,DCT-7,S,E,G,\,\,"7,9","10,3",2018
-Esportivo,PORSCHE,Cayman,****,2.0 - 16V,DCT-7,S,E-H,G,\,\,9,"12,2",2018
+Esportivo,PORSCHE,Cayman,****,2.0 - 16V,DCT-7,S,E-H,G,\,\,"9,0","12,2",2018
 Esportivo,PORSCHE,Cayman,S,2.5 - 16V,DCT-7,S,E-H,G,\,\,"8,7","11,4",2018
 Esportivo,PORSCHE,Cayman,GTS,2.5-16V,DCT-7,S,E,G,\,\,"7,9","10,3",2018
 Esportivo,PORSCHE,PANAMERA,**** / 4,3.0 - 24V,DCT-8,S,E-H,G,\,\,"7,8","10,5",2018
@@ -1313,21 +1315,21 @@ Esportivo,AUDI,RS6 Avant Plus,-,4.0-32V,A-8,S,E,G,\,\,"6,3","8,9",2018
 Esportivo,AUDI,"RS7 Sportback
 Plus",-,4.0-32V,A-8,S,E,G,\,\,"6,3","8,9",2018
 Esportivo,AUDI,TT,Coupé,2.0-16V,DCT-6,S,E,G,\,\,"9,9","12,7",2018
-Esportivo,AUDI,TT,Roadster,2.0-16V,DCT-6,S,E,G,\,\,10,"12,8",2018
+Esportivo,AUDI,TT,Roadster,2.0-16V,DCT-6,S,E,G,\,\,"10,0","12,8",2018
 Esportivo,AUDI,TTS,Coupé,2.0-16V,DCT-6,S,E,G,\,\,"9,2","10,7",2018
-Esportivo,AUDI,TTS,Roadster,2.0-16V,DCT-6,S,E,G,\,\,9,"10,7",2018
+Esportivo,AUDI,TTS,Roadster,2.0-16V,DCT-6,S,E,G,\,\,"9,0","10,7",2018
 Esportivo,AUDI,R8,Coupé,5.2-40V,DCT-7,S,E,G,\,\,"5,2","6,8",2018
 Esportivo,AUDI,TTRS,Coupé,2.5-20V,DCT-7,S,E,G,\,\,"7,5","10,3",2018
 Esportivo,AUDI,R8,Spyder,5.2-40V,DCT-7,S,E,G,\,\,"5,4","7,7",2018
-Esportivo,BMW,430i,Cabrio,2.0 - 16v,A-8,S,E-H,G,\,\,"9,8",12,2018
+Esportivo,BMW,430i,Cabrio,2.0 - 16v,A-8,S,E-H,G,\,\,"9,8","12,0",2018
 Esportivo,BMW,M4,Cabrio,3.0 - 24v,DCT-7,S,E-H,G,\,\,"7,2","9,2",2018
 Esportivo,BMW,M4,Coupe,3.0 - 24v,DCT-7,S,E-H,G,\,\,"7,2","9,2",2018
 Esportivo,MINI,"John Cooper
 Works",-,2.0 - 16v,A-6,S,E-H,G,\,\,"10,6","13,2",2018
-Esportivo,MINI,Cooper,S,2.0 - 16v,A-6,S,E-H,G,\,\,"11,1",14,2018
+Esportivo,MINI,Cooper,S,2.0 - 16v,A-6,S,E-H,G,\,\,"11,1","14,0",2018
 Esportivo,MINI,Cooper,S Cabrio,2.0 - 16v,A-6,S,E-H,G,\,\,"10,6","13,2",2018
 Esportivo,BMW,M2,-,3.0 - 24v,DCT-7,S,E-H,G,\,\,"7,6","9,8",2018
-Esportivo,BMW,M240i,-,3.0 - 24v,A-8,S,E-H,G,\,\,"9,4",12,2018
+Esportivo,BMW,M240i,-,3.0 - 24v,A-8,S,E-H,G,\,\,"9,4","12,0",2018
 Esportivo,BMW,i8,-,1.5 - 12v,A-6,S,E-H,G,\,\,"11,3","13,6",2018
 Esportivo,MINI,Cooper,S,2.0 - 16v,DCT-7,S,E-H,G,\,\,"11,9","14,4",2018
 Esportivo,MINI,HATCH,JCW 3P,2.0 - 16v,A-8,S,E-H,G,\,\,"10,9","13,2",2018
@@ -1338,7 +1340,7 @@ Esportivo,CHEVROLET,CAMARO,2SS CONV,"6.2L -
 Esportivo,FORD,Mustang,GT,5.0-32V,A-10,S,E,G,\,\,"5,9","8,9",2018
 Esportivo,Maserati,Gran,TurismoS,4.7-32V,A-6,S,H,G,\,\,"5,2","7,1",2018
 Esportivo,Mercedes-Benz,AMG C 63 S,Coupé,4.0 - 32V,A 7,S,E,G,\,\,"6,6","9,2",2018
-Esportivo,Mercedes-Benz,AMG C43,Coupé,3.0 - 24V,A 9,S,E,G,\,\,8,"11,4",2018
+Esportivo,Mercedes-Benz,AMG C43,Coupé,3.0 - 24V,A 9,S,E,G,\,\,"8,0","11,4",2018
 Esportivo,Mercedes-Benz,C250,Coupé,2.0 - 16V,A 9,S,E,G,\,\,"9,6","13,2",2018
 Esportivo,Mercedes-Benz,C300,Cabrio,2.0 - 16V,A 9,S,E,G,\,\,"8,7","11,7",2018
 Esportivo,Mercedes-Benz,E300,Coupé,2.0 - 16V,A 9,S,E,G,\,\,"8,9","12,1",2018

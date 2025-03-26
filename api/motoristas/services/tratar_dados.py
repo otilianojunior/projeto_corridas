@@ -3,25 +3,50 @@ import os
 
 
 def tratar_dados_modelo_I(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
-    # Carrega o arquivo
-    df = pd.read_csv(caminho_entrada)
+    # Carrega o arquivo pulando as 5 primeiras linhas
+    df = pd.read_csv(caminho_entrada, skiprows=3)
 
-    # Remove linhas vazias
+    # Corrigir linhas onde a categoria aparece na coluna 25 (índice 24)
+    if df.shape[1] > 25:
+        # Preencher coluna 0 (categoria) com valores da coluna 25 quando estiverem ausentes
+        df.iloc[:, 0] = df.iloc[:, 0].fillna(df.iloc[:, 25])
+
+    # Selecionar colunas úteis
+    colunas_desejadas = [
+        df.columns[0],   # categoria
+        df.columns[1],   # marca
+        df.columns[2],   # modelo
+        df.columns[3],   # motor
+        df.columns[4],   # versao
+        df.columns[5],   # transmissao
+        df.columns[6],   # ar_cond
+        df.columns[7],   # direcao
+        df.columns[8],   # combustivel
+        df.columns[15],  # km_etanol_cidade
+        df.columns[16],  # km_etanol_estrada
+        df.columns[17],  # km_gasolina_cidade
+        df.columns[18],  # km_gasolina_estrada
+        df.columns[24]   # ano
+    ]
+    df = df[colunas_desejadas]
+
+    # Renomear colunas corretamente
+    df.columns = [
+        'categoria', 'marca', 'modelo', 'motor', 'versao',
+        'transmissao', 'ar_cond', 'direcao', 'combustivel',
+        'km_etanol_cidade', 'km_etanol_estrada',
+        'km_gasolina_cidade', 'km_gasolina_estrada', 'ano'
+    ]
+
+    # Preencher categorias ausentes com o valor da linha anterior
+    df['categoria'] = df['categoria'].ffill()
+
+    # Remover linhas totalmente vazias
     df = df.dropna(how='all')
 
-    # Remove linhas com cabeçalhos repetidos
-    df = df[~df['marca'].isin(['Marca(?)'])]
-
-    # Corrige a coluna 'categoria' com valores da última coluna, se necessário
-    df['categoria'] = df['categoria'].fillna(df['Unnamed: 14'])
-
-    # Remove coluna desnecessária
-    df = df.drop(columns=['Unnamed: 14'])
-
-    # Remove linhas com dados essenciais ausentes
-    colunas_essenciais = ['marca', 'modelo', 'motor', 'versao']
-    for coluna in colunas_essenciais:
-        df = df[df[coluna].notna()]
+    # Remover linhas com dados essenciais ausentes
+    for col in ['marca', 'modelo', 'motor', 'versao', 'km_etanol_estrada']:
+        df = df[df[col].notna()]
 
     # Resetar índice
     df = df.reset_index(drop=True)
@@ -31,6 +56,7 @@ def tratar_dados_modelo_I(caminho_entrada: str, caminho_saida: str = None) -> pd
         df.to_csv(caminho_saida, index=False)
 
     return df
+
 
 
 
@@ -124,11 +150,12 @@ def unir_tabelas_tratadas(arquivos_csv: list, caminho_saida: str = "dados_tratad
 if __name__ == '__main__':
     # tratar_dados_modelo_I("tabela_PBEV_2015.csv", "tabela_PBEV_2015_tratada.csv")
     # tratar_dados_modelo_I("tabela_PBEV_2016.csv", "tabela_PBEV_2016_tratada.csv")
-    # tratar_dados_modelo_II("tabela_PBEV_2017.csv", "tabela_PBEV_2017_tratada.csv")
-    # tratar_dados_modelo_II("tabela_PBEV_2018.csv", "tabela_PBEV_2018_tratada.csv")
-    # tratar_dados_modelo_II("tabela_PBEV_2019.csv", "tabela_PBEV_2019_tratada.csv")
+    # tratar_dados_modelo_I("tabela_PBEV_2017.csv", "tabela_PBEV_2017_tratada.csv")
+    # tratar_dados_modelo_I("tabela_PBEV_2018.csv", "tabela_PBEV_2018_tratada.csv")
+    # tratar_dados_modelo_I("tabela_PBEV_2019.csv", "tabela_PBEV_2019_tratada.csv")
     # tratar_dados_modelo_I("tabela_PBEV_2020.csv", "tabela_PBEV_2020_tratada.csv")
-    # tratar_dados_modelo_III("tabela_PBEV_2021.csv", "tabela_PBEV_2021_tratada.csv")
+
+    tratar_dados_modelo_III("tabela_PBEV_2021.csv", "tabela_PBEV_2021_tratada.csv")
     # tratar_dados_modelo_II("tabela_PBEV_2022.csv", "tabela_PBEV_2022_tratada.csv")
     # tratar_dados_modelo_II("tabela_PBEV_2023.csv", "tabela_PBEV_2023_tratada.csv")
     # tratar_dados_modelo_II("tabela_PBEV_2024.csv", "tabela_PBEV_2024_tratada.csv")
@@ -148,4 +175,4 @@ if __name__ == '__main__':
         "tabela_PBEV_2025_tratada.csv"
     ]
 
-    unir_tabelas_tratadas(arquivos_tratados, "dados_tratados.csv")
+    # unir_tabelas_tratadas(arquivos_tratados, "dados_tratados.csv")

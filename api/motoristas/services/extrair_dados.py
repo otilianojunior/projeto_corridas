@@ -3,8 +3,7 @@ import pandas as pd
 import os
 import fitz
 import re
-
-# Função para tornar os nomes das colunas únicos
+#
 # def dedup_columns(columns):
 #     seen = {}
 #     result = []

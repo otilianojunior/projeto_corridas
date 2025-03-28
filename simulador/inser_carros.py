@@ -12,10 +12,9 @@ NUM_CARROS = len(df_carros)
 # Carregar o arquivo CSV
 
 
-# Função para gerar os dados do carro a partir do CSV
 def gerar_dados_carro(row):
     """Gera dados do carro a partir de uma linha do CSV"""
-    return {
+    carro = {
         "categoria": row['categoria'],
         "marca": row['marca'],
         "modelo": row['modelo'],
@@ -25,12 +24,14 @@ def gerar_dados_carro(row):
         "ar_cond": row['ar_cond'],
         "direcao": row['direcao'],
         "combustivel": row['combustivel'],
-        "km_etanol_cidade": row['km_etanol_cidade'],
-        "km_etanol_estrada": row['km_etanol_estrada'],
-        "km_gasolina_cidade": row['km_gasolina_cidade'],
-        "km_gasolina_estrada": row['km_gasolina_estrada'],
+        "km_etanol_cidade": row['km_etanol_cidade'] if pd.notna(row['km_etanol_cidade']) else 0,
+        "km_etanol_estrada": row['km_etanol_estrada'] if pd.notna(row['km_etanol_estrada']) else 0,
+        "km_gasolina_cidade": row['km_gasolina_cidade'] if pd.notna(row['km_gasolina_cidade']) else 0,
+        "km_gasolina_estrada": row['km_gasolina_estrada'] if pd.notna(row['km_gasolina_estrada']) else 0,
         "ano": row['ano']
     }
+
+    return carro
 
 def cadastrar_carros(df_carros, total):
     """Cria os carros na API e garante que o número total seja atingido"""

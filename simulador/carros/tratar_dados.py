@@ -195,6 +195,36 @@ def limpar_e_padronizar_dados(caminho_entrada: str, caminho_saida: str = "dados_
     return df
 
 
+def tratar_dados_carro(df):
+    # Substituir as vírgulas por pontos nas colunas de quilometragem
+    cols_quilometragem = ['km_etanol_cidade', 'km_etanol_estrada', 'km_gasolina_cidade', 'km_gasolina_estrada']
+
+    for col in cols_quilometragem:
+        # Substituir as vírgulas por pontos para garantir o formato numérico
+        df[col] = df[col].str.replace(',', '.')
+
+        # Substituir valores inválidos ('\\' ou outros valores não numéricos) por NaN
+        df[col] = pd.to_numeric(df[col], errors='coerce')
+
+        # Preencher os NaN com 0 (ou outro valor adequado)
+        df[col] = df[col].fillna(0)  # Substituindo NaN por 0
+
+    # Limpeza das colunas de texto (remover quebras de linha)
+    df['categoria'] = df['categoria'].str.replace(r'\n', '', regex=True)
+    df['marca'] = df['marca'].str.replace(r'\n', '', regex=True)
+    df['modelo'] = df['modelo'].str.replace(r'\n', '', regex=True)
+    df['motor'] = df['motor'].str.replace(r'\n', '', regex=True)
+    df['versao'] = df['versao'].str.replace(r'\n', '', regex=True)
+
+    # Preenchendo os valores ausentes nos campos obrigatórios
+    df['transmissao'] = df['transmissao'].str.replace(r'\n', '', regex=True).fillna("N/D")  # Preenchendo com "N/D"
+    df['ar_cond'] = df['ar_cond'].str.replace(r'\n', '', regex=True).fillna("não")  # Preenchendo com "não"
+    df['direcao'] = df['direcao'].str.replace(r'\n', '', regex=True).fillna("Não informado")  # Preenchendo com "Não informado"
+    df['combustivel'] = df['combustivel'].str.replace(r'\n', '', regex=True)
+
+    return df
+
+
 # === EXECUÇÃO PRINCIPAL ===
 
 if __name__ == '__main__':
@@ -214,11 +244,26 @@ if __name__ == '__main__':
 
     arquivos_tratados = []
 
+    # 1. Processar os arquivos CSV de cada ano
     for ano, func in tratadores.items():
         entrada = f"tabela_PBEV_{ano}.csv"
         saida = f"tabela_PBEV_{ano}_tratada.csv"
         func(entrada, saida)
         arquivos_tratados.append(saida)
 
-    unir_tabelas_tratadas(arquivos_tratados, "tabela_PBEV_unida.csv")
-    limpar_e_padronizar_dados("tabela_PBEV_unida.csv")
+    # 2. Unir os arquivos tratados
+    df_unido = unir_tabelas_tratadas(arquivos_tratados, "tabela_PBEV_unida.csv")
+
+    # 3. Limpar e padronizar os dados no arquivo unificado
+    df_limpado = limpar_e_padronizar_dados("tabela_PBEV_unida.csv", "tabela_PBEV_unida_limpa.csv")
+
+    # 4. Aplicar o tratamento adicional aos dados após a unificação
+    df_carros_tratado = tratar_dados_carro(df_limpado)  # Aplicando tratamento aos dados unificados
+
+    # 5. Salvar o arquivo final tratado
+    df_carros_tratado.to_csv("dados_tratados.csv", index=False)  # Alterei o nome do arquivo para "dados_tratados.csv"
+    print(f"[✔] Arquivo final tratado salvo como: dados_tratados.csv")
+
+    # Exibir as primeiras linhas do DataFrame final tratado
+    print(df_carros_tratado.head())
+

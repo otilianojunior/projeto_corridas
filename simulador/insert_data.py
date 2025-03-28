@@ -10,49 +10,85 @@ NUM_CLIENTES = 5000
 
 fake = Faker("pt_BR")
 
+
 def formatar_cpf(cpf):
     """Remove pontos e traço do CPF"""
     return cpf.replace(".", "").replace("-", "")
+
 
 def gerar_dados_pessoa(status="disponivel"):
     """Gera dados fictícios para clientes e motoristas"""
     return {
         "nome": fake.name(),
-        "cpf": formatar_cpf(fake.cpf()),  # Remove a formatação do CPF
-        "telefone": f"7{random.randint(100000000, 999999999)}",  # Garante telefone como string válida
+        "cpf": formatar_cpf(fake.cpf()),
+        "telefone": f"7{random.randint(100000000, 999999999)}",
         "email": fake.email(),
-        "status": status  # Definir o status do motorista
+        "status": status
     }
 
-def criar_pessoas(endpoint, total, status="disponivel"):
-    """Cria clientes ou motoristas na API e garante que o número total seja atingido"""
-    criados = 0
 
-    while criados < total:
+def criar_motoristas(total, status="disponivel"):
+    criados = 0
+    attempts = 0
+    MAX_ATTEMPTS = total * 5  # Define um limite para evitar loop infinito
+
+    # Obter a lista de carros cadastrados
+    resposta = requests.get(f"{API_URL}/carros/listar/")
+    if resposta.status_code != 200:
+        print(f"❌ Erro ao obter a lista de carros. Código de status: {resposta.status_code}")
+        return criados
+
+    carros = resposta.json()
+    if not carros:
+        print("❌ Nenhum carro cadastrado. Cadastre carros antes de criar motoristas.")
+        return criados
+
+    # Extraindo a lista de IDs dos carros disponíveis
+    lista_carro_ids = [carro["id"] for carro in carros]
+
+    while criados < total and attempts < MAX_ATTEMPTS:
+        attempts += 1
         pessoa = gerar_dados_pessoa(status)
-        response = requests.post(f"{API_URL}/{endpoint}/", json=pessoa)
+        # Atribuir aleatoriamente um id_carro ao motorista
+        pessoa["id_carro"] = random.choice(lista_carro_ids)
+        response = requests.post(f"{API_URL}/motoristas/", json=pessoa)
 
         if response.status_code == 201:
             criados += 1
         elif response.status_code == 422:
-            print(f"⚠️ Erro de validação no cadastro, tentando novamente para o CPF {pessoa['cpf']}")
-            continue  # JSON inválido, gera outro registro
-        else:
-            print(f"❌ Erro ao tentar criar {endpoint} com CPF {pessoa['cpf']}. Código de status: {response.status_code}")
-            continue  # Outros erros, tenta novamente
+            continue
+
+    if attempts >= MAX_ATTEMPTS and criados < total:
+        print("Limite máximo de tentativas atingido. Motoristas criados:", criados)
+    return criados
+
+
+def criar_clientes(total, status="disponivel"):
+    """Cria clientes na API"""
+    criados = 0
+
+    while criados < total:
+        pessoa = gerar_dados_pessoa(status)
+        response = requests.post(f"{API_URL}/clientes/", json=pessoa)
+
+        if response.status_code == 201:
+            criados += 1
+        elif response.status_code == 422:
+            continue
 
     return criados
+
 
 if __name__ == "__main__":
     start_time = time.time()  # Inicia o contador de tempo
 
     # Criar motoristas
     print("🔄 Criando motoristas...")
-    motoristas_criados = criar_pessoas("motoristas", NUM_MOTORISTAS)
+    motoristas_criados = criar_motoristas(NUM_MOTORISTAS)
 
-    # Criar clientes
+    # Criar clientes (descomente se desejar criar clientes)
     print("🔄 Criando clientes...")
-    clientes_criados = criar_pessoas("clientes", NUM_CLIENTES)
+    clientes_criados = criar_clientes(NUM_CLIENTES)
 
     elapsed_time = time.time() - start_time  # Calcula o tempo total
     minutes, seconds = divmod(elapsed_time, 60)

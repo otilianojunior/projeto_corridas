@@ -37,9 +37,6 @@ def cadastrar_carros(df_carros):
     for index, row in df_carros.iterrows():
         carro = gerar_dados_carro(row)
 
-        # Imprime os dados do carro que está sendo enviado
-        print(f"\nEnviando carro para cadastro: {carro}")
-
         response = requests.post(f"{API_URL}/carros/", json=carro)
 
         if response.status_code == 201:

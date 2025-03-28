@@ -1,0 +1,1044 @@
+categoria,marca,modelo,motor,versao,transmissao,ar_cond,direcao,combustivel,km_etanol_cidade,km_etanol_estrada,km_gasolina_cidade,km_gasolina_estrada,ano
+subcompacto,fiat,uno,1.08v,vivace,m5,não,mecânica,flex,8.2,10.4,11.8,15.0,2015
+subcompacto,kia,picanto,1.012v,ex4,m5,sim,elétrica,flex,8.2,9.8,12.0,14.4,2015
+subcompacto,kia,picanto,1.012v,"lx4 1,0 mt ff",m5,sim,elétrica,flex,8.2,9.8,12.0,14.4,2015
+subcompacto,kia,picanto,1.012v,ex4,a4,sim,elétrica,flex,8.3,9.4,11.4,13.1,2015
+subcompacto,kia,picanto,1.012v,"lx4 1,0 at ff",a4,sim,elétrica,flex,8.3,9.4,11.4,13.1,2015
+compacto,citroen,c3,1.58v,origine,m5,sim,elétrica,flex,7.5,9.3,11.9,14.7,2015
+compacto,citroen,c3,1.58v,tendance,m5,sim,elétrica,flex,7.5,9.3,11.9,14.7,2015
+compacto,citroen,c3,1.58v,exclusive,m5,sim,elétrica,flex,7.5,9.3,11.9,14.7,2015
+compacto,citroen,c3,1.58v,attraction,m5,sim,elétrica,flex,7.5,9.3,11.9,14.7,2015
+compacto,fiat,siena,1.08v,el,m5,não,mecânica,flex,8.0,9.7,11.9,14.4,2015
+compacto,fiat,siena,1.48v,el,m5,sim,hidráulica,flex,7.1,8.8,10.6,13.2,2015
+compacto,honda,fit,1.516v,dx,m5,sim,elétrica,flex,8.3,9.5,11.6,13.6,2015
+compacto,honda,fit,1.516v,lx,m5,sim,elétrica,flex,8.3,9.5,11.6,13.6,2015
+compacto,honda,fit,1.516v,dx,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2015
+compacto,honda,fit,1.516v,lx,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2015
+compacto,honda,fit,1.516v,ex,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2015
+compacto,honda,fit,1.516v,exl,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2015
+compacto,hyundai,hb20,1.012v,comfort,m5,sim,hidráulica,flex,8.3,9.8,11.8,14.0,2015
+compacto,hyundai,hb20,1.012v,plus,m5,sim,hidráulica,flex,8.3,9.8,11.8,14.0,2015
+compacto,hyundai,hb20,1.012v,style,m5,sim,hidráulica,flex,8.3,9.8,11.8,14.0,2015
+compacto,hyundai,hb20,1.616v,comfort,m5,sim,hidráulica,flex,7.7,9.3,11.5,13.0,2015
+compacto,hyundai,hb20,1.616v,plus,m5,sim,hidráulica,flex,7.7,9.3,11.5,13.0,2015
+compacto,hyundai,hb20,1.616v,style,m5,sim,hidráulica,flex,7.7,9.3,11.5,13.0,2015
+compacto,hyundai,hb20,1.616v,premium,m5,sim,hidráulica,flex,7.7,9.3,11.5,13.0,2015
+compacto,peugeot,208,1.58v,active,m5,sim,elétrica,flex,8.0,9.6,11.6,14.3,2015
+compacto,peugeot,208,1.58v,active pack,m5,sim,elétrica,flex,8.0,9.6,11.6,14.3,2015
+compacto,peugeot,208,1.58v,allure,m5,sim,elétrica,flex,8.0,9.6,11.6,14.3,2015
+compacto,peugeot,208,1.58v,like,m5,sim,elétrica,flex,8.0,9.6,11.6,14.3,2015
+compacto,peugeot,208,1.58v,style,m5,sim,elétrica,flex,8.0,9.6,11.6,14.3,2015
+compacto,peugeot,208,1.58v,quiksilver,m5,sim,elétrica,flex,8.0,9.6,11.6,14.3,2015
+compacto,peugeot,208,1.616v,griffe,m5,sim,elétrica,flex,7.1,8.9,10.6,12.9,2015
+compacto,volkswagen,gol,1.08v,bluemotiontechnology,m5,não,hidráulica,flex,8.0,10.1,11.8,14.9,2015
+compacto,volkswagen,gol,1.08v,special,m5,sim,hidráulica,flex,7.7,9.6,11.6,13.9,2015
+compacto,volkswagen,gol,1.08v,city,m5,sim,hidráulica,flex,7.7,9.6,11.6,13.9,2015
+compacto,volkswagen,gol,1.08v,trendline,m5,sim,hidráulica,flex,7.7,9.6,11.6,13.9,2015
+compacto,volkswagen,gol,1.08v,comfortline,m5,sim,hidráulica,flex,7.7,9.6,11.6,13.9,2015
+compacto,volkswagen,gol,1.68v,patrulheiro,m5,sim,hidráulica,flex,7.3,9.4,10.7,13.7,2015
+compacto,volkswagen,gol,1.68v,city,m5,sim,hidráulica,flex,7.3,9.4,10.7,13.7,2015
+compacto,volkswagen,gol,1.68v,trendline,m5,sim,hidráulica,flex,7.3,9.4,10.7,13.7,2015
+compacto,volkswagen,gol,1.68v,comfortline,m5,sim,hidráulica,flex,7.3,9.4,10.7,13.7,2015
+compacto,volkswagen,gol,1.68v,highline,m5,sim,hidráulica,flex,7.3,9.4,10.7,13.7,2015
+compacto,volkswagen,gol,1.68v,comfortline imotion,mta5,sim,hidráulica,flex,7.3,9.5,10.7,13.6,2015
+compacto,volkswagen,gol,1.68v,highline imotion,mta5,sim,hidráulica,flex,7.3,9.5,10.7,13.6,2015
+compacto,volkswagen,gol,1.616v,rallye,m5,sim,hidráulica,flex,7.7,8.0,11.1,11.3,2015
+compacto,volkswagen,gol,1.616v,rallye imotion,mta5,sim,hidráulica,flex,7.3,8.0,10.5,11.2,2015
+compacto,volkswagen,gol,1.08v,rock in rio,m5,sim,hidráulica,flex,7.7,9.6,11.6,13.9,2015
+médio,honda,city,1.516v,dx,m5,sim,elétrica,flex,8.6,10.3,12.4,14.6,2015
+médio,honda,city,1.516v,lx,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2015
+médio,honda,city,1.516v,ex,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2015
+médio,honda,city,1.516v,exl,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2015
+médio,hyundai,hb20s,1.012v,comfort,m5,sim,hidráulica,flex,8.6,10.0,12.3,14.4,2015
+médio,hyundai,hb20s,1.012v,plus,m5,sim,hidráulica,flex,8.6,10.0,12.3,14.4,2015
+médio,hyundai,hb20s,1.012v,style,m5,sim,hidráulica,flex,8.6,10.0,12.3,14.4,2015
+médio,hyundai,hb20s,1.616v,comfort,m5,sim,hidráulica,flex,7.9,9.3,11.5,12.9,2015
+médio,hyundai,hb20s,1.616v,plus,m5,sim,hidráulica,flex,7.9,9.3,11.5,12.9,2015
+médio,hyundai,hb20s,1.616v,style,m5,sim,hidráulica,flex,7.9,9.3,11.5,12.9,2015
+médio,nissan,versa,1.616v,s flex,m5,sim,elétrica,flex,7.8,9.3,11.7,13.9,2015
+médio,nissan,versa,1.616v,sv flex,m5,sim,elétrica,flex,7.8,9.3,11.7,13.9,2015
+médio,nissan,versa,1.616v,sl flex,m5,sim,elétrica,flex,7.8,9.3,11.7,13.9,2015
+médio,volkswagen,voyage,1.08v,bluemotiontechnology,m5,não,hidráulica,flex,8.0,10.1,11.8,14.9,2015
+médio,volkswagen,voyage,1.08v,city,m5,sim,hidráulica,flex,7.7,9.6,11.6,13.9,2015
+médio,volkswagen,voyage,1.08v,trendline,m5,sim,hidráulica,flex,7.7,9.6,11.6,13.9,2015
+médio,volkswagen,voyage,1.08v,comfortline,m5,sim,hidráulica,flex,7.7,9.6,11.6,13.9,2015
+médio,volkswagen,voyage,1.68v,patrulheiro,m5,sim,hidráulica,flex,7.3,9.4,10.7,13.7,2015
+médio,volkswagen,voyage,1.68v,city,m5,sim,hidráulica,flex,7.3,9.4,10.7,13.7,2015
+médio,volkswagen,voyage,1.68v,trendline,m5,sim,hidráulica,flex,7.3,9.4,10.7,13.7,2015
+médio,volkswagen,voyage,1.68v,comfortline,m5,sim,hidráulica,flex,7.3,9.4,10.7,13.7,2015
+médio,volkswagen,voyage,1.68v,highline,m5,sim,hidráulica,flex,7.3,9.4,10.7,13.7,2015
+médio,volkswagen,voyage,1.68v,evidence,m5,sim,hidráulica,flex,7.3,9.4,10.7,13.7,2015
+médio,volkswagen,voyage,1.68v,comfortline imotion,mta5,sim,hidráulica,flex,7.3,9.5,10.7,13.6,2015
+médio,volkswagen,voyage,1.68v,highline imotion,mta5,sim,hidráulica,flex,7.3,9.5,10.7,13.6,2015
+médio,volkswagen,voyage,1.68v,evidence imotion,mta5,sim,hidráulica,flex,7.3,9.5,10.7,13.6,2015
+grande,honda,civic,1.816v,lxs,a5,sim,elétrica,flex,6.8,9.6,10.5,14.4,2015
+grande,honda,civic,1.816v,lxs,m6,sim,elétrica,flex,7.2,9.2,10.9,13.5,2015
+grande,honda,civic,2.016v,lxr,a5,sim,elétrica,flex,6.4,9.4,9.7,13.8,2015
+grande,honda,civic,2.016v,exr,a5,sim,elétrica,flex,6.4,9.4,9.7,13.8,2015
+grande,honda,civic,2.416v,coupe si,m6,sim,elétrica,gasolina,0.0,0.0,8.3,11.6,2015
+grande,toyota,corolla,1.816v,gli,m6,sim,elétrica,flex,7.3,9.1,10.7,13.2,2015
+grande,toyota,corolla,1.816v,gli,contínua,sim,elétrica,flex,7.8,9.2,11.4,13.2,2015
+grande,toyota,corolla,2.016v,altis,contínua,sim,elétrica,flex,7.2,8.8,10.6,12.6,2015
+grande,toyota,corolla,2.016v,xei,contínua,sim,elétrica,flex,7.2,8.8,10.6,12.6,2015
+microcompacto,fiat,mobi,1.08v,way,m5,sim,hidráulica,flex,8.4,9.2,11.9,13.3,2016
+microcompacto,fiat,mobi,1.08v,way on,m5,sim,hidráulica,flex,8.4,9.2,11.9,13.3,2016
+microcompacto,fiat,mobi,1.08v,easy,m5,não,mecânica,flex,8.7,10.1,12.7,14.7,2016
+microcompacto,fiat,mobi,1.08v,easy on,m5,sim,hidráulica,flex,8.4,9.2,11.9,13.3,2016
+microcompacto,fiat,mobi,1.08v,like,m5,sim,hidráulica,flex,8.4,9.2,11.9,13.3,2016
+microcompacto,fiat,mobi,1.08v,like on,m5,sim,hidráulica,flex,8.4,9.2,11.9,13.3,2016
+microcompacto,kia,picanto,1.012v,ex4,a4,sim,elétrica,flex,8.0,8.9,10.6,12.1,2016
+microcompacto,kia,picanto,1.012v,lx4,a4,sim,elétrica,flex,8.0,8.9,10.6,12.1,2016
+microcompacto,kia,picanto,1.012v,ex4,m5,sim,elétrica,flex,8.2,10.0,11.7,14.3,2016
+microcompacto,kia,picanto,1.012v,lx4,m5,sim,elétrica,flex,8.2,10.0,11.7,14.3,2016
+subcompacto,fiat,uno,1.08v,vivace,m5,não,mecânica,flex,8.2,10.4,11.8,15.0,2016
+compacto,chevrolet,onix,1.08v,ls,m5,sim,hidráulica,flex,7.8,9.2,11.5,13.5,2016
+compacto,chevrolet,onix,1.08v,lt,m5,sim,hidráulica,flex,7.8,9.2,11.5,13.5,2016
+compacto,chevrolet,onix,1.48v,lt,a6,sim,hidráulica,flex,6.9,8.5,9.9,12.2,2016
+compacto,chevrolet,onix,1.48v,ltz,a6,sim,hidráulica,flex,6.9,8.5,9.9,12.2,2016
+compacto,chevrolet,onix,1.48v,lt,m5,sim,hidráulica,flex,7.9,9.6,11.5,13.6,2016
+compacto,chevrolet,onix,1.48v,ltz,m5,sim,hidráulica,flex,7.9,9.6,11.5,13.6,2016
+compacto,chevrolet,onix,1.48v,eff,m5,sim,hidráulica,flex,7.9,9.6,11.5,13.6,2016
+compacto,citroen,c3,1.212v,origine,m5,sim,elétrica,flex,10.6,11.3,14.8,16.6,2016
+compacto,citroen,c3,1.212v,attraction,m5,sim,elétrica,flex,10.6,11.3,14.8,16.6,2016
+compacto,citroen,c3,1.212v,tendance,m5,sim,elétrica,flex,10.6,11.3,14.8,16.6,2016
+compacto,citroen,c3,1.212v,style,m5,sim,elétrica,flex,10.6,11.3,14.8,16.6,2016
+compacto,citroen,c3,1.58v,origine,m5,sim,elétrica,flex,8.0,10.0,11.8,14.6,2016
+compacto,citroen,c3,1.58v,attraction,m5,sim,elétrica,flex,8.0,10.0,11.8,14.6,2016
+compacto,citroen,c3,1.58v,tendance,m5,sim,elétrica,flex,8.0,10.0,11.8,14.6,2016
+compacto,citroen,c3,1.616v,exclusive,a4,sim,elétrica,flex,7.9,8.8,11.0,12.6,2016
+compacto,citroen,c3,1.616v,tendance,a4,sim,elétrica,flex,7.9,8.8,11.0,12.6,2016
+compacto,citroen,c3,1.616v,style,a4,sim,elétrica,flex,7.9,8.8,11.0,12.6,2016
+compacto,fiat,siena,1.08v,el,m5,não,hidráulica,flex,8.1,9.8,11.5,14.1,2016
+compacto,fiat,siena,1.48v,el,m5,sim,hidráulica,flex,7.3,8.5,10.8,12.5,2016
+compacto,ford,ka,1.516v,se,m5,sim,elétrica,flex,7.9,9.5,11.5,13.6,2016
+compacto,ford,ka,1.516v,sel,m5,sim,elétrica,flex,7.9,9.5,11.5,13.6,2016
+compacto,ford,ka,1.012v,se,m5,sim,elétrica,flex,8.9,10.4,13.0,15.1,2016
+compacto,ford,ka,1.012v,sel,m5,sim,elétrica,flex,8.9,10.4,13.0,15.1,2016
+compacto,honda,fit,1.516v,dx,m5,sim,elétrica,flex,8.3,9.5,11.6,13.6,2016
+compacto,honda,fit,1.516v,lx,m5,sim,elétrica,flex,8.3,9.5,11.6,13.6,2016
+compacto,honda,fit,1.516v,dx,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2016
+compacto,honda,fit,1.516v,lx,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2016
+compacto,honda,fit,1.516v,ex,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2016
+compacto,honda,fit,1.516v,exl,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2016
+compacto,hyundai,hb20,1.012v,comfort,m5,sim,hidráulica,flex,8.5,9.9,12.5,14.1,2016
+compacto,hyundai,hb20,1.012v,plus,m5,sim,hidráulica,flex,8.5,9.9,12.5,14.1,2016
+compacto,hyundai,hb20,1.012v,style,m5,sim,hidráulica,flex,8.5,9.9,12.5,14.1,2016
+compacto,hyundai,hb20,1.616v,plus,a6,sim,hidráulica,flex,7.1,9.4,9.9,12.5,2016
+compacto,hyundai,hb20,1.616v,style,a6,sim,hidráulica,flex,7.1,9.4,9.9,12.5,2016
+compacto,hyundai,hb20,1.616v,premium,a6,sim,hidráulica,flex,7.1,9.4,9.9,12.5,2016
+compacto,hyundai,hb20,1.616v,r spec,a6,sim,hidráulica,flex,7.1,9.4,9.9,12.5,2016
+compacto,hyundai,hb20,1.616v,plus,m6,sim,hidráulica,flex,8.1,9.9,11.6,13.8,2016
+compacto,hyundai,hb20,1.616v,style,m6,sim,hidráulica,flex,8.1,9.9,11.6,13.8,2016
+compacto,hyundai,hb20,1.616v,premium,m6,sim,hidráulica,flex,8.1,9.9,11.6,13.8,2016
+compacto,hyundai,hb20,1.616v,r spec,m6,sim,hidráulica,flex,8.1,9.9,11.6,13.8,2016
+compacto,hyundai,hb20,1.012v,plus turbo,m6,sim,hidráulica,flex,8.2,10.1,11.6,14.3,2016
+compacto,hyundai,hb20,1.012v,style turbo,m6,sim,hidráulica,flex,8.2,10.1,11.6,14.3,2016
+compacto,peugeot,208,1.212v,active,m5,sim,elétrica,flex,10.9,11.7,15.1,16.9,2016
+compacto,peugeot,208,1.212v,act pack,m5,sim,elétrica,flex,10.9,11.7,15.1,16.9,2016
+compacto,peugeot,208,1.212v,allure,m5,sim,elétrica,flex,10.9,11.7,15.1,16.9,2016
+compacto,peugeot,208,1.58v,active,m5,sim,elétrica,flex,8.0,9.6,11.6,14.3,2016
+compacto,peugeot,208,1.58v,active pack,m5,sim,elétrica,flex,8.0,9.6,11.6,14.3,2016
+compacto,peugeot,208,1.58v,allure,m5,sim,elétrica,flex,8.0,9.6,11.6,14.3,2016
+compacto,peugeot,208,1.616v,griffe,m5,sim,elétrica,flex,7.1,8.9,10.6,12.9,2016
+compacto,peugeot,208,1.616v,sport,m5,sim,elétrica,flex,8.5,10.0,12.3,14.0,2016
+compacto,peugeot,208,1.616v,griffe,m5,sim,elétrica,flex,8.5,10.0,12.3,14.0,2016
+compacto,peugeot,208,1.616v,allure,a4,sim,elétrica,flex,8.1,9.1,11.7,13.0,2016
+compacto,peugeot,208,1.616v,griffe,a4,sim,elétrica,flex,8.1,9.1,11.7,13.0,2016
+compacto,peugeot,208,1.616v,gt thp,m6,sim,elétrica,flex,8.2,9.5,12.0,13.8,2016
+compacto,renault,sandero,1.016v,authentique,m5,sim,hidráulica,flex,8.7,9.6,12.6,14.0,2016
+compacto,renault,sandero,1.016v,expression,m5,sim,hidráulica,flex,8.7,9.6,12.6,14.0,2016
+compacto,renault,sandero,1.68v,dynamique,m5,sim,hidráulica,flex,7.5,8.7,10.7,12.4,2016
+compacto,renault,sandero,1.68v,expression,m5,sim,hidráulica,flex,7.5,8.7,10.7,12.4,2016
+compacto,renault,sandero,1.68v,gt line,m5,sim,hidráulica,flex,7.5,8.7,10.7,12.4,2016
+compacto,volkswagen,gol,1.616v,rallye (imotion),mta5,sim,hidráulica,flex,7.0,7.5,9.9,11.1,2016
+compacto,volkswagen,gol,1.68v,comfortline,m5,sim,hidráulica,flex,7.8,9.5,11.1,13.6,2016
+compacto,volkswagen,gol,1.68v,highline,m5,sim,hidráulica,flex,7.8,9.5,11.1,13.6,2016
+compacto,volkswagen,gol,1.68v,trendline,m5,sim,hidráulica,flex,7.9,9.7,11.5,14.0,2016
+médio,chevrolet,spin,1.88v,activ (5l),a6,sim,hidráulica,flex,5.9,7.5,9.0,10.9,2016
+médio,chevrolet,spin,1.88v,lt (5l),a6,sim,hidráulica,flex,5.9,7.4,8.9,10.8,2016
+médio,chevrolet,spin,1.88v,lt advantage(5l),a6,sim,hidráulica,flex,5.9,7.4,8.9,10.8,2016
+médio,chevrolet,spin,1.88v,(5l),m5,sim,hidráulica,flex,6.5,7.4,9.2,10.8,2016
+médio,chevrolet,spin,1.88v,lt (5l),m5,sim,hidráulica,flex,6.5,7.4,9.2,10.8,2016
+médio,chevrolet,spin,1.88v,lt advantage(5l),m5,sim,hidráulica,flex,6.5,7.4,9.2,10.8,2016
+médio,honda,city,1.516v,dx,m5,sim,elétrica,flex,8.6,10.3,12.4,14.6,2016
+médio,honda,city,1.516v,lx,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2016
+médio,honda,city,1.516v,ex,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2016
+médio,honda,city,1.516v,exl,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2016
+médio,hyundai,hb20s,1.012v,plus,m5,sim,hidráulica,flex,8.5,9.4,11.4,13.0,2016
+médio,hyundai,hb20s,1.012v,style,m5,sim,hidráulica,flex,8.5,9.4,11.4,13.0,2016
+médio,hyundai,hb20s,1.616v,plus,m6,sim,hidráulica,flex,7.7,9.6,10.7,12.6,2016
+médio,hyundai,hb20s,1.616v,style,m6,sim,hidráulica,flex,7.7,9.6,10.7,12.6,2016
+médio,hyundai,hb20s,1.616v,premium,m6,sim,hidráulica,flex,7.7,9.6,10.7,12.6,2016
+médio,hyundai,hb20s,1.012v,plus  turbo,m6,sim,hidráulica,flex,8.4,10.5,11.9,15.2,2016
+médio,hyundai,hb20s,1.012v,style  turbo,m6,sim,hidráulica,flex,8.4,10.5,11.9,15.2,2016
+médio,renault,logan,1.016v,authentique,m5,sim,hidráulica,flex,7.2,9.1,10.5,13.1,2016
+médio,renault,logan,1.016v,expression,m5,sim,hidráulica,flex,7.2,9.1,10.5,13.1,2016
+médio,renault,logan,1.68v,dynamique,m5,sim,hidráulica,flex,7.5,8.7,10.7,12.6,2016
+médio,renault,logan,1.68v,expression,m5,sim,hidráulica,flex,7.5,8.7,10.7,12.6,2016
+médio,renault,logan,1.68v,dynamique,mta5,sim,hidráulica,flex,6.2,8.9,9.6,12.8,2016
+médio,renault,logan,1.68v,expression,mta5,sim,hidráulica,flex,6.2,8.9,9.6,12.8,2016
+grande,honda,civic,2.416v,coupe si,m6,sim,elétrica,gasolina,0.0,0.0,8.3,11.6,2016
+grande,honda,civic,2.016v,lxr,a5,sim,elétrica,flex,6.4,9.4,9.7,13.8,2016
+grande,honda,civic,2.016v,exr,a5,sim,elétrica,flex,6.4,9.4,9.7,13.8,2016
+grande,honda,civic,1.816v,lxs,a5,sim,elétrica,flex,6.8,9.6,10.5,14.4,2016
+grande,honda,civic,1.816v,lxs,m6,sim,elétrica,flex,7.2,9.2,10.9,13.5,2016
+grande,honda,civic,2.016v,ex,contínua,sim,elétrica,flex,7.2,8.9,10.6,12.9,2016
+grande,honda,civic,2.016v,exl,contínua,sim,elétrica,flex,7.2,8.9,10.6,12.9,2016
+grande,honda,civic,2.016v,sport,contínua,sim,elétrica,flex,7.2,8.9,10.6,12.9,2016
+grande,honda,civic,2.016v,sport,m6,sim,elétrica,flex,7.1,9.3,10.2,13.4,2016
+grande,honda,civic,1.516v,touring turbo,contínua,sim,elétrica,gasolina,0.0,0.0,12.0,14.6,2016
+grande,toyota,corolla,2.016v,altis,contínua,sim,elétrica,flex,7.2,8.8,10.6,12.6,2016
+grande,toyota,corolla,2.016v,xei,contínua,sim,elétrica,flex,7.2,8.8,10.6,12.6,2016
+grande,toyota,corolla,1.816v,gli,contínua,sim,elétrica,flex,7.8,9.2,11.4,13.2,2016
+grande,toyota,corolla,1.816v,gli,m6,sim,elétrica,flex,7.3,9.1,10.7,13.2,2016
+utilitárioesportivocompacto,nissan,kicks,1.616v,16 sl,contínua,sim,elétrica,flex,8.1,9.6,11.4,13.7,2016
+utilitárioesportivocompacto,renault,sandero,1.68v,stepway,m5,sim,hidráulica,flex,7.4,8.0,10.4,11.5,2016
+utilitárioesportivocompacto,renault,sandero,1.68v,stepway,mta5,sim,hidráulica,flex,6.2,8.9,9.6,12.8,2016
+minivan,chevrolet,spin,1.88v,ltz (7l),a6,sim,hidráulica,flex,5.9,7.4,8.9,10.8,2016
+minivan,chevrolet,spin,1.88v,ltz (7l),m5,sim,hidráulica,flex,6.5,7.4,9.2,10.8,2016
+microcompacto,kia,picanto,1.0 - 12v,ex4/lx4 1.0 mt ff,m-5,sim,elétrica,flex,8.2,10.0,11.7,14.3,2017
+microcompacto,kia,picanto,1.0 - 12v,ex4/ lx4 1.0 atff,a-4,sim,elétrica,flex,8.4,9.7,11.3,13.6,2017
+microcompacto,fiat,mobi,1.0 8v,easy,m-5,não,hidráulica,flex,9.2,10.2,13.5,15.2,2017
+microcompacto,fiat,mobi,1.0 8v,easy on,m-5,sim,hidráulica,flex,8.8,9.9,12.7,14.3,2017
+microcompacto,fiat,mobi,1.0 8v,like,m-5,sim,hidráulica,flex,8.8,9.9,12.7,14.3,2017
+microcompacto,fiat,mobi,1.0 8v,like on,m-5,sim,hidráulica,flex,8.8,9.9,12.7,14.3,2017
+microcompacto,fiat,mobi,1.0 8v,way,m-5,sim,hidráulica,flex,8.9,9.7,12.6,14.2,2017
+microcompacto,fiat,mobi,1.0 8v,way on,m-5,sim,hidráulica,flex,8.9,9.7,12.6,14.2,2017
+microcompacto,kia,picanto,1.0 - 12v,ex5/ lx5 1.0 ff mt,m-5,sim,elétrica,flex,7.9,10.3,11.6,15.0,2017
+microcompacto,kia,picanto,1.0 - 12v,ex5/ lx5 1.0 ff at,a-4,sim,elétrica,flex,8.1,9.9,11.4,14.7,2017
+compacto,citroën,c3,1.2,origine / attraction / tendance / mstyle,m-5,sim,elétrica,flex,10.6,11.3,14.8,16.6,2017
+compacto,citroën,c3,1.6 16v,a exclusive / a tendance / a style,a-4,sim,elétrica,flex,7.9,8.8,11.0,12.6,2017
+compacto,peugeot,208,1.2,active mt / act pack mt / allure mt,m-5,sim,elétrica,flex,10.9,11.7,15.1,16.9,2017
+compacto,peugeot,208,1.6 thp16v flex,gt,m-6,sim,elétrica,flex,8.2,9.5,12.0,13.8,2017
+compacto,peugeot,208,1.6 16v,sport mt / griffe mt,m-5,sim,elétrica,flex,8.5,10.0,12.3,14.0,2017
+compacto,peugeot,208,1.6 16v,allure at / griffe at,a-4,sim,elétrica,flex,8.1,9.1,11.7,13.0,2017
+compacto,hyundai,hb20,1.0-12v,comfort / plus / style,m-5,sim,hidráulica,flex,8.5,9.9,12.5,14.1,2017
+compacto,hyundai,hb20,1.6-16v,plus / style / premium / r spec,m-6,sim,hidráulica,flex,8.1,9.9,11.6,13.8,2017
+compacto,hyundai,hb20,1.6-16v,plus / style / premium / r spec,a-6,sim,hidráulica,flex,7.1,9.4,9.9,12.5,2017
+compacto,hyundai,hb20,1.0-12vturbo,plus / style,m-6,sim,hidráulica,flex,8.2,10.1,11.6,14.3,2017
+compacto,volkswagen,gol,1.0-12v,city /trendline,m-5,sim,hidráulica,flex,8.9,10.4,13.1,14.9,2017
+compacto,volkswagen,gol,1.0-12v,comfortline / track,m-5,sim,hidráulica,flex,8.6,10.0,12.7,14.3,2017
+compacto,volkswagen,gol,1.6-8v,"trendline(rodas aro 14"")",m-5,sim,hidráulica,flex,7.9,9.7,11.5,14.0,2017
+compacto,volkswagen,gol,1.6-8v,"comfortline (rodas aro 15"")/ highline(rodas aro 15"")",m-5,sim,hidráulica,flex,7.8,9.5,11.1,13.6,2017
+compacto,volkswagen,gol,1.6-8v,"comfortline (rodas aro 16"")/ highline (rodas aro 16"")",m-5,sim,hidráulica,flex,7.4,8.7,10.7,12.3,2017
+compacto,volkswagen,gol,1.6-8v,"comfortline (rodas aro 15"") (i-motion)/ highline (rodas aro 15"") (i-motion)",mta-5,sim,hidráulica,flex,7.7,9.2,11.1,13.1,2017
+compacto,volkswagen,gol,1.6-8v,"comfortline (rodas aro 16"") (i-motion)/ highline (rodas aro 16"") (i-motion)",mta-5,sim,hidráulica,flex,7.4,8.4,10.6,11.9,2017
+compacto,renault,sandero,1.0-12v,authentique / expression,m5,sim,eletro-hidráulica,flex,9.5,9.6,14.2,14.1,2017
+compacto,renault,sandero,1.6-16v,dynamique / expression,m5,sim,eletro-hidráulica,flex,8.6,9.2,12.8,13.4,2017
+compacto,renault,sandero,1.6-16v,expression / dynamique,mta-5,sim,eletro-hidráulica,flex,8.1,8.8,11.8,12.8,2017
+compacto,renault,sandero,1.6-16v,gt line,m5,sim,eletro-hidráulica,flex,8.4,8.9,12.5,13.0,2017
+compacto,hyundai,hb20,1.0-12v,comfort / plus / style,m-5,sim,hidráulica,flex,8.5,9.9,12.5,14.1,2017
+compacto,hyundai,hb20,1.6-16v,plus / style,m-6,sim,hidráulica,flex,8.1,9.9,11.6,13.8,2017
+compacto,hyundai,hb20,1.6-16v,plus / style,a-6,sim,hidráulica,flex,7.1,9.4,9.9,12.5,2017
+compacto,hyundai,hb20,1.0-12vturbo,plus / style,m-6,sim,hidráulica,flex,8.2,10.1,11.6,14.3,2017
+médio,hyundai,hb20s,1.6-16v,plus / style / premium,a-6,sim,hidráulica,flex,7.0,9.3,10.2,12.9,2017
+médio,hyundai,hb20s,1.0-12vturbo,plus / style,m-6,sim,hidráulica,flex,8.4,10.5,11.9,15.2,2017
+médio,volkswagen,voyage,1.0-12v,city /trendline,m-5,sim,hidráulica,flex,8.9,10.7,13.1,15.3,2017
+médio,volkswagen,voyage,1.0-12v,comfortline,m-5,sim,hidráulica,flex,8.6,10.2,12.7,14.8,2017
+médio,volkswagen,voyage,1.6-8v,"trendline(rodas aro 14"")",m-5,sim,hidráulica,flex,7.9,10.0,11.5,14.5,2017
+médio,volkswagen,voyage,1.6-8v,"comfortline (rodas aro 15"")/ highline (rodas aro 15"")",m-5,sim,hidráulica,flex,8.0,9.9,11.6,14.1,2017
+médio,volkswagen,voyage,1.6-8v,"comfortline (rodas aro 16"")/ highline (rodas aro 16"")",m-5,sim,hidráulica,flex,7.6,9.1,10.7,12.6,2017
+médio,volkswagen,voyage,1.6-8v,"comfortline (rodas aro 15"") (i-motion)/ highline (rodas aro 15"") (i-motion)",mta-5,sim,hidráulica,flex,7.8,9.5,11.2,13.5,2017
+médio,volkswagen,voyage,1.6-8v,"comfortline (rodas aro 16"") (i-motion)/ highline (rodas aro 16"") (i-motion)",mta-5,sim,hidráulica,flex,7.3,8.6,10.6,12.3,2017
+médio,honda,city,1.5-16v,dx,m-5,sim,elétrica,flex,8.6,10.3,12.4,14.6,2017
+médio,honda,city,1.5-16v,lx / ex / exl,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2017
+médio,renault,logan,1.0-12v,authentique / expression,m5,sim,eletro-hidráulica,flex,9.4,10.0,13.8,14.5,2017
+médio,renault,logan,1.6-16v,dynamique / expression,m5,sim,eletro-hidráulica,flex,8.8,9.5,13.0,13.8,2017
+médio,renault,logan,1.6-16v,dynamique / expression,mta-5,sim,eletro-hidráulica,flex,7.9,9.1,11.8,13.4,2017
+médio,hyundai,hb20s,1.0-12v,plus / style,m-5,sim,hidráulica,flex,8.5,9.8,12.0,14.0,2017
+médio,hyundai,hb20s,1.6-16v,plus / style,m-6,sim,hidráulica,flex,8.1,9.8,11.5,14.0,2017
+médio,hyundai,hb20s,1.6-16v,plus / style / premium,a-6,sim,hidráulica,flex,7.0,9.3,10.2,12.9,2017
+médio,hyundai,hb20s,1.0-12vturbo,plus / style,m-6,sim,hidráulica,flex,8.4,10.5,11.9,15.2,2017
+grande,toyota,corolla,1.8-16v,gli,m-6,sim,elétrica,flex,7.3,9.1,10.7,13.2,2017
+grande,toyota,corolla,1.8-16v,gli,contínua,sim,elétrica,flex,7.8,9.2,11.4,13.2,2017
+grande,toyota,corolla,2.0-16v,altis / xei / dymamic,contínua,sim,elétrica,flex,7.2,8.8,10.6,12.6,2017
+grande,honda,civic,2.0-16v,ex / ex-l / sport,contínua,sim,elétrica,flex,7.2,8.9,10.5,12.9,2017
+grande,honda,civic,1.5t-16v,touring,contínua,sim,elétrica,gasolina,0.0,0.0,11.8,14.4,2017
+utilitárioesportivocompacto,nissan,kicks,1.6 - 16v,16 sl,contínua,sim,elétrica,flex,8.1,9.6,11.4,13.7,2017
+microcompacto,fiat,mobi,1.0-6v,drive,m-5,sim,elétrica,flex,9.6,11.3,13.7,16.1,2018
+microcompacto,fiat,mobi,1.0-6v,drive gsr,mta-5,sim,elétrica,flex,9.8,11.1,14.0,15.9,2018
+microcompacto,fiat,mobi,1.0-8v,easy,m-5,não,hidráulica,flex,9.2,10.2,13.5,15.2,2018
+microcompacto,fiat,mobi,1.0-8v,like,m-5,sim,hidráulica,flex,8.8,9.9,12.7,14.3,2018
+microcompacto,fiat,mobi,1.0-8v,way,m-5,sim,hidráulica,flex,8.7,9.7,12.6,14.2,2018
+microcompacto,kia,picanto,1.0 - 12v,ex5/ lx5 1.0 ff mt,m-5,sim,elétrica,flex,7.9,10.3,11.6,15.0,2018
+microcompacto,kia,picanto,1.0 - 12v,ex5/ lx5 1.0 ff at,a-4,sim,elétrica,flex,8.1,9.9,11.4,14.7,2018
+compacto,honda,fit,1.5-16v,dx / lx,m-5,sim,elétrica,flex,8.3,9.5,11.6,13.6,2018
+compacto,honda,fit,1.5-16v,dx / lx / ex / exl / personal,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2018
+compacto,volkswagen,gol,1.0-12v,trendline/ city,m-5,sim,hidráulica,flex,8.9,10.4,13.1,14.9,2018
+compacto,volkswagen,gol,1.0-12v,track,m-5,sim,hidráulica,flex,8.6,10.0,12.7,14.3,2018
+compacto,volkswagen,gol,1.6-8v,trendline,m-5,sim,hidráulica,flex,7.9,9.7,11.5,14.0,2018
+compacto,volkswagen,gol,1.6-8v,comfortline,m-5,sim,hidráulica,flex,7.8,9.5,11.1,13.6,2018
+compacto,volkswagen,gol,1.6-8v,comfortline (i-motion),mta-5,sim,hidráulica,flex,7.7,9.2,11.1,13.1,2018
+compacto,peugeot,208,1.6 thp16v flex,gt,m-6,sim,elétrica,flex,8.2,9.5,12.0,13.8,2018
+compacto,peugeot,208,1.6 16v,sport mt / griffe mt,m-5,sim,elétrica,flex,8.5,10.0,12.3,14.0,2018
+compacto,peugeot,208,1.6 16v,griffe eat6 / allure eat6 /ubtech eat6,a-6,sim,elétrica,flex,7.7,9.3,11.0,13.2,2018
+compacto,peugeot,208,1.2,active mt / act pack mt / allure mt,m-5,sim,elétrica,flex,9.6,10.7,13.9,15.5,2018
+compacto,citroën,c3,1.6 16v,attraction a / exclusive a /tendance a / urban tech,a-6,sim,elétrica,flex,7.6,9.3,10.9,13.2,2018
+compacto,citroën,c3,1.2,origine / attraction / tendance / mstyle / urban tech,m-5,sim,elétrica,flex,9.3,10.1,13.2,14.8,2018
+compacto,fiat,argo,1.0-6v,drive,m-5,sim,elétrica,flex,9.9,10.7,14.2,15.1,2018
+compacto,fiat,argo,1.3-8v,drive,m-5,sim,elétrica,flex,9.2,10.2,12.9,14.3,2018
+compacto,fiat,argo,1.3-8v,drive gsr,mta-5,sim,elétrica,flex,8.9,10.0,12.7,14.4,2018
+compacto,fiat,argo,1.8-16v,hgt,a-6,sim,elétrica,flex,6.9,9.1,10.0,12.8,2018
+compacto,fiat,argo,1.8-16v,hgt,m-5,sim,elétrica,flex,7.8,9.2,11.4,13.3,2018
+compacto,fiat,argo,1.8-16v,precision,a-6,sim,elétrica,flex,7.1,9.5,10.1,13.2,2018
+compacto,fiat,argo,1.8-16v,precision,m-5,sim,elétrica,flex,8.0,9.6,11.5,13.8,2018
+compacto,renault,sandero,1.0-12v,authentique / expression,m5,sim,eletro-hidráulica,flex,9.5,9.6,14.2,14.1,2018
+compacto,renault,sandero,1.6-16v,dynamique / expression,m5,sim,eletro-hidráulica,flex,8.6,9.2,12.8,13.4,2018
+compacto,renault,sandero,1.6-16v,expression / dynamique,mta-5,sim,eletro-hidráulica,flex,8.1,8.8,11.8,12.8,2018
+compacto,renault,sandero,1.6-16v,gt line,m5,sim,eletro-hidráulica,flex,8.4,8.9,12.5,13.0,2018
+compacto,hyundai,hb20,1.0-12v,comfort / plus / style,m-5,sim,hidráulica,flex,8.5,9.9,12.5,14.1,2018
+compacto,hyundai,hb20,1.6-16v,plus / style,m-6,sim,hidráulica,flex,8.1,9.9,11.6,13.8,2018
+compacto,hyundai,hb20,1.6-16v,plus / style,a-6,sim,hidráulica,flex,7.1,9.4,9.9,12.5,2018
+compacto,hyundai,hb20,1.0-12vturbo,plus / style,m-6,sim,hidráulica,flex,8.2,10.1,11.6,14.3,2018
+médio,toyota,yaris,1.3 - 16v,xl,m-6,sim,elétrica,flex,8.4,10.0,12.1,14.2,2018
+médio,toyota,yaris,1.3 - 16v,xl / xplus,contínua,sim,elétrica,flex,9.0,9.9,13.1,14.2,2018
+médio,toyota,yaris,1.5 - 16v,xs,m-6,sim,elétrica,flex,8.2,9.8,11.8,14.1,2018
+médio,toyota,yaris,1.5 - 16v,xs / xls,contínua,sim,elétrica,flex,8.8,10.0,12.6,13.8,2018
+médio,toyota,yaris,1.5 - 16v,xs / xl,m-6,sim,elétrica,flex,8.3,10.1,12.0,14.6,2018
+médio,toyota,yaris,1.5 - 16v,xs / xl / xls / xplus,contínua,sim,elétrica,flex,9.0,10.6,13.0,14.5,2018
+médio,honda,city,1.5-16v,dx,m-5,sim,elétrica,flex,8.6,10.3,12.4,14.6,2018
+médio,honda,city,1.5-16v,dx / lx / ex / exl / personal,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2018
+médio,volkswagen,voyage,1.0-12v,trendline/ city,m-5,sim,hidráulica,flex,8.9,10.7,13.1,15.3,2018
+médio,volkswagen,voyage,1.0-12v,comfortline,m-5,sim,hidráulica,flex,8.6,10.2,12.7,14.8,2018
+médio,volkswagen,voyage,1.6-8v,trendline,m-5,sim,hidráulica,flex,7.9,10.0,11.5,14.5,2018
+médio,volkswagen,voyage,1.6-8v,comfortline/ highline,m-5,sim,hidráulica,flex,8.0,9.9,11.6,14.1,2018
+médio,volkswagen,voyage,1.6-8v,comfortline (i-motion)/ highline (i-motion),mta-5,sim,hidráulica,flex,7.8,9.5,11.2,13.5,2018
+médio,volkswagen,polo,1.0-12v,"200 tsi comfortline (r15"")",a-6,sim,elétrica,flex,8.0,9.8,11.6,14.1,2018
+médio,volkswagen,polo,1.0-12v,"200 tsi comfortline (r16"") /200 tsi highline",a-6,sim,elétrica,flex,7.9,9.5,11.4,13.9,2018
+médio,fiat,cronos,1.3 – 8v,drive,m-5,sim,elétrica,flex,8.5,10.3,12.4,14.8,2018
+médio,fiat,cronos,1.3 – 8v,drive gsr,mta-5,sim,elétrica,flex,8.8,10.4,12.7,14.8,2018
+médio,fiat,cronos,1.8 - 16v,precision,m-5,sim,elétrica,flex,8.0,9.6,11.6,13.8,2018
+médio,fiat,cronos,1.8 - 16v,precision,a-6,sim,elétrica,flex,7.2,9.6,10.3,13.3,2018
+médio,fiat,cronos,1.8 - 16v,drive,a-6,sim,elétrica,flex,7.2,9.6,10.3,13.3,2018
+médio,renault,logan,1.6-16v,dynamique / expression,mta-5,sim,eletro-hidráulica,flex,7.9,9.1,11.8,13.4,2018
+médio,renault,logan,1.0-12v,authentique / expression,m5,sim,eletro-hidráulica,flex,9.4,10.2,14.0,14.9,2018
+médio,renault,logan,1.6-16v,dynamique / expression,m5,sim,eletro-hidráulica,flex,8.7,9.7,13.0,14.1,2018
+médio,hyundai,hb20s,1.0-12v,plus / style,m-5,sim,hidráulica,flex,8.5,9.8,12.0,14.0,2018
+médio,hyundai,hb20s,1.6-16v,plus / style,m-6,sim,hidráulica,flex,8.1,9.8,11.5,14.0,2018
+médio,hyundai,hb20s,1.6-16v,plus / style / premium,a-6,sim,hidráulica,flex,7.0,9.3,10.2,12.9,2018
+médio,hyundai,hb20s,1.0-12vturbo,plus / style,m-6,sim,hidráulica,flex,8.4,10.5,11.9,15.2,2018
+grande,toyota,corolla,1.8-16v,gli,m-6,sim,elétrica,flex,7.3,9.1,10.7,13.2,2018
+grande,toyota,corolla,1.8-16v,gli,contínua,sim,elétrica,flex,7.8,9.2,11.4,13.2,2018
+grande,toyota,corolla,2.0-16v,altis / xei / xrs,contínua,sim,elétrica,flex,7.2,8.8,10.6,12.6,2018
+grande,honda,civic,2.0-16v,sport,m-6,sim,elétrica,flex,7.1,9.2,10.2,13.4,2018
+grande,honda,civic,2.0-16v,ex / ex-l / sport,contínua,sim,elétrica,flex,7.2,8.9,10.5,13.0,2018
+grande,honda,civic,1.5t-16v,touring,contínua,sim,elétrica,gasolina,0.0,0.0,11.8,14.4,2018
+grande,honda,civic,1.5t-16v,coupe si,m-6,sim,elétrica,gasolina,0.0,0.0,11.2,13.7,2018
+utilitárioesportivocompacto,nissan,kicks,1.6 - 16v,16 s,m-5,sim,elétrica,flex,7.8,9.0,11.1,13.0,2018
+utilitárioesportivocompacto,nissan,kicks,1.6 - 16v,16 s / 16 sv / 16 sl,contínua,sim,elétrica,flex,7.7,9.4,11.4,13.7,2018
+utilitárioesportivocompacto,renault,kwid,1.0-12v,intens / life / zen,m5,sim,m / e,flex,10.3,10.8,14.9,15.6,2018
+sub compacto,kia,picanto,1.0 - 12v,ex5/ lx5 1.0 ff mt,m-5,sim,elétrica,flex,7.9,10.3,11.6,15.0,2019
+sub compacto,kia,picanto,1.0 - 12v,ex5/ lx5 1.0 ff at,a-4,sim,elétrica,flex,8.1,9.9,11.4,14.7,2019
+sub compacto,fiat,mobi,1.0-6v,drive,m-5,sim,elétrica,flex,9.6,11.3,13.7,16.1,2019
+sub compacto,fiat,mobi,1.0-6v,drive gsr,mta-5,sim,elétrica,flex,9.8,11.1,14.0,15.9,2019
+sub compacto,fiat,mobi,1.0-8v,easy,m-5,não,hidráulica,flex,9.2,10.2,13.5,15.2,2019
+sub compacto,fiat,mobi,1.0-8v,like,m-5,sim,hidráulica,flex,8.8,9.9,12.7,14.3,2019
+sub compacto,fiat,mobi,1.0-8v,way,m-5,sim,hidráulica,flex,8.7,9.7,12.6,14.2,2019
+sub compacto,fiat,mobi,1.0-8v,easy,m-5,sim,hidráulica,flex,8.8,9.9,12.7,14.3,2019
+compacto,citroën,c3,1.2 12v,origine / attraction / tendance,m-5,sim,elétrica,flex,9.3,10.1,13.2,14.8,2019
+compacto,citroën,c3,1.6 16v,attraction a / exclusive a /urban trail a,a-6,sim,elétrica,flex,7.6,9.3,10.9,13.2,2019
+compacto,peugeot,208,1.6 thp16v flex,gt,m-6,sim,elétrica,flex,8.2,9.5,12.0,13.8,2019
+compacto,peugeot,208,1.2 12v,active mt / act pack mt / allure mt,m-5,sim,elétrica,flex,9.6,10.7,13.9,15.5,2019
+compacto,peugeot,208,1.6 16v,griffe eat6 / active pk at,a-6,sim,elétrica,flex,7.7,9.3,11.0,13.2,2019
+compacto,honda,fit,1.5-16v,dx / lx,m-5,sim,elétrica,flex,8.3,9.5,11.6,13.6,2019
+compacto,honda,fit,1.5-16v,dx / lx / ex / exl / personal,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2019
+compacto,volkswagen,gol,1.0-12v,(rodas aro 15),m-5,sim,hidráulica,flex,9.0,9.9,12.9,14.2,2019
+compacto,volkswagen,gol,1.0-12v,(rodas aro 14),m-5,sim,hidráulica,flex,9.1,10.1,13.3,14.4,2019
+compacto,hyundai,hb20,1.0-12v,unique / comfort plus / style,m-5,sim,hidráulica,flex,8.5,9.9,12.5,14.1,2019
+compacto,hyundai,hb20,1.6-16v,comfort plus / style,m-6,sim,hidráulica,flex,8.1,9.9,11.6,13.8,2019
+compacto,hyundai,hb20,1.6-16v,comfort plus / style / premium /rspec,a-6,sim,hidráulica,flex,7.1,9.4,9.9,12.5,2019
+compacto,hyundai,hb20,1.0-12vturbo,comfort plus / style,m-6,sim,hidráulica,flex,8.2,10.1,11.6,14.3,2019
+compacto,fiat,argo,1.0-6v,drive ( com stop & start),m-5,sim,elétrica,flex,9.9,10.7,14.2,15.1,2019
+compacto,fiat,argo,1.3-8v,drive ( com stop & start),m-5,sim,elétrica,flex,9.2,10.2,12.9,14.3,2019
+compacto,fiat,argo,1.3-8v,drive gsr,mta-5,sim,elétrica,flex,8.9,10.0,12.7,14.4,2019
+compacto,fiat,argo,1.8-16v,hgt,a-6,sim,elétrica,flex,6.9,9.1,10.0,12.8,2019
+compacto,fiat,argo,1.8-16v,hgt,m-5,sim,elétrica,flex,7.8,9.2,11.4,13.3,2019
+compacto,fiat,argo,1.8-16v,precision,a-6,sim,elétrica,flex,7.1,9.5,10.1,13.2,2019
+compacto,fiat,argo,1.8-16v,precision,m-5,sim,elétrica,flex,8.0,9.6,11.5,13.8,2019
+compacto,fiat,argo,1.0-6v,1.0,m-5,sim,elétrica,flex,9.1,10.4,13.0,14.7,2019
+compacto,fiat,argo,1.0-6v,drive,m-5,sim,elétrica,flex,9.1,10.4,13.0,14.7,2019
+compacto,fiat,argo,1.3-8v,drive,m-5,sim,elétrica,flex,8.7,10.0,12.6,14.7,2019
+compacto,renault,sandero,1.0-12v,authentique / expression,m5,sim,eletro-hidráulica,flex,9.5,9.6,14.2,14.1,2019
+compacto,renault,sandero,1.6-16v,dynamique / expression,m5,sim,eletro-hidráulica,flex,8.6,9.2,12.8,13.4,2019
+compacto,renault,sandero,1.6-16v,expression / dynamique,mta-5,sim,eletro-hidráulica,flex,8.1,8.8,11.8,12.8,2019
+compacto,renault,sandero,1.6-16v,gt line,m5,sim,eletro-hidráulica,flex,8.4,8.9,12.5,13.0,2019
+médio,honda,city,1.5-16v,dx,m-5,sim,elétrica,flex,8.6,10.3,12.4,14.6,2019
+médio,honda,city,1.5-16v,dx / lx / ex / exl / personal,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2019
+médio,volkswagen,polo,1.0-12v,"200 tsi comfortline (r15"")",a-6,sim,elétrica,flex,8.0,9.8,11.6,14.1,2019
+médio,volkswagen,polo,1.0-12v,"200 tsi comfortline (r16"") /200 tsi highline",a-6,sim,elétrica,flex,7.9,9.5,11.4,13.9,2019
+médio,volkswagen,voyage,1.0-12v,(rodas aro 14),m-5,sim,hidráulica,flex,8.9,10.6,13.4,15.6,2019
+médio,volkswagen,voyage,1.0-12v,(rodas aro 15),m-5,sim,hidráulica,flex,9.1,10.6,13.1,15.1,2019
+médio,hyundai,hb20s,1.0-12v,unique / comfort plus / style,m-5,sim,hidráulica,flex,8.5,9.8,12.0,14.0,2019
+médio,hyundai,hb20s,1.6-16v,comfort plus / style,m-6,sim,hidráulica,flex,8.1,9.8,11.5,14.0,2019
+médio,hyundai,hb20s,1.6-16v,comfort plus / style / premium,a-6,sim,hidráulica,flex,7.0,9.3,10.2,12.9,2019
+médio,hyundai,hb20s,1.0-12vturbo,comfort plus / style,m-6,sim,hidráulica,flex,8.4,10.5,11.9,15.2,2019
+médio,fiat,cronos,1.3 – 8v,drive,m-5,sim,elétrica,flex,8.5,10.3,12.4,14.8,2019
+médio,fiat,cronos,1.3 – 8v,drive gsr,mta-5,sim,elétrica,flex,8.8,10.4,12.7,14.8,2019
+médio,fiat,cronos,1.8 - 16v,precision,m-5,sim,elétrica,flex,8.0,9.6,11.6,13.8,2019
+médio,fiat,cronos,1.8 - 16v,precision,a-6,sim,elétrica,flex,7.2,9.6,10.3,13.3,2019
+médio,fiat,cronos,1.8 - 16v,drive,a-6,sim,elétrica,flex,7.2,9.6,10.3,13.3,2019
+médio,renault,logan,1.6-16v,dynamique / expression,mta-5,sim,eletro-hidráulica,flex,7.9,9.1,11.8,13.4,2019
+médio,renault,logan,1.0-12v,authentique / expression,m5,sim,eletro-hidráulica,flex,9.4,10.2,14.0,14.9,2019
+médio,renault,logan,1.6-16v,dynamique / expression,m5,sim,eletro-hidráulica,flex,8.7,9.7,13.0,14.1,2019
+grande,toyota,corolla,1.8-16v,gli,m-6,sim,elétrica,flex,7.4,9.1,10.7,13.2,2019
+grande,toyota,corolla,1.8-16v,gli,contínua,sim,elétrica,flex,7.8,9.2,11.4,13.2,2019
+grande,toyota,corolla,2.0-16v,altis / xei / xrs,contínua,sim,elétrica,flex,7.2,8.8,10.6,12.6,2019
+grande,honda,civic,2.0-16v,sport,m-6,sim,elétrica,flex,7.1,9.2,10.2,13.4,2019
+grande,honda,civic,2.0-16v,ex / ex-l / sport,contínua,sim,elétrica,flex,7.2,8.9,10.5,13.0,2019
+grande,honda,civic,1.5t-16v,touring,contínua,sim,elétrica,gasolina,0.0,0.0,11.8,14.4,2019
+grande,honda,civic,1.5t-16v,coupe si,m-6,sim,elétrica,gasolina,0.0,0.0,11.2,13.7,2019
+utilitárioesportivocompacto,nissan,kicks,1.6 - 16v,16 s,m-5,sim,elétrica,flex,7.8,9.0,11.1,13.0,2019
+utilitárioesportivocompacto,nissan,kicks,1.6 - 16v,16 s / 16 sv / 16 sl / 16 s drct / 16uefa cl,contínua,sim,elétrica,flex,7.7,9.4,11.4,13.7,2019
+utilitárioesportivocompacto,renault,kwid,1.0-12v,intens / life / zen,m5,sim,m / e,flex,10.3,10.8,14.9,15.6,2019
+subcompacto,fiat,mobi,1.06v,drive,m5,sim,hidráulica,flex,9.7,11.5,13.8,16.4,2020
+subcompacto,fiat,mobi,1.08v,drive gsr,m5,sim,hidráulica,flex,9.5,11.3,13.7,15.9,2020
+subcompacto,fiat,mobi,1.08v,easy,m5,não,hidráulica,flex,9.2,10.2,13.5,15.2,2020
+subcompacto,fiat,mobi,1.08v,like,m5,sim,hidráulica,flex,8.8,9.9,12.7,14.3,2020
+subcompacto,fiat,mobi,1.08v,way,m5,sim,hidráulica,flex,8.7,9.7,12.6,14.2,2020
+subcompacto,fiat,mobi,1.08v,easy,m5,sim,hidráulica,flex,8.8,9.9,12.7,14.3,2020
+compacto,honda,fit,1.516v,dx,m5,sim,elétrica,flex,8.3,9.5,11.6,13.6,2020
+compacto,honda,fit,1.516v,lx,m5,sim,elétrica,flex,8.3,9.5,11.6,13.6,2020
+compacto,honda,fit,1.516v,dx,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2020
+compacto,honda,fit,1.516v,lx,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2020
+compacto,honda,fit,1.516v,ex,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2020
+compacto,honda,fit,1.516v,exl,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2020
+compacto,honda,fit,1.516v,personal,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2020
+compacto,peugeot,208,1.212v,active pack,m5,sim,elétrica,flex,9.6,10.7,13.9,15.5,2020
+compacto,peugeot,208,1.212v,active,m5,sim,elétrica,flex,9.6,10.7,13.9,15.5,2020
+compacto,peugeot,208,1.212v,allure,m5,sim,elétrica,flex,9.6,10.7,13.9,15.5,2020
+compacto,peugeot,208,1.616v,griffe,a6,sim,elétrica,flex,7.7,9.3,11.0,13.2,2020
+compacto,peugeot,208,1.616v,allure,a6,sim,elétrica,flex,7.7,9.3,11.0,13.2,2020
+compacto,fiat,argo,1.06v,drive,m5,sim,elétrica,flex,9.3,10.0,13.2,14.2,2020
+compacto,fiat,argo,1.06v,drive (stop &start),m5,sim,elétrica,flex,9.8,10.3,14.2,14.5,2020
+compacto,fiat,argo,1.38v,drive,m5,sim,elétrica,flex,8.9,10.4,12.5,14.7,2020
+compacto,fiat,argo,1.38v,drive (stop &start),m5,sim,elétrica,flex,9.4,10.5,13.4,15.0,2020
+compacto,fiat,argo,1.38v,drive,mta5,sim,elétrica,flex,8.5,10.0,12.2,14.1,2020
+compacto,fiat,argo,1.38v,drive (stop &start),mta5,sim,elétrica,flex,9.1,10.1,13.0,14.3,2020
+compacto,fiat,argo,1.816v,precision,a6,sim,elétrica,flex,6.9,9.2,9.7,12.8,2020
+compacto,fiat,argo,1.816v,precision (stop& start),a6,sim,elétrica,flex,7.2,9.3,10.4,12.9,2020
+compacto,fiat,argo,1.816v,hgt,a6,sim,elétrica,flex,6.9,9.2,9.7,12.8,2020
+compacto,fiat,argo,1.816v,hgt (stop &start),a6,sim,elétrica,flex,7.2,9.3,10.4,12.9,2020
+compacto,renault,sandero,1.012v,authentique,m5,sim,eletro-hidráulica,flex,9.5,9.6,14.2,14.1,2020
+compacto,renault,sandero,1.012v,expression,m5,sim,eletro-hidráulica,flex,9.5,9.6,14.2,14.1,2020
+compacto,renault,sandero,1.616v,dynamique,m5,sim,eletro-hidráulica,flex,8.6,9.2,12.8,13.4,2020
+compacto,renault,sandero,1.616v,expression,m5,sim,eletro-hidráulica,flex,8.6,9.2,12.8,13.4,2020
+compacto,renault,sandero,1.616v,expression,mta5,sim,eletro-hidráulica,flex,8.1,8.8,11.8,12.8,2020
+compacto,renault,sandero,1.616v,dynamique,mta5,sim,eletro-hidráulica,flex,8.1,8.8,11.8,12.8,2020
+compacto,renault,sandero,1.616v,gt line,m5,sim,eletro-hidráulica,flex,8.4,8.9,12.5,13.0,2020
+compacto,hyundai,hb20,1.012v turbo,evolution,a6,sim,elétrica,flex,8.2,10.2,11.8,14.2,2020
+compacto,hyundai,hb20,1.012v turbo,diamond,a6,sim,elétrica,flex,8.6,10.3,12.2,13.9,2020
+compacto,hyundai,hb20,1.616v,vision,m6,sim,elétrica,flex,8.6,10.3,12.5,14.7,2020
+compacto,hyundai,hb20,1.616v,evolution,m6,sim,elétrica,flex,8.6,10.3,12.5,14.7,2020
+compacto,hyundai,hb20,1.616v,vision,a6,sim,elétrica,flex,7.8,9.8,11.5,13.9,2020
+compacto,hyundai,hb20,1.616v,evolution,a6,sim,elétrica,flex,7.8,9.8,11.5,13.9,2020
+compacto,hyundai,hb20,1.012v,sense,m5,sim,elétrica,flex,9.1,10.1,12.8,14.6,2020
+compacto,hyundai,hb20,1.012v,vision,m5,sim,elétrica,flex,9.1,10.1,12.8,14.6,2020
+compacto,hyundai,hb20,1.012v turbo,sport,a6,sim,elétrica,flex,8.2,10.4,11.7,14.0,2020
+compacto,volkswagen,gol,1.012v,(roda aro 14),m5,sim,hidráulica,flex,9.1,10.1,13.3,14.4,2020
+compacto,volkswagen,gol,1.012v,(roda aro 15),m5,sim,hidráulica,flex,9.0,9.9,12.9,14.2,2020
+compacto,volkswagen,gol,1.68v,patrulheiro,m5,sim,hidráulica,flex,7.7,9.0,11.2,13.0,2020
+compacto,volkswagen,gol,1.616v,msi,a6,sim,hidráulica,flex,7.7,9.6,11.1,13.6,2020
+médio,hyundai,hb20s,1.012v turbo,diamond,a6,sim,elétrica,flex,8.0,10.8,12.1,15.3,2020
+médio,hyundai,hb20s,1.012v turbo isg,diamond fe,a6,sim,elétrica,flex,8.8,11.0,12.7,15.7,2020
+médio,hyundai,hb20s,1.616v,vision,m6,sim,elétrica,flex,8.5,10.5,12.6,15.1,2020
+médio,hyundai,hb20s,1.616v,vision,a6,sim,elétrica,flex,8.1,10.4,11.5,14.9,2020
+médio,hyundai,hb20s,1.012v,vision,m5,sim,elétrica,flex,9.5,10.6,12.8,14.7,2020
+médio,hyundai,hb20s,1.012v,evolution,m5,sim,elétrica,flex,9.5,10.6,12.8,14.7,2020
+médio,honda,city,1.516v,dx,m5,sim,elétrica,flex,8.6,10.3,12.4,14.6,2020
+médio,honda,city,1.516v,dx,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2020
+médio,honda,city,1.516v,lx,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2020
+médio,honda,city,1.516v,ex,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2020
+médio,honda,city,1.516v,exl,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2020
+médio,honda,city,1.516v,personal,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2020
+médio,fiat,cronos,1.38v,drive,m5,sim,elétrica,flex,8.9,10.4,12.5,14.7,2020
+médio,fiat,cronos,1.38v,drive (stop &start),m5,sim,elétrica,flex,9.2,10.7,13.2,15.0,2020
+médio,fiat,cronos,1.816v,drive,m5,sim,elétrica,flex,7.4,9.3,11.0,13.5,2020
+médio,fiat,cronos,1.816v,drive (stop &start),m5,sim,elétrica,flex,8.0,9.6,11.6,13.8,2020
+médio,fiat,cronos,1.38v,drive,mta5,sim,elétrica,flex,8.6,10.3,12.4,14.4,2020
+médio,fiat,cronos,1.38v,drive (stop &start),mta5,sim,elétrica,flex,9.3,11.1,13.0,15.6,2020
+médio,fiat,cronos,1.816v,drive,a6,sim,elétrica,flex,6.7,9.3,9.8,13.2,2020
+médio,fiat,cronos,1.816v,precision,a6,sim,elétrica,flex,6.7,9.3,9.8,13.2,2020
+médio,fiat,cronos,1.816v,hgt,a6,sim,elétrica,flex,6.7,9.3,9.8,13.2,2020
+médio,fiat,cronos,1.816v,hgt (stop &start),a6,sim,elétrica,flex,7.2,9.6,10.3,13.3,2020
+médio,renault,logan,1.616v,dynamique,mta5,sim,eletro-hidráulica,flex,7.9,9.1,11.8,13.4,2020
+médio,renault,logan,1.616v,expression,mta5,sim,eletro-hidráulica,flex,7.9,9.1,11.8,13.4,2020
+médio,renault,logan,1.012v,authentique,m5,sim,eletro-hidráulica,flex,9.4,10.2,14.0,14.9,2020
+médio,renault,logan,1.012v,expression,m5,sim,eletro-hidráulica,flex,9.4,10.2,14.0,14.9,2020
+médio,renault,logan,1.616v,dynamique,m5,sim,eletro-hidráulica,flex,8.7,9.7,13.0,14.1,2020
+médio,renault,logan,1.616v,expression,m5,sim,eletro-hidráulica,flex,8.7,9.7,13.0,14.1,2020
+médio,renault,logan,1.012v,life,m5,sim,eletro-hidráulica,flex,9.0,10.0,13.2,14.1,2020
+médio,renault,logan,1.012v,zen,m5,sim,eletro-hidráulica,flex,9.0,10.0,13.2,14.1,2020
+médio,renault,logan,1.616v,zen,m5,sim,eletro-hidráulica,flex,8.3,9.0,11.9,13.1,2020
+médio,chevrolet,onix,1.012v turbo,pr2,a6,sim,elétrica,flex,8.3,10.7,11.9,15.1,2020
+médio,chevrolet,onix,1.012v turbo,pr1,a6,sim,elétrica,flex,8.3,10.7,11.9,15.1,2020
+médio,chevrolet,onix,1.012v turbo,ltz,a6,sim,elétrica,flex,8.3,10.7,11.9,15.1,2020
+médio,chevrolet,onix,1.012v turbo,4lt,a6,sim,elétrica,flex,8.3,10.7,11.9,15.1,2020
+médio,chevrolet,onix,1.012v turbo,2ls,a6,sim,elétrica,flex,8.3,10.7,11.9,15.1,2020
+médio,chevrolet,onix,1.012v,2lt,m6,sim,elétrica,flex,9.9,11.7,13.9,16.7,2020
+médio,chevrolet,onix,1.012v,8lt,m6,sim,elétrica,flex,9.9,11.7,13.9,16.7,2020
+médio,chevrolet,onix,1.012v,5lt,m6,sim,elétrica,flex,9.9,11.7,13.9,16.7,2020
+médio,chevrolet,onix,1.012v,1lt,m6,sim,elétrica,flex,9.9,11.7,13.9,16.7,2020
+médio,chevrolet,onix,1.012v,1ls,m6,sim,elétrica,flex,9.9,11.7,13.9,16.7,2020
+médio,chevrolet,onix,1.012v turbo,3lt,m6,sim,elétrica,flex,9.4,11.2,13.5,16.0,2020
+médio,chevrolet,onix,1.012v turbo,ltz,m6,sim,elétrica,flex,9.4,11.2,13.5,16.0,2020
+médio,chevrolet,spin,1.88v,lt,m6,sim,elétrica,flex,7.8,9.1,11.3,13.0,2020
+médio,chevrolet,spin,1.88v,ls,m6,sim,elétrica,flex,7.8,9.1,11.3,13.0,2020
+médio,chevrolet,spin,1.88v,lt,a6,sim,elétrica,flex,7.2,8.9,10.6,12.8,2020
+médio,chevrolet,spin,1.88v,ls2,m6,sim,elétrica,flex,7.8,8.9,11.0,12.6,2020
+médio,volkswagen,voyage,1.012v,(roda aro 14),m5,sim,hidráulica,flex,8.9,10.6,13.4,15.6,2020
+médio,volkswagen,voyage,1.012v,(roda aro 15),m5,sim,hidráulica,flex,9.1,10.6,13.1,15.1,2020
+médio,volkswagen,voyage,1.68v,patrulheiro,m5,sim,hidráulica,flex,7.7,9.0,11.2,13.0,2020
+médio,volkswagen,voyage,1.616v,msi,a6,sim,hidráulica,flex,8.0,10.1,11.1,14.3,2020
+médio,volkswagen,polo,1.616v,msi,m5,sim,elétrica,flex,8.2,9.5,12.0,13.9,2020
+médio,volkswagen,polo,1.616v,msi,a6,sim,elétrica,flex,7.9,9.6,11.0,13.8,2020
+médio,volkswagen,polo,1.012v,sense 200 tsi,a6,sim,elétrica,flex,8.0,9.8,11.6,14.1,2020
+médio,volkswagen,polo,1.012v,comforlline200tsi (rodaaro 15),a6,sim,elétrica,flex,8.0,9.8,11.6,14.1,2020
+médio,volkswagen,polo,1.012v,comfortline200tsi (rodaaro 16),a6,sim,elétrica,flex,7.9,9.5,11.4,13.9,2020
+médio,volkswagen,polo,1.012v,highline 200tsi,a6,sim,elétrica,flex,7.9,9.5,11.4,13.9,2020
+grande,honda,civic,2.016v,lx / ex / exl /sport,contínua,sim,elétrica,flex,7.2,8.9,10.5,13.0,2020
+grande,honda,civic,1.516v turbo,touring,contínua,sim,elétrica,gasolina,0.0,0.0,11.8,14.4,2020
+grande,honda,civic,1.516v turbo,coupe si,m6,sim,elétrica,gasolina,0.0,0.0,11.2,13.7,2020
+grande,toyota,corolla,1.816v,altis premiumh,contínua,sim,elétrica,flex,10.9,9.9,16.3,14.5,2020
+grande,toyota,corolla,1.816v,altis hv,contínua,sim,elétrica,flex,10.9,9.9,16.3,14.5,2020
+grande,toyota,corolla,2.016v,xei,contínua,sim,elétrica,flex,8.0,9.7,11.6,13.9,2020
+grande,toyota,corolla,2.016v,gli,contínua,sim,elétrica,flex,8.0,9.7,11.6,13.9,2020
+grande,toyota,corolla,2.016v,altis premium,contínua,sim,elétrica,flex,8.0,9.7,11.6,13.9,2020
+utilitárioesportivocompacto,nissan,kicks,1.616v,s,m5,sim,elétrica,flex,7.8,9.0,11.1,13.0,2020
+utilitárioesportivocompacto,nissan,kicks,1.616v,"spc,ed",m5,sim,elétrica,flex,7.8,9.0,11.1,13.0,2020
+utilitárioesportivocompacto,nissan,kicks,1.616v,s,contínua,sim,elétrica,flex,7.7,9.4,11.4,13.7,2020
+utilitárioesportivocompacto,nissan,kicks,1.616v,sv,contínua,sim,elétrica,flex,7.7,9.4,11.4,13.7,2020
+utilitárioesportivocompacto,nissan,kicks,1.616v,sl,contínua,sim,elétrica,flex,7.7,9.4,11.4,13.7,2020
+utilitárioesportivocompacto,nissan,kicks,1.616v,s drct,contínua,sim,elétrica,flex,7.7,9.4,11.4,13.7,2020
+utilitárioesportivocompacto,nissan,kicks,1.616v,uefa cl,contínua,sim,elétrica,flex,7.7,9.4,11.4,13.7,2020
+utilitárioesportivocompacto,nissan,kicks,1.616v,"spc,ed",contínua,sim,elétrica,flex,7.7,9.4,11.4,13.7,2020
+utilitárioesportivocompacto,fiat,argo,1.38v,trekking,m5,sim,elétrica,flex,8.5,9.6,12.1,13.5,2020
+utilitárioesportivocompacto,fiat,argo,1.816v,trekking,a6,sim,elétrica,flex,6.6,8.6,9.4,11.9,2020
+utilitárioesportivocompacto,renault,kwid,1.012v,intens,m5,sim,elétrica,flex,10.3,10.8,14.9,15.6,2020
+utilitárioesportivocompacto,renault,kwid,1.012v,life,m5,sim,elétrica,flex,10.3,10.8,14.9,15.6,2020
+utilitárioesportivocompacto,renault,kwid,1.012v,zen,m5,sim,elétrica,flex,10.3,10.8,14.9,15.6,2020
+minivan,chevrolet,spin,1.88v,premier (7l),a6,sim,elétrica,flex,7.1,8.7,10.2,12.4,2020
+minivan,chevrolet,spin,1.88v,premier (7l),m6,sim,elétrica,flex,7.7,9.0,11.1,12.7,2020
+minivan,chevrolet,spin,1.88v,at act (7l),a6,sim,elétrica,flex,7.1,8.3,10.2,11.8,2020
+sub compacto,fiat,mobi,1.0-8v,easy,m-5,não,mecânica,flex,9.7,10.7,13.7,15.3,2021
+sub compacto,fiat,mobi,1.0-8v,like,m-5,sim,hidráulica,flex,8.9,10.0,13.0,14.1,2021
+sub compacto,fiat,mobi,1.0-8v,trekking,m-5,sim,hidráulica,flex,8.9,10.0,13.0,14.1,2021
+sub compacto,fiat,uno,1.0-6v,drive,m-5,sim,elétrica,flex,9.1,10.6,13.2,15.2,2021
+sub compacto,fiat,uno,1.0-6v,way e,m-5,sim,elétrica,flex,9.1,10.6,13.2,15.2,2021
+sub compacto,fiat,uno,1.0-8v,attractive,m-5,sim,hidráulica,flex,8.0,9.4,11.6,13.4,2021
+compacto,fiat,argo,1.0-6v,1.0,m-5,sim,elétrica,flex,9.8,10.7,13.9,15.1,2021
+compacto,fiat,argo,1.0-6v,1.0,m-5,sim,elétrica,flex,9.4,10.5,13.5,15.0,2021
+compacto,fiat,argo,1.0-6v,drive,m-5,sim,elétrica,flex,9.8,10.7,13.9,15.1,2021
+compacto,fiat,argo,1.0-6v,drive,m-5,sim,elétrica,flex,9.4,10.5,13.5,15.0,2021
+compacto,fiat,argo,1.3-8v,drive,m-5,sim,elétrica,flex,8.8,10.4,12.8,14.7,2021
+compacto,fiat,argo,1.8-16v,hgt,a-6,sim,elétrica,flex,6.9,9.2,9.7,12.8,2021
+compacto,fiat,argo,1.8-16v,precision,a-6,sim,elétrica,flex,6.9,9.2,9.7,12.8,2021
+compacto,honda,fit,1.5-16v,dx,m-5,sim,elétrica,flex,8.3,9.5,11.6,13.6,2021
+compacto,honda,fit,1.5-16v,lx,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2021
+compacto,honda,fit,1.5-16v,ex,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2021
+compacto,honda,fit,1.5-16v,exl,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2021
+compacto,honda,fit,1.5-16v,personal,contínua,sim,elétrica,flex,8.3,9.9,12.3,14.1,2021
+compacto,hyundai,hb20,1.0-12v t,evolution,a-6,sim,elétrica,flex,8.2,10.2,11.8,14.2,2021
+compacto,hyundai,hb20,1.0-12v t,diamond,a-6,sim,elétrica,flex,8.2,10.2,11.8,14.2,2021
+compacto,hyundai,hb20,1.0-12v t,diamond plus,a-6,sim,elétrica,flex,8.6,10.3,12.2,13.9,2021
+compacto,hyundai,hb20,1.6-16v,vision,m-6,sim,elétrica,flex,8.6,10.3,12.5,14.7,2021
+compacto,hyundai,hb20,1.6-16v,vision,a-6,sim,elétrica,flex,7.8,9.8,11.5,13.9,2021
+compacto,hyundai,hb20,1.0-12v,sense 21/22,m-5,sim,elétrica,flex,9.5,10.5,13.3,14.9,2021
+compacto,hyundai,hb20,1.0-12v,vision 21/22,m-5,sim,elétrica,flex,9.5,10.5,13.3,14.9,2021
+compacto,hyundai,hb20,1.0-12v,evolution 21/22,m-5,sim,elétrica,flex,9.5,10.5,13.3,14.9,2021
+compacto,hyundai,hb20,1.0-12v,sense 21/21,m-5,sim,elétrica,flex,9.1,10.1,12.8,14.6,2021
+compacto,hyundai,hb20,1.0-12v,vision 21/21,m-5,sim,elétrica,flex,9.1,10.1,12.8,14.6,2021
+compacto,hyundai,hb20,1.0-12v,evolution 21/21,m-5,sim,elétrica,flex,9.1,10.1,12.8,14.6,2021
+compacto,hyundai,hb20,1.0-12v t,platinum,m-6,sim,elétrica,flex,9.2,10.9,13.2,15.1,2021
+compacto,hyundai,hb20,1.0-12v t,platinum,a-6,sim,elétrica,flex,8.2,10.2,11.8,14.2,2021
+compacto,hyundai,hb20,1.0-12v t,platinum plus,a-6,sim,elétrica,flex,8.2,10.2,11.8,14.2,2021
+compacto,hyundai,hb20,1.0-12v t,sport,a-6,sim,elétrica,flex,8.2,10.4,11.7,14.0,2021
+compacto,peugeot,208,1.2 12v,act pack mt,m-5,sim,elétrica,flex,9.6,10.7,13.9,15.5,2021
+compacto,peugeot,208,1.2 12v,active mt,m-5,sim,elétrica,flex,9.6,10.7,13.9,15.5,2021
+compacto,peugeot,208,1.2 12v,allure mt,m-5,sim,elétrica,flex,9.6,10.7,13.9,15.5,2021
+compacto,peugeot,208,1.6 16v,griffe eat6,a-6,sim,elétrica,flex,7.7,9.3,11.0,13.2,2021
+compacto,peugeot,208,1.6 16v,allure eat6,a-6,sim,elétrica,flex,7.7,9.3,11.0,13.2,2021
+compacto,peugeot,208,elétrico,e-gt,a-1,sim,elétrica,gasolina,0.0,0.0,37.8,30.8,2021
+compacto,renault,sandero,1.6-16v,zen,m5,sim,eletro-hidráulica,flex,8.6,9.1,12.0,13.1,2021
+compacto,renault,sandero,1.6-16v,zen,contínua,sim,eletro-hidráulica,flex,7.4,8.3,10.8,11.8,2021
+compacto,renault,sandero,1.6-16v,intense,contínua,sim,eletro-hidráulica,flex,7.4,8.3,10.8,11.8,2021
+compacto,renault,sandero,1.0-12v,life,m5,sim,eletro-hidráulica,flex,9.1,9.7,13.3,14.1,2021
+compacto,renault,sandero,1.0-12v,zen,m5,sim,eletro-hidráulica,flex,9.0,9.6,13.3,13.9,2021
+compacto,renault,sandero,1.6-16v,rli16cvt (gt line),contínua,sim,eletro-hidráulica,flex,7.4,8.3,10.8,11.8,2021
+compacto,renault,sandero,2.0-16v,rs,m6,sim,eletro-hidráulica,flex,6.9,7.7,9.9,11.1,2021
+compacto,volkswagen,gol,1.6-8v,1.6,m-5,sim,hidráulica,flex,7.8,9.5,11.1,13.6,2021
+compacto,volkswagen,gol,1.0-12v,1.0 (roda aro 14),m-5,sim,hidráulica,flex,9.1,10.1,13.3,14.4,2021
+compacto,volkswagen,gol,1.0-12v,1.0 (roda aro 15),m-5,sim,hidráulica,flex,9.0,9.9,12.9,14.2,2021
+compacto,volkswagen,gol,1.6-16v,1.6 msi automatic,a-6,sim,hidráulica,flex,7.7,9.6,11.1,13.6,2021
+compacto,volkswagen,gol,1.6-8v,patrulheiro,m-5,sim,hidráulica,flex,7.7,9.0,11.2,13.0,2021
+médio,chevrolet,onix,1.0 - 12 v,1ls,m-6,sim,elétrica,flex,9.9,11.7,13.9,16.7,2021
+médio,chevrolet,onix,1.0 - 12 v,1lt,m-6,sim,elétrica,flex,9.9,11.7,13.9,16.7,2021
+médio,chevrolet,onix,1.0 - 12 v,2lt,m-6,sim,elétrica,flex,9.9,11.7,13.9,16.7,2021
+médio,chevrolet,onix,1.0 - 12 v,5lt,m-6,sim,elétrica,flex,9.9,11.7,13.9,16.7,2021
+médio,chevrolet,onix,1.0 - 12 v,8lt,m-6,sim,elétrica,flex,9.9,11.7,13.9,16.7,2021
+médio,chevrolet,onix,1.0t - 12 v,rs,a-6,sim,elétrica,flex,8.3,10.1,12.0,14.4,2021
+médio,chevrolet,onix,1.0t - 12 v,pr1,a-6,sim,elétrica,flex,8.3,10.7,11.9,15.1,2021
+médio,chevrolet,onix,1.0t - 12 v,pr2,a-6,sim,elétrica,flex,8.3,10.7,11.9,15.1,2021
+médio,chevrolet,onix,1.0t - 12 v,2ls,a-6,sim,elétrica,flex,8.3,10.7,11.9,15.1,2021
+médio,chevrolet,onix,1.0t - 12 v,4lt,a-6,sim,elétrica,flex,8.3,10.7,11.9,15.1,2021
+médio,chevrolet,onix,1.0t - 12 v,7lt,a-6,sim,elétrica,flex,8.3,10.7,11.9,15.1,2021
+médio,chevrolet,onix,1.0t - 12 v,3lt,m-6,sim,elétrica,flex,9.4,11.2,13.5,16.0,2021
+médio,chevrolet,onix,1.0t - 12 v,6lt,m-6,sim,elétrica,flex,9.4,11.2,13.5,16.0,2021
+médio,chevrolet,spin,1.8l-8v,1.8l mt lt (5l),m-6,sim,elétrica,flex,7.8,9.1,11.3,13.0,2021
+médio,chevrolet,spin,1.8l-8v,1.8l mt ls e (5l),m-6,sim,elétrica,flex,7.8,9.1,11.3,13.0,2021
+médio,chevrolet,spin,1.8l-8v,at act (5l),a-6,sim,elétrica,flex,7.1,8.3,10.2,11.8,2021
+médio,chevrolet,spin,1.8l-8v,at lt (5l),a-6,sim,elétrica,flex,7.2,8.9,10.6,12.8,2021
+médio,chevrolet,spin,1.8l-8v,mt ls2,m-6,sim,elétrica,flex,7.8,8.9,11.0,12.6,2021
+médio,fiat,cronos,1.3-8v,1.3,m-5,sim,elétrica,flex,9.0,11.0,13.0,15.6,2021
+médio,fiat,cronos,1.3-8v,drive,m-5,sim,elétrica,flex,9.0,11.0,13.0,15.6,2021
+médio,fiat,cronos,1.8-16v,1.8,a-6,sim,elétrica,flex,6.7,9.3,9.8,13.2,2021
+médio,fiat,cronos,1.8-16v,drive,a-6,sim,elétrica,flex,6.7,9.3,9.8,13.2,2021
+médio,fiat,cronos,1.8-16v,hgt,a-6,sim,elétrica,flex,6.7,9.3,9.8,13.2,2021
+médio,fiat,cronos,1.8-16v,precision,a-6,sim,elétrica,flex,6.7,9.3,9.8,13.2,2021
+médio,fiat,siena,1.0-8v,1.0,m-5,sim,hidráulica,flex,7.9,9.5,11.2,13.6,2021
+médio,fiat,siena,1.4-8v,1.4,m-5,sim,hidráulica,flex,7.8,9.5,11.0,13.5,2021
+médio,honda,city,1.5-16v,dx,m-5,sim,elétrica,flex,8.6,10.3,12.4,14.6,2021
+médio,honda,city,1.5-16v,lx,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2021
+médio,honda,city,1.5-16v,ex,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2021
+médio,honda,city,1.5-16v,exl,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2021
+médio,honda,city,1.5-16v,personal,contínua,sim,elétrica,flex,8.5,10.3,12.3,14.5,2021
+médio,hyundai,hb20s,1.0-12v t,evolution,a-6,sim,elétrica,flex,8.0,10.8,12.1,15.3,2021
+médio,hyundai,hb20s,1.0-12v t,diamond,a-6,sim,elétrica,flex,8.0,10.8,12.1,15.3,2021
+médio,hyundai,hb20s,1.0-12v t,diamond plus,a-6,sim,elétrica,flex,8.8,11.0,12.7,15.6,2021
+médio,hyundai,hb20s,1.6-16v,vision,m-6,sim,elétrica,flex,8.5,10.5,12.6,15.1,2021
+médio,hyundai,hb20s,1.6-16v,vision,a-6,sim,elétrica,flex,8.1,10.4,11.5,14.9,2021
+médio,hyundai,hb20s,1.0-12v,vision 21/22,m-5,sim,elétrica,flex,9.6,11.1,13.7,15.7,2021
+médio,hyundai,hb20s,1.0-12v,evolution 21/22,m-5,sim,elétrica,flex,9.6,11.1,13.7,15.7,2021
+médio,hyundai,hb20s,1.0-12v,vision 21/21,m-5,sim,elétrica,flex,9.5,10.6,12.8,14.7,2021
+médio,hyundai,hb20s,1.0-12v,evolution 21/21,m-5,sim,elétrica,flex,9.5,10.6,12.8,14.7,2021
+médio,hyundai,hb20s,1.0-12v t,platinum,m-6,sim,elétrica,flex,9.8,11.6,13.6,16.0,2021
+médio,hyundai,hb20s,1.0-12v t,platinum,a-6,sim,elétrica,flex,8.0,10.8,12.1,15.3,2021
+médio,hyundai,hb20s,1.0-12v t,platinum plus,a-6,sim,elétrica,flex,8.0,10.8,12.1,15.3,2021
+médio,nissan,versa,1.6 - 16v,sense,m-5,sim,elétrica,flex,8.1,9.6,11.8,13.8,2021
+médio,nissan,versa,1.6 - 16v,sense,contínua,sim,elétrica,flex,8.0,10.0,11.7,13.9,2021
+médio,nissan,versa,1.6 - 16v,advance,contínua,sim,elétrica,flex,8.0,10.0,11.7,13.9,2021
+médio,nissan,versa,1.6 - 16v,exclusive,contínua,sim,elétrica,flex,8.0,10.0,11.7,13.9,2021
+médio,renault,logan,1.6-16v,zen,m5,sim,eletro-hidráulica,flex,8.3,9.0,11.9,13.1,2021
+médio,renault,logan,1.6-16v,zen,contínua,sim,eletro-hidráulica,flex,7.4,8.5,10.9,11.9,2021
+médio,renault,logan,1.6-16v,intense,contínua,sim,eletro-hidráulica,flex,7.4,8.5,10.9,11.9,2021
+médio,renault,logan,1.6-16v,iconic,contínua,sim,eletro-hidráulica,flex,7.4,8.5,10.9,11.9,2021
+médio,renault,logan,1.0-12v,zen,m5,sim,eletro-hidráulica,flex,9.3,10.0,13.6,14.2,2021
+médio,volkswagen,polo,1.0-12v,1.0,m-5,sim,elétrica,flex,8.8,10.0,12.9,14.3,2021
+médio,volkswagen,polo,1.6-16v,1.6 msi,m-5,sim,elétrica,flex,8.2,9.5,12.0,13.9,2021
+médio,volkswagen,polo,1.0-12v,comfortline 200tsi auto(roda aro 15),a-6,sim,elétrica,flex,8.0,9.8,11.6,14.1,2021
+médio,volkswagen,polo,1.0-12v,sense 200 tsi automatic,a-6,sim,elétrica,flex,8.0,9.8,11.6,14.1,2021
+médio,volkswagen,polo,1.0-12v,comfortline 200tsi auto(roda aro 16),a-6,sim,elétrica,flex,7.9,9.5,11.4,13.9,2021
+médio,volkswagen,polo,1.0-12v,highline 200tsi automatic,a-6,sim,elétrica,flex,7.9,9.5,11.4,13.9,2021
+médio,volkswagen,polo,1.6-16v,1.6 msi automatic,a-6,sim,elétrica,flex,7.9,9.6,11.0,13.8,2021
+médio,volkswagen,polo,1.4-16v,gts,a-6,sim,elétrica,flex,7.5,9.6,11.0,13.7,2021
+médio,volkswagen,voyage,1.6-8v,1.6,m-5,sim,hidráulica,flex,8.0,9.9,11.6,14.1,2021
+médio,volkswagen,voyage,1.0-12v,1.0 (roda aro 14),m-5,sim,hidráulica,flex,8.9,10.6,13.4,15.6,2021
+médio,volkswagen,voyage,1.0-12v,1.0 (roda aro 15),m-5,sim,hidráulica,flex,9.1,10.6,13.1,15.1,2021
+médio,volkswagen,voyage,1.6-16v,1.6 msi automatic,a-6,sim,hidráulica,flex,8.0,10.1,11.1,14.3,2021
+médio,volkswagen,voyage,1.6-8v,patrulheiro,m-5,sim,hidráulica,flex,7.7,9.0,11.2,13.0,2021
+grande,honda,civic,2.0-16v,lx,contínua,sim,elétrica,flex,7.2,8.9,10.5,13.0,2021
+grande,honda,civic,2.0-16v,ex,contínua,sim,elétrica,flex,7.2,8.9,10.5,13.0,2021
+grande,honda,civic,2.0-16v,exl,contínua,sim,elétrica,flex,7.2,8.9,10.5,13.0,2021
+grande,honda,civic,2.0-16v,sport,contínua,sim,elétrica,flex,7.2,8.9,10.5,13.0,2021
+grande,honda,civic,1.5t-16v,touring,contínua,sim,elétrica,gasolina,0.0,0.0,11.8,14.4,2021
+grande,honda,civic,1.5t-16v,coupe si,m-6,sim,elétrica,gasolina,0.0,0.0,11.1,13.7,2021
+grande,toyota,corolla,1.8 - 16v,apremiumh,contínua,sim,elétrica,flex,10.9,9.9,16.3,14.5,2021
+grande,toyota,corolla,1.8 - 16v,altis hv,contínua,sim,elétrica,flex,10.9,9.9,16.3,14.5,2021
+grande,toyota,corolla,2.0 - 16v,xei 20,contínua,sim,elétrica,flex,8.0,9.7,11.6,13.9,2021
+grande,toyota,corolla,2.0 - 16v,gli 20,contínua,sim,elétrica,flex,8.0,9.7,11.6,13.9,2021
+grande,toyota,corolla,2.0 - 16v,aprem 20,contínua,sim,elétrica,flex,8.0,9.7,11.6,13.9,2021
+grande,toyota,corolla,2.0 - 16v,grs,contínua,sim,elétrica,flex,8.0,9.7,11.6,13.9,2021
+utilitário esportivocompacto,fiat,argo,1.3-8v,trekking,m-5,sim,elétrica,flex,8.4,9.7,12.1,13.6,2021
+utilitário esportivocompacto,fiat,argo,1.8-16v,trekking,a-6,sim,elétrica,flex,6.6,8.6,9.4,11.9,2021
+utilitário esportivocompacto,fiat,argo,1.8-16v,trekking automático,a-6,sim,elétrica,flex,6.6,8.6,9.4,11.9,2021
+utilitário esportivocompacto,fiat,uno,1.3-8v,way e,m-5,sim,elétrica,flex,9.3,11.0,13.0,15.0,2021
+utilitário esportivocompacto,nissan,kicks,1.6 - 16v,s,m-5,sim,elétrica,flex,7.8,9.0,11.1,13.0,2021
+utilitário esportivocompacto,nissan,kicks,1.6 - 16v,spc ed,m-5,sim,elétrica,flex,7.8,9.0,11.1,13.0,2021
+utilitário esportivocompacto,nissan,kicks,1.6 - 16v,s,contínua,sim,elétrica,flex,7.7,9.4,11.4,13.7,2021
+utilitário esportivocompacto,nissan,kicks,1.6 - 16v,sv,contínua,sim,elétrica,flex,7.7,9.4,11.4,13.7,2021
+utilitário esportivocompacto,nissan,kicks,1.6 - 16v,sl,contínua,sim,elétrica,flex,7.7,9.4,11.4,13.7,2021
+utilitário esportivocompacto,nissan,kicks,1.6 - 16v,s drct,contínua,sim,elétrica,flex,7.7,9.4,11.4,13.7,2021
+utilitário esportivocompacto,nissan,kicks,1.6 - 16v,uefa cl,contínua,sim,elétrica,flex,7.7,9.4,11.4,13.7,2021
+utilitário esportivocompacto,nissan,kicks,1.6 - 16v,spc ed,contínua,sim,elétrica,flex,7.7,9.4,11.4,13.7,2021
+utilitário esportivocompacto,nissan,kicks,1.6 - 16v,active,contínua,sim,elétrica,flex,7.7,9.4,11.4,13.7,2021
+utilitário esportivocompacto,renault,kwid,1.0-12v,life,m5,sim,m / e,flex,10.3,10.8,14.9,15.6,2021
+utilitário esportivocompacto,renault,kwid,1.0-12v,zen,m5,sim,m / e,flex,10.3,10.8,14.9,15.6,2021
+utilitário esportivocompacto,renault,kwid,1.0-12v,intense,m5,sim,m / e,flex,10.3,10.8,14.9,15.6,2021
+utilitário esportivocompacto,renault,kwid,1.0-12v,outsider,m5,sim,elétrica,flex,9.3,10.0,13.8,14.4,2021
+minivan,chevrolet,spin,1.8l-8v,1.8l at premier (7l),a-6,sim,elétrica,flex,7.1,8.7,10.2,12.4,2021
+minivan,chevrolet,spin,1.8l-8v,1.8l mt premier (7l),m-6,sim,elétrica,flex,7.7,9.0,11.1,12.7,2021
+minivan,chevrolet,spin,1.8l-8v,at act7 (7l),a-6,sim,elétrica,flex,7.1,8.3,10.2,11.8,2021
+sub compacto,fiat,mobi,1.0-8v,easy,combustão,m-5,n,m,88.0,9.8,11.0,14.2,1
+sub compacto,fiat,mobi,1.0-8v,trekking,combustão,m-5,s,h,93.0,9.6,10.4,13.5,1
+sub compacto,fiat,mobi,1.0-8v,like,combustão,m-5,s,h,93.0,9.6,10.4,13.5,1
+compacto,renault,sandero,1.0-12v,sedtion bs,combustão,m-5,s,e-h,93.0,10.0,10.2,13.9,1
+compacto,renault,sandero,1.0-12v,sedition,combustão,m-5,s,e-h,93.0,10.0,10.2,13.9,1
+compacto,renault,sandero,1.0-12v,life10mt,combustão,m-5,s,e-h,93.0,10.0,10.2,13.9,1
+compacto,renault,sandero,1.0-12v,rlin,combustão,m-5,s,e-h,93.0,10.0,10.2,13.9,1
+compacto,renault,sandero,1.0-12v,zen10mt,combustão,m-5,s,e-h,93.0,10.0,10.2,13.9,1
+compacto,volkswagen,gol,1.0-12v,mpi,combustão,m - 5,s,h,92.0,9.4,10.7,13.7,1
+médio,renault,logan,1.6-16v,zen16cvt,combustão,cvt,s,e-h,119.0,7.4,8.5,10.7,1
+médio,renault,logan,1.0-12v,life,combustão,m-5,s,e-h,95.0,9.6,9.8,13.6,1
+médio,renault,logan,1.0-12v,zen,combustão,m-5,s,e-h,95.0,9.6,9.8,13.6,1
+médio,volkswagen,voyage,1.0-12v,mpi,combustão,m - 5,s,h,91.0,9.5,10.9,13.8,1
+utilitário esportivo compacto,nissan,kicks,1.6-16v,sense,combustão,m-5,s,h,109.0,7.8,9.1,11.6,3
+utilitário esportivo compacto,nissan,kicks,1.6-16v,sense,combustão,cvt,s,h,108.0,7.8,9.6,11.4,3
+utilitário esportivo compacto,nissan,kicks,1.6-16v,exclusi,combustão,cvt,s,h,108.0,7.8,9.6,11.4,3
+utilitário esportivo compacto,nissan,kicks,1.6-16v,active,combustão,cvt,s,h,108.0,7.8,9.6,11.4,3
+utilitário esportivo compacto,nissan,kicks,1.6-16v,advance,combustão,cvt,s,h,108.0,7.8,9.6,11.4,3
+utilitário esportivo compacto,renault,kwid,1.0-12v,zen,combustão,m-5,s,e-h,84.0,10.8,11.0,15.3,3
+utilitário esportivo compacto,renault,kwid,1.0-12v,intense,combustão,m-5,s,e-h,84.0,10.8,11.0,15.3,3
+utilitário esportivo compacto,renault,kwid,1.0-12v,outsider,combustão,m-5,s,e-h,84.0,10.8,11.0,15.3,3
+utilitário esportivo compacto,renault,kwid,1.0-12v,intense biton,combustão,m-5,s,e-h,84.0,10.8,11.0,15.3,3
+utilitário esportivo compacto,renault,sandero,1.6-16v,sze,combustão,m-5,s,e-h,111.0,8.3,8.5,11.8,3
+sub compacto,fiat,mobi,1.0-8v,easy,m-5,não,mecânica,flex,9.8,11.0,14.2,15.5,2023
+sub compacto,fiat,mobi,1.0-8v,trekking,m-5,sim,hidráulica,flex,9.6,10.4,13.5,15.0,2023
+sub compacto,fiat,mobi,1.0-8v,like,m-5,sim,hidráulica,flex,9.6,10.4,13.5,15.0,2023
+compacto,fiat,argo,1.0-6v,drive 1.0 (cy23),m-5,sim,elétrica,flex,9.3,10.3,13.4,14.6,2023
+compacto,fiat,argo,1.0-6v,1.0 (cy23),m-5,sim,elétrica,flex,9.3,10.3,13.4,14.6,2023
+compacto,fiat,argo,1.3-8v,drive at (my23),cvt-7,sim,elétrica,flex,8.9,10.6,12.8,14.6,2023
+compacto,fiat,argo,1.3-8v,drive,m-5,sim,elétrica,flex,9.1,10.5,13.1,15.0,2023
+compacto,fiat,argo,1.0-6v,1.0,m-5,sim,elétrica,flex,9.4,10.2,13.3,14.7,2023
+compacto,fiat,argo,1.0-6v,drive 1.0,m-5,sim,elétrica,flex,9.4,10.2,13.3,14.7,2023
+compacto,hyundai,hb20,1.0-12v,sense,m-5,sim,elétrica,flex,9.6,10.4,13.3,14.6,2023
+compacto,hyundai,hb20,1.0-12v,comfort,m-5,sim,elétrica,flex,9.6,10.4,13.3,14.6,2023
+compacto,hyundai,hb20,1.0-12v,limited,m-5,sim,elétrica,flex,9.6,10.4,13.3,14.6,2023
+compacto,hyundai,hb20,1.0-12v,platinum,m-5,sim,elétrica,flex,9.6,10.4,13.3,14.6,2023
+compacto,hyundai,hb20,1.0-12v t,comfort,m-6,sim,elétrica,flex,9.4,10.6,13.4,14.6,2023
+compacto,hyundai,hb20,1.0-12v t,platinum,a-6,sim,elétrica,flex,8.3,9.9,11.7,13.9,2023
+compacto,hyundai,hb20,1.0-12v t,sense,a-6,sim,elétrica,flex,8.3,9.9,11.7,13.9,2023
+compacto,hyundai,hb20,1.0-12v t,platinum smart sense,a-6,sim,elétrica,flex,9.0,10.3,12.7,14.0,2023
+compacto,hyundai,hb20,1.0-12v t,platinum plus,a-6,sim,elétrica,flex,9.0,10.3,12.7,14.0,2023
+compacto,peugeot,208,1.6-16v,active at1,a-6,sim,elétrica,flex,7.7,9.1,11.1,12.9,2023
+compacto,peugeot,208,1.6-16v,allure at,a-6,sim,elétrica,flex,7.7,9.1,11.1,12.9,2023
+compacto,peugeot,208,1.6-16v,griffe at,a-6,sim,elétrica,flex,7.7,9.1,11.1,12.9,2023
+compacto,peugeot,208,1.6-16v,roadtrip a,a-6,sim,elétrica,flex,7.7,9.1,11.1,12.9,2023
+compacto,peugeot,208,1.0-6v,like mt,m-5,sim,elétrica,flex,10.4,11.3,14.7,16.3,2023
+compacto,peugeot,208,1.0-6v,style mt,m-5,sim,elétrica,flex,9.6,11.0,13.6,15.5,2023
+compacto,peugeot,208,1.0-6v,style mt (my24),m-5,sim,elétrica,flex,9.6,11.1,13.3,15.8,2023
+compacto,peugeot,208,1.0-6v,like mt (my24),m-5,sim,elétrica,flex,9.6,11.1,13.3,15.8,2023
+compacto,peugeot,208,1.0-12v t,griff t200,cvt-7,sim,elétrica,flex,8.8,10.0,12.5,14.1,2023
+compacto,peugeot,208,1.0-12v t,allur t200,cvt-7,sim,elétrica,flex,8.8,10.0,12.5,14.1,2023
+compacto,peugeot,208,1.0-12v t,style t200,cvt-7,sim,elétrica,flex,8.3,9.8,12.0,13.6,2023
+compacto,renault,sandero,1.0-12v,sedtion bs,m-5,sim,eletro-hidráulica,flex,10.0,10.2,13.9,14.7,2023
+compacto,renault,sandero,1.0-12v,sedition,m-5,sim,eletro-hidráulica,flex,10.0,10.2,13.9,14.7,2023
+compacto,renault,sandero,1.0-12v,life10mt,m-5,sim,eletro-hidráulica,flex,10.0,10.2,13.9,14.7,2023
+compacto,renault,sandero,1.0-12v,rlin,m-5,sim,eletro-hidráulica,flex,10.0,10.2,13.9,14.7,2023
+compacto,renault,sandero,1.0-12v,zen10mt,m-5,sim,eletro-hidráulica,flex,10.0,10.2,13.9,14.7,2023
+compacto,renault,sandero,1.0-12v,sze10mt,m-5,sim,eletro-hidráulica,flex,9.3,9.3,13.0,13.7,2023
+compacto,volkswagen,gol,1.0-12v,mpi,m - 5,sim,hidráulica,flex,9.4,10.7,13.7,15.2,2023
+médio,chevrolet,onix,1.0 - 12 v,10mt lt1,m-6,sim,elétrica,flex,9.4,11.6,13.3,16.6,2023
+médio,chevrolet,onix,1.0 - 12 v,10mt lt2,m-6,sim,elétrica,flex,9.4,11.6,13.3,16.6,2023
+médio,chevrolet,onix,1.0t - 12 v,10tmt lt1,m-6,sim,elétrica,flex,9.1,11.1,13.1,16.1,2023
+médio,chevrolet,onix,1.0 - 12 v,10mt hb,m-6,sim,elétrica,flex,9.4,11.6,13.3,16.6,2023
+médio,chevrolet,onix,1.0t - 12 v,10tmt ltz,m-6,sim,elétrica,flex,9.1,11.1,13.1,16.1,2023
+médio,chevrolet,onix,1.0t - 12 v,10tat hb (produzidos até 22jan23),a-6,sim,elétrica,flex,8.4,10.4,11.9,15.1,2023
+médio,chevrolet,onix,1.0t - 12 v,10tat lt1 (produzidos até 22jan23),a-6,sim,elétrica,flex,8.4,10.4,11.9,15.1,2023
+médio,chevrolet,onix,1.0t - 12 v,10tat ltz (produzidos até 22jan23),a-6,sim,elétrica,flex,8.4,10.4,11.9,15.1,2023
+médio,chevrolet,onix,1.0t - 12 v,10tat pr2 (produzidos até 22jan23),a-6,sim,elétrica,flex,8.4,10.4,11.9,15.1,2023
+médio,chevrolet,onix,1.0t - 12 v,10tat rs (produzidos até 22jan23),a-6,sim,elétrica,flex,8.2,9.8,11.8,14.0,2023
+médio,chevrolet,onix,1.0t - 12 v,10tat hb (produzidos a partir de23jan23),a-6,sim,elétrica,flex,8.4,10.4,11.8,14.9,2023
+médio,chevrolet,onix,1.0t - 12 v,10tat lt1(produzidos a partir de 23jan23),a-6,sim,elétrica,flex,8.4,10.4,11.8,14.9,2023
+médio,chevrolet,onix,1.0t - 12 v,10tat ltz (produzidos a partir de23jan23),a-6,sim,elétrica,flex,8.4,10.4,11.8,14.9,2023
+médio,chevrolet,onix,1.0t - 12 v,10tat pr2(produzidos a partir de 23jan23),a-6,sim,elétrica,flex,8.4,10.4,11.8,14.9,2023
+médio,chevrolet,onix,1.0t - 12 v,10tat rs (produzidos a partir de23jan23),a-6,sim,elétrica,flex,8.2,10.0,11.7,14.5,2023
+médio,chevrolet,onix,1.0 - 12 v,10mt hb my24,m-6,sim,elétrica,flex,9.3,11.4,13.3,16.5,2023
+médio,chevrolet,onix,1.0 - 12 v,10mt lt1 my24,m-6,sim,elétrica,flex,9.3,11.4,13.3,16.5,2023
+médio,chevrolet,onix,1.0 - 12 v,10mt lt2 my24,m-6,sim,elétrica,flex,9.3,11.4,13.3,16.5,2023
+médio,chevrolet,spin,1.8l -8v,1.8l at act,a-6,sim,elétrica,flex,6.9,8.6,9.8,12.3,2023
+médio,chevrolet,spin,1.8l -8v,1.8l at ltz5,a-6,sim,elétrica,flex,6.9,8.6,9.8,12.3,2023
+médio,chevrolet,spin,1.8l -8v,1.8l at lt,a-6,sim,elétrica,flex,7.2,8.8,10.2,12.6,2023
+médio,chevrolet,spin,1.8l -8v,1.8l at ls,a-6,sim,elétrica,flex,7.2,8.8,10.2,12.6,2023
+médio,chevrolet,spin,1.8l-8v,1.8l mt ls e,m-6,sim,elétrica,flex,7.5,8.9,10.8,12.8,2023
+médio,chevrolet,spin,1.8l-8v,1.8l mt lt,m-6,sim,elétrica,flex,7.5,8.9,10.8,12.8,2023
+médio,fiat,cronos,1.0-6v,1.0 (my23),m-5,sim,elétrica,flex,9.9,11.3,13.8,16.0,2023
+médio,fiat,cronos,1.0-6v,drive 1.0 (my23),m-5,sim,elétrica,flex,9.9,11.4,14.0,16.1,2023
+médio,fiat,cronos,1.3-8v,drive 1.3 (cy23),m-5,sim,elétrica,flex,9.0,10.9,12.8,15.5,2023
+médio,fiat,cronos,1.3-8v,prec 1.3at (cy23),cvt-7,sim,elétrica,flex,9.3,11.0,13.3,15.0,2023
+médio,fiat,cronos,1.3-8v,drive 1.3at (cy23),cvt-7,sim,elétrica,flex,9.3,11.0,13.3,15.0,2023
+médio,fiat,cronos,1.0-6v,1.0,m-5,sim,elétrica,flex,9.8,11.0,13.4,15.6,2023
+médio,fiat,cronos,1.0-6v,drive 1.0,m-5,sim,elétrica,flex,9.8,11.0,13.4,15.6,2023
+médio,honda,city,1.5-16v,ex,contínua,sim,elétrica,flex,9.2,10.5,13.1,15.2,2023
+médio,honda,city,1.5-16v,exl,contínua,sim,elétrica,flex,9.2,10.5,13.1,15.2,2023
+médio,honda,city,1.5-16v,touring,contínua,sim,elétrica,flex,9.2,10.5,13.1,15.2,2023
+médio,hyundai,hb20s,1.0-12v,comfort,m-5,sim,elétrica,flex,9.4,10.4,13.2,14.8,2023
+médio,hyundai,hb20s,1.0-12v,limited,m-5,sim,elétrica,flex,9.4,10.4,13.2,14.8,2023
+médio,hyundai,hb20s,1.0-12v,platinum,m-5,sim,elétrica,flex,9.4,10.4,13.2,14.8,2023
+médio,hyundai,hb20s,1.0-12v t,comfort,m-6,sim,elétrica,flex,9.3,10.7,12.9,14.7,2023
+médio,hyundai,hb20s,1.0-12v t,comfort,a-6,sim,elétrica,flex,8.3,9.9,11.6,14.3,2023
+médio,hyundai,hb20s,1.0-12v t,platinum,a-6,sim,elétrica,flex,8.3,9.9,11.6,14.3,2023
+médio,hyundai,hb20s,1.0-12v t,sense,a-6,sim,elétrica,flex,8.9,10.3,12.2,14.3,2023
+médio,hyundai,hb20s,1.0-12v t,platinum smart sense,a-6,sim,elétrica,flex,8.9,10.3,12.2,14.3,2023
+médio,nissan,versa,1.6-16v,sense,m-5,sim,elétrica,flex,8.1,9.9,11.5,14.1,2023
+médio,nissan,versa,1.6-16v,sense,contínua,sim,elétrica,flex,7.9,10.2,11.5,14.7,2023
+médio,nissan,versa,1.6-16v,exclusive,contínua,sim,elétrica,flex,7.9,10.2,11.5,14.7,2023
+médio,nissan,versa,1.6-16v,advance,contínua,sim,elétrica,flex,7.9,10.2,11.5,14.7,2023
+médio,renault,logan,1.6 - 16v,zen16cvt,contínua,sim,eletro-hidráulica,flex,7.4,8.5,10.7,12.2,2023
+médio,renault,logan,1.0-12v,life,m-5,sim,eletro-hidráulica,flex,9.6,9.8,13.6,14.4,2023
+médio,renault,logan,1.0-12v,zen,m-5,sim,eletro-hidráulica,flex,9.6,9.8,13.6,14.4,2023
+médio,volkswagen,polo,1.0-12v,comfortline tsi automático,a - 6,sim,elétrica,flex,8.7,10.8,12.5,15.3,2023
+médio,volkswagen,polo,1.0-12v,highline tsi automático,a - 6,sim,elétrica,flex,8.4,10.5,12.1,14.9,2023
+médio,volkswagen,polo,1.0-12v,mpi,m - 5,sim,elétrica,flex,9.6,10.9,14.0,15.4,2023
+médio,volkswagen,polo,1.0-12v,tsi manual,m - 5,sim,elétrica,flex,9.6,11.5,14.0,16.4,2023
+médio,volkswagen,polo,1.4-16v,gts 250tsi automático,a - 6,sim,elétrica,flex,8.0,9.8,11.4,14.1,2023
+médio,volkswagen,polo,1.4-16v,gts 250tsi automático (ad),a - 6,sim,elétrica,flex,8.0,9.8,11.4,14.1,2023
+médio,volkswagen,polo,1.0-12v,track mpi,m - 5,sim,elétrica,flex,9.3,10.5,13.5,15.0,2023
+médio,volkswagen,polo,1.0-12v,track first edition,m - 5,sim,elétrica,flex,9.3,10.5,13.5,15.0,2023
+médio,volkswagen,polo,1.0-12v,tsi manual (my24),m - 5,sim,elétrica,flex,9.5,11.3,13.7,16.1,2023
+médio,volkswagen,polo,1.0-12v,comfortline tsi aut.(my24),a - 6,sim,elétrica,flex,8.5,10.6,12.5,15.1,2023
+médio,volkswagen,polo,1.0-12v,highline tsi automático (my24),a - 6,sim,elétrica,flex,8.5,10.4,12.3,14.6,2023
+médio,volkswagen,polo,1.0-12v,sense tsi aut.(my24),a - 6,sim,elétrica,flex,8.5,10.6,12.5,15.1,2023
+médio,volkswagen,polo,1.0-12v,track mpi (my24),m - 5,sim,elétrica,flex,9.4,10.8,13.7,15.2,2023
+médio,volkswagen,polo,1.0-12v,mpi (my24),m - 5,sim,elétrica,flex,9.4,10.8,13.7,15.2,2023
+médio,volkswagen,polo,1.4-16v,gts 250tsi aut.(my24),a - 6,sim,elétrica,flex,8.1,9.8,11.6,13.8,2023
+médio,volkswagen,voyage,1.0-12v,mpi,m - 5,sim,hidráulica,flex,9.5,10.9,13.8,15.6,2023
+grande,toyota,corolla,1.8 - 16v,apremiumh,contínua,sim,elétrica,flex,11.8,10.5,17.9,15.4,2023
+grande,toyota,corolla,1.8 - 16v,altis hv,contínua,sim,elétrica,flex,11.8,10.5,17.9,15.4,2023
+grande,toyota,corolla,2.0 - 16v,xei 20,contínua,sim,elétrica,flex,8.3,9.8,11.9,14.2,2023
+grande,toyota,corolla,2.0 - 16v,gli 20,contínua,sim,elétrica,flex,8.3,9.8,11.9,14.2,2023
+grande,toyota,corolla,2.0 - 16v,altis 20,contínua,sim,elétrica,flex,8.3,9.8,11.9,14.2,2023
+grande,toyota,corolla,2.0 - 16v,grs,contínua,sim,elétrica,flex,8.3,9.8,11.9,14.2,2023
+grande,toyota,corolla,1.8 - 16v,apremiumh hv (my 2024),contínua,sim,elétrica,flex,12.8,11.1,18.5,15.7,2023
+grande,toyota,corolla,1.8 - 16v,altis hv (my 2024),contínua,sim,elétrica,flex,12.8,11.1,18.5,15.7,2023
+grande,toyota,corolla,2.0 - 16v,xei 20 (my 2024),contínua,sim,elétrica,flex,8.6,10.7,12.3,14.9,2023
+grande,toyota,corolla,2.0 - 16v,gli 20 (my 2024),contínua,sim,elétrica,flex,8.6,10.7,12.3,14.9,2023
+grande,toyota,corolla,2.0 - 16v,altis 20 (my 2024),contínua,sim,elétrica,flex,8.6,10.7,12.3,14.9,2023
+grande,toyota,corolla,2.0 - 16v,grs (my 2024),contínua,sim,elétrica,flex,8.6,10.7,12.3,14.9,2023
+utilitário esportivo compacto,citroen,c3,1.0 6v,first ed 1.0,m-5,sim,elétrica,flex,9.3,10.0,12.9,14.1,2023
+utilitário esportivo compacto,citroen,c3,1.0 6v,feel 1.0 (cy23),m-5,sim,elétrica,flex,9.5,10.3,13.2,14.5,2023
+utilitário esportivo compacto,citroen,c3,1.0 6v,live 1.0 (cy23),m-5,sim,elétrica,flex,9.5,10.3,13.2,14.5,2023
+utilitário esportivo compacto,citroen,c3,1.0 6v,live pk 1.0 (cy23),m-5,sim,elétrica,flex,9.5,10.3,13.2,14.5,2023
+utilitário esportivo compacto,citroen,c3,1.6 16v,feel pk at,a-6,sim,elétrica,flex,7.2,8.5,10.3,12.4,2023
+utilitário esportivo compacto,citroen,c3,1.6 16v,first ed at,a-6,sim,elétrica,flex,7.2,8.5,10.3,12.4,2023
+utilitário esportivo compacto,citroen,c3,1.6 16v,feel 1.6,m-5,sim,elétrica,flex,7.8,9.0,10.9,12.8,2023
+utilitário esportivo compacto,fiat,argo,1.3-8v,trekking 1.3 at (cy23),cvt-7,sim,elétrica,flex,8.9,10.1,12.7,13.9,2023
+utilitário esportivo compacto,fiat,argo,1.3-8v,trekking 1.3 (cy23),m-5,sim,elétrica,flex,9.1,10.0,12.6,14.1,2023
+utilitário esportivo compacto,nissan,kicks,1.6-16v,sense,m-5,sim,elétrica,flex,7.8,9.0,11.5,13.0,2023
+utilitário esportivo compacto,nissan,kicks,1.6-16v,sense,contínua,sim,elétrica,flex,7.8,9.5,11.4,13.8,2023
+utilitário esportivo compacto,nissan,kicks,1.6-16v,exclusive,contínua,sim,elétrica,flex,7.8,9.5,11.4,13.8,2023
+utilitário esportivo compacto,nissan,kicks,1.6-16v,active,contínua,sim,elétrica,flex,7.8,9.5,11.4,13.8,2023
+utilitário esportivo compacto,nissan,kicks,1.6-16v,advance,contínua,sim,elétrica,flex,7.8,9.5,11.4,13.8,2023
+utilitário esportivo compacto,nissan,kicks,1.6-16v,xplay,contínua,sim,elétrica,flex,7.8,9.5,11.4,13.8,2023
+utilitário esportivo compacto,renault,kwid,1.0-12v,zen,m-5,sim,eletro-hidráulica,flex,10.8,11.0,15.3,15.7,2023
+utilitário esportivo compacto,renault,kwid,1.0-12v,intense,m-5,sim,eletro-hidráulica,flex,10.8,11.0,15.3,15.7,2023
+utilitário esportivo compacto,renault,kwid,1.0-12v,outsider,m-5,sim,eletro-hidráulica,flex,10.8,11.0,15.3,15.7,2023
+utilitário esportivo compacto,renault,kwid,1.0-12v,intense biton,m-5,sim,eletro-hidráulica,flex,10.8,11.0,15.3,15.7,2023
+utilitário esportivo compacto,renault,sandero,1.6 - 16v,sze,m-5,sim,eletro-hidráulica,flex,8.3,8.5,11.8,12.1,2023
+utilitário esportivo compacto,renault,sandero,1.6 - 16v,sic16cvt,contínua,sim,eletro-hidráulica,flex,7.4,8.3,10.7,11.6,2023
+minivan,chevrolet,spin,1.8l -8v,1.8l at act7,a-6,sim,elétrica,flex,6.9,8.6,9.8,12.3,2023
+minivan,chevrolet,spin,1.8l -8v,1.8l at premier,a-6,sim,elétrica,flex,6.9,8.6,9.8,12.3,2023
+minivan,chevrolet,spin,1.8l -8v,1.8l at lt7,a-6,sim,elétrica,flex,6.9,8.6,9.8,12.3,2023
+minivan,chevrolet,spin,1.8l-8v,18l mt premier,m-6,sim,elétrica,flex,7.5,8.9,10.8,12.8,2023
+esportivo,honda,civic,2.0t - 16v,type-r,manual,sim,elétrica,gasolina,0.0,0.0,8.8,11.1,2023
+sub compacto,fiat,mobi,1.0-8v,like,m-5,sim,hidráulica,flex,9.6,10.4,13.5,15.0,2024
+sub compacto,fiat,mobi,1.0-8v,trekking 1.0mt,m-5,sim,hidráulica,flex,9.6,10.4,13.5,15.0,2024
+compacto,fiat,argo,1.0-6v,1.0,m-5,sim,elétrica,flex,9.4,10.2,13.3,14.7,2024
+compacto,fiat,argo,1.0-6v,drive 1.0,m-5,sim,elétrica,flex,9.4,10.2,13.3,14.7,2024
+compacto,fiat,argo,1.0-6v,drive 1.0 / 1.0,m-5,sim,elétrica,flex,9.4,10.6,13.6,15.1,2024
+compacto,fiat,argo,1.3-8v,drive 1.3 at,cvt-7,sim,elétrica,flex,9.1,10.1,12.6,13.9,2024
+compacto,fiat,argo,1.3-8v,drive 1.3 at (my 25),cvt-7,sim,elétrica,flex,8.8,10.4,12.6,14.4,2024
+compacto,hyundai,hb20,1.0-12v,sense,m-5,sim,elétrica,flex,9.6,10.4,13.5,14.6,2024
+compacto,hyundai,hb20,1.0-12v,comfort,m-5,sim,elétrica,flex,9.6,10.4,13.5,14.6,2024
+compacto,hyundai,hb20,1.0-12v,limited,m-5,sim,elétrica,flex,9.6,10.4,13.5,14.6,2024
+compacto,hyundai,hb20,1.0-12v,platinum,m-5,sim,elétrica,flex,9.6,10.4,13.5,14.6,2024
+compacto,hyundai,hb20,1.0-12v t,comfort,m-6,sim,elétrica,flex,9.4,10.6,13.4,14.5,2024
+compacto,hyundai,hb20,1.0-12v t,comfort,a-6,sim,elétrica,flex,8.3,9.9,11.8,14.0,2024
+compacto,hyundai,hb20,1.0-12v t,platinum,a-6,sim,elétrica,flex,8.3,9.9,11.8,14.0,2024
+compacto,hyundai,hb20,1.0-12v t,sense,a-6,sim,elétrica,flex,8.3,9.9,11.8,14.0,2024
+compacto,hyundai,hb20,1.0-12v t,platinum smart sense,a-6,sim,elétrica,flex,8.3,9.9,11.8,14.0,2024
+compacto,hyundai,hb20,1.0-12v t,platinum plus,a-6,sim,elétrica,flex,9.0,10.2,12.6,14.1,2024
+compacto,hyundai,hb20,1.0-12v t,platinum safety,a-6,sim,elétrica,flex,8.3,9.9,11.8,14.0,2024
+compacto,hyundai,hb20,1.0-12v t,platinum safety,a-6,sim,elétrica,flex,9.0,10.2,12.6,14.1,2024
+compacto,hyundai,hb20,1.0-12v t,comfort (25my),a-6,sim,elétrica,flex,8.5,10.4,12.3,14.8,2024
+compacto,hyundai,hb20,1.0-12v,sense (25my),m-5,sim,elétrica,flex,10.0,10.4,13.6,14.8,2024
+compacto,hyundai,hb20,1.0-12v,comfort (25my),m-5,sim,elétrica,flex,10.0,10.4,13.6,14.8,2024
+compacto,hyundai,hb20,1.0-12v,limited (25my),m-5,sim,elétrica,flex,10.0,10.4,13.6,14.8,2024
+compacto,hyundai,hb20,1.0-12v t,comfort (25my),a-6,sim,elétrica,flex,9.1,10.5,13.1,14.8,2024
+compacto,hyundai,hb20,1.0-12v t,comfort / platinum safety (25my),a-6,sim,elétrica,flex,9.1,10.5,13.1,14.8,2024
+compacto,peugeot,208,1.0-6v,style mt,m-5,sim,elétrica,flex,9.6,11.1,13.3,15.8,2024
+compacto,peugeot,208,1.0-6v,like mt,m-5,sim,elétrica,flex,9.6,11.1,13.3,15.8,2024
+compacto,peugeot,208,1.6-16v,roadtrip a,a-6,sim,elétrica,flex,7.7,9.1,11.1,12.9,2024
+compacto,peugeot,208,1.0-12v t,griff t200,cvt-7,sim,elétrica,flex,8.8,10.0,12.5,14.1,2024
+compacto,peugeot,208,1.0-12v t,allur t200,cvt-7,sim,elétrica,flex,8.8,10.0,12.5,14.1,2024
+compacto,peugeot,208,1.0-12v t,style t200,cvt-7,sim,elétrica,flex,8.3,9.8,12.0,13.6,2024
+compacto,renault,sandero,1.0-12v,sedtion bs,m-5,sim,eletro-hidráulica,flex,10.0,10.2,13.9,14.7,2024
+compacto,renault,sandero,1.0-12v,sedition,m-5,sim,eletro-hidráulica,flex,10.0,10.2,13.9,14.7,2024
+compacto,renault,sandero,1.0-12v,sze10mt,m-5,sim,eletro-hidráulica,flex,9.3,9.3,13.0,13.7,2024
+médio,chevrolet,onix,1.0 - 12 v,10mt hb,m-6,sim,elétrica,flex,9.3,11.4,13.3,16.5,2024
+médio,chevrolet,onix,1.0 - 12 v,10mt lt1,m-6,sim,elétrica,flex,9.3,11.4,13.3,16.5,2024
+médio,chevrolet,onix,1.0 - 12 v,10mt lt2,m-6,sim,elétrica,flex,9.3,11.4,13.3,16.5,2024
+médio,chevrolet,onix,1.0t - 12 v,10tat rs,a-6,sim,elétrica,flex,8.2,9.9,11.7,13.7,2024
+médio,chevrolet,onix,1.0t - 12 v,10tat hb,a-6,sim,elétrica,flex,8.3,10.4,11.6,14.9,2024
+médio,chevrolet,onix,1.0t - 12 v,10tat lt1,a-6,sim,elétrica,flex,8.3,10.4,11.6,14.9,2024
+médio,chevrolet,onix,1.0t - 12 v,10tat ltz,a-6,sim,elétrica,flex,8.3,10.4,11.6,14.9,2024
+médio,chevrolet,onix,1.0t - 12 v,10tat pr2,a-6,sim,elétrica,flex,8.3,10.4,11.6,14.9,2024
+médio,chevrolet,onix,1.0t - 12 v,10tmt lt1,m-6,sim,elétrica,flex,9.1,11.1,13.1,16.1,2024
+médio,chevrolet,onix,1.0t - 12 v,10tmt ltz,m-6,sim,elétrica,flex,9.1,11.1,13.1,16.1,2024
+médio,chevrolet,onix,1.0 - 12 v,10mt hb (my25.5),m-6,sim,elétrica,flex,9.6,11.9,13.8,16.9,2024
+médio,chevrolet,onix,1.0 - 12 v,10mt lt2 (my25.5),m-6,sim,elétrica,flex,9.6,11.9,13.8,16.9,2024
+médio,chevrolet,onix,1.0t - 12v,10tmt lt1 (my25.5),m-6,sim,elétrica,flex,9.3,11.7,13.5,16.7,2024
+médio,chevrolet,onix,1.0t - 12v,10tat hb (my25.5),a-6,sim,elétrica,flex,8.2,10.5,12.0,14.8,2024
+médio,chevrolet,onix,1.0t - 12v,10tat lt1 (my25.5),a-6,sim,elétrica,flex,8.2,10.5,12.0,14.8,2024
+médio,chevrolet,onix,1.0t - 12v,10tat ltz (my25.5),a-6,sim,elétrica,flex,8.2,10.5,12.0,14.8,2024
+médio,chevrolet,onix,1.0t - 12v,10tat pr2 (my25.5),a-6,sim,elétrica,flex,8.2,10.5,12.0,14.8,2024
+médio,chevrolet,onix,1.0t - 12v,10tat rs (my25.5),a-6,sim,elétrica,flex,8.2,9.8,11.8,13.5,2024
+médio,chevrolet,spin,1.8l -8v,1.8l at ls,a-6,sim,elétrica,flex,7.2,8.8,10.2,12.6,2024
+médio,chevrolet,spin,1.8l -8v,1.8l at lt,a-6,sim,elétrica,flex,7.2,8.8,10.2,12.6,2024
+médio,chevrolet,spin,1.8l -8v,1.8l at act,a-6,sim,elétrica,flex,6.9,8.6,9.8,12.3,2024
+médio,chevrolet,spin,1.8l -8v,1.8l at ltz5,a-6,sim,elétrica,flex,6.9,8.6,9.8,12.3,2024
+médio,chevrolet,spin,1.8l-8v,1.8l mt ls e,m-6,sim,elétrica,flex,7.5,8.9,10.8,12.8,2024
+médio,chevrolet,spin,1.8l-8v,1.8l mt lt,m-6,sim,elétrica,flex,7.5,8.9,10.8,12.8,2024
+médio,chevrolet,spin,1.8l-8v,1.8l mt lt (my25),m-6,sim,elétrica,flex,7.7,8.6,11.0,12.5,2024
+médio,chevrolet,spin,1.8l-8v,1.8l at lt (my25),a-6,sim,elétrica,flex,7.4,9.3,10.5,13.4,2024
+médio,chevrolet,spin,1.8l-8v,1.8l at,a-6,sim,elétrica,flex,7.4,9.3,10.5,13.4,2024
+médio,fiat,cronos,1.0-6v,1.0,m-5,sim,elétrica,flex,9.8,11.0,13.4,15.6,2024
+médio,fiat,cronos,1.0-6v,drive 1.0,m-5,sim,elétrica,flex,9.8,11.0,13.4,15.6,2024
+médio,fiat,cronos,1.3-8v,drive 1.3,m-5,sim,elétrica,flex,9.0,10.9,12.8,15.5,2024
+médio,fiat,cronos,1.3-8v,prec 1.3at,cvt-7,sim,elétrica,flex,9.3,11.0,13.3,15.0,2024
+médio,fiat,cronos,1.3-8v,drive1.3at,cvt-7,sim,elétrica,flex,9.3,11.0,13.3,15.0,2024
+médio,fiat,cronos,1.0-6v,drive 1.0 / 1.0 (my 25),m-5,sim,elétrica,flex,9.6,11.4,13.5,16.6,2024
+médio,fiat,cronos,1.3-8v,drive1.3at (my 25),cvt-7,sim,elétrica,flex,8.8,11.0,12.5,14.8,2024
+médio,fiat,cronos,1.3-8v,prec 1.3at (my 25),cvt-7,sim,elétrica,flex,8.8,11.0,12.5,14.8,2024
+médio,honda,city,1.5-16v,lx,contínua,sim,elétrica,flex,9.2,10.5,13.1,15.2,2024
+médio,honda,city,1.5-16v,ex,contínua,sim,elétrica,flex,9.2,10.5,13.1,15.2,2024
+médio,honda,city,1.5-16v,exl,contínua,sim,elétrica,flex,9.2,10.5,13.1,15.2,2024
+médio,honda,city,1.5-16v,touring,contínua,sim,elétrica,flex,9.2,10.5,13.1,15.2,2024
+médio,hyundai,hb20s,1.0-12v,comfort,m-5,sim,elétrica,flex,9.4,10.4,13.2,15.0,2024
+médio,hyundai,hb20s,1.0-12v,limited,m-5,sim,elétrica,flex,9.4,10.4,13.2,15.0,2024
+médio,hyundai,hb20s,1.0-12v,platinum,m-5,sim,elétrica,flex,9.4,10.4,13.2,15.0,2024
+médio,hyundai,hb20s,1.0-12v t,comfort,m-6,sim,elétrica,flex,9.2,10.7,13.1,14.8,2024
+médio,hyundai,hb20s,1.0-12v t,comfort,a-6,sim,elétrica,flex,8.3,9.9,11.7,13.9,2024
+médio,hyundai,hb20s,1.0-12v t,platinum,a-6,sim,elétrica,flex,8.3,9.9,11.7,13.9,2024
+médio,hyundai,hb20s,1.0-12v t,sense,a-6,sim,elétrica,flex,8.3,9.9,11.7,13.9,2024
+médio,hyundai,hb20s,1.0-12v t,platinum smart sense,a-6,sim,elétrica,flex,8.3,9.9,11.7,13.9,2024
+médio,hyundai,hb20s,1.0-12v t,platinum safety,a-6,sim,elétrica,flex,8.3,9.9,11.7,13.9,2024
+médio,hyundai,hb20s,1.0-12v t,platinum safety,a-6,sim,elétrica,flex,8.8,10.3,12.5,14.2,2024
+médio,hyundai,hb20s,1.0-12v t,platinum plus,a-6,sim,elétrica,flex,8.8,10.3,12.5,14.2,2024
+médio,hyundai,hb20s,1.0-12v t,comfort (25my),a-6,sim,elétrica,flex,8.5,10.5,12.1,14.7,2024
+médio,hyundai,hb20s,1.0-12v t,platinum plus,a-6,sim,elétrica,flex,8.8,10.3,12.5,14.2,2024
+médio,hyundai,hb20s,1.0-12v t,platinum safety,a-6,sim,elétrica,flex,8.8,10.3,12.5,14.2,2024
+médio,hyundai,hb20s,1.0-12v,comfort (25my),m-5,sim,elétrica,flex,9.6,10.8,13.4,15.3,2024
+médio,hyundai,hb20s,1.0-12v,limited (25my),m-5,sim,elétrica,flex,9.6,10.8,13.4,15.3,2024
+médio,hyundai,hb20s,1.0-12v t,comfort (25my),a-6,sim,elétrica,flex,9.0,11.2,13.0,16.0,2024
+médio,hyundai,hb20s,1.0-12v t,platinum safety (25my),a-6,sim,elétrica,flex,9.0,11.2,13.0,16.0,2024
+médio,nissan,versa,1.6-16v,sense,contínua,sim,elétrica,flex,8.1,10.5,11.8,15.0,2024
+médio,nissan,versa,1.6-16v,exclusive,contínua,sim,elétrica,flex,8.1,10.5,11.8,15.0,2024
+médio,nissan,versa,1.6-16v,advance,contínua,sim,elétrica,flex,8.1,10.5,11.8,15.0,2024
+médio,renault,logan,1.6 - 16v,zen16cvt,contínua,sim,eletro-hidráulica,flex,7.4,8.5,10.7,12.2,2024
+médio,renault,logan,1.0-12v,life,m-5,sim,eletro-hidráulica,flex,9.6,9.8,13.6,14.4,2024
+médio,renault,logan,1.0-12v,zen,m-5,sim,eletro-hidráulica,flex,9.6,9.8,13.6,14.4,2024
+médio,volkswagen,polo,1.0-12v,track mpi (my23),m - 5,sim,elétrica,flex,9.3,10.5,13.5,15.0,2024
+médio,volkswagen,polo,1.0-12v,mpi (my23),m - 5,sim,elétrica,flex,9.2,10.7,13.4,15.1,2024
+médio,volkswagen,polo,1.0-12v,track mpi (my24),m - 5,sim,elétrica,flex,9.4,10.8,13.7,15.2,2024
+médio,volkswagen,polo,1.0-12v,mpi (my24),m - 5,sim,elétrica,flex,9.4,10.8,13.7,15.2,2024
+médio,volkswagen,polo,1.0-12v,tsi manual,m - 5,sim,elétrica,flex,9.5,11.3,13.7,16.1,2024
+médio,volkswagen,polo,1.0-12v,comfortline tsi automático,a - 6,sim,elétrica,flex,8.5,10.6,12.5,15.1,2024
+médio,volkswagen,polo,1.0-12v,sense tsi automático,a - 6,sim,elétrica,flex,8.5,10.6,12.5,15.1,2024
+médio,volkswagen,polo,1.0-12v,highline tsi automático,a - 6,sim,elétrica,flex,8.5,10.4,12.3,14.6,2024
+médio,volkswagen,polo,1.4-16v,gts 250tsi automático,a - 6,sim,elétrica,flex,8.1,9.8,11.6,13.8,2024
+médio,volkswagen,polo,1.0-12v,track rock in rio 1.0 mpi,m - 5,sim,elétrica,flex,9.4,10.8,13.7,15.2,2024
+médio,volkswagen,polo,1.0-12v,track robust 1.0 mpi,m - 5,sim,elétrica,flex,9.4,10.8,13.7,15.2,2024
+grande,toyota,corolla,1.8 - 16v,apremiumh,contínua,sim,elétrica,flex,12.8,11.1,18.5,15.7,2024
+grande,toyota,corolla,1.8 - 16v,altis hv (my 2024),contínua,sim,elétrica,flex,12.8,11.1,18.5,15.7,2024
+grande,toyota,corolla,2.0 - 16v,xei 20,contínua,sim,elétrica,flex,8.6,10.7,12.3,14.9,2024
+grande,toyota,corolla,2.0 - 16v,gli 20,contínua,sim,elétrica,flex,8.6,10.7,12.3,14.9,2024
+grande,toyota,corolla,2.0 - 16v,altis 20,contínua,sim,elétrica,flex,8.6,10.7,12.3,14.9,2024
+grande,toyota,corolla,2.0 - 16v,grs (my 2024),contínua,sim,elétrica,flex,8.6,10.7,12.3,14.9,2024
+utilitário esportivo compacto,citroen,c3,1.6-16v,live pack at,a-6,sim,elétrica,flex,7.2,8.5,10.3,12.4,2024
+utilitário esportivo compacto,citroen,c3,1.6-16v,feel pk at,a-6,sim,elétrica,flex,7.2,8.5,10.3,12.4,2024
+utilitário esportivo compacto,citroen,c3,1.0-6v,feel 1.0,m-5,sim,elétrica,flex,9.3,10.5,13.0,14.6,2024
+utilitário esportivo compacto,citroen,c3,1.0-6v,live 1.0,m-5,sim,elétrica,flex,9.3,10.5,13.0,14.6,2024
+utilitário esportivo compacto,citroen,c3,1.0-6v,live pk 1.0,m-5,sim,elétrica,flex,9.3,10.5,13.0,14.6,2024
+utilitário esportivo compacto,citroen,c3,1.0-12v t,you 1.0t cvt,cvt-7,sim,elétrica,flex,7.8,8.8,11.0,12.8,2024
+utilitário esportivo compacto,fiat,argo,1.3-8v,trekking 1.3,m-5,sim,elétrica,flex,9.1,10.0,12.6,14.1,2024
+utilitário esportivo compacto,fiat,argo,1.3-8v,endur 1.3 mt,m-5,sim,elétrica,flex,9.1,10.0,12.6,14.1,2024
+utilitário esportivo compacto,fiat,argo,1.3-8v,trekking 1.3 at,cvt-7,sim,elétrica,flex,8.9,10.1,12.7,13.9,2024
+utilitário esportivo compacto,fiat,argo,1.3-8v,trekking 1.3at (my25),cvt-7,sim,elétrica,flex,8.8,10.4,12.6,14.4,2024
+utilitário esportivo compacto,nissan,kicks,1.6-16v,sense,contínua,sim,elétrica,flex,7.8,9.5,11.4,13.8,2024
+utilitário esportivo compacto,nissan,kicks,1.6-16v,exclusi,contínua,sim,elétrica,flex,7.8,9.5,11.4,13.8,2024
+utilitário esportivo compacto,nissan,kicks,1.6-16v,active,contínua,sim,elétrica,flex,7.8,9.5,11.4,13.8,2024
+utilitário esportivo compacto,nissan,kicks,1.6-16v,advance,contínua,sim,elétrica,flex,7.8,9.5,11.4,13.8,2024
+utilitário esportivo compacto,nissan,kicks,1.6-16v,xplay,contínua,sim,elétrica,flex,7.8,9.5,11.4,13.8,2024
+utilitário esportivo compacto,renault,kwid,1.0-12v,zen,m-5,sim,eletro-hidráulica,flex,10.8,11.0,15.3,15.7,2024
+utilitário esportivo compacto,renault,kwid,1.0-12v,intense,m-5,sim,eletro-hidráulica,flex,10.8,11.0,15.3,15.7,2024
+utilitário esportivo compacto,renault,kwid,1.0-12v,outsider,m-5,sim,eletro-hidráulica,flex,10.8,11.0,15.3,15.7,2024
+utilitário esportivo compacto,renault,kwid,1.0-12v,intense biton,m-5,sim,eletro-hidráulica,flex,10.8,11.0,15.3,15.7,2024
+utilitário esportivo compacto,renault,sandero,1.6 - 16v,sze16mt,m-5,sim,eletro-hidráulica,flex,8.3,8.5,11.8,12.1,2024
+utilitário esportivo compacto,renault,sandero,1.6 - 16v,sic16cvt,contínua,sim,eletro-hidráulica,flex,7.4,8.3,10.7,11.6,2024
+esportivo,honda,civic,2.0t - 16v,type-r,n/d,sim,elétrica,gasolina,0.0,0.0,8.8,11.1,2024
+sub compacto,fiat,mobi,1.0-6v,trekking,m-5,sim,elétrica,flex,9.8,10.6,14.0,15.1,2025
+sub compacto,fiat,mobi,1.0-6v,like,m-5,sim,elétrica,flex,9.8,10.6,14.0,15.1,2025
+compacto,fiat,argo,1.0-6v,1.0,m-5,sim,elétrica,flex,9.4,10.4,13.6,14.5,2025
+compacto,fiat,argo,1.0-6v,drive 1.0,m-5,sim,elétrica,flex,9.4,10.4,13.6,14.5,2025
+compacto,fiat,argo,1.3-8v,drive 1.3 at,cvt-7,sim,elétrica,flex,9.0,10.3,12.8,14.3,2025
+compacto,hyundai,hb20,1.0-12v t,sense,m-5,sim,elétrica,flex,9.9,10.7,13.3,15.4,2025
+compacto,hyundai,hb20,1.0-12v t,comfort,m-5,sim,elétrica,flex,9.9,10.7,13.3,15.4,2025
+compacto,hyundai,hb20,1.0-12v t,limited,m-5,sim,elétrica,flex,9.9,10.7,13.3,15.4,2025
+compacto,hyundai,hb20,1.0-12v t,platinum,m-5,sim,elétrica,flex,9.9,10.7,13.3,15.4,2025
+compacto,hyundai,hb20,1.0-12v t,se,m-5,sim,elétrica,flex,9.9,10.7,13.3,15.4,2025
+compacto,hyundai,hb20,1.0-12v t,comfort,a-6,sim,elétrica,flex,9.2,10.2,13.2,14.7,2025
+compacto,hyundai,hb20,1.0-12v t,platinum safety,a-6,sim,elétrica,flex,9.2,10.2,13.2,14.7,2025
+compacto,hyundai,hb20,1.0-12v t,se,a-6,sim,elétrica,flex,9.2,10.2,13.2,14.7,2025
+compacto,peugeot,208,1.0-6v,style mt,m-5,sim,elétrica,flex,9.5,10.8,13.6,15.3,2025
+compacto,peugeot,208,1.0-6v,active mt,m-5,sim,elétrica,flex,9.5,10.8,13.6,15.3,2025
+compacto,peugeot,208,1.0t-12v,allur t200,cvt-7,sim,elétrica,flex,8.8,10.1,12.6,14.3,2025
+compacto,peugeot,208,1.0t-12v,gt t200,cvt-7,sim,elétrica,flex,8.3,9.7,12.0,13.7,2025
+médio,chevrolet,onix,1.0 - 12 v,mt,m-6,sim,elétrica,flex,9.6,11.9,13.8,16.9,2025
+médio,chevrolet,onix,1.0 - 12 v,lt,m-6,sim,elétrica,flex,9.6,11.9,13.8,16.9,2025
+médio,chevrolet,onix,1.0t - 12v,lt,m-6,sim,elétrica,flex,9.3,11.7,13.5,16.7,2025
+médio,chevrolet,onix,1.0t - 12v,at,a-6,sim,elétrica,flex,8.2,10.5,12.0,14.8,2025
+médio,chevrolet,onix,1.0t - 12v,lt,a-6,sim,elétrica,flex,8.2,10.5,12.0,14.8,2025
+médio,chevrolet,onix,1.0t - 12v,ltz,a-6,sim,elétrica,flex,8.2,10.5,12.0,14.8,2025
+médio,chevrolet,onix,1.0t - 12v,premier,a-6,sim,elétrica,flex,8.2,10.5,12.0,14.8,2025
+médio,chevrolet,onix,1.0t - 12v,rs,a-6,sim,elétrica,flex,8.2,9.8,11.8,13.5,2025
+médio,chevrolet,spin,1.8l-8v,ls e,n/d,sim,elétrica,flex,7.7,8.6,11.0,12.5,2025
+médio,chevrolet,spin,1.8l-8v,ls2,n/d,sim,elétrica,flex,7.7,8.6,11.0,12.5,2025
+médio,chevrolet,spin,1.8l-8v,lt,n/d,sim,elétrica,flex,7.7,8.6,11.0,12.5,2025
+médio,chevrolet,spin,1.8l-8v,lt,n/d,sim,elétrica,flex,7.4,9.3,10.5,13.4,2025
+médio,chevrolet,spin,1.8l-8v,at,n/d,sim,elétrica,flex,7.4,9.3,10.5,13.4,2025
+médio,chevrolet,spin,1.8l-8v,ltz5,n/d,sim,elétrica,flex,7.4,9.3,10.5,13.4,2025
+médio,fiat,cronos,1.0-6v,1.0,n/d,sim,elétrica,flex,9.7,11.2,13.4,15.9,2025
+médio,fiat,cronos,1.0-6v,drive 1.0,n/d,sim,elétrica,flex,9.7,11.2,13.4,15.9,2025
+médio,fiat,cronos,1.3-8v,drive1.3at,n/d,sim,elétrica,flex,8.9,10.7,12.6,14.6,2025
+médio,fiat,cronos,1.3-8v,prec 1.3at,n/d,sim,elétrica,flex,8.9,10.7,12.6,14.6,2025
+médio,honda,city,1.5-16v,lx,n/d,sim,elétrica,flex,9.3,10.4,12.8,15.5,2025
+médio,honda,city,1.5-16v,ex,n/d,sim,elétrica,flex,9.3,10.4,12.8,15.5,2025
+médio,honda,city,1.5-16v,exl,n/d,sim,elétrica,flex,9.3,10.4,12.8,15.5,2025
+médio,honda,city,1.5-16v,touring,n/d,sim,elétrica,flex,9.3,10.4,12.8,15.5,2025
+médio,hyundai,hb20s,1.0-12v t,comfort,n/d,sim,elétrica,flex,9.7,10.9,13.4,15.4,2025
+médio,hyundai,hb20s,1.0-12v t,limited,n/d,sim,elétrica,flex,9.7,10.9,13.4,15.4,2025
+médio,hyundai,hb20s,1.0-12v t,platinum,n/d,sim,elétrica,flex,9.7,10.9,13.4,15.4,2025
+médio,hyundai,hb20s,1.0-12v t,se,n/d,sim,elétrica,flex,9.7,10.9,13.4,15.4,2025
+médio,hyundai,hb20s,1.0-12v t,comfort,n/d,sim,elétrica,flex,9.2,10.7,13.0,15.2,2025
+médio,hyundai,hb20s,1.0-12v t,platinum safety,n/d,sim,elétrica,flex,9.2,10.7,13.0,15.2,2025
+médio,hyundai,hb20s,1.0-12v t,se,n/d,sim,elétrica,flex,9.2,10.7,13.0,15.2,2025
+médio,nissan,versa,1.6-16v,sense cvt,n/d,sim,elétrica,flex,7.9,10.5,11.5,15.0,2025
+médio,nissan,versa,1.6-16v,advnc cvt,n/d,sim,elétrica,flex,7.9,10.5,11.5,15.0,2025
+médio,nissan,versa,1.6-16v,sr cvt,n/d,sim,elétrica,flex,7.9,10.5,11.5,15.0,2025
+médio,nissan,versa,1.6-16v,excl cvt,n/d,sim,elétrica,flex,7.9,10.5,11.5,15.0,2025
+médio,volkswagen,polo,1.0-12v,tsi mecânico,n/d,sim,elétrica,flex,9.6,11.4,13.9,16.3,2025
+médio,volkswagen,polo,1.0-12v,sense tsi automático,n/d,sim,elétrica,flex,9.0,11.1,13.1,16.1,2025
+médio,volkswagen,polo,1.0-12v,mpi,n/d,sim,elétrica,flex,9.3,10.8,13.5,15.7,2025
+médio,volkswagen,polo,1.0-12v,track 1.0 mpi,n/d,sim,elétrica,flex,9.3,10.8,13.5,15.7,2025
+médio,volkswagen,polo,1.0-12v,track robust 1.0 mpi,n/d,sim,elétrica,flex,9.3,10.8,13.5,15.7,2025
+médio,volkswagen,polo,1.0-12v,mpi,n/d,sim,elétrica,flex,9.3,10.9,13.5,15.7,2025
+médio,volkswagen,polo,1.0-12v,track 1.0 mpi,n/d,sim,elétrica,flex,9.3,10.9,13.5,15.7,2025
+médio,volkswagen,polo,1.0-12v,track robust 1.0 mpi,n/d,sim,elétrica,flex,9.3,10.9,13.5,15.7,2025
+grande,toyota,corolla,2.0-16v,gli 20,n/d,sim,elétrica,flex,8.0,10.0,11.9,14.5,2025
+grande,toyota,corolla,2.0-16v,xei 20,n/d,sim,elétrica,flex,8.0,10.0,11.9,14.5,2025
+grande,toyota,corolla,2.0-16v,altis 20,n/d,sim,elétrica,flex,8.0,10.0,11.9,14.5,2025
+grande,toyota,corolla,2.0-16v,grs,n/d,sim,elétrica,flex,8.0,10.0,11.9,14.5,2025
+utilitário esportivo compacto,citroen,c3,1.0-6v,feel 1.0,n/d,sim,elétrica,flex,9.3,10.3,13.2,14.5,2025
+utilitário esportivo compacto,citroen,c3,1.0-6v,live 1.0,n/d,sim,elétrica,flex,9.3,10.3,13.2,14.5,2025
+utilitário esportivo compacto,citroen,c3,1.0-6v,live pk 1.0,n/d,sim,elétrica,flex,9.3,10.3,13.2,14.5,2025
+utilitário esportivo compacto,citroen,c3,1.0t-12v,you 1.0t cvt,n/d,sim,elétrica,flex,8.1,8.9,11.5,12.9,2025
+utilitário esportivo compacto,fiat,argo,1.3-8v,trekking 1.3at,n/d,sim,elétrica,flex,9.0,10.3,12.8,14.3,2025
+utilitário esportivo compacto,renault,kwid,1.0-12v,zen,n/d,sim,eletro-hidráulica,flex,10.4,10.8,14.6,15.5,2025
+utilitário esportivo compacto,renault,kwid,1.0-12v,intense,n/d,sim,eletro-hidráulica,flex,10.4,10.8,14.6,15.5,2025
+utilitário esportivo compacto,renault,kwid,1.0-12v,outsider,n/d,sim,eletro-hidráulica,flex,10.4,10.8,14.6,15.5,2025
+utilitário esportivo compacto,renault,kwid,1.0-12v,intense biton,n/d,sim,eletro-hidráulica,flex,10.4,10.8,14.6,15.5,2025
+utilitário esportivo compacto,renault,kwid,1.0-12v,iconic 2,n/d,sim,eletro-hidráulica,flex,10.4,10.8,14.6,15.5,2025
+minivan,chevrolet,spin,1.8l-8v,lt7,n/d,sim,elétrica,flex,7.7,8.6,11.0,12.5,2025
+minivan,chevrolet,spin,1.8l-8v,lt7,n/d,sim,elétrica,flex,7.4,9.3,10.5,13.4,2025
+minivan,chevrolet,spin,1.8l-8v,ltz,n/d,sim,elétrica,flex,7.4,9.3,10.5,13.4,2025
+minivan,chevrolet,spin,1.8l-8v,premier,n/d,sim,elétrica,flex,7.4,9.3,10.5,13.4,2025
+comercial,chevrolet,onix,1.0 - 12 v,log,n/d,sim,elétrica,flex,9.6,11.9,13.8,16.9,2025

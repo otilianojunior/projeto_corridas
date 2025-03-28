@@ -207,23 +207,24 @@ def tratar_dados_carro(df):
         df[col] = pd.to_numeric(df[col], errors='coerce')
 
         # Preencher os NaN com 0 (ou outro valor adequado)
-        df[col] = df[col].fillna(0)  # Substituindo NaN por 0
+        df[col] = df[col].fillna(0)
 
-    # Limpeza das colunas de texto (remover quebras de linha)
-    df['categoria'] = df['categoria'].str.replace(r'\n', '', regex=True)
-    df['marca'] = df['marca'].str.replace(r'\n', '', regex=True)
-    df['modelo'] = df['modelo'].str.replace(r'\n', '', regex=True)
-    df['motor'] = df['motor'].str.replace(r'\n', '', regex=True)
-    df['versao'] = df['versao'].str.replace(r'\n', '', regex=True)
+    # Limpeza das colunas de texto (remover quebras de linha e caracteres não alfanuméricos)
+    cols_texto = ['categoria', 'marca', 'modelo', 'motor', 'versao', 'transmissao', 'ar_cond', 'direcao', 'combustivel']
 
-    # Preenchendo os valores ausentes nos campos obrigatórios
+    for col in cols_texto:
+        # Limpar quebras de linha e caracteres especiais indesejados como '\xad'
+        df[col] = df[col].str.replace(r'\n', '', regex=True)  # Remover quebras de linha
+        df[col] = df[col].str.replace(r'\xad', '', regex=True)  # Remover o 'soft hyphen' \xad
+
+    # Preencher os valores ausentes nos campos obrigatórios
     df['transmissao'] = df['transmissao'].str.replace(r'\n', '', regex=True).fillna("N/D")  # Preenchendo com "N/D"
-    df['ar_cond'] = df['ar_cond'].str.replace(r'\n', '', regex=True).fillna("não")  # Preenchendo com "não"
-    df['direcao'] = df['direcao'].str.replace(r'\n', '', regex=True).fillna("Não informado")  # Preenchendo com "Não informado"
+    df['ar_cond'] = df['ar_cond'].str.replace(r'\n', '', regex=True).fillna("N/D")  # Preenchendo com "não"
+    df['direcao'] = df['direcao'].str.replace(r'\n', '', regex=True).fillna(
+        "Não informado")  # Preenchendo com "Não informado"
     df['combustivel'] = df['combustivel'].str.replace(r'\n', '', regex=True)
 
     return df
-
 
 # === EXECUÇÃO PRINCIPAL ===
 
@@ -260,10 +261,32 @@ if __name__ == '__main__':
     # 4. Aplicar o tratamento adicional aos dados após a unificação
     df_carros_tratado = tratar_dados_carro(df_limpado)  # Aplicando tratamento aos dados unificados
 
-    # 5. Salvar o arquivo final tratado
-    df_carros_tratado.to_csv("dados_tratados.csv", index=False)  # Alterei o nome do arquivo para "dados_tratados.csv"
-    print(f"[✔] Arquivo final tratado salvo como: dados_tratados.csv")
+    # 5. Converter os dados para letras minúsculas e atualizar a marca "vw" para "volkswagen"
+    cols_texto = ['categoria', 'marca', 'modelo', 'motor', 'versao', 'transmissao', 'ar_cond', 'direcao', 'combustivel']
+    for col in cols_texto:
+        df_carros_tratado[col] = df_carros_tratado[col].astype(str).str.lower().str.strip()
 
-    # Exibir as primeiras linhas do DataFrame final tratado
+    # Atualiza a coluna 'marca' substituindo "vw" por "volkswagen"
+    df_carros_tratado['marca'] = df_carros_tratado['marca'].replace('vw', 'volkswagen')
+
+    # Salva o arquivo final tratado (com todos os dados em minúsculas e marca corrigida)
+    df_carros_tratado.to_csv("dados_tratados.csv", index=False)
+
+    # Lista de modelos desejados (todos em minúsculo)
+    modelos_permitidos = [
+        'onix', 'argo', 'mobi', 'gol', 'uno', 'logan', 'kwid',
+        'hb20', 'hb20s', 'voyage', 'siena', 'versa', 'chery', 'kicks',
+        'ka', 'sandero', '208', 'cronos', 'c3', 'polo', 'city', 'fit',
+        'civic', 'yaris', 'spin', 'picanto', 'corolla', 'doblò'
+    ]
+
+    # Filtra o DataFrame apenas para os modelos desejados
+    df_filtrado = df_carros_tratado[df_carros_tratado['modelo'].isin(modelos_permitidos)]
+
+    # Salva o arquivo filtrado
+    df_filtrado.to_csv("dados_tratados_filtrado.csv", index=False)
+    print(f"[✔] Arquivo final filtrado salvo como: dados_tratados_filtrado.csv ({len(df_filtrado)} linhas)")
+
+    # Exibe as primeiras linhas do DataFrame final tratado
     print(df_carros_tratado.head())
 

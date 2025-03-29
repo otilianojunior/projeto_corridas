@@ -20,14 +20,14 @@ if config.config_file_name is not None:
 # target_metadata = mymodel.Base.metadata
 
 # noinspection PyUnresolvedReferences
-from clientes.models.ClienteModel import ClienteModel
+from clientes.models.cliente_model import ClienteModel
 # noinspection PyUnresolvedReferences
-from motoristas.models.MotoristaModel import MotoristaModel
+from motoristas.models.motorista_model import MotoristaModel
 # noinspection PyUnresolvedReferences
-from corridas.models.CorridaModel import CorridaModel
+from corridas.models.corrida_model import CorridaModel
 
 
-from shared.database import Base
+from core.database import Base
 target_metadata = Base.metadata
 
 from dotenv import load_dotenv

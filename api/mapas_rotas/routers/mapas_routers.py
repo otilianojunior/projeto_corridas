@@ -16,7 +16,7 @@ from sqlalchemy.future import select
 from sqlalchemy.orm import Session
 from unidecode import unidecode
 
-router = APIRouter(prefix="/mapas", tags=["Mapas"])
+router = APIRouter(prefix="/mapas_rotas", tags=["Mapas"])
 
 
 async def obter_nome_rua_bairro(coordenada):

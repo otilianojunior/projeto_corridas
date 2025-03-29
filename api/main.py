@@ -3,11 +3,11 @@ from fastapi import FastAPI
 from contextlib import asynccontextmanager
 
 # ROTAS
-from corridas.routers import Corridas
-from mapas.routers import Mapas
-from clientes.routers import Clientes
-from motoristas.routers import Motoristas
-from carros.routers import Carros
+from corridas.routers import corridas_routers
+from mapas_rotas.routers import mapas_routers
+from clientes.routers import clientes_routers
+from motoristas.routers import motoristas_routers
+from carros.routers import carros_router
 
 # Inicialização da aplicação FastAPI
 app = FastAPI(

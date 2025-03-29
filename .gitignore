@@ -14,7 +14,7 @@ cache/
 __pycache__
 **/__pycache__/
 
-# Ignorar arquivos HTML da pasta 'data'
+# Ignorar arquivos HTML da pasta 'resources'
 data/*.html
 
 # Ignorar a pasta de testes

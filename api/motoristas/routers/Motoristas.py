@@ -6,6 +6,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from pydantic import BaseModel
 
 from motoristas.models.MotoristaModel import MotoristaModel
+from carros.models.CarroModel import CarroModel
 from shared.dependencies import get_db
 
 router = APIRouter(prefix="/motoristas", tags=["Motoristas"])
@@ -19,25 +20,36 @@ class MotoristaCreate(BaseModel):
     status: str
     id_carro: int
 
-
 @router.get("/listar/", summary="Listar Motoristas")
 async def listar_motoristas(db: AsyncSession = Depends(get_db)):
     """Lista todos os motoristas cadastrados na API"""
     query = select(MotoristaModel)
-    result = await db.execute(query)  # 🔄 Agora é assíncrono
+    result = await db.execute(query)
     motoristas = result.scalars().all()
 
     if not motoristas:
         return {"mensagem": "Nenhum motorista cadastrado."}
 
-    return [{"id": m.id, "nome": m.nome, "cpf": m.cpf, "telefone": m.telefone, "email": m.email, "status": m.status} for m in motoristas]
+    return [
+        {
+            "id": m.id,
+            "nome": m.nome,
+            "cpf": m.cpf,
+            "telefone": m.telefone,
+            "email": m.email,
+            "status": m.status,
+            "id_carro": m.id_carro
+        }
+        for m in motoristas
+    ]
 
 @router.post("/", status_code=status.HTTP_201_CREATED, summary="Criar Motorista")
 async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends(get_db)):
     """Cria um novo motorista na API"""
-    motorista.cpf = re.sub(r"\D", "", motorista.cpf)  # Remove formatação do CPF
+    # Remove formatação do CPF
+    motorista.cpf = re.sub(r"\D", "", motorista.cpf)
 
-    # Verificar se o motorista com o mesmo CPF, telefone ou email já existe
+    # Verificar se já existe um motorista com o mesmo CPF, telefone ou email
     query = select(MotoristaModel).where(
         (MotoristaModel.cpf == motorista.cpf) |
         (MotoristaModel.telefone == motorista.telefone) |
@@ -58,45 +70,47 @@ async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends
     carro = carro_result.scalars().first()
 
     if not carro:
-        raise HTTPException(status_code=400, detail="Carro não encontrado.")
+        raise HTTPException(status_code=400, detail="Carro não encontrado com o id informado.")
 
-    # Criar novo motorista e associá-lo ao carro
+    # Criar novo motorista e definir explicitamente o id_carro
     novo_motorista = MotoristaModel(
         nome=motorista.nome,
         email=motorista.email,
         telefone=motorista.telefone,
         cpf=motorista.cpf,
-        status="disponivel"
+        status="disponivel",
+        id_carro=motorista.id_carro
     )
 
-    # Adicionar o motorista ao banco de dados
     try:
         db.add(novo_motorista)
-        await db.commit()  # 🔄 Agora é assíncrono
-        await db.refresh(novo_motorista)  # 🔄 Agora é assíncrono
-
-        # Associar o motorista ao carro
-        carro.motoristas.append(novo_motorista)
         await db.commit()
+        await db.refresh(novo_motorista)
 
-        return {"status": "OK", "motorista": {
-            "id": novo_motorista.id,
-            "nome": novo_motorista.nome,
-            "email": novo_motorista.email,
-            "telefone": novo_motorista.telefone,
-            "cpf": novo_motorista.cpf,
-            "status": novo_motorista.status,
-            "carro": {
-                "id": carro.id,
-                "marca": carro.marca,
-                "modelo": carro.modelo
+        # A associação via chave estrangeira (id_carro) já foi feita;
+        # se o relacionamento estiver configurado corretamente, não há necessidade de adicionar manualmente.
+        return {
+            "status": "OK",
+            "motorista": {
+                "id": novo_motorista.id,
+                "nome": novo_motorista.nome,
+                "email": novo_motorista.email,
+                "telefone": novo_motorista.telefone,
+                "cpf": novo_motorista.cpf,
+                "status": novo_motorista.status,
+                "id_carro": novo_motorista.id_carro,
+                "carro": {
+                    "id": carro.id,
+                    "marca": carro.marca,
+                    "modelo": carro.modelo
+                }
             }
-        }}
-    except IntegrityError:
+        }
+    except IntegrityError as ie:
         await db.rollback()
         raise HTTPException(
             status_code=400,
-            detail="Erro ao criar motorista. Verifique os dados fornecidos."
+            detail=f"Erro de integridade ao criar motorista: {str(ie.orig) if hasattr(ie, 'orig') else str(ie)}"
         )
     except Exception as e:
         await db.rollback()

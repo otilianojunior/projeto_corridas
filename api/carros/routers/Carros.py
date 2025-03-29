@@ -3,6 +3,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.future import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from pydantic import BaseModel
+from typing import Optional
 
 from carros.models.CarroModel import CarroModel
 from shared.dependencies import get_db
@@ -19,12 +20,12 @@ class CarroCreate(BaseModel):
     transmissao: str
     ar_cond: str
     direcao: str
-    combustivel: str = None
-    km_etanol_cidade: str = None
-    km_etanol_estrada: str = None
-    km_gasolina_cidade: str = None
-    km_gasolina_estrada: str = None
-    ano: str = None
+    combustivel: Optional[str] = None
+    km_etanol_cidade: Optional[float] = None  # Alterado para float
+    km_etanol_estrada: Optional[float] = None  # Alterado para float
+    km_gasolina_cidade: Optional[float] = None  # Alterado para float
+    km_gasolina_estrada: Optional[float] = None  # Alterado para float
+    ano: Optional[int] = None
 
 # 📌 Modelo de entrada para edição de carro
 class CarroUpdate(BaseModel):
@@ -41,7 +42,7 @@ class CarroUpdate(BaseModel):
     km_etanol_estrada: str = None
     km_gasolina_cidade: str = None
     km_gasolina_estrada: str = None
-    ano: str = None
+    ano: Optional[int] = None
 
 @router.get("/listar/", summary="Listar Carros")
 async def listar_carros(db: AsyncSession = Depends(get_db)):
@@ -66,7 +67,20 @@ async def criar_carro(carro: CarroCreate, db: AsyncSession = Depends(get_db)):
     """Cria um novo carro na API"""
     # Verificar se já existe um carro com os mesmos dados
     query = select(CarroModel).where(
-        (CarroModel.marca == carro.marca) & (CarroModel.modelo == carro.modelo)
+        (CarroModel.marca == carro.marca) &
+        (CarroModel.modelo == carro.modelo) &
+        (CarroModel.ano == carro.ano) &
+        (CarroModel.categoria == carro.categoria) &
+        (CarroModel.motor == carro.motor) &
+        (CarroModel.versao == carro.versao) &
+        (CarroModel.transmissao == carro.transmissao) &
+        (CarroModel.ar_cond == carro.ar_cond) &
+        (CarroModel.direcao == carro.direcao) &
+        (CarroModel.combustivel == carro.combustivel) &
+        (CarroModel.km_etanol_cidade == carro.km_etanol_cidade) &
+        (CarroModel.km_etanol_estrada == carro.km_etanol_estrada) &
+        (CarroModel.km_gasolina_cidade == carro.km_gasolina_cidade) &
+        (CarroModel.km_gasolina_estrada == carro.km_gasolina_estrada)
     )
     result = await db.execute(query)  # 🔄 Agora é assíncrono
     carro_existente = result.scalars().first()

@@ -112,7 +112,7 @@ class CorridaUpdate(BaseModel):
 
 # Rotas existentes
 
-@router.get("/disponiveis", summary="Listar corridas disponíveis")
+@router.get("/listar_disponiveis", summary="Listar corridas disponíveis")
 async def listar_corridas_disponiveis(db: AsyncSession = Depends(get_db)):
     """Lista todas as corridas disponíveis no status 'solicitado'"""
     query = (
@@ -140,6 +140,41 @@ async def listar_corridas_disponiveis(db: AsyncSession = Depends(get_db)):
                 "horario_pedido": corrida.horario_pedido,
             }
             for corrida in corridas_disponiveis
+        ]
+    }
+
+
+@router.get("/listar", summary="Listar todas as corridas")
+async def listar_todas_corridas(db: AsyncSession = Depends(get_db)):
+    """Lista todas as corridas, independente do status."""
+    query = select(CorridaModel).options(joinedload(CorridaModel.cliente), joinedload(CorridaModel.motorista))
+    result = await db.execute(query)
+    corridas = result.scalars().all()
+
+    if not corridas:
+        raise HTTPException(status_code=404, detail="Nenhuma corrida cadastrada.")
+
+    return {
+        "total": len(corridas),
+        "corridas": [
+            {
+                "id": corrida.id,
+                "origem_rua": corrida.origem_rua,
+                "origem_bairro": corrida.origem_bairro,
+                "origem_longitude": corrida.origem_longitude,
+                "origem_latitude": corrida.origem_latitude,
+                "destino_rua": corrida.destino_rua,
+                "destino_bairro": corrida.destino_bairro,
+                "destino_longitude": corrida.destino_longitude,
+                "destino_latitude": corrida.destino_latitude,
+                "horario_pedido": corrida.horario_pedido,
+                "id_cliente": corrida.id_cliente,
+                "id_motorista": corrida.id_motorista,
+                "distancia_km": corrida.distancia_km,
+                "cordenadas_rota": corrida.cordenadas_rota,
+                "status": corrida.status,
+            }
+            for corrida in corridas
         ]
     }
 
@@ -270,43 +305,6 @@ async def finalizar_corrida(corrida_id: int, taxas: TaxasAtualizadas, db: AsyncS
         "preco_total": corrida.preco_total,
         "valor_motorista": corrida.valor_motorista,
         "nivel_taxa": corrida.nivel_taxa
-    }
-
-
-# ----- Novas Rotas: Listar todas, Editar e Excluir Corrida -----
-
-@router.get("/listar_todas", summary="Listar todas as corridas")
-async def listar_todas_corridas(db: AsyncSession = Depends(get_db)):
-    """Lista todas as corridas, independente do status."""
-    query = select(CorridaModel).options(joinedload(CorridaModel.cliente), joinedload(CorridaModel.motorista))
-    result = await db.execute(query)
-    corridas = result.scalars().all()
-
-    if not corridas:
-        raise HTTPException(status_code=404, detail="Nenhuma corrida cadastrada.")
-
-    return {
-        "total": len(corridas),
-        "corridas": [
-            {
-                "id": corrida.id,
-                "origem_rua": corrida.origem_rua,
-                "origem_bairro": corrida.origem_bairro,
-                "origem_longitude": corrida.origem_longitude,
-                "origem_latitude": corrida.origem_latitude,
-                "destino_rua": corrida.destino_rua,
-                "destino_bairro": corrida.destino_bairro,
-                "destino_longitude": corrida.destino_longitude,
-                "destino_latitude": corrida.destino_latitude,
-                "horario_pedido": corrida.horario_pedido,
-                "id_cliente": corrida.id_cliente,
-                "id_motorista": corrida.id_motorista,
-                "distancia_km": corrida.distancia_km,
-                "cordenadas_rota": corrida.cordenadas_rota,
-                "status": corrida.status,
-            }
-            for corrida in corridas
-        ]
     }
 
 

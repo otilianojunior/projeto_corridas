@@ -1,7 +1,6 @@
 import folium
 from folium.plugins import Fullscreen
 
-
 def criar_mapa_interativo(origem, destino, coordenadas_rota, distancia_km, origem_info, destino_info):
     """
     Cria um mapa interativo com a rota entre origem e destino.
@@ -58,7 +57,7 @@ def criar_mapa_interativo(origem, destino, coordenadas_rota, distancia_km, orige
     folium.Marker(
         location=destino,
         popup=folium.Popup(
-            f"<b>🏁 Destino</b><br>"
+            f"<b>🏋️ Destino</b><br>"
             f"<b>Rua:</b> {destino_info.get('nome_rua', 'Desconhecido')}<br>"
             f"<b>Bairro:</b> {destino_info.get('bairro', 'Desconhecido')}",
             max_width=250

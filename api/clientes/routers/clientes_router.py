@@ -1,9 +1,10 @@
 import re
 
-from clientes.models.ClienteModel import ClienteModel
+from clientes.models.cliente_model import ClienteModel
+from core.dependencies import get_db
+from corridas.models.corrida_model import CorridaModel
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel
-from shared.dependencies import get_db
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 
@@ -53,7 +54,6 @@ async def listar_clientes(db: AsyncSession = Depends(get_db)):
 @router.get("/listar_sem_corrida/", summary="Listar Clientes sem corridas ativas")
 async def listar_clientes_sem_corrida(db: AsyncSession = Depends(get_db)):
     """Lista clientes que não possuem corridas ativas"""
-    from corridas.models.CorridaModel import CorridaModel
 
     query = select(ClienteModel).where(
         ~ClienteModel.id.in_(

@@ -3,48 +3,37 @@ import aiohttp
 import random
 import time
 import urllib.parse
+import argparse
 from datetime import datetime, timedelta
 
-# 🔥 Configuração da API
 API_URL = "http://127.0.0.1:8000"
-NUM_CORRIDAS = 10
-CITY = "Vitória da Conquista"
+CIDADE = "Vitória da Conquista"
 TIMEOUT = 120
-MAX_CONCURRENT_REQUESTS = 5
+MAX_CONCORRENTES = 5
 
-# 🔄 Semáforo para controle de concorrência
-semaphore = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
+semaforo = asyncio.Semaphore(MAX_CONCORRENTES)
 
-
-async def obter_motoristas(session):
-    """Obtém a lista de motoristas disponíveis na API."""
+async def obter_motoristas(session: aiohttp.ClientSession):
     url = f"{API_URL}/motoristas/listar/"
     async with session.get(url, timeout=TIMEOUT) as response:
         if response.status == 200:
-            motoristas = await response.json()
-            return motoristas  # Retorna a lista de motoristas
+            return await response.json()
         else:
             print(f"⚠️ Erro ao buscar motoristas: {response.status} - {await response.text()}")
             return []
 
-
-async def obter_clientes(session):
-    """Obtém a lista de clientes disponíveis na API."""
+async def obter_clientes(session: aiohttp.ClientSession):
     url = f"{API_URL}/clientes/listar_sem_corrida/"
     async with session.get(url, timeout=TIMEOUT) as response:
         if response.status == 200:
-            clientes = await response.json()
-            if isinstance(clientes, dict) and clientes.get("mensagem"):
-                return []
-            return clientes
+            dados = await response.json()
+            return dados if isinstance(dados, list) else []
         else:
             print(f"⚠️ Erro ao buscar clientes: {response.status} - {await response.text()}")
             return []
 
-
-async def obter_coordenadas_aleatorias(session):
-    """Obtém coordenadas aleatórias de origem e destino da API."""
-    url = f"{API_URL}/mapas/selecionar_coordenadas_aleatorias?cidade={urllib.parse.quote(CITY)}"
+async def obter_coordenadas(session: aiohttp.ClientSession):
+    url = f"{API_URL}/mapas_rotas/selecionar_coordenadas_aleatorias?cidade={urllib.parse.quote(CIDADE)}"
     async with session.get(url, timeout=TIMEOUT) as response:
         if response.status == 200:
             return await response.json()
@@ -52,36 +41,23 @@ async def obter_coordenadas_aleatorias(session):
             print(f"⚠️ Erro ao buscar coordenadas: {response.status} - {await response.text()}")
             return None
 
-
-def gerar_horario_pedido():
-    """Gera um horário aleatório para o dia 2024-06-01 com possibilidade de cair nos horários de pico."""
-    base_date = datetime(2024, 6, 1)
-    intervalos_pico = [
-        {"inicio": "07:00:00", "fim": "08:00:00"},
-        {"inicio": "12:00:00", "fim": "13:00:00"},
-        {"inicio": "17:30:00", "fim": "18:30:00"}
-    ]
-    chance_pico = 0.15  # 15% de chance de cair no horário de pico
-    if random.random() < chance_pico:
-        intervalo_escolhido = random.choice(intervalos_pico)
-        inicio_intervalo = datetime.strptime(f"{base_date.date()} {intervalo_escolhido['inicio']}", "%Y-%m-%d %H:%M:%S")
-        fim_intervalo = datetime.strptime(f"{base_date.date()} {intervalo_escolhido['fim']}", "%Y-%m-%d %H:%M:%S")
-        delta = fim_intervalo - inicio_intervalo
-        segundos_aleatorios = random.randint(0, int(delta.total_seconds()))
-        horario_aleatorio = inicio_intervalo + timedelta(seconds=segundos_aleatorios)
+def gerar_horario():
+    base = datetime(2024, 6, 1)
+    picos = [("07:00:00", "08:00:00"), ("12:00:00", "13:00:00"), ("17:30:00", "18:30:00")]
+    if random.random() < 0.15:
+        inicio, fim = random.choice(picos)
+        dt_inicio = datetime.strptime(f"{base.date()} {inicio}", "%Y-%m-%d %H:%M:%S")
+        dt_fim = datetime.strptime(f"{base.date()} {fim}", "%Y-%m-%d %H:%M:%S")
     else:
-        inicio_dia = datetime.strptime(f"{base_date.date()} 00:00:00", "%Y-%m-%d %H:%M:%S")
-        fim_dia = datetime.strptime(f"{base_date.date()} 23:59:59", "%Y-%m-%d %H:%M:%S")
-        delta = fim_dia - inicio_dia
-        segundos_aleatorios = random.randint(0, int(delta.total_seconds()))
-        horario_aleatorio = inicio_dia + timedelta(seconds=segundos_aleatorios)
-    return horario_aleatorio.isoformat()
+        dt_inicio = datetime.strptime(f"{base.date()} 00:00:00", "%Y-%m-%d %H:%M:%S")
+        dt_fim = datetime.strptime(f"{base.date()} 23:59:59", "%Y-%m-%d %H:%M:%S")
 
+    segundos = random.randint(0, int((dt_fim - dt_inicio).total_seconds()))
+    return (dt_inicio + timedelta(seconds=segundos)).isoformat()
 
-async def solicitar_corrida(session, id_cliente):
-    """Solicita uma corrida para um cliente específico."""
-    async with semaphore:
-        coordenadas = await obter_coordenadas_aleatorias(session)
+async def solicitar_corrida(session: aiohttp.ClientSession, id_cliente: int):
+    async with semaforo:
+        coordenadas = await obter_coordenadas(session)
         if not coordenadas:
             return False
 
@@ -90,63 +66,53 @@ async def solicitar_corrida(session, id_cliente):
             return False
 
         motoristas = await obter_motoristas(session)
-        if motoristas:
-            motorista = random.choice(motoristas)
-            id_motorista = motorista["id"]
-            motorista["status"] = "ocupado"
-        else:
-            print(f"⚠️ Nenhum motorista disponível para o cliente {id_cliente}.")
-            id_motorista = None
+        id_motorista = random.choice(motoristas)["id"] if motoristas else None
 
-        corrida_data = {
+        corrida = {
             "cliente": {"id_cliente": id_cliente},
             "motorista": {"id_motorista": id_motorista},
             "origem": origem,
             "destino": destino,
-            "horario_pedido": gerar_horario_pedido()
+            "horario_pedido": gerar_horario()
         }
 
         url = f"{API_URL}/corridas/solicitar"
-        async with session.post(url, json=corrida_data, timeout=TIMEOUT) as response:
-            if response.status == 201:
-                return True
-            else:
-                return False
+        async with session.post(url, json=corrida, timeout=TIMEOUT) as response:
+            return response.status == 201
 
-
-async def processar_solicitacoes_corrida():
+async def executar_solicitacoes_corrida(num_corridas: int):
     print("\n🚀 Iniciando solicitações de corridas...")
-    start_time = time.time()
+    inicio = time.time()
 
     async with aiohttp.ClientSession() as session:
         clientes = await obter_clientes(session)
         if not clientes:
-            print("⚠️ Nenhum cliente disponível. Solicitação abortada.")
-            return
+            print("⚠️ Nenhum cliente disponível. Abortando...")
+            return 0
 
-        success_count = 0
-        attempts = 0
-        MAX_ATTEMPTS = NUM_CORRIDAS * 10  # Limite de tentativas para evitar loop infinito
+        total = 0
+        tentativas = 0
+        MAX_TENTATIVAS = num_corridas * 10
 
-        while success_count < NUM_CORRIDAS and attempts < MAX_ATTEMPTS:
-            pending = NUM_CORRIDAS - success_count
-            # Para cada corrida pendente, escolhe aleatoriamente um cliente (repetição permitida)
-            tasks = [solicitar_corrida(session, random.choice(clientes)["id"]) for _ in range(pending)]
-            results = await asyncio.gather(*tasks)
-            successes = sum(results)
-            success_count += successes
-            attempts += pending
+        while total < num_corridas and tentativas < MAX_TENTATIVAS:
+            pendentes = num_corridas - total
+            tarefas = [solicitar_corrida(session, random.choice(clientes)["id"]) for _ in range(pendentes)]
+            resultados = await asyncio.gather(*tarefas)
+            total += sum(resultados)
+            tentativas += pendentes
 
-        if attempts >= MAX_ATTEMPTS and success_count < NUM_CORRIDAS:
-            print(f"Limite máximo de tentativas atingido. Corridas solicitadas com sucesso: {success_count}")
+        fim = time.time() - inicio
+        minutos, segundos = divmod(fim, 60)
 
-    elapsed_time = time.time() - start_time
-    minutes, seconds = divmod(elapsed_time, 60)
-    print("\n✅ Resumo da Simulação:")
-    print(f"✔️ {success_count}/{NUM_CORRIDAS} corridas solicitadas com sucesso.")
-    print(f"\n⏳ Tempo total de execução: {int(minutes)} min {seconds:.2f} seg.")
-    print("\n🏁 Simulação concluída!")
-
+        print("\n✅ Resumo da Simulação:")
+        print(f"✔️ {total}/{num_corridas} corridas solicitadas com sucesso.")
+        print(f"⏱️ Tempo total: {int(minutos)} min {segundos:.2f} seg.")
+        print("\n🏁 Simulação concluída!")
+        return total
 
 if __name__ == "__main__":
-    asyncio.run(processar_solicitacoes_corrida())
+    parser = argparse.ArgumentParser(description="Simular solicitações de corridas")
+    parser.add_argument("--corridas", type=int, default=10, help="Número de corridas a serem solicitadas")
+    args = parser.parse_args()
+
+    asyncio.run(executar_solicitacoes_corrida(args.corridas))

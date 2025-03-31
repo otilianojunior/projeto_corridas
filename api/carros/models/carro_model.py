@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.orm import relationship
-from shared.database import Base
+from core.database import Base
 
 class CarroModel(Base):
     __tablename__ = 'tb_carro'

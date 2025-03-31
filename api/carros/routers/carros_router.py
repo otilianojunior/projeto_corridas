@@ -5,8 +5,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from pydantic import BaseModel
 from typing import Optional
 
-from carros.models.CarroModel import CarroModel
-from shared.dependencies import get_db
+from carros.models.carro_model import CarroModel
+from core.dependencies import get_db
 
 router = APIRouter(prefix="/carros", tags=["Carros"])
 

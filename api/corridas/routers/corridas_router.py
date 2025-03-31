@@ -1,12 +1,12 @@
 import random
 from datetime import datetime
 
-from corridas.models.CorridaModel import CorridaModel
-from corridas.services.tracar_rota import calcular_rota_mais_curta
+from core.dependencies import get_db
+from corridas.models.corrida_model import CorridaModel
+from corridas.services.rota_service import calcular_rota_mais_curta
 from fastapi import APIRouter, Depends, HTTPException, status
-from motoristas.models.MotoristaModel import MotoristaModel
+from motoristas.models.motorista_model import MotoristaModel
 from pydantic import BaseModel
-from shared.dependencies import get_db
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.orm import joinedload
@@ -110,40 +110,6 @@ class CorridaUpdate(BaseModel):
     status: str
 
 
-# Rotas existentes
-
-@router.get("/listar_disponiveis", summary="Listar corridas disponíveis")
-async def listar_corridas_disponiveis(db: AsyncSession = Depends(get_db)):
-    """Lista todas as corridas disponíveis no status 'solicitado'"""
-    query = (
-        select(CorridaModel)
-        .where(CorridaModel.status == "solicitado")
-        .options(joinedload(CorridaModel.cliente), joinedload(CorridaModel.motorista))
-    )
-    result = await db.execute(query)
-    corridas_disponiveis = result.scalars().all()
-
-    if not corridas_disponiveis:
-        return {"mensagem": "Sem corridas disponíveis no momento."}
-
-    return {
-        "corridas_disponiveis": [
-            {
-                "id": corrida.id,
-                "origem_rua": corrida.origem_rua,
-                "origem_bairro": corrida.origem_bairro,
-                "destino_rua": corrida.destino_rua,
-                "destino_bairro": corrida.destino_bairro,
-                "nome_cliente": corrida.cliente.nome if corrida.cliente else "Cliente Desconhecido",
-                "id_motorista": corrida.motorista.id if corrida.motorista else None,
-                "distancia_km": corrida.distancia_km,
-                "horario_pedido": corrida.horario_pedido,
-            }
-            for corrida in corridas_disponiveis
-        ]
-    }
-
-
 @router.get("/listar", summary="Listar todas as corridas")
 async def listar_todas_corridas(db: AsyncSession = Depends(get_db)):
     """Lista todas as corridas, independente do status."""
@@ -175,6 +141,40 @@ async def listar_todas_corridas(db: AsyncSession = Depends(get_db)):
                 "status": corrida.status,
             }
             for corrida in corridas
+        ]
+    }
+
+
+# Rotas existentes
+
+@router.get("/listar_disponiveis", summary="Listar corridas disponíveis")
+async def listar_corridas_disponiveis(db: AsyncSession = Depends(get_db)):
+    """Lista todas as corridas disponíveis no status 'solicitado'"""
+    query = (
+        select(CorridaModel)
+        .where(CorridaModel.status == "solicitado")
+        .options(joinedload(CorridaModel.cliente), joinedload(CorridaModel.motorista))
+    )
+    result = await db.execute(query)
+    corridas_disponiveis = result.scalars().all()
+
+    if not corridas_disponiveis:
+        return {"mensagem": "Sem corridas disponíveis no momento."}
+
+    return {
+        "corridas_disponiveis": [
+            {
+                "id": corrida.id,
+                "origem_rua": corrida.origem_rua,
+                "origem_bairro": corrida.origem_bairro,
+                "destino_rua": corrida.destino_rua,
+                "destino_bairro": corrida.destino_bairro,
+                "nome_cliente": corrida.cliente.nome if corrida.cliente else "Cliente Desconhecido",
+                "id_motorista": corrida.motorista.id if corrida.motorista else None,
+                "distancia_km": corrida.distancia_km,
+                "horario_pedido": corrida.horario_pedido,
+            }
+            for corrida in corridas_disponiveis
         ]
     }
 

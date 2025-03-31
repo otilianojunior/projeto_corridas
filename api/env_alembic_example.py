@@ -1,9 +1,8 @@
 from logging.config import fileConfig
 
+from alembic import context
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
-
-from alembic import context
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
@@ -20,14 +19,16 @@ if config.config_file_name is not None:
 # target_metadata = mymodel.Base.metadata
 
 # noinspection PyUnresolvedReferences
-from clientes.models.cliente_model import ClienteModel
+from clientes.models.ClienteModel import ClienteModel
 # noinspection PyUnresolvedReferences
-from motoristas.models.motorista_model import MotoristaModel
+from carros.models.CarroModel import CarroModel
 # noinspection PyUnresolvedReferences
-from corridas.models.corrida_model import CorridaModel
-
+from motoristas.models.MotoristaModel import MotoristaModel
+# noinspection PyUnresolvedReferences
+from corridas.models.CorridaModel import CorridaModel
 
 from core.database import Base
+
 target_metadata = Base.metadata
 
 from dotenv import load_dotenv
@@ -39,6 +40,7 @@ SQLALCHEMY_DATABASE_URL = os.getenv("SQLALCHEMY_DATABASE_URL")
 
 config = context.config
 config.set_main_option("sqlalchemy.url", SQLALCHEMY_DATABASE_URL)
+
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:

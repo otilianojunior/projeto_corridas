@@ -1,6 +1,8 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
-from shared.database import Base
+
+from core.database import Base
+
 
 class MotoristaModel(Base):
     __tablename__ = "tb_motorista"
@@ -12,9 +14,9 @@ class MotoristaModel(Base):
     cpf = Column(String(11), unique=True, nullable=False)
     status = Column(String(255), nullable=False)
 
-    # Relacionamento com CorridaModel
+    # Relacionamento com CorridaModel: um motorista pode ter muitas corridas
     corridas = relationship("CorridaModel", back_populates="motorista")
 
-    # Relacionamento com CarroModel (motorista tem um carro)
+    # Relacionamento com CarroModel: um motorista está vinculado a um carro
     id_carro = Column(Integer, ForeignKey("tb_carro.id"), nullable=False)
     carro = relationship("CarroModel", back_populates="motoristas")

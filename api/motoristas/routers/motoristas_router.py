@@ -1,19 +1,19 @@
 import re
 
-from carros.models.CarroModel import CarroModel
 from fastapi import APIRouter, Depends, HTTPException, status
-from motoristas.models.MotoristaModel import MotoristaModel
-from pydantic import BaseModel
-from shared.dependencies import get_db
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.orm import selectinload
+from pydantic import BaseModel
+
+from core.dependencies import get_db
+from carros.models.carro_model import CarroModel
+from motoristas.models.motorista_model import MotoristaModel
 
 router = APIRouter(prefix="/motoristas", tags=["Motoristas"])
 
 
-# Modelo de entrada para criação de motorista
 class MotoristaCreate(BaseModel):
     nome: str
     email: str
@@ -23,7 +23,6 @@ class MotoristaCreate(BaseModel):
     id_carro: int
 
 
-# Modelo de entrada para edição de motorista
 class MotoristaUpdate(BaseModel):
     nome: str
     email: str
@@ -33,9 +32,9 @@ class MotoristaUpdate(BaseModel):
     id_carro: int
 
 
-@router.get("/listar/", summary="Listar Motoristas")
+@router.get("/listar", summary="Listar motoristas")
 async def listar_motoristas(db: AsyncSession = Depends(get_db)):
-    """Lista todos os motoristas cadastrados na API, incluindo os dados do carro."""
+    """Lista todos os motoristas cadastrados na API, incluindo dados do carro."""
     query = select(MotoristaModel).options(selectinload(MotoristaModel.carro))
     result = await db.execute(query)
     motoristas = result.scalars().all()
@@ -68,13 +67,11 @@ async def listar_motoristas(db: AsyncSession = Depends(get_db)):
     }
 
 
-@router.post("/", status_code=status.HTTP_201_CREATED, summary="Criar Motorista")
+@router.post("/", status_code=status.HTTP_201_CREATED, summary="Criar motorista")
 async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends(get_db)):
     """Cria um novo motorista na API."""
-    # Remove formatação do CPF
     motorista.cpf = re.sub(r"\D", "", motorista.cpf)
 
-    # Verifica duplicidade por CPF, telefone ou email
     query = select(MotoristaModel).where(
         (MotoristaModel.cpf == motorista.cpf) |
         (MotoristaModel.telefone == motorista.telefone) |
@@ -89,21 +86,19 @@ async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends
             detail="Motorista com CPF, telefone ou email já cadastrado."
         )
 
-    # Verifica se o carro com o id fornecido existe
     carro_query = select(CarroModel).where(CarroModel.id == motorista.id_carro)
     carro_result = await db.execute(carro_query)
     carro = carro_result.scalars().first()
 
     if not carro:
-        raise HTTPException(status_code=400, detail="Carro não encontrado com o id informado.")
+        raise HTTPException(status_code=400, detail="Carro não encontrado com o ID informado.")
 
-    # Cria o novo motorista (a associação pelo id_carro já é feita via chave estrangeira)
     novo_motorista = MotoristaModel(
         nome=motorista.nome,
         email=motorista.email,
         telefone=motorista.telefone,
         cpf=motorista.cpf,
-        status="disponivel",
+        status=motorista.status,
         id_carro=motorista.id_carro
     )
 
@@ -143,10 +138,9 @@ async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends
         )
 
 
-@router.put("/{motorista_id}", summary="Editar Motorista")
+@router.put("/{motorista_id}", summary="Editar motorista")
 async def editar_motorista(motorista_id: int, motorista: MotoristaUpdate, db: AsyncSession = Depends(get_db)):
     """Edita os dados de um motorista existente."""
-    # Remove formatação do CPF
     motorista.cpf = re.sub(r"\D", "", motorista.cpf)
 
     query = select(MotoristaModel).where(MotoristaModel.id == motorista_id)
@@ -156,13 +150,12 @@ async def editar_motorista(motorista_id: int, motorista: MotoristaUpdate, db: As
     if not motorista_existente:
         raise HTTPException(status_code=404, detail="Motorista não encontrado.")
 
-    # Verifica se o carro informado existe
     carro_query = select(CarroModel).where(CarroModel.id == motorista.id_carro)
     carro_result = await db.execute(carro_query)
     carro = carro_result.scalars().first()
 
     if not carro:
-        raise HTTPException(status_code=400, detail="Carro não encontrado com o id informado.")
+        raise HTTPException(status_code=400, detail="Carro não encontrado com o ID informado.")
 
     try:
         motorista_existente.nome = motorista.nome
@@ -192,7 +185,7 @@ async def editar_motorista(motorista_id: int, motorista: MotoristaUpdate, db: As
         raise HTTPException(status_code=500, detail=f"Erro ao editar motorista: {str(e)}")
 
 
-@router.delete("/{motorista_id}", summary="Excluir Motorista")
+@router.delete("/{motorista_id}", summary="Excluir motorista")
 async def excluir_motorista(motorista_id: int, db: AsyncSession = Depends(get_db)):
     """Exclui um motorista da API."""
     query = select(MotoristaModel).where(MotoristaModel.id == motorista_id)

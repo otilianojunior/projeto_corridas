@@ -1,292 +1,217 @@
-import pandas as pd
 import os
+import pandas as pd
 
-
-# === FUNÇÕES DE TRATAMENTO DE CADA MODELO ===
-
-def tratar_dados_modelo_I(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
+def tratar_modelo_1(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
     df = pd.read_csv(caminho_entrada, skiprows=3)
-
     if df.shape[1] > 25:
         df.iloc[:, 0] = df.iloc[:, 0].fillna(df.iloc[:, 25])
-
-    colunas_desejadas = [df.columns[i] for i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 15, 16, 17, 18, 24]]
-    df = df[colunas_desejadas]
-    df.columns = [
-        'categoria', 'marca', 'modelo', 'motor', 'versao',
-        'transmissao', 'ar_cond', 'direcao', 'combustivel',
-        'km_etanol_cidade', 'km_etanol_estrada',
-        'km_gasolina_cidade', 'km_gasolina_estrada', 'ano'
-    ]
+    colunas = [df.columns[i] for i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 15, 16, 17, 18, 24]]
+    df = df[colunas]
+    df.columns = ['categoria', 'marca', 'modelo', 'motor', 'versao', 'transmissao', 'ar_condicionado', 'direcao',
+                  'combustivel', 'km_etanol_cidade', 'km_etanol_estrada', 'km_gasolina_cidade', 'km_gasolina_estrada',
+                  'ano']
     df['categoria'] = df['categoria'].ffill()
     df = df.dropna(how='all')
     df = df.dropna(subset=['marca', 'modelo', 'motor', 'versao', 'km_etanol_estrada'])
     df = df.reset_index(drop=True)
-
     if caminho_saida:
         df.to_csv(caminho_saida, index=False)
-
     return df
 
-
-def tratar_dados_modelo_II(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
+def tratar_modelo_2(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
     df = pd.read_csv(caminho_entrada, skiprows=3)
-
     if df.shape[1] > 25:
         df.iloc[:, 0] = df.iloc[:, 0].fillna(df.iloc[:, 25])
-
-    colunas_desejadas = [df.columns[i] for i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 15, 16, 17, 18, 24]]
-    df = df[colunas_desejadas]
-    df.columns = [
-        'categoria', 'marca', 'modelo', 'versao', 'motor',
-        'transmissao', 'ar_cond', 'direcao', 'combustivel',
-        'km_etanol_cidade', 'km_etanol_estrada',
-        'km_gasolina_cidade', 'km_gasolina_estrada', 'ano'
-    ]
+    colunas = [df.columns[i] for i in [0, 1, 2, 3, 4, 6, 7, 8, 9, 16, 17, 18, 19, 25]]
+    df = df[colunas]
+    df.columns = ['categoria', 'marca', 'modelo', 'versao', 'motor', 'transmissao', 'ar_condicionado', 'direcao',
+                  'combustivel', 'km_etanol_cidade', 'km_etanol_estrada', 'km_gasolina_cidade', 'km_gasolina_estrada',
+                  'ano']
     df['categoria'] = df['categoria'].ffill()
     df = df.dropna(how='all')
     df = df.dropna(subset=['marca', 'modelo', 'motor', 'versao', 'km_etanol_estrada'])
     df = df.reset_index(drop=True)
-
     if caminho_saida:
         df.to_csv(caminho_saida, index=False)
-
     return df
 
+def tratar_modelo_3(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
+    df = pd.read_csv(caminho_entrada, skiprows=14)
+    colunas = [df.columns[i] for i in [0, 1, 2, 3, 4, 5, 6, 7, 9, 16, 17, 18, 19]]
+    df = df[colunas]
+    df.columns = ['categoria', 'marca', 'modelo', 'versao', 'motor', 'transmissao', 'ar_condicionado', 'direcao',
+                  'combustivel', 'km_etanol_cidade', 'km_etanol_estrada', 'km_gasolina_cidade', 'km_gasolina_estrada']
+    df['categoria'] = df['categoria'].ffill()
+    df = df.dropna(how='all')
+    df = df.dropna(subset=['marca', 'modelo', 'motor', 'versao', 'km_etanol_estrada'])
+    df['ano'] = 2021
+    df = df.reset_index(drop=True)
+    if caminho_saida:
+        df.to_csv(caminho_saida, index=False)
+    return df
 
-def tratar_dados_modelo_III(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
-    try:
-        df = pd.read_csv(caminho_entrada, skiprows=14)
-        colunas_indices = [0, 1, 2, 3, 4, 5, 6, 7, 9, 16, 17, 18, 19]
-        df = df[[df.columns[i] for i in colunas_indices]]
-        df.columns = [
-            'categoria', 'marca', 'modelo', 'versao', 'motor',
-            'transmissao', 'ar_cond', 'direcao', 'combustivel',
-            'km_etanol_cidade', 'km_etanol_estrada',
-            'km_gasolina_cidade', 'km_gasolina_estrada'
-        ]
-        df['categoria'] = df['categoria'].ffill()
-        df = df.dropna(how='all')
-        df = df.dropna(subset=['marca', 'modelo', 'motor', 'versao', 'km_etanol_estrada'])
-        df['ano'] = 2021
-        df = df.reset_index(drop=True)
-
-        if caminho_saida:
-            df.to_csv(caminho_saida, index=False)
-            print(f"[✔] Arquivo tratado salvo em: {caminho_saida}")
-
-        return df
-    except Exception as e:
-        print(f"[Erro] Falha ao processar arquivo: {e}")
-        return pd.DataFrame()
-
-
-def tratar_dados_modelo_IV(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
+def tratar_modelo_4(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
     df = pd.read_csv(caminho_entrada, skiprows=2)
-    colunas = [0, 1, 2, 3, 4, 6, 7, 8, 9, 17, 18, 19, 20, 29]
-    df = df[[df.columns[i] for i in colunas]]
-    df.columns = [
-        'categoria', 'marca', 'modelo', 'versao', 'motor',
-        'transmissao', 'ar_cond', 'direcao', 'combustivel',
-        'km_etanol_cidade', 'km_etanol_estrada',
-        'km_gasolina_cidade', 'km_gasolina_estrada', 'ano'
-    ]
+    colunas = [df.columns[i] for i in [0, 1, 2, 3, 4, 6, 7, 8, 9, 17, 18, 19, 20, 29]]
+    df = df[colunas]
+    df.columns = ['categoria', 'marca', 'modelo', 'versao', 'motor', 'transmissao', 'ar_condicionado', 'direcao',
+                  'combustivel', 'km_etanol_cidade', 'km_etanol_estrada', 'km_gasolina_cidade', 'km_gasolina_estrada',
+                  'ano']
     df['categoria'] = df['categoria'].ffill()
     df = df.dropna(how='all')
     df = df.dropna(subset=['marca', 'modelo', 'motor', 'versao', 'km_etanol_estrada'])
     df = df.reset_index(drop=True)
-
     if caminho_saida:
         df.to_csv(caminho_saida, index=False)
-
     return df
 
-
-def tratar_dados_modelo_V(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
+def tratar_modelo_5(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
     df = pd.read_csv(caminho_entrada, skiprows=3)
-    colunas = [0, 1, 2, 3, 4, 6, 7, 8, 9, 17, 18, 19, 20, 29]
-    df = df[[df.columns[i] for i in colunas]]
-    df.columns = [
-        'categoria', 'marca', 'modelo', 'versao', 'motor',
-        'transmissao', 'ar_cond', 'direcao', 'combustivel',
-        'km_etanol_cidade', 'km_etanol_estrada',
-        'km_gasolina_cidade', 'km_gasolina_estrada', 'ano'
-    ]
+    colunas = [df.columns[i] for i in [0, 1, 2, 3, 4, 6, 7, 8, 9, 17, 18, 19, 20, 29]]
+    df = df[colunas]
+    df.columns = ['categoria', 'marca', 'modelo', 'versao', 'motor', 'transmissao', 'ar_condicionado', 'direcao',
+                  'combustivel', 'km_etanol_cidade', 'km_etanol_estrada', 'km_gasolina_cidade', 'km_gasolina_estrada',
+                  'ano']
     df['categoria'] = df['categoria'].ffill()
     df = df.dropna(how='all')
     df = df.dropna(subset=['marca', 'modelo', 'motor', 'versao', 'km_etanol_estrada'])
     df = df.reset_index(drop=True)
-
     if caminho_saida:
         df.to_csv(caminho_saida, index=False)
-
     return df
 
 
-# === FUNÇÃO PARA UNIR TABELAS ===
-
-def unir_tabelas_tratadas(arquivos_csv: list, caminho_saida: str = "dados_tratados.csv") -> pd.DataFrame:
-    dataframes = []
-
-    for caminho in arquivos_csv:
+def unir_tabelas(arquivos: list, caminho_saida: str = "dados_tratados.csv") -> pd.DataFrame:
+    tabelas = []
+    for caminho in arquivos:
         if os.path.exists(caminho):
             print(f"[✔] Lendo: {caminho}")
-            df = pd.read_csv(caminho)
-            dataframes.append(df)
+            tabela = pd.read_csv(caminho)
+            tabelas.append(tabela)
         else:
             print(f"[⚠] Arquivo não encontrado: {caminho}")
 
-    if not dataframes:
-        raise ValueError("Nenhum arquivo válido foi fornecido.")
+    if not tabelas:
+        raise ValueError("Nenhum arquivo válido foi encontrado.")
 
-    df_final = pd.concat(dataframes, ignore_index=True)
-    df_final.to_csv(caminho_saida, index=False)
-    print(f"[✔] Arquivo final salvo como: {caminho_saida} ({len(df_final)} linhas)")
+    tabela_final = pd.concat(tabelas, ignore_index=True)
+    tabela_final.to_csv(caminho_saida, index=False)
+    print(f"[✔] Arquivo unido salvo em: {caminho_saida} ({len(tabela_final)} linhas)")
+    return tabela_final
 
-    return df_final
 
-
-def limpar_e_padronizar_dados(caminho_entrada: str, caminho_saida: str = "dados_tratados.csv") -> pd.DataFrame:
-    df = pd.read_csv(caminho_entrada)
-
-    # 1. Remover linhas com combustivel "E", "Elétrico" ou "ELÉTRICO"
+def padronizar_dados(df: pd.DataFrame, caminho_saida: str = "data/carros/dados_tratados.csv") -> pd.DataFrame:
     df = df[~df['combustivel'].str.upper().isin(["E", "ELÉTRICO"])]
 
-    # 2. Atualizar coluna 'ar_cond'
-    df['ar_cond'] = df['ar_cond'].map({
+    df.loc[:, 'ar_condicionado'] = df['ar_condicionado'].map({
         'S': 'sim',
         'N': 'não'
-    }).fillna(df['ar_cond'])  # mantém valores originais se não forem S/N
+    }).fillna(df['ar_condicionado'])
 
-    # 3. Atualizar coluna 'combustivel'
     combustiveis = {
-        'E': 'Elétrico',
-        'G': 'Gasolina',
-        'F': 'Flex',
-        'D': 'Diesel',
+        'E': 'elétrico',
+        'G': 'gasolina',
+        'F': 'flex',
+        'D': 'diesel'
     }
-    df['combustivel'] = df['combustivel'].map(combustiveis).fillna(df['combustivel'])
+    df.loc[:, 'combustivel'] = df['combustivel'].map(combustiveis).fillna(df['combustivel'])
 
-    # 4. Atualizar coluna 'direcao'
     direcoes = {
-        'H': 'Hidráulica',
-        'M': 'Mecânica',
-        'E': 'Elétrica',
-        'E-H': 'Eletro-hidráulica',
-        'E-h': 'Eletro-hidráulica',
-        'E­H':'Eletro-hidráulica'
+        'H': 'hidráulica',
+        'M': 'mecânica',
+        'E': 'elétrica',
+        'E-H': 'eletro-hidráulica',
+        'E-h': 'eletro-hidráulica',
+        'E­H': 'eletro-hidráulica'
     }
-    df['direcao'] = df['direcao'].map(direcoes).fillna(df['direcao'])
+    df.loc[:, 'direcao'] = df['direcao'].map(direcoes).fillna(df['direcao'])
 
-    # 5. Atualizar coluna 'transmissao'
     transmissoes = {
-        'M': 'Manual',
-        'A': 'Automática',
-        'DCT': 'Automática Dupla Embreagem',
-        'MTA': 'Automatizada',
-        'CVT': 'Contínua'
+        'M': 'manual',
+        'A': 'automática',
+        'DCT': 'automática dupla embreagem',
+        'MTA': 'automatizada',
+        'CVT': 'contínua'
     }
-    df['transmissao'] = df['transmissao'].map(transmissoes).fillna(df['transmissao'])
+    df.loc[:, 'transmissao'] = df['transmissao'].map(transmissoes).fillna(df['transmissao'])
 
-    # Salvar o resultado
     df.to_csv(caminho_saida, index=False)
-    print(f"[✔] Arquivo final limpo salvo como: {caminho_saida} ({len(df)} linhas)")
+    print(f"[✔] Arquivo padronizado salvo em: {caminho_saida} ({len(df)} linhas)")
+    return df
+
+
+def tratar_valores(df: pd.DataFrame) -> pd.DataFrame:
+    colunas_km = [
+        'km_etanol_cidade', 'km_etanol_estrada',
+        'km_gasolina_cidade', 'km_gasolina_estrada'
+    ]
+    for coluna in colunas_km:
+        df.loc[:, coluna] = df[coluna].astype(str).str.replace(',', '.')
+        df.loc[:, coluna] = pd.to_numeric(df[coluna], errors='coerce').fillna(0)
+
+    colunas_texto = [
+        'categoria', 'marca', 'modelo', 'motor', 'versao',
+        'transmissao', 'ar_condicionado', 'direcao', 'combustivel'
+    ]
+    for coluna in colunas_texto:
+        df.loc[:,coluna] = df[coluna].astype(str).str.replace(r'\n', '', regex=True)
+        df.loc[:,coluna] = df[coluna].str.replace(r'\xad', '', regex=True)
+        df.loc[:,coluna] = df[coluna].str.strip().str.lower()
+
+    df.loc[:,'transmissao'] = df['transmissao'].fillna('n/d')
+    df.loc[:,'ar_condicionado'] = df['ar_condicionado'].fillna('n/d')
+    df.loc[:,'direcao'] = df['direcao'].fillna('não informado')
+
+    df.loc[:,'marca'] = df['marca'].replace('vw', 'volkswagen')
 
     return df
 
 
-def tratar_dados_carro(df):
-    # Substituir as vírgulas por pontos nas colunas de quilometragem
-    cols_quilometragem = ['km_etanol_cidade', 'km_etanol_estrada', 'km_gasolina_cidade', 'km_gasolina_estrada']
+def filtrar_modelos(df: pd.DataFrame, modelos: list,
+    caminho_saida: str = "data/carros/dados_tratados_filtrado.csv") -> pd.DataFrame:
+    df_filtrado = df[df['modelo'].isin(modelos)]
+    df_filtrado.to_csv(caminho_saida, index=False)
+    print(f"[✔] Arquivo filtrado salvo em: {caminho_saida} ({len(df_filtrado)} linhas)")
+    return df_filtrado
 
-    for col in cols_quilometragem:
-        # Substituir as vírgulas por pontos para garantir o formato numérico
-        df[col] = df[col].str.replace(',', '.')
 
-        # Substituir valores inválidos ('\\' ou outros valores não numéricos) por NaN
-        df[col] = pd.to_numeric(df[col], errors='coerce')
-
-        # Preencher os NaN com 0 (ou outro valor adequado)
-        df[col] = df[col].fillna(0)
-
-    # Limpeza das colunas de texto (remover quebras de linha e caracteres não alfanuméricos)
-    cols_texto = ['categoria', 'marca', 'modelo', 'motor', 'versao', 'transmissao', 'ar_cond', 'direcao', 'combustivel']
-
-    for col in cols_texto:
-        # Limpar quebras de linha e caracteres especiais indesejados como '\xad'
-        df[col] = df[col].str.replace(r'\n', '', regex=True)  # Remover quebras de linha
-        df[col] = df[col].str.replace(r'\xad', '', regex=True)  # Remover o 'soft hyphen' \xad
-
-    # Preencher os valores ausentes nos campos obrigatórios
-    df['transmissao'] = df['transmissao'].str.replace(r'\n', '', regex=True).fillna("N/D")  # Preenchendo com "N/D"
-    df['ar_cond'] = df['ar_cond'].str.replace(r'\n', '', regex=True).fillna("N/D")  # Preenchendo com "não"
-    df['direcao'] = df['direcao'].str.replace(r'\n', '', regex=True).fillna(
-        "Não informado")  # Preenchendo com "Não informado"
-    df['combustivel'] = df['combustivel'].str.replace(r'\n', '', regex=True)
-
-    return df
-
-# === EXECUÇÃO PRINCIPAL ===
-
-if __name__ == '__main__':
+def main():
     tratadores = {
-        2015: tratar_dados_modelo_I,
-        2016: tratar_dados_modelo_I,
-        2017: tratar_dados_modelo_II,
-        2018: tratar_dados_modelo_II,
-        2019: tratar_dados_modelo_II,
-        2020: tratar_dados_modelo_I,
-        2021: tratar_dados_modelo_III,
-        2022: tratar_dados_modelo_II,
-        2023: tratar_dados_modelo_IV,
-        2024: tratar_dados_modelo_V,
-        2025: tratar_dados_modelo_V
+        2015: tratar_modelo_1,
+        2016: tratar_modelo_1,
+        2017: tratar_modelo_1,
+        2018: tratar_modelo_1,
+        2019: tratar_modelo_1,
+        2020: tratar_modelo_1,
+        2021: tratar_modelo_3,
+        2022: tratar_modelo_2,
+        2023: tratar_modelo_4,
+        2024: tratar_modelo_5,
+        2025: tratar_modelo_5
     }
 
     arquivos_tratados = []
 
-    # 1. Processar os arquivos CSV de cada ano
-    for ano, func in tratadores.items():
-        entrada = f"tabela_PBEV_{ano}.csv"
-        saida = f"tabela_PBEV_{ano}_tratada.csv"
-        func(entrada, saida)
-        arquivos_tratados.append(saida)
+    for ano, funcao_tratar in tratadores.items():
+        caminho_entrada = f"data/carros/tabela_pbev_{ano}.csv"
+        caminho_saida = f"data/carros/tabela_pbev_{ano}_tratada.csv"
+        funcao_tratar(caminho_entrada, caminho_saida)
+        arquivos_tratados.append(caminho_saida)
 
-    # 2. Unir os arquivos tratados
-    df_unido = unir_tabelas_tratadas(arquivos_tratados, "tabela_PBEV_unida.csv")
+    df_unido = unir_tabelas(arquivos_tratados, "data/carros/tabela_pbev_unida.csv")
+    df_padronizado = padronizar_dados(df_unido, "data/carros/tabela_pbev_padronizada.csv")
+    df_tratado = tratar_valores(df_padronizado)
 
-    # 3. Limpar e padronizar os dados no arquivo unificado
-    df_limpado = limpar_e_padronizar_dados("tabela_PBEV_unida.csv", "tabela_PBEV_unida_limpa.csv")
-
-    # 4. Aplicar o tratamento adicional aos dados após a unificação
-    df_carros_tratado = tratar_dados_carro(df_limpado)  # Aplicando tratamento aos dados unificados
-
-    # 5. Converter os dados para letras minúsculas e atualizar a marca "vw" para "volkswagen"
-    cols_texto = ['categoria', 'marca', 'modelo', 'motor', 'versao', 'transmissao', 'ar_cond', 'direcao', 'combustivel']
-    for col in cols_texto:
-        df_carros_tratado[col] = df_carros_tratado[col].astype(str).str.lower().str.strip()
-
-    # Atualiza a coluna 'marca' substituindo "vw" por "volkswagen"
-    df_carros_tratado['marca'] = df_carros_tratado['marca'].replace('vw', 'volkswagen')
-
-    # Salva o arquivo final tratado (com todos os dados em minúsculas e marca corrigida)
-    df_carros_tratado.to_csv("dados_tratados.csv", index=False)
-
-    # Lista de modelos desejados (todos em minúsculo)
-    modelos_permitidos = [
+    modelos_desejados = [
         'onix', 'argo', 'mobi', 'gol', 'uno', 'logan', 'kwid',
         'hb20', 'hb20s', 'voyage', 'siena', 'versa', 'chery', 'kicks',
         'ka', 'sandero', '208', 'cronos', 'c3', 'polo', 'city', 'fit',
         'civic', 'yaris', 'spin', 'picanto', 'corolla', 'doblò'
     ]
 
-    # Filtra o DataFrame apenas para os modelos desejados
-    df_filtrado = df_carros_tratado[df_carros_tratado['modelo'].isin(modelos_permitidos)]
+    df_filtrado = filtrar_modelos(df_tratado, modelos_desejados)
+    print(df_tratado.head())
 
-    # Salva o arquivo filtrado
-    df_filtrado.to_csv("dados_tratados_filtrado.csv", index=False)
-    print(f"[✔] Arquivo final filtrado salvo como: dados_tratados_filtrado.csv ({len(df_filtrado)} linhas)")
 
-    # Exibe as primeiras linhas do DataFrame final tratado
-    print(df_carros_tratado.head())
-
+if __name__ == "__main__":
+    main()

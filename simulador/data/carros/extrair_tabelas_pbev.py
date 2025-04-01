@@ -1,6 +1,8 @@
-import pdfplumber
-import pandas as pd
 import os
+
+import pandas as pd
+import pdfplumber
+
 
 def remover_duplicatas_colunas(colunas):
     ocorrencias = {}
@@ -17,6 +19,7 @@ def remover_duplicatas_colunas(colunas):
 
     return resultado
 
+
 def extrair_tabelas_padrão(caminho_pdf: str, ano: int) -> pd.DataFrame:
     tabelas = []
 
@@ -32,10 +35,12 @@ def extrair_tabelas_padrão(caminho_pdf: str, ano: int) -> pd.DataFrame:
 
     return pd.concat(tabelas, ignore_index=True) if tabelas else pd.DataFrame()
 
+
 def salvar_como_csv(df: pd.DataFrame, caminho_csv: str):
     """Salva um DataFrame como arquivo CSV."""
     df.to_csv(caminho_csv, index=False)
     print(f"[✔] CSV gerado: {caminho_csv}")
+
 
 def processar_pdfs(caminho_diretorio: str = "./", anos: range = range(2015, 2026)):
     """Processa todos os PDFs da pasta (exceto 2021)."""
@@ -54,12 +59,13 @@ def processar_pdfs(caminho_diretorio: str = "./", anos: range = range(2015, 2026
         df = extrair_tabelas_padrão(caminho_pdf, ano)
 
         if not df.empty:
-            caminho_csv = os.path.join(caminho_diretorio, f"tabela_PBEV_{ano}.csv")
+            caminho_csv = os.path.join(caminho_diretorio, f"tabela_pbev_{ano}.csv")
             salvar_como_csv(df, caminho_csv)
         else:
             print(f"[!] Nenhuma tabela encontrada em {nome_pdf}")
 
-def extrair_tabela_2021(caminho_pdf: str, caminho_csv: str = "tabela_PBEV_2021.csv") -> pd.DataFrame:
+
+def extrair_tabela_2021(caminho_pdf: str, caminho_csv: str = "data/carros/tabela_pbev_2021.csv") -> pd.DataFrame:
     """Extrai e salva a tabela do PDF de 2021, que tem estrutura diferente."""
     dados = []
 
@@ -76,6 +82,7 @@ def extrair_tabela_2021(caminho_pdf: str, caminho_csv: str = "tabela_PBEV_2021.c
 
     salvar_como_csv(df, caminho_csv)
     return df
+
 
 if __name__ == "__main__":
     processar_pdfs()

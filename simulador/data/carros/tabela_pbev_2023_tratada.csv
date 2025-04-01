@@ -1,0 +1,979 @@
+categoria,marca,modelo,versao,motor,transmissao,ar_condicionado,direcao,combustivel,km_etanol_cidade,km_etanol_estrada,km_gasolina_cidade,km_gasolina_estrada,ano
+Sub Compacto,CAOA CHERY,ICAR EQ1,TEC,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Sub Compacto,FIAT,500E,ICON,ELÉTRICO,A-1,S,E,E,\,\,\,\,2023
+Sub Compacto,FIAT,MOBI,EASY,1.0-8V,M-5,N,M,F,"9,8","11,0","14,2","15,5",2023
+Sub Compacto,FIAT,MOBI,TREKKING,1.0-8V,M-5,S,H,F,"9,6","10,4","13,5","15,0",2023
+Sub Compacto,FIAT,MOBI,LIKE,1.0-8V,M-5,S,H,F,"9,6","10,4","13,5","15,0",2023
+Sub Compacto,JAC,e-JS1,e-JS1,ELÉTRICO,A-1,S,E,E,\,\,\,\,2023
+Sub Compacto,JAC,e-JS1,e-JS1 EXT,ELÉTRICO,A-1,S,E,E,\,\,\,\,2023
+Sub Compacto,Renault,E-KWID,INTENS,Elétrico,A,S,E,E,\,\,\,\,2023
+Compacto,FIAT,ARGO,DRIVE 1.0 (CY23),1.0-6V,M-5,S,E,F,"9,3","10,3","13,4","14,6",2023
+Compacto,FIAT,ARGO,1.0 (CY23),1.0-6V,M-5,S,E,F,"9,3","10,3","13,4","14,6",2023
+Compacto,FIAT,ARGO,DRIVE AT (MY23),1.3-8V,CVT-7,S,E,F,"8,9","10,6","12,8","14,6",2023
+Compacto,FIAT,ARGO,DRIVE,1.3-8V,M-5,S,E,F,"9,1","10,5","13,1","15,0",2023
+Compacto,FIAT,ARGO,1.0,1.0-6V,M-5,S,E,F,"9,4","10,2","13,3","14,7",2023
+Compacto,FIAT,ARGO,DRIVE 1.0,1.0-6V,M-5,S,E,F,"9,4","10,2","13,3","14,7",2023
+Compacto,Hyundai,HB20,Sense,1.0-12V,M-5,S,E,F,"9,6","10,4","13,3","14,6",2023
+Compacto,Hyundai,HB20,Comfort,1.0-12V,M-5,S,E,F,"9,6","10,4","13,3","14,6",2023
+Compacto,Hyundai,HB20,Limited,1.0-12V,M-5,S,E,F,"9,6","10,4","13,3","14,6",2023
+Compacto,Hyundai,HB20,Platinum,1.0-12V,M-5,S,E,F,"9,6","10,4","13,3","14,6",2023
+Compacto,Hyundai,HB20,Comfort,1.0-12V T,M-6,S,E,F,"9,4","10,6","13,4","14,6",2023
+Compacto,Hyundai,HB20,Platinum,1.0-12V T,A-6,S,E,F,"8,3","9,9","11,7","13,9",2023
+Compacto,Hyundai,HB20,Sense,1.0-12V T,A-6,S,E,F,"8,3","9,9","11,7","13,9",2023
+Compacto,Hyundai,HB20,Platinum Smart Sense,1.0-12V T,A-6,S,E,F,"9,0","10,3","12,7","14,0",2023
+Compacto,Hyundai,HB20,Platinum Plus,1.0-12V T,A-6,S,E,F,"9,0","10,3","12,7","14,0",2023
+Compacto,MINI,Cooper,S Electric,Elétrico,A,S,E,E,\,\,\,\,2023
+Compacto,MINI,Cooper,S 5P,2.0 - 16V,DCT-7,S,E,G,\,\,"10,3","13,2",2023
+Compacto,MINI,JCW,Hatch 3P,2.0 - 16V,A-8,S,E,G,\,\,"10,3","13,9",2023
+Compacto,MINI,Cooper,S 3P,2.0 - 16V,DCT-7,S,E,G,\,\,"10,3","13,4",2023
+Compacto,MINI,Cooper (06/23),S 3P,2.0 - 16V,DCT-7,S,E,G,\,\,"10,2","13,0",2023
+Compacto,MINI,JCW (06/23),Hatch 3P,2.0 - 16V,A-8,S,E,G,\,\,"9,9","12,8",2023
+Compacto,MINI,Cooper (06/23),S 5P,2.0 - 16V,DCT-7,S,E,G,\,\,"10,3","13,2",2023
+Compacto,PEUGEOT,E-208,GT,ELÉTRICO,A-1,S,E,E,\,\,\,\,2023
+Compacto,PEUGEOT,208,ACTIVE AT1,1.6-16V,A-6,S,E,F,"7,7","9,1","11,1","12,9",2023
+Compacto,PEUGEOT,208,ALLURE AT,1.6-16V,A-6,S,E,F,"7,7","9,1","11,1","12,9",2023
+Compacto,PEUGEOT,208,GRIFFE AT,1.6-16V,A-6,S,E,F,"7,7","9,1","11,1","12,9",2023
+Compacto,PEUGEOT,208,ROADTRIP A,1.6-16V,A-6,S,E,F,"7,7","9,1","11,1","12,9",2023
+Compacto,PEUGEOT,208,LIKE MT,1.0-6V,M-5,S,E,F,"10,4","11,3","14,7","16,3",2023
+Compacto,PEUGEOT,208,STYLE MT,1.0-6V,M-5,S,E,F,"9,6","11,0","13,6","15,5",2023
+Compacto,PEUGEOT,208,STYLE MT (MY24),1.0-6V,M-5,S,E,F,"9,6","11,1","13,3","15,8",2023
+Compacto,PEUGEOT,208,LIKE MT (MY24),1.0-6V,M-5,S,E,F,"9,6","11,1","13,3","15,8",2023
+Compacto,PEUGEOT,208,GRIFF T200,1.0-12V T,CVT-7,S,E,F,"8,8","10,0","12,5","14,1",2023
+Compacto,PEUGEOT,208,ALLUR T200,1.0-12V T,CVT-7,S,E,F,"8,8","10,0","12,5","14,1",2023
+Compacto,PEUGEOT,208,STYLE T200,1.0-12V T,CVT-7,S,E,F,"8,3","9,8","12,0","13,6",2023
+Compacto,Renault,Sandero,SEDTION BS,1.0-12V,M-5,S,E-H,F,"10,0","10,2","13,9","14,7",2023
+Compacto,Renault,Sandero,SEDITION,1.0-12V,M-5,S,E-H,F,"10,0","10,2","13,9","14,7",2023
+Compacto,Renault,Sandero,LIFE10MT,1.0-12V,M-5,S,E-H,F,"10,0","10,2","13,9","14,7",2023
+Compacto,Renault,Sandero,RLIN,1.0-12V,M-5,S,E-H,F,"10,0","10,2","13,9","14,7",2023
+Compacto,Renault,Sandero,ZEN10MT,1.0-12V,M-5,S,E-H,F,"10,0","10,2","13,9","14,7",2023
+Compacto,Renault,Sandero,SZE10MT,1.0-12V,M-5,S,E-H,F,"9,3","9,3","13,0","13,7",2023
+Compacto,VW,GOL,MPI,1.0-12V,M - 5,S,H,F,"9,4","10,7","13,7","15,2",2023
+Médio,AUDI,A3 Sportback,S line,2.0 - 16V,A-7,S,E,G,\,\,"10,0","11,9",2023
+Médio,AUDI,A3 Sportback,Performance Black,2.0 - 16V,A-7,S,E,G,\,\,"10,0","11,9",2023
+Médio,BMW,118i,-,1.5 - 12V,DCT-7,S,E,G,\,\,"11,5","13,0",2023
+Médio,BYD,DOLPHIN,GS 180EV,Elétrico,N.A.,S,E,E,\,\,\,\,2023
+Médio,BYD,DOLPHIN,PLUS 310EV,Elétrico,N.A.,S,E,E,\,\,\,\,2023
+Médio,CHEVROLET,BOLT,LT,ELÉTRICO,Automática (A),S,E,E,\,\,\,\,2023
+Médio,CHEVROLET,BOLT,PREMIER,ELÉTRICO,Automática (A),S,E,E,\,\,\,\,2023
+Médio,CHEVROLET,BOLT EUV,BOLT EUV,Elétrico,Automática (A),S,E,E,\,\,\,\,2023
+Médio,CHEVROLET,BOLT EUV,BOLT EUV PREMIER,Elétrico,Automática (A),S,E,E,\,\,\,\,2023
+Médio,CHEVROLET,ONIX,10MT LT1,1.0 - 12 V,M-6,S,E,F,"9,4","11,6","13,3","16,6",2023
+Médio,CHEVROLET,ONIX,10MT LT2,1.0 - 12 V,M-6,S,E,F,"9,4","11,6","13,3","16,6",2023
+Médio,CHEVROLET,ONIX,10TMT LT1,1.0T - 12 V,M-6,S,E,F,"9,1","11,1","13,1","16,1",2023
+Médio,CHEVROLET,ONIX,10MT HB,1.0 - 12 V,M-6,S,E,F,"9,4","11,6","13,3","16,6",2023
+Médio,CHEVROLET,ONIX,10TMT LTZ,1.0T - 12 V,M-6,S,E,F,"9,1","11,1","13,1","16,1",2023
+Médio,CHEVROLET,ONIX,10TAT HB (produzidos até 22Jan23),1.0T - 12 V,A-6,S,E,F,"8,4","10,4","11,9","15,1",2023
+Médio,CHEVROLET,ONIX,10TAT LT1 (produzidos até 22Jan23),1.0T - 12 V,A-6,S,E,F,"8,4","10,4","11,9","15,1",2023
+Médio,CHEVROLET,ONIX,10TAT LTZ (produzidos até 22Jan23),1.0T - 12 V,A-6,S,E,F,"8,4","10,4","11,9","15,1",2023
+Médio,CHEVROLET,ONIX,10TAT PR2 (produzidos até 22Jan23),1.0T - 12 V,A-6,S,E,F,"8,4","10,4","11,9","15,1",2023
+Médio,CHEVROLET,ONIX,10TAT RS (produzidos até 22Jan23),1.0T - 12 V,A-6,S,E,F,"8,2","9,8","11,8","14,0",2023
+Médio,CHEVROLET,ONIX,"10TAT HB (produzidos a partir de
+23Jan23)",1.0T - 12 V,A-6,S,E,F,"8,4","10,4","11,8","14,9",2023
+Médio,CHEVROLET,ONIX,"10TAT LT1
+(produzidos a partir de 23Jan23)",1.0T - 12 V,A-6,S,E,F,"8,4","10,4","11,8","14,9",2023
+Médio,CHEVROLET,ONIX,"10TAT LTZ (produzidos a partir de
+23Jan23)",1.0T - 12 V,A-6,S,E,F,"8,4","10,4","11,8","14,9",2023
+Médio,CHEVROLET,ONIX,"10TAT PR2
+(produzidos a partir de 23Jan23)",1.0T - 12 V,A-6,S,E,F,"8,4","10,4","11,8","14,9",2023
+Médio,CHEVROLET,ONIX,"10TAT RS (produzidos a partir de
+23Jan23)",1.0T - 12 V,A-6,S,E,F,"8,2","10,0","11,7","14,5",2023
+Médio,CHEVROLET,ONIX,10MT HB MY24,1.0 - 12 V,M-6,S,E,F,"9,3","11,4","13,3","16,5",2023
+Médio,CHEVROLET,ONIX,10MT LT1 MY24,1.0 - 12 V,M-6,S,E,F,"9,3","11,4","13,3","16,5",2023
+Médio,CHEVROLET,ONIX,10MT LT2 MY24,1.0 - 12 V,M-6,S,E,F,"9,3","11,4","13,3","16,5",2023
+Médio,CHEVROLET,ONIX (MY24.5),10TAT HB,1.0T - 12 V,A-6,S,E,F,"8,3","10,4","11,6","14,9",2023
+Médio,CHEVROLET,ONIX (MY24.5),10TAT LT1,1.0T - 12 V,A-6,S,E,F,"8,3","10,4","11,6","14,9",2023
+Médio,CHEVROLET,ONIX (MY24.5),10TAT LTZ,1.0T - 12 V,A-6,S,E,F,"8,3","10,4","11,6","14,9",2023
+Médio,CHEVROLET,ONIX (MY24.5),10TAT PR2,1.0T - 12 V,A-6,S,E,F,"8,3","10,4","11,6","14,9",2023
+Médio,CHEVROLET,ONIX (MY24.5),10TAT RS,1.0T - 12 V,A-6,S,E,F,"8,2","9,9","11,7","13,7",2023
+Médio,CHEVROLET,ONIX PLUS,10MT LT1,1.0 - 12 V,M-6,S,E,F,"9,5","12,4","13,6","17,5",2023
+Médio,CHEVROLET,ONIX PLUS,10MT LT2,1.0 - 12 V,M-6,S,E,F,"9,5","12,4","13,6","17,5",2023
+Médio,CHEVROLET,ONIX PLUS,10TMT LT1,1.0T - 12 V,M-6,S,E,F,"9,3","11,8","13,4","16,9",2023
+Médio,CHEVROLET,ONIX PLUS,10TMT LTZ,1.0T - 12 V,M-6,S,E,F,"9,3","11,8","13,4","16,9",2023
+Médio,CHEVROLET,ONIX PLUS,10TAT NB,1.0T - 12 V,A-6,S,E,F,"8,4","12,2","12,3","16,8",2023
+Médio,CHEVROLET,ONIX PLUS,10TAT LT1,1.0T - 12 V,A-6,S,E,F,"8,4","12,2","12,3","16,8",2023
+Médio,CHEVROLET,ONIX PLUS,10TAT LTZ,1.0T - 12 V,A-6,S,E,F,"8,4","12,2","12,3","16,8",2023
+Médio,CHEVROLET,ONIX PLUS,10TAT PR2,1.0T - 12 V,A-6,S,E,F,"8,4","12,2","12,3","16,8",2023
+Médio,CHEVROLET,ONIX PLUS,10MT LT1 MY24,1.0 - 12 V,M-6,S,E,F,"9,3","12,0","13,5","17,4",2023
+Médio,CHEVROLET,ONIX PLUS,10MT LT2 MY24,1.0 - 12 V,M-6,S,E,F,"9,3","12,0","13,5","17,4",2023
+Médio,CHEVROLET,ONIX PLUS (MY24.5),10TAT PR2,1.0T - 12 V,A-6,S,E,F,"8,6","11,1","12,1","15,8",2023
+Médio,CHEVROLET,ONIX PLUS (MY24.5),10TAT NB,1.0T - 12 V,A-6,S,E,F,"8,6","11,1","12,1","15,8",2023
+Médio,CHEVROLET,ONIX PLUS (MY24.5),10TAT LT1,1.0T - 12 V,A-6,S,E,F,"8,6","11,1","12,1","15,8",2023
+Médio,CHEVROLET,ONIX PLUS (MY24.5),10TAT LTZ,1.0T - 12 V,A-6,S,E,F,"8,6","11,1","12,1","15,8",2023
+Médio,CHEVROLET,SPIN,1.8L AT ACT,1.8L -8V,A-6,S,E,F,"6,9","8,6","9,8","12,3",2023
+Médio,CHEVROLET,SPIN,1.8L AT LTZ5,1.8L -8V,A-6,S,E,F,"6,9","8,6","9,8","12,3",2023
+Médio,CHEVROLET,SPIN,1.8L AT LT,1.8L -8V,A-6,S,E,F,"7,2","8,8","10,2","12,6",2023
+Médio,CHEVROLET,SPIN,1.8L AT LS,1.8L -8V,A-6,S,E,F,"7,2","8,8","10,2","12,6",2023
+Médio,CHEVROLET,SPIN,1.8L MT LS E,1.8L-8V,M-6,S,E,F,"7,5","8,9","10,8","12,8",2023
+Médio,CHEVROLET,SPIN,1.8L MT LT,1.8L-8V,M-6,S,E,F,"7,5","8,9","10,8","12,8",2023
+Médio,FIAT,CRONOS,1.0 (MY23),1.0-6V,M-5,S,E,F,"9,9","11,3","13,8","16,0",2023
+Médio,FIAT,CRONOS,DRIVE 1.0 (MY23),1.0-6V,M-5,S,E,F,"9,9","11,4","14,0","16,1",2023
+Médio,FIAT,CRONOS,DRIVE 1.3 (CY23),1.3-8V,M-5,S,E,F,"9,0","10,9","12,8","15,5",2023
+Médio,FIAT,CRONOS,PREC 1.3AT (CY23),1.3-8V,CVT-7,S,E,F,"9,3","11,0","13,3","15,0",2023
+Médio,FIAT,CRONOS,DRIVE 1.3AT (CY23),1.3-8V,CVT-7,S,E,F,"9,3","11,0","13,3","15,0",2023
+Médio,FIAT,CRONOS,1.0,1.0-6V,M-5,S,E,F,"9,8","11,0","13,4","15,6",2023
+Médio,FIAT,CRONOS,DRIVE 1.0,1.0-6V,M-5,S,E,F,"9,8","11,0","13,4","15,6",2023
+Médio,GWM,ORA 03,GT BEV63,Elétrico,A-1,S,E,E,\,\,\,\,2023
+Médio,GWM,ORA 03,SKIN BEV48,Elétrico,A-1,S,E,E,\,\,\,\,2023
+Médio,HONDA,CITY,EX,1.5-16V,CVT,S,E,F,"9,2","10,5","13,1","15,2",2023
+Médio,HONDA,CITY,EXL,1.5-16V,CVT,S,E,F,"9,2","10,5","13,1","15,2",2023
+Médio,HONDA,CITY,TOURING,1.5-16V,CVT,S,E,F,"9,2","10,5","13,1","15,2",2023
+Médio,HONDA,CITY HATCH,EXL,1.5-16V,CVT,S,E,F,"9,1","10,5","13,3","14,8",2023
+Médio,HONDA,CITY HATCH,TOURING,1.5-16V,CVT,S,E,F,"9,1","10,5","13,3","14,8",2023
+Médio,HONDA,HR-V,EX HONDA SENSING,1.5-16V,CVT,S,E,F,"8,8","9,8","12,7","13,9",2023
+Médio,HONDA,HR-V,EXL HONDA SENSING,1.5-16V,CVT,S,E,F,"8,8","9,8","12,7","13,9",2023
+Médio,HONDA,HR-V,ADVANCE,1.5T-16V,CVT,S,E,F,"7,9","8,8","11,3","12,6",2023
+Médio,HONDA,HR-V,TOURING,1.5T-16V,CVT,S,E,F,"7,9","8,8","11,3","12,6",2023
+Médio,HYUNDAI,IONIQ,HEV,1.6 -16V,A,S,E,G,\,\,"18,9","18,8",2023
+Médio,Hyundai,HB20S,Comfort,1.0-12V,M-5,S,E,F,"9,4","10,4","13,2","14,8",2023
+Médio,Hyundai,HB20S,Limited,1.0-12V,M-5,S,E,F,"9,4","10,4","13,2","14,8",2023
+Médio,Hyundai,HB20S,Platinum,1.0-12V,M-5,S,E,F,"9,4","10,4","13,2","14,8",2023
+Médio,Hyundai,HB20S,Comfort,1.0-12V T,M-6,S,E,F,"9,3","10,7","12,9","14,7",2023
+Médio,Hyundai,HB20S,Comfort,1.0-12V T,A-6,S,E,F,"8,3","9,9","11,6","14,3",2023
+Médio,Hyundai,HB20S,Platinum,1.0-12V T,A-6,S,E,F,"8,3","9,9","11,6","14,3",2023
+Médio,Hyundai,HB20S,Sense,1.0-12V T,A-6,S,E,F,"8,9","10,3","12,2","14,3",2023
+Médio,Hyundai,HB20S,Platinum Smart Sense,1.0-12V T,A-6,S,E,F,"8,9","10,3","12,2","14,3",2023
+Médio,HYUNDAI,KONA HEV,HEV GLS,1.6 -16V,A,S,E,G,\,\,"19,6","17,4",2023
+Médio,HYUNDAI,KONA HEV,HEV LTD,1.6 -16V,A,S,E,G,\,\,"19,6","17,4",2023
+Médio,HYUNDAI,KONA EV,EV39,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Médio,KIA,STONIC,MHEV EX,1.0 - 12V,DCT-7,S,E,G,\,\,"13,7","13,8",2023
+Médio,KIA,STONIC,MHEV LX,1.0 - 12V,DCT-7,S,E,G,\,\,"13,7","13,8",2023
+Médio,KIA,STONIC,MHEV SX,1.0 - 12V,DCT-7,S,E,G,\,\,"13,7","13,8",2023
+Médio,KIA,STONIC,MHEV GT,1.0 - 12V,DCT-7,S,E,G,\,\,"13,7","13,8",2023
+Médio,MINI,Countryman,JCW,2.0 - 16V,A-8,S,E,G,\,\,"8,8","10,8",2023
+Médio,MINI,Countryman,PHEV,1.5 - 12V,A-6,S,E,G,\,\,"10,1","10,2",2023
+Médio,Nissan,Versa,SENSE,1.6-16V,M-5,S,E,F,"8,1","9,9","11,5","14,1",2023
+Médio,Nissan,Versa,SENSE,1.6-16V,CVT,S,E,F,"7,9","10,2","11,5","14,7",2023
+Médio,Nissan,Versa,EXCLUSIVE,1.6-16V,CVT,S,E,F,"7,9","10,2","11,5","14,7",2023
+Médio,Nissan,Versa,ADVANCE,1.6-16V,CVT,S,E,F,"7,9","10,2","11,5","14,7",2023
+Médio,PEUGEOT,E2008,GT,ELÉTRICO,A-1,S,E,E,\,\,\,\,2023
+Médio,Renault,Logan,ZEN16CVT,1.6 - 16V,CVT,S,E-H,F,"7,4","8,5","10,7","12,2",2023
+Médio,Renault,Logan,LIFE,1.0-12V,M-5,S,E-H,F,"9,6","9,8","13,6","14,4",2023
+Médio,Renault,Logan,ZEN,1.0-12V,M-5,S,E-H,F,"9,6","9,8","13,6","14,4",2023
+Médio,Renault,Zoe,Life,Elétrico,A,S,E,E,\,\,\,\,2023
+Médio,Renault,Zoe,NEO INT,Elétrico,A,S,E,E,\,\,\,\,2023
+Médio,Renault,Zoe,Intense,Elétrico,A,S,E,E,\,\,\,\,2023
+Médio,Renault,Mégane,E-Tech,Elétrico,A,S,E,E,\,\,\,\,2023
+Médio,TOYOTA,YARIS HATCHBACK,XS,1.5 - 16V,CVT,S,E,F,"8,7","9,8","12,2","13,9",2023
+Médio,TOYOTA,YARIS HATCHBACK,XL,1.5 - 16V,CVT,S,E,F,"8,7","9,8","12,2","13,9",2023
+Médio,TOYOTA,YARIS HATCHBACK,XLS,1.5 - 16V,CVT,S,E,F,"8,7","9,8","12,2","13,9",2023
+Médio,TOYOTA,YARIS SEDÃ,XS,1.5 - 16V,CVT,S,E,F,"8,9","10,5","12,9","14,7",2023
+Médio,TOYOTA,YARIS SEDÃ,XL,1.5 - 16V,CVT,S,E,F,"8,9","10,5","12,9","14,7",2023
+Médio,TOYOTA,YARIS SEDÃ,XLS,1.5 - 16V,CVT,S,E,F,"8,9","10,5","12,9","14,7",2023
+Médio,VW,T CROSS,SENSE 200 TSI AUTOMATICO,1.0-12V,A - 6,S,E,F,"8,3","10,0","12,0","14,4",2023
+Médio,VW,T CROSS,200TSI AUTOMÁTICO,1.0-12V,A - 6,S,E,F,"8,3","10,0","12,0","14,4",2023
+Médio,VW,T CROSS,COMFORTLINE 200TSI AUTOMÁTICO,1.0-12V,A - 6,S,E,F,"8,3","10,0","12,0","14,4",2023
+Médio,VW,T CROSS,HIGHLINE 250TSI AUTOMÁTICO,1.4-16V,A - 6,S,E,F,"8,2","10,0","11,8","14,2",2023
+Médio,VW,T CROSS,SENSE 200 TSI AUTOMATICO (MY24),1.0-12V,A - 6,S,E,F,"8,2","10,1","11,9","14,3",2023
+Médio,VW,T CROSS,"COMFORTLINE 200TSI AUTOMATICO
+(MY24)",1.0-12V,A - 6,S,E,F,"8,2","10,1","11,9","14,3",2023
+Médio,VW,T CROSS,"HIGHLINE 250TSI AUTOMÁTICO
+(MY24)",1.4-16V,A - 6,S,E,F,"8,1","10,1","11,6","14,3",2023
+Médio,VW,POLO,COMFORTLINE TSI AUTOMÁTICO,1.0-12V,A - 6,S,E,F,"8,7","10,8","12,5","15,3",2023
+Médio,VW,POLO,HIGHLINE TSI AUTOMÁTICO,1.0-12V,A - 6,S,E,F,"8,4","10,5","12,1","14,9",2023
+Médio,VW,POLO,MPI,1.0-12V,M - 5,S,E,F,"9,6","10,9","14,0","15,4",2023
+Médio,VW,POLO,TSI MANUAL,1.0-12V,M - 5,S,E,F,"9,6","11,5","14,0","16,4",2023
+Médio,VW,POLO,GTS 250TSI AUTOMÁTICO,1.4-16V,A - 6,S,E,F,"8,0","9,8","11,4","14,1",2023
+Médio,VW,POLO,GTS 250TSI AUTOMÁTICO (AD),1.4-16V,A - 6,S,E,F,"8,0","9,8","11,4","14,1",2023
+Médio,VW,POLO,TRACK MPI,1.0-12V,M - 5,S,E,F,"9,3","10,5","13,5","15,0",2023
+Médio,VW,POLO,TRACK FIRST EDITION,1.0-12V,M - 5,S,E,F,"9,3","10,5","13,5","15,0",2023
+Médio,VW,POLO,TSI MANUAL (MY24),1.0-12V,M - 5,S,E,F,"9,5","11,3","13,7","16,1",2023
+Médio,VW,POLO,COMFORTLINE TSI AUT.(MY24),1.0-12V,A - 6,S,E,F,"8,5","10,6","12,5","15,1",2023
+Médio,VW,POLO,HIGHLINE TSI AUTOMÁTICO (MY24),1.0-12V,A - 6,S,E,F,"8,5","10,4","12,3","14,6",2023
+Médio,VW,POLO,SENSE TSI AUT.(MY24),1.0-12V,A - 6,S,E,F,"8,5","10,6","12,5","15,1",2023
+Médio,VW,POLO,TRACK MPI (MY24),1.0-12V,M - 5,S,E,F,"9,4","10,8","13,7","15,2",2023
+Médio,VW,POLO,MPI (MY24),1.0-12V,M - 5,S,E,F,"9,4","10,8","13,7","15,2",2023
+Médio,VW,POLO,GTS 250TSI AUT.(MY24),1.4-16V,A - 6,S,E,F,"8,1","9,8","11,6","13,8",2023
+Médio,VW,VIRTUS,GTS 250TSI AUTOMÁTICO,1.4-16V,A - 6,S,E,F,"8,0","10,0","11,9","14,7",2023
+Médio,VW,VIRTUS,TSI MANUAL,1.0-12V,M - 5,S,E,F,"9,2","11,3","13,5","15,9",2023
+Médio,VW,VIRTUS,TSI AUTOMÁTICO,1.0-12V,A - 6,S,E,F,"8,5","10,7","12,2","15,2",2023
+Médio,VW,VIRTUS,COMFORTLINE 200TSI AUT. (MY24),1.0-12V,A - 6,S,E,F,"8,2","10,4","11,8","15,0",2023
+Médio,VW,VIRTUS,HIGHLINE 200TSI AUTOMÁTICO,1.0-12V,A - 6,S,E,F,"8,2","10,4","11,8","15,0",2023
+Médio,VW,VIRTUS,COMFORTLINE 200TSI AUTOMÁTICO,1.0-12V,A - 6,S,E,F,"8,2","10,4","11,8","15,0",2023
+Médio,VW,VIRTUS,HIGHLINE 200TSI AUTOMÁTICO,1.0-12V,A - 6,S,E,F,"8,2","10,4","11,8","15,0",2023
+Médio,VW,VIRTUS,TSI AUTOMÁTICO (MY24),1.0-12V,M - 5,S,E,F,"8,9","10,8","12,5","15,4",2023
+Médio,VW,VIRTUS,TSI MANUAL (MY24),1.0-12V,A - 6,S,E,F,"8,4","10,5","12,1","14,8",2023
+Médio,VW,VIRTUS,COMFORTLINE 200TSI AUT. (MY24),1.0-12V,A - 6,S,E,F,"8,3","10,2","12,1","14,4",2023
+Médio,VW,VIRTUS,HIGHLINE 200TSI AUT. (MY24),1.0-12V,A - 6,S,E,F,"8,3","10,2","12,1","14,4",2023
+Médio,VW,VIRTUS,EXCLUSIVE 250TSI AUT.(MY24),1.4-16V,A - 6,S,E,F,"8,1","9,9","11,7","14,0",2023
+Médio,VW,VOYAGE,MPI,1.0-12V,M - 5,S,H,F,"9,5","10,9","13,8","15,6",2023
+Grande,AUDI,A3 Sedan,S line,2.0 - 16V,A-7,S,E,G,\,\,"10,2","12,6",2023
+Grande,AUDI,A3 Sedan,Performance Black,2.0 - 16V,A-7,S,E,G,\,\,"10,2","12,6",2023
+Grande,BYD,D1,GL 180EV,ELÉTRICO,N.A.,S,E,E,\,\,\,\,2023
+Grande,BYD,D1,GS 180EV,ELÉTRICO,N.A.,S,E,E,\,\,\,\,2023
+Grande,BMW,218i,-,1.5 - 12V,DCT-7,S,E,G,\,\,"11,2","13,6",2023
+Grande,BMW,iX1,xDrive30,Elétrico,A,S,E,E,\,\,\,\,2023
+Grande,CAOA CHERY,ARRIZO 6,PRO,1.5T -16V,CVT,S,E,F,"7,4","9,2","10,6","13,4",2023
+Grande,CAOA CHERY,ARRIZO 6,PRO H,1.5T -16V,CVT,S,E,F,"8,9","9,9","12,5","13,5",2023
+Grande,CHEVROLET,CRUZE HB,LT HB AT,1.4T-16V,A-6,S,E,F,"6,8","9,2","10,1","13,1",2023
+Grande,CHEVROLET,CRUZE HB,LTZ HB AT,1.4T-16V,A-7,S,E,F,"6,8","9,2","10,1","13,1",2023
+Grande,CHEVROLET,CRUZE HB,PRE HB AT,1.4T-16V,A-8,S,E,F,"6,8","9,2","10,1","13,1",2023
+Grande,CHEVROLET,CRUZE HB,PRE2 HB AT,1.4T-16V,A-9,S,E,F,"6,8","9,2","10,1","13,1",2023
+Grande,CHEVROLET,CRUZE HB,RS HB AT,1.4T-16V,A-10,S,E,F,"6,8","9,2","10,1","13,1",2023
+Grande,CHEVROLET,CRUZE NB,LT NB AT,1.4T-16V,A-6,S,E,F,"7,1","9,7","10,5","13,9",2023
+Grande,CHEVROLET,CRUZE NB,LTZ NB AT,1.4T-16V,A-7,S,E,F,"7,1","9,7","10,5","13,9",2023
+Grande,CHEVROLET,CRUZE NB,PRE NB AT,1.4T-16V,A-8,S,E,F,"7,1","9,7","10,5","13,9",2023
+Grande,CHEVROLET,CRUZE NB,PRE2 NB AT,1.4T-16V,A-9,S,E,F,"7,1","9,7","10,5","13,9",2023
+Grande,CHEVROLET,CRUZE NB,MID NB AT,1.4T-16V,A-10,S,E,F,"7,1","9,7","10,5","13,9",2023
+Grande,HONDA,CIVIC HYBRID,TOURING,2.0 - 16V,CVT,S,E,G,\,\,"18,3","15,9",2023
+Grande,HONDA,ZR-V,TOURING,2.0 - 16V,CVT,S,E,G,\,\,"10,2","12,1",2023
+Grande,JEEP,COMPASS,S 4XE,1.3 16V T,A-6,S,E,G,\,\,"11,5","11,2",2023
+Grande,KIA,NIRO,HEV EX,1.6 - 16V,DCT-6,S,E,G,\,\,"19,8","17,7",2023
+Grande,KIA,NIRO,HEV LX,1.6 - 16V,DCT-6,S,E,G,\,\,"19,8","17,7",2023
+Grande,KIA,NIRO,HEV SX,1.6 - 16V,DCT-6,S,E,G,\,\,"19,8","17,7",2023
+Grande,LEXUS,UX250H,LUXURY,2.0 - 16V,CVT,S,E,G,\,\,"16,6","14,7",2023
+Grande,LEXUS,UX250H,DYNAMIC,2.0 - 16V,CVT,S,E,G,\,\,"16,6","14,7",2023
+Grande,MASERATI,GHIBLI,GT HYB,"2,0L-16V",A-8,S,E,G,\,\,"8,0","10,4",2023
+Grande,Mercedes-Benz,GLA200,AMG LINE(L7),1.3-16V,DCT-7,S,E,G,\,\,"11,1","13,6",2023
+Grande,NISSAN,LEAF,TEKNA,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Grande,TOYOTA,COROLLA CROSS,XRV HYBRID,1.8 - 16V,CVT,S,E,F,"11,8","9,7","17,8","14,7",2023
+Grande,TOYOTA,COROLLA CROSS,XRX HYBRID,1.8 - 16V,CVT,S,E,F,"11,8","9,7","17,8","14,7",2023
+Grande,TOYOTA,COROLLA CROSS,XR 20,2.0 - 16V,CVT,S,E,F,"8,2","9,0","11,7","13,0",2023
+Grande,TOYOTA,COROLLA CROSS,XRE 20,2.0 - 16V,CVT,S,E,F,"8,2","9,0","11,7","13,0",2023
+Grande,TOYOTA,COROLLA CROSS,GRS,2.0 - 16V,CVT,S,E,F,"8,2","9,0","11,7","13,0",2023
+Grande,TOYOTA,COROLLA CROSS,XRX 20,2.0 - 16V,CVT,S,E,F,"8,2","9,0","11,7","13,0",2023
+Grande,TOYOTA,COROLLA,APREMIUMH,1.8 - 16V,CVT,S,E,F,"11,8","10,5","17,9","15,4",2023
+Grande,TOYOTA,COROLLA,ALTIS HV,1.8 - 16V,CVT,S,E,F,"11,8","10,5","17,9","15,4",2023
+Grande,TOYOTA,COROLLA,XEI 20,2.0 - 16V,CVT,S,E,F,"8,3","9,8","11,9","14,2",2023
+Grande,TOYOTA,COROLLA,GLI 20,2.0 - 16V,CVT,S,E,F,"8,3","9,8","11,9","14,2",2023
+Grande,TOYOTA,COROLLA,ALTIS 20,2.0 - 16V,CVT,S,E,F,"8,3","9,8","11,9","14,2",2023
+Grande,TOYOTA,COROLLA HB,GR,1.6 - 12V,M-6,S,E,G,\,\,"8,7","11,1",2023
+Grande,TOYOTA,COROLLA HB,GR R,1.6 - 12V,M-6,S,E,G,\,\,"8,7","11,1",2023
+Grande,TOYOTA,COROLLA,GRS,2.0 - 16V,CVT,S,E,F,"8,3","9,8","11,9","14,2",2023
+Grande,TOYOTA,COROLLA,APREMIUMH HV (MY 2024),1.8 - 16V,CVT,S,E,F,"12,8","11,1","18,5","15,7",2023
+Grande,TOYOTA,COROLLA,ALTIS HV (MY 2024),1.8 - 16V,CVT,S,E,F,"12,8","11,1","18,5","15,7",2023
+Grande,TOYOTA,COROLLA,XEI 20 (MY 2024),2.0 - 16V,CVT,S,E,F,"8,6","10,7","12,3","14,9",2023
+Grande,TOYOTA,COROLLA,GLI 20 (MY 2024),2.0 - 16V,CVT,S,E,F,"8,6","10,7","12,3","14,9",2023
+Grande,TOYOTA,COROLLA,ALTIS 20 (MY 2024),2.0 - 16V,CVT,S,E,F,"8,6","10,7","12,3","14,9",2023
+Grande,TOYOTA,COROLLA,GRS (MY 2024),2.0 - 16V,CVT,S,E,F,"8,6","10,7","12,3","14,9",2023
+Grande,VW,ID.4,PRO PERFORMANCE,Elétrico,A,S,E,E,\,\,\,\,2023
+Extra Grande,AUDI,A4 Sedan,Prestige,2.0 - 16V,DCT-7,S,E,G,\,\,"10,5","12,5",2023
+Extra Grande,AUDI,A4 Sedan,S line,2.0 - 16V,DCT-7,S,E,G,\,\,"10,5","12,5",2023
+Extra Grande,AUDI,A5 Sportback,S line,2.0 - 16V,DCT-7,S,E,G,\,\,"10,3","12,4",2023
+Extra Grande,AUDI,RS 6 Avant,-,4.0 - 32V,A-8,S,E,G,\,\,"5,4","7,2",2023
+Extra Grande,AUDI,Q5,Prestige,2.0 - 16V,A-7,S,E,G,\,\,"8,5","10,0",2023
+Extra Grande,AUDI,Q5,S line,2.0 - 16V,A-7,S,E,G,\,\,"8,5","10,0",2023
+Extra Grande,AUDI,Q5,S line Black,2.0 - 16V,A-7,S,E,G,\,\,"8,5","10,0",2023
+Extra Grande,AUDI,Q7,Performance,3.0 - 24V,A-8,S,E,G,\,\,"7,1","8,1",2023
+Extra Grande,AUDI,Q7,Performance Black,3.0 - 24V,A-8,S,E,G,\,\,"7,1","8,1",2023
+Extra Grande,AUDI,Q8 Sportback,Performance,3.0 - 24V,A-8,S,E,G,\,\,"7,0","7,6",2023
+Extra Grande,AUDI,Q8 Sportback,Performance Black,3.0 - 24V,A-8,S,E,G,\,\,"7,0","7,6",2023
+Extra Grande,AUDI,RS e-tron GT,-,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Extra Grande,AUDI,e-tron S Sportback,-,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Extra Grande,AUDI,e-tron Sportback,Performance,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Extra Grande,AUDI,e-tron Sportback,Performance Black,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Extra Grande,AUDI,e-tron,Performance,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Extra Grande,AUDI,e-tron,Performance Black,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Extra Grande,AUDI,Q5 TFSIe,Performance,2.0 - 16V,A-7,S,E,G,\,\,"8,5","9,6",2023
+Extra Grande,AUDI,Q5 TFSIe,Performance Black,2.0 - 16V,A-7,S,E,G,\,\,"8,5","9,6",2023
+Extra Grande,AUDI,Q5 Sportback TFSIe,Performance,2.0 - 16V,A-7,S,E,G,\,\,"8,6","8,9",2023
+Extra Grande,AUDI,Q5 Sportback TFSIe,Performance Black,2.0 - 16V,A-7,S,E,G,\,\,"8,6","8,9",2023
+Extra Grande,AUDI,Q5 TFSIe,Performance (ed. 0),2.0 - 16V,A-7,S,E,G,\,\,"8,8","9,4",2023
+Extra Grande,AUDI,Q5 Sportback TFSIe,Performance Black (ed. 0),2.0 - 16V,A-7,S,E,G,\,\,"9,1","9,6",2023
+Extra Grande,AUDI,Q5 TFSIe,Performance,2.0 - 16V,A-7,S,E,G,\,\,"9,4","9,9",2023
+Extra Grande,AUDI,Q5 TFSIe,Performance Black,2.0 - 16V,A-7,S,E,G,\,\,"9,4","9,9",2023
+Extra Grande,AUDI,Q5 TFSIe,Performance,2.0 - 16V,A-7,S,E,G,\,\,"9,4","9,9",2023
+Extra Grande,AUDI,Q5 TFSIe,Performance Black,2.0 - 16V,A-7,S,E,G,\,\,"9,4","9,9",2023
+Extra Grande,AUDI,Q5 Sportback TFSIe,Performance,2.0 - 16V,A-7,S,E,G,\,\,"9,3","9,9",2023
+Extra Grande,AUDI,Q5 Sportback TFSIe,Performance Black,2.0 - 16V,A-7,S,E,G,\,\,"9,3","9,9",2023
+Extra Grande,AUDI,RS Q8,(MY23),4.0 - 32V,A-8,S,E,G,\,\,"5,5","7,1",2023
+Extra Grande,AUDI,RS 5 Sportback,Competition Plus,2.9 - 24 V,A-8,S,E,G,\,\,"6,8","9,6",2023
+Extra Grande,AUDI,RS 5 Sportback,-,2.9 - 24 V,A-8,S,E,G,\,\,"6,9","9,6",2023
+Extra Grande,AUDI,e-tron GT,-,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Extra Grande,AUDI,Q8 e-tron Sportback 55,Launch Edition,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Extra Grande,AUDI,Q8 e-tron Sportback 55,Performance Black,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Extra Grande,AUDI,Q8 e-tron 55,Launch Edition,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Extra Grande,AUDI,Q8 e-tron 55,Performance Black,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Extra Grande,BMW,420i,Cabrio,2.0 - 16V,A-8,S,E,G,\,\,"9,9","13,3",2023
+Extra Grande,BMW,530e,-,2.0 - 16V,A-8,S,E,G,\,\,"10,1","11,4",2023
+Extra Grande,BMW,iX3,-,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Extra Grande,BMW,IX xDrive 40,-,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Extra Grande,BMW,IX xDrive 50,-,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Extra Grande,BMW,330e,-,2.0 - 16V,A-8,S,E,G,\,\,"9,5","11,2",2023
+Extra Grande,BMW,320i,Active Flex,2.0 - 16V,A-8,S,E,F,"7,2","9,0","10,4","13,1",2023
+Extra Grande,BMW,320i,GP Flex,2.0 - 16V,A-8,S,E,F,"7,5","9,2","10,7","13,2",2023
+Extra Grande,BMW,320i,Sport GP Flex,2.0 - 16V,A-8,S,E,F,"7,5","9,2","10,7","13,2",2023
+Extra Grande,BMW,320i,M Sport Flex,2.0 - 16V,A-8,S,E,F,"7,5","9,1","10,6","13,2",2023
+Extra Grande,BMW,i4,40,ELÉTRICO,A,S,E,E,"(km/l)
+\","(km/l)
+\","(km/l)
+\","(km/l)
+\",2023
+Extra Grande,BMW,i4,M50,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Extra Grande,BMW,i4,eDrive35,Elétrico,A,S,E,E,\,\,\,\,2023
+Extra Grande,BMW,i7,xDrive60,Elétrico,A,S,E,E,\,\,\,\,2023
+Extra Grande,BMW,iX,M60,Elétrico,A,S,E,E,\,\,\,\,2023
+Extra Grande,BYD,HAN,AWD GS 680EV,Elétrico,N.A.,S,E,E,\,\,\,\,2023
+Extra Grande,BYD,SEAL,AWD GS 590EV,Elétrico,N.A.,S,E,E,\,\,\,\,2023
+Extra Grande,CHEVROLET,EQUINOX,15T PRE,1.5T -16V,A-6,S,E,G,\,\,"9,0","10,8",2023
+Extra Grande,CHEVROLET,EQUINOX,15T RS,1.5T -16V,A-6,S,E,G,\,\,"9,3","11,5",2023
+Extra Grande,CHEVROLET,EQUINOX,15T LT,1.5T -16V,A-6,S,E,G,\,\,"9,3","11,5",2023
+Extra Grande,FORD,Territory,SEL,1.5 - 16V,CVT,S,E,G,\,\,"9,4","9,8",2023
+Extra Grande,FORD,Territory,SEL Plus,1.5 - 16V,CVT,S,E,G,\,\,"9,4","9,8",2023
+Extra Grande,FORD,Territory,Titanium,1.5 - 16V,CVT,S,E,G,\,\,"9,4","9,8",2023
+Extra Grande,FORD,Novo Territory,Titanium,1.5 - 16V,A-7,S,E,G,\,\,"9,5","11,8",2023
+Extra Grande,FORD,Mustang Mach-E,GT,Elétrico,A-1,S,E,E,\,\,\,\,2023
+Extra Grande,GWM,HAVAL H6,PREM HEV,1.5-16V,A-2,S,E,G,\,\,"13,8","12,0",2023
+Extra Grande,GWM,HAVAL H6,GT,1.5-16V,A-2,S,E,G,\,\,"11,4","10,4",2023
+Extra Grande,GWM,HAVAL H6,PREM PHEV,1.5-16V,A-2,S,E,G,\,\,"11,7","10,4",2023
+Extra Grande,HONDA,ACCORD HYBRID,TOURING,2.0 - 16V,CVT,S,E,G,\,\,"17,8","16,1",2023
+Extra Grande,JAC,e-J7,e-J7,ELÉTRICO,A-1,S,E,E,\,\,\,\,2023
+Extra Grande,JAGUAR,I-PACE,E400 FIRSTED,ELÉTRICO,A-1,S,E,E,\,\,\,\,2023
+Extra Grande,JAGUAR,I-PACE,E400 S,ELÉTRICO,A-2,S,E,E,\,\,\,\,2023
+Extra Grande,JAGUAR,I-PACE,E400 SE,ELÉTRICO,A-3,S,E,E,\,\,\,\,2023
+Extra Grande,JAGUAR,I-PACE,E400 HSE,ELÉTRICO,A-4,S,E,E,\,\,\,\,2023
+Extra Grande,LEXUS,NX350H,LUXURY,2.5 - 16V,CVT,S,E,G,\,\,"15,3","12,9",2023
+Extra Grande,LEXUS,NX350H,DYNAMIC,2.5 - 16V,CVT,S,E,G,\,\,"15,3","12,9",2023
+Extra Grande,LEXUS,NX350H,F-SPORT,2.5 - 16V,CVT,S,E,G,\,\,"15,3","12,9",2023
+Extra Grande,LEXUS,ES300H,-,2.5 - 16V,CVT,S,E,G,\,\,"15,8","15,2",2023
+Extra Grande,LEXUS,RX500H,F-SPORT,2.4 - 16V,A,S,E,G,\,\,"10,5","10,8",2023
+Extra Grande,LEXUS,RX500H (MY24),F-SPORT,2.4 - 16V,A,S,E,G,\,\,"10,6","10,8",2023
+Extra Grande,Mercedes-Benz,CLA250,ADV,2.0 - 16V,DCT-7,S,E,G,\,\,"9,5","13,3",2023
+Extra Grande,Mercedes-Benz,C200,AMG LINE,1.5 - 16V,A-9,S,E,G,\,\,"11,1","13,9",2023
+Extra Grande,Mercedes-Benz,C300,AMG LINE,2.0 - 16V,A-9,S,E,G,\,\,"10,4","12,9",2023
+Extra Grande,Mercedes-Benz,EQE300,SUV,Elétrico,A-1,S,E,E,\,\,\,\,2023
+Extra Grande,Mercedes-Benz,GLB200,PROGRESSIVE(L7),1.3-16V,DCT-7,S,E,G,\,\,"10,0","12,4",2023
+Extra Grande,Mercedes-Benz,E300,EXCLUSIVE,2.0-16V,A-9,S,E,G,\,\,"8,9","12,0",2023
+Extra Grande,Mercedes-Benz,AMG GLC43,Coupé,3.0-24V,A-9,S,E,G,\,\,"6,8","8,7",2023
+Extra Grande,Mercedes-Benz,AMG GLE63 S CO,Coupé,Híbrido,A-9,S,E,G,\,\,"5,9","7,4",2023
+Extra Grande,Mercedes-Benz,EQE300,SUV,Elétrico,A-1,S,E,E,\,\,\,\,2023
+Extra Grande,Mercedes-Benz,AMG EQE53,SUV,Elétrico,A-1,S,E,E,\,\,\,\,2023
+Extra Grande,Nissan,Sentra,SENSE,2.0-16V,CVT,S,E,G,\,\,"11,0","13,9",2023
+Extra Grande,Nissan,Sentra,EXCLUSIVE,2.0-16V,CVT,S,E,G,\,\,"11,0","13,9",2023
+Extra Grande,Nissan,Sentra,ADVANCE,2.0-16V,CVT,S,E,G,\,\,"11,0","13,9",2023
+Extra Grande,PORSCHE,MACAN,S,2.9-24V,DCT-7,S,E,G,\,\,"7,0","8,4",2023
+Extra Grande,PORSCHE,MACAN,GTS,2.9-24V,DCT-7,S,E,G,\,\,"6,8","8,4",2023
+Extra Grande,PORSCHE,MACAN,--,2.0-16V,DCT-7,S,E,G,\,\,"7,4","8,3",2023
+Extra Grande,PORSCHE,MACAN,T,2.0-16V,DCT-8,S,E,G,\,\,"7,4","8,3",2023
+Extra Grande,TOYOTA,RAV4H,SXAWD CNT,2.5 - 16V,CVT,S,E,G,\,\,"17,1","14,5",2023
+Extra Grande,TOYOTA,RAV4H,S AWD CNT,2.5 - 16V,CVT,S,E,G,\,\,"17,1","14,5",2023
+Extra Grande,TOYOTA,CAMRY,HV,2.5-16V,CVT,S,E,G,\,\,"17,4","15,3",2023
+Extra Grande,VW,ID.BUZZ,PRO,Elétrico,A,S,E,E,\,\,\,\,2023
+Extra Grande,VW,JETTA,GLI 350 TSI,2.0-16V,DCT-7,S,E,G,\,\,"9,9","12,2",2023
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,PRO,1.5T -16V,CVT,S,E,F,"(km/l)
+6,9","(km/l)
+8,1","(km/l)
+9,9","(km/l)
+11,5",2023
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,PLUS,1.5T -16V,CVT,S,E,F,"6,9","8,1","9,9","11,5",2023
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,PLS 15T,1.5T -16V,CVT,S,E,F,"6,9","8,1","9,9","11,5",2023
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,PRO 15T,1.5T -16V,CVT,S,E,F,"6,9","8,1","9,9","11,5",2023
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,T,1.5T -16V,CVT,S,E,F,"6,9","8,1","9,9","11,5",2023
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,TXS,1.5T -16V,CVT,S,E,F,"6,9","8,1","9,9","11,5",2023
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,H,1.5T -16V,CVT,S,E,F,"8,1","8,3","11,1","10,9",2023
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,PRO HA,1.5T -16V,CVT,S,E,F,"8,1","8,3","11,1","10,9",2023
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,PRO H,1.5T -16V,CVT,S,E,F,"8,1","8,3","11,1","10,9",2023
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,H,1.5T -16V,CVT,S,E,F,"8,7","8,8","11,8","12,3",2023
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,PRO HA,1.5T -16V,CVT,S,E,F,"8,7","8,8","11,8","12,3",2023
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,PRO H,1.5T -16V,CVT,S,E,F,"8,7","8,8","11,8","12,3",2023
+Utilitário Esportivo Compacto,CAOA CHERY,TIGGO 5X,SPORT,1.5T -16V,CVT,S,E,F,"6,9","8,1","9,9","11,5",2023
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,12T A,1.2T - 12 V,A-6,S,E,F,"7,2","9,2","10,4","13,2",2023
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,12T A LTZ,1.2T - 12 V,A-6,S,E,F,"7,2","9,2","10,4","13,2",2023
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,12T A PR,1.2T - 12 V,A-6,S,E,F,"7,2","9,2","10,4","13,2",2023
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,"T A
+(produzidos até 22Jan23)",1.0T - 12 V,A-6,S,E,F,"7,7","9,5","11,2","13,4",2023
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,"T A LT
+(produzidos até 22Jan23)",1.0T - 12 V,A-6,S,E,F,"7,7","9,5","11,2","13,4",2023
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,"T A LTZ
+(produzidos até 22Jan23)",1.0T - 12 V,A-6,S,E,F,"7,7","9,5","11,2","13,4",2023
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,"T A
+(produzidos a partir de 23Jan23)",1.0T - 12 V,A-6,S,E,F,"7,8","9,6","11,2","13,6",2023
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,"T A LT
+(produzidos a partir de 23Jan23)",1.0T - 12 V,A-6,S,E,F,"7,8","9,6","11,2","13,6",2023
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,"T A LTZ
+(produzidos a partir de 23Jan23)",1.0T - 12 V,A-6,S,E,F,"7,8","9,6","11,2","13,6",2023
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,"T A PR
+(produzido até 22Jan23)",1.0T - 12 V,A-6,S,E,F,"7,7","9,5","11,2","13,4",2023
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,"T A PR
+(produzido a partir de 23Jan23)",1.0T - 12 V,A-6,S,E,F,"7,8","9,6","11,2","13,6",2023
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,T A MID,1.0T - 12 V,A-6,S,E,F,"7,8","9,6","11,2","13,6",2023
+Utilitário Esportivo Compacto,CHEVROLET,TRACKER,12T A RS,1.2T - 12 V,A-6,S,E,F,"7,2","9,2","10,4","13,2",2023
+Utilitário Esportivo Compacto,CITROEN,C4 CACTUS,FEEL AT,1.6 16V,A-6,S,E,F,"7,7","8,9","11,2","12,7",2023
+Utilitário Esportivo Compacto,CITROEN,C4 CACTUS,FEEL P,1.6 16V,A-6,S,E,F,"7,7","8,9","11,2","12,7",2023
+Utilitário Esportivo Compacto,CITROEN,C4 CACTUS,LIVE A,1.6 16V,A-6,S,E,F,"7,7","8,9","11,2","12,7",2023
+Utilitário Esportivo Compacto,CITROEN,C4 CACTUS,SHINE,1.6 16V,A-6,S,E,F,"7,7","8,9","11,2","12,7",2023
+Utilitário Esportivo Compacto,CITROEN,C4 CACTUS,XSE AT,1.6 16V,A-6,S,E,F,"7,7","8,9","11,2","12,7",2023
+Utilitário Esportivo Compacto,CITROEN,C4 CACTUS,SHINE T,1.6 16V T,A-6,S,E,F,"8,2","9,5","11,7","13,4",2023
+Utilitário Esportivo Compacto,CITROEN,C4 CACTUS,NOIR,1.6 16V T,A-6,S,E,F,"8,2","9,5","11,7","13,4",2023
+Utilitário Esportivo Compacto,CITROEN,C3,FIRST ED 1.0,1.0 6V,M-5,S,E,F,"9,3","10,0","12,9","14,1",2023
+Utilitário Esportivo Compacto,CITROEN,C3,FEEL 1.0 (CY23),1.0 6V,M-5,S,E,F,"9,5","10,3","13,2","14,5",2023
+Utilitário Esportivo Compacto,CITROEN,C3,LIVE 1.0 (CY23),1.0 6V,M-5,S,E,F,"9,5","10,3","13,2","14,5",2023
+Utilitário Esportivo Compacto,CITROEN,C3,LIVE PK 1.0 (CY23),1.0 6V,M-5,S,E,F,"9,5","10,3","13,2","14,5",2023
+Utilitário Esportivo Compacto,CITROEN,C3,FEEL PK AT,1.6 16V,A-6,S,E,F,"7,2","8,5","10,3","12,4",2023
+Utilitário Esportivo Compacto,CITROEN,C3,FIRST ED AT,1.6 16V,A-6,S,E,F,"7,2","8,5","10,3","12,4",2023
+Utilitário Esportivo Compacto,CITROEN,C3,FEEL 1.6,1.6 16V,M-5,S,E,F,"7,8","9,0","10,9","12,8",2023
+Utilitário Esportivo Compacto,FIAT,ARGO,TREKKING 1.3 AT (CY23),1.3-8V,CVT-7,S,E,F,"8,9","10,1","12,7","13,9",2023
+Utilitário Esportivo Compacto,FIAT,ARGO,TREKKING 1.3 (CY23),1.3-8V,M-5,S,E,F,"9,1","10,0","12,6","14,1",2023
+Utilitário Esportivo Compacto,FIAT,FASTBACK,AUDACE TF200,1.0 12V T,CVT-7,S,E,F,"8,4","10,2","11,9","14,6",2023
+Utilitário Esportivo Compacto,FIAT,FASTBACK,IMPETUS TF200,1.0 12V T,CVT-7,S,E,F,"8,1","9,7","11,3","13,9",2023
+Utilitário Esportivo Compacto,FIAT,FASTBACK,TURBO 270,1.3 16V T,A-6,S,E,F,"7,9","9,7","11,3","13,6",2023
+Utilitário Esportivo Compacto,FIAT,FASTBACK,DRIVE TF200,1.0 12V T,CVT-7,S,E,F,"8,4","10,2","11,9","14,6",2023
+Utilitário Esportivo Compacto,FIAT,FASTBACK,ABARTH 270,1.3-16V T,A-6,S,E,F,"7,2","9,3","10,3","13,1",2023
+Utilitário Esportivo Compacto,FIAT,PULSE,IMPETUS TF200 (MY23),1.0 12V T,CVT-7,S,E,F,"8,4","10,2","12,1","14,4",2023
+Utilitário Esportivo Compacto,FIAT,PULSE,AUDACE TF200 (MY23),1.0 12V T,CVT-7,S,E,F,"8,4","10,2","12,1","14,4",2023
+Utilitário Esportivo Compacto,FIAT,PULSE,DRIVE TF200 (MY23),1.0 12V T,CVT-7,S,E,F,"8,4","10,2","12,1","14,4",2023
+Utilitário Esportivo Compacto,FIAT,PULSE,MT (MY23),1.3-8V,M-5,S,E,F,"9,0","10,4","12,5","14,7",2023
+Utilitário Esportivo Compacto,FIAT,PULSE,DRIVE AT (MY23),1.3-8V,CVT-7,S,E,F,"9,0","10,3","12,8","14,0",2023
+Utilitário Esportivo Compacto,FIAT,PULSE,ABARTH 270,1.3 16V T,A-6,S,E,F,"6,8","8,8","10,0","12,3",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,N Line,1.0-12V T,A-6,S,E,F,"8,2","8,9","12,0","12,2",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,Comfort,1.0-12V T,A-6,S,E,F,"8,2","8,9","12,0","12,2",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,Limited,1.0-12V T,A-6,S,E,F,"8,2","8,9","12,0","12,2",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,Platinum,1.0-12V T,A-6,S,E,F,"8,2","8,9","12,0","12,2",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,Ultimate,2.0-16V,A-6,S,E,F,"7,7","8,9","10,9","12,5",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,Action,1.6-16V,A-6,S,E,F,"7,1","8,1","10,1","11,5",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,N Line,1.0-12V T,A-6,S,E,F,"8,2","8,9","12,0","12,2",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,Comfort,1.0-12V T,A-6,S,E,F,"8,2","8,9","12,0","12,2",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,Limited,1.0-12V T,A-6,S,E,F,"8,2","8,9","12,0","12,2",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,Platinum,1.0-12V T,A-6,S,E,F,"8,2","8,9","12,0","12,2",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,N Line (ORVR),1.0-12V T,A-6,S,E,F,"8,3","9,1","11,9","12,6",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,Comfort (ORVR),1.0-12V T,A-6,S,E,F,"8,3","9,1","11,9","12,6",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,Limited (ORVR),1.0-12V T,A-6,S,E,F,"8,3","9,1","11,9","12,6",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,Platinum (ORVR),1.0-12V T,A-6,S,E,F,"8,3","9,1","11,9","12,6",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,Ultimate,2.0-16V,A-6,S,E,F,"7,7","8,8","11,1","12,4",2023
+Utilitário Esportivo Compacto,Hyundai,CRETA,N Line Night Edition,2.0-16V,A-6,S,E,F,"7,7","8,8","11,1","12,4",2023
+Utilitário Esportivo Compacto,JAC,e-JS4,e-JS4,ELÉTRICO,A-1,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Compacto,JEEP,RENEGADE,SPT T270 (CY23),1.3 16V T,A-6,S,E,F,"7,7","9,1","11,0","12,8",2023
+Utilitário Esportivo Compacto,JEEP,RENEGADE,LGTD T270 (CY23),1.3 16V T,A-6,S,E,F,"7,7","9,1","11,0","12,8",2023
+Utilitário Esportivo Compacto,JEEP,RENEGADE,1.3 TURBO,1.3 16V T,A-6,S,E,F,"7,7","9,1","11,0","12,8",2023
+Utilitário Esportivo Compacto,Nissan,Kicks,SENSE,1.6-16V,M-5,S,E,F,"7,8","9,0","11,5","13,0",2023
+Utilitário Esportivo Compacto,Nissan,Kicks,SENSE,1.6-16V,CVT,S,E,F,"7,8","9,5","11,4","13,8",2023
+Utilitário Esportivo Compacto,Nissan,Kicks,EXCLUSIVE,1.6-16V,CVT,S,E,F,"7,8","9,5","11,4","13,8",2023
+Utilitário Esportivo Compacto,Nissan,Kicks,ACTIVE,1.6-16V,CVT,S,E,F,"7,8","9,5","11,4","13,8",2023
+Utilitário Esportivo Compacto,Nissan,Kicks,ADVANCE,1.6-16V,CVT,S,E,F,"7,8","9,5","11,4","13,8",2023
+Utilitário Esportivo Compacto,Nissan,Kicks,XPLAY,1.6-16V,CVT,S,E,F,"7,8","9,5","11,4","13,8",2023
+Utilitário Esportivo Compacto,PEUGEOT,2008,GRF THP AT,1.6-16V T,A-6,S,E,F,"7,8","9,1","11,2","12,9",2023
+Utilitário Esportivo Compacto,PEUGEOT,2008,STYLE THP AT,1.6-16V T,A-6,S,E,F,"7,8","9,1","11,2","12,9",2023
+Utilitário Esportivo Compacto,PEUGEOT,2008,GRIFFE EAT6,1.6-16V,A-6,S,E,F,"7,6","8,6","11,0","12,4",2023
+Utilitário Esportivo Compacto,PEUGEOT,2008,ALLURE EAT6,1.6-16V,A-6,S,E,F,"7,6","8,6","11,0","12,4",2023
+Utilitário Esportivo Compacto,PEUGEOT,2008,ALLURE PK,1.6-16V,A-6,S,E,F,"7,6","8,6","11,0","12,4",2023
+Utilitário Esportivo Compacto,PEUGEOT,2008,STYLE AT,1.6-16V,A-6,S,E,F,"7,6","8,6","11,0","12,4",2023
+Utilitário Esportivo Compacto,PEUGEOT,2008,ROADTRIP AT,1.6-16V,A-6,S,E,F,"7,6","8,6","11,0","12,4",2023
+Utilitário Esportivo Compacto,Renault,Kwid,Zen,1.0-12V,M-5,S,E-H,F,"10,8","11,0","15,3","15,7",2023
+Utilitário Esportivo Compacto,Renault,Kwid,Intense,1.0-12V,M-5,S,E-H,F,"10,8","11,0","15,3","15,7",2023
+Utilitário Esportivo Compacto,Renault,Kwid,Outsider,1.0-12V,M-5,S,E-H,F,"10,8","11,0","15,3","15,7",2023
+Utilitário Esportivo Compacto,Renault,Kwid,Intense Biton,1.0-12V,M-5,S,E-H,F,"10,8","11,0","15,3","15,7",2023
+Utilitário Esportivo Compacto,Renault,Sandero,SZE,1.6 - 16V,M-5,S,E-H,F,"8,3","8,5","11,8","12,1",2023
+Utilitário Esportivo Compacto,Renault,Sandero,SIC16CVT,1.6 - 16V,CVT,S,E-H,F,"7,4","8,3","10,7","11,6",2023
+Utilitário Esportivo Compacto,VW,NIVUS,COMFORTLINE 200TSI AUTOMÁTICO,1.0-12V,A - 6,S,E,F,"8,3","10,1","12,1","14,2",2023
+Utilitário Esportivo Compacto,VW,NIVUS,HIGHLINE 200TSI AUTOMÁTICO,1.0-12V,A - 6,S,E,F,"8,3","10,1","12,1","14,2",2023
+Utilitário Esportivo Compacto,VW,NIVUS,COMFORTLINE 200TSI AUTO(MY24),1.0-12V,A - 6,S,E,F,"8,3","9,9","11,9","14,1",2023
+Utilitário Esportivo Compacto,VW,NIVUS,HIGHLINE 200TSI AUTO (MY24),1.0-12V,A - 6,S,E,F,"8,3","9,9","11,9","14,1",2023
+Utilitário Esportivo Grande,AUDI,Q3,Prestige,2.0 - 16V,A-8,S,E,G,"(km/l)
+\","(km/l)
+\","(km/l)
+8,0","(km/l)
+10,3",2023
+Utilitário Esportivo Grande,AUDI,Q3,Performance,2.0 - 16V,A-8,S,E,G,\,\,"8,0","10,3",2023
+Utilitário Esportivo Grande,AUDI,Q3,Performance Black,2.0 - 16V,A-8,S,E,G,\,\,"8,0","10,3",2023
+Utilitário Esportivo Grande,AUDI,Q3 Sportback,Performance,2.0 - 16V,A-8,S,E,G,\,\,"8,0","10,1",2023
+Utilitário Esportivo Grande,AUDI,Q3 Sportback,Performance Black,2.0 - 16V,A-8,S,E,G,\,\,"8,0","10,1",2023
+Utilitário Esportivo Grande,AUDI,Q3,Performance Black,2.0 - 16V,A-8,S,E,G,\,\,"8,0","10,3",2023
+Utilitário Esportivo Grande,AUDI,Q3 Sportback,Performance Black,2.0 - 16V,A-8,S,E,G,\,\,"8,0","10,1",2023
+Utilitário Esportivo Grande,BMW,X1,sDrive 18i GP,1.5 - 12V,A-7,S,E,G,\,\,"11,4","13,5",2023
+Utilitário Esportivo Grande,BMW,X1,sDrive 20i X Line,2.0 - 16V,A-7,S,E,G,\,\,"10,7","13,0",2023
+Utilitário Esportivo Grande,BMW,X1,sDrive 20i M Sport,2.0 - 16V,A-7,S,E,G,\,\,"10,6","12,9",2023
+Utilitário Esportivo Grande,BYD,TAN,AWD GS 680EV,ELÉTRICO,N.A.,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande,BYD,YUAN PLUS,GL310 EV,ELÉTRICO,N.A.,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande,BYD,YUAN PLUS,GS310 EV,ELÉTRICO,N.A.,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande,BYD,SONG PLUS,GS DM,1.5-16V,A-1,S,E,G,\,\,"15,1","13,2",2023
+Utilitário Esportivo Grande,CAOA CHERY,TIGGO 7,PRO,1.6T-16V,DCT-7,S,E,G,\,\,"9,9","11,7",2023
+Utilitário Esportivo Grande,CAOA CHERY,TIGGO 8,TGDI,1.6T - 16V,DCT-8,S,E,G,\,\,"10,1","12,0",2023
+Utilitário Esportivo Grande,CAOA CHERY,TIGGO 7,PRO H,1.6T-16V,CVT,S,E,F,"8,1","8,5","11,1","11,2",2023
+Utilitário Esportivo Grande,CAOA CHERY,TIGGO 7,HA,1.6T-16V,CVT,S,E,F,"8,1","8,5","11,1","11,2",2023
+Utilitário Esportivo Grande,CAOA CHERY,TIGGO 7,PRO H,1.5T -16V,CVT,S,E,F,"8,5","8,6","11,6","11,4",2023
+Utilitário Esportivo Grande,CAOA CHERY,TIGGO 7,HA,1.5T -16V,CVT,S,E,F,"8,5","8,6","11,6","11,4",2023
+Utilitário Esportivo Grande,CAOA CHERY,TIGGO 8,PHEV,1.5T -16V,DHT,S,E,G,\,\,"11,0","10,9",2023
+Utilitário Esportivo Grande,DONFENG,SERES 3,ELEG,ELÉTRICO,A-1,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande,HYUNDAI,TUCSON TURBO,GLS,1.6T -16V,DCT-7,S,E,G,\,\,"10,6","12,2",2023
+Utilitário Esportivo Grande,HYUNDAI,TUCSON TURBO,LTD,1.6T -16V,DCT-7,S,E,G,\,\,"10,6","12,2",2023
+Utilitário Esportivo Grande,JEEP,COMMANDER,OVERLAND T270,1.3 16V T,A-6,S,E,F,"6,9","8,3","9,8","11,8",2023
+Utilitário Esportivo Grande,JEEP,COMMANDER,LIMITED T270 (MY23),1.3 16V T,A-6,S,E,F,"6,9","8,3","9,8","11,8",2023
+Utilitário Esportivo Grande,JEEP,COMMANDER,LONGITUDE,1.3 16V T,A-6,S,E,F,"6,9","8,3","9,8","11,8",2023
+Utilitário Esportivo Grande,JEEP,COMMANDER,OVR T270,1.3-16V T,A-6,S,E,F,"7,0","8,2","10,0","11,4",2023
+Utilitário Esportivo Grande,JEEP,COMMANDER,LIM T270,1.3-16V T,A-6,S,E,F,"7,0","8,2","10,0","11,4",2023
+Utilitário Esportivo Grande,JEEP,COMMANDER,LONGITUDE,1.3-16V T,A-6,S,E,F,"7,0","8,2","10,0","11,4",2023
+Utilitário Esportivo Grande,JEEP,COMMANDER,T270,1.3-16V T,A-6,S,E,F,"7,0","8,2","10,0","11,4",2023
+Utilitário Esportivo Grande,JEEP,COMPASS,LIMITED TF,1.3-16V T,A-6,S,E,F,"7,2","8,7","10,1","12,0",2023
+Utilitário Esportivo Grande,JEEP,COMPASS,LONGITUDE TF,1.3-16V T,A-6,S,E,F,"7,2","8,7","10,1","12,0",2023
+Utilitário Esportivo Grande,JEEP,COMPASS,SERIE S TF,1.3-16V T,A-6,S,E,F,"7,2","8,7","10,1","12,0",2023
+Utilitário Esportivo Grande,JEEP,COMPASS,SPORT TF,1.3-16V T,A-6,S,E,F,"7,2","8,7","10,1","12,0",2023
+Utilitário Esportivo Grande,KIA,SPORTAGE,TMHEV EX,1.6 - 16V,DCT-7,S,E,G,\,\,"11,5","12,1",2023
+Utilitário Esportivo Grande,KIA,SPORTAGE,TMHEV LX,1.6 - 16V,DCT-7,S,E,G,\,\,"11,5","12,1",2023
+Utilitário Esportivo Grande,KIA,SPORTAGE,TMHEV SX,1.6 - 16V,DCT-7,S,E,G,\,\,"11,5","12,1",2023
+Utilitário Esportivo Grande,KIA,SPORTAGE,TMHEV GT,1.6 - 16V,DCT-7,S,E,G,\,\,"11,5","12,1",2023
+Utilitário Esportivo Grande,KIA,SPORTAGE,TMHEV EXP,1.6 - 16V,DCT-7,S,E,G,\,\,"11,5","12,1",2023
+Utilitário Esportivo Grande,LAMBORGHINI,URUS,--,4.0-32V,A-8,S,E,G,\,\,"4,9","6,9",2023
+Utilitário Esportivo Grande,MASERATI,LEVANTE,MHEV,"2,0L-16V",A-8,S,E,G,\,\,"7,2","9,4",2023
+Utilitário Esportivo Grande,Mitsubishi,Eclipse Cross,GLS,1.5T-16V,CVT,S,E,G,\,\,"10,9","11,9",2023
+Utilitário Esportivo Grande,Mitsubishi,Eclipse Cross,HPE,1.5T-16V,CVT,S,E,G,\,\,"10,9","11,9",2023
+Utilitário Esportivo Grande,Mitsubishi,Eclipse Cross,HPE-S,1.5T-16V,CVT,S,E,G,\,\,"10,9","11,9",2023
+Utilitário Esportivo Grande,PEUGEOT,3008,GT LINE,1.6-16V T,A-6,S,E,G,\,\,"9,9","11,9",2023
+Utilitário Esportivo Grande,PEUGEOT,3008,GRIFFE AT,1.6-16V T,A-6,S,E,G,\,\,"9,9","11,9",2023
+Utilitário Esportivo Grande,PEUGEOT,3008,GT PACK A,1.6-16V T,A-6,S,E,G,\,\,"9,9","11,9",2023
+Utilitário Esportivo Grande,Renault,Captur,Zen,1.3 - 16V,CVT,S,E-H,F,"7,7","8,2","10,9","11,6",2023
+Utilitário Esportivo Grande,Renault,Captur,Intense,1.3 - 16V,CVT,S,E-H,F,"7,7","8,2","10,9","11,6",2023
+Utilitário Esportivo Grande,Renault,Captur,Iconic,1.3 - 16V,CVT,S,E-H,F,"7,7","8,2","10,9","11,6",2023
+Utilitário Esportivo Grande,Renault,Duster,Life,1.6 - 16V,CVT,S,E-H,F,"7,2","8,1","10,5","11,5",2023
+Utilitário Esportivo Grande,Renault,Duster,Zen,1.6 - 16V,CVT,S,E-H,F,"7,2","8,1","10,5","11,5",2023
+Utilitário Esportivo Grande,Renault,Duster,Intense,1.6 - 16V,CVT,S,E-H,F,"7,2","8,1","10,5","11,5",2023
+Utilitário Esportivo Grande,Renault,Duster,Iconic,1.6 - 16V,CVT,S,E-H,F,"7,2","8,1","10,5","11,5",2023
+Utilitário Esportivo Grande,Renault,Duster,Zen,1.6 - 16V,M-5,S,E,F,"8,1","8,5","11,6","12,3",2023
+Utilitário Esportivo Grande,Renault,Duster,Iconic,1.3 - 16V,CVT,S,E-H,F,"7,7","8,4","10,8","11,5",2023
+Utilitário Esportivo Grande,Renault,Duster,Intense,1.6 - 16V,M-5,S,E,F,"8,1","8,5","11,6","12,3",2023
+Utilitário Esportivo Grande,VOLVO,XC40,6 ULTIMATE,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande,VOLVO,XC40,6 PLUS,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande,VOLVO,XC40,6 CORE,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande,VOLVO,XC40,P6 RECHARGE,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande,VW,TAOS,COMFORTLINE 250TSI AUTOMÁTICO,1.4-16V,A - 6,S,E,F,"7,6","9,1","10,9","13,0",2023
+Utilitário Esportivo Grande,VW,TAOS,HIGHLINE 250TSI AUTOMÁTICO,1.4-16V,A - 6,S,E,F,"7,6","9,1","10,9","13,0",2023
+Utilitário Esportivo Grande,VW,TAOS,"COMFORTLINE 250TSI AUTOMÁTICO
+(MY23)",1.4-16V,A - 6,S,E,F,"7,6","9,1","11,1","13,1",2023
+Utilitário Esportivo Grande,VW,TAOS,"HIGHLINE 250TSI AUTOMÁTICO
+(MY23)",1.4-16V,A - 6,S,E,F,"7,6","9,1","11,1","13,1",2023
+Utilitário Esportivo Grande 4x4,BMW,X3,xDrive 30e,2.0 - 16V,A-8,S,E,G,\,\,"8,1","9,6",2023
+Utilitário Esportivo Grande 4x4,BMW,X3,M40i,3.0 - 24V,A-8,S,E,G,\,\,"7,8","9,5",2023
+Utilitário Esportivo Grande 4x4,BMW,X4,xDrive 30i,2.0 - 16V,A-8,S,E,G,\,\,"9,0","11,0",2023
+Utilitário Esportivo Grande 4x4,BMW,X4,M40i,3.0 - 24V,A-8,S,E,G,\,\,"7,8","9,6",2023
+Utilitário Esportivo Grande 4x4,BMW,X5,xDrive45e,3.0 - 24V,A-8,S,E,G,\,\,"7,6","8,7",2023
+Utilitário Esportivo Grande 4x4,BMW,X5,xDrive50e MSP,3.0 - 24V,A-8,S,E,G,\,\,"9,1","9,3",2023
+Utilitário Esportivo Grande 4x4,BMW,X5,xDrive50e XLINE,3.0 - 24V,A-8,S,E,G,\,\,"9,1","9,3",2023
+Utilitário Esportivo Grande 4x4,BMW,X6,xDrive 40i,3.0 - 24V,A-8,S,E,G,\,\,"7,8","9,2",2023
+Utilitário Esportivo Grande 4x4,BMW,X6,M COMPETITION,"4,4 - 32V",A-8,S,E,G,\,\,"5,9","7,3",2023
+Utilitário Esportivo Grande 4x4,BMW,X6,M COMPETITION,4.4 - 32V,A-8,S,E,G,\,\,"5,7","7,4",2023
+Utilitário Esportivo Grande 4x4,BMW,X6,xDrive40i,3.0 - 24V,A-8,S,E,G,\,\,"9,0","9,7",2023
+Utilitário Esportivo Grande 4x4,BMW,X7,M60i xDrive,4.4 - 32V,A-8,S,E,G,\,\,"6,3","7,7",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,F-PACE,SVR LE1988,5.0-32V,A-8,S,E,G,\,\,"5,6","8,4",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,F-PACE,P550 SVR,5.0-32V,A-8,S,E,G,\,\,"5,6","8,4",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,E-PACE,P250F,2.0-16V,A-9,S,E,F,"5,4","7,0","7,5","10,0",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,E-PACE,P250F RDYNS,2.0-16V,A-9,S,E,F,"5,4","7,0","7,5","10,0",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,E-PACE,P250F RDYNSE,2.0-16V,A-9,S,E,F,"5,4","7,0","7,5","10,0",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,E-PACE,P250F SE,2.0-16V,A-9,S,E,F,"5,4","7,0","7,5","10,0",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,E-PACE,P250F S,2.0-16V,A-9,S,E,F,"5,4","7,0","7,5","10,0",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,F-PACE,P340,3.0-24V,A-8,S,E,G,\,\,"7,4","10,0",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,F-PACE,P340 RDYN S,3.0-24V,A-8,S,E,G,\,\,"7,4","10,0",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,F-PACE,P340 RDYN SE,3.0-24V,A-8,S,E,G,\,\,"7,4","10,0",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,F-PACE,P340 RDYNHSE,3.0-24V,A-8,S,E,G,\,\,"7,4","10,0",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,F-PACE,P340 SE,3.0-24V,A-8,S,E,G,\,\,"7,4","10,0",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,F-PACE,PHEV,2.0-16V,A-8,S,E,G,\,\,"7,4","8,6",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,F-PACE,PHEV SE,2.0-16V,A-8,S,E,G,\,\,"7,4","8,6",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,F-PACE,PHEV RDYN S,2.0-16V,A-8,S,E,G,\,\,"7,4","8,6",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,F-PACE,PHEV RDYN SE,2.0-16V,A-8,S,E,G,\,\,"7,4","8,6",2023
+Utilitário Esportivo Grande 4x4,JAGUAR,F-PACE,PHEV RDYNHSE,2.0-16V,A-8,S,E,G,\,\,"7,4","8,6",2023
+Utilitário Esportivo Grande 4x4,JEEP,COMPASS,SPORT TD (MY23),2.0 T,A-9,S,E,D,\,\,"10,6","13,6",2023
+Utilitário Esportivo Grande 4x4,JEEP,COMPASS,LONGITUDE TD (MY23),2.0 T,A-9,S,E,D,\,\,"10,6","13,6",2023
+Utilitário Esportivo Grande 4x4,JEEP,COMPASS,LIMITED TD (MY23),2.0 T,A-9,S,E,D,\,\,"10,6","13,6",2023
+Utilitário Esportivo Grande 4x4,Mercedes-Benz,GLC 220D,ENDR,2.0-16V,A-9,S,E,D,\,\,"10,3","12,1",2023
+Utilitário Esportivo Grande 4x4,Mercedes-Benz,GLC 220D,OFRD,2.0-16V,A-9,S,E,D,\,\,"10,3","12,1",2023
+Utilitário Esportivo Grande 4x4,Mercedes-Benz,GLE400D,Coupé,3.0-24V,A-9,S,E,D,\,\,"10,0","12,8",2023
+Utilitário Esportivo Grande 4x4,Mercedes-Benz,GLC300 4M,Coupé,2.0-16V,A-9,S,E,G,\,\,"7,9","9,8",2023
+Utilitário Esportivo Grande 4x4,Mitsubishi,Eclipse Cross,HPE-S S-AWC,1.5T-16V,CVT,S,E,G,\,\,"10,7","12,0",2023
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,CP PHE,3.0-24V,A-8,S,E,G,\,\,"7,3","7,9",2023
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,PHEV,3.0-24V,A-8,S,E,G,\,\,"7,3","7,9",2023
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,CP TSP,4.0-32V,A-8,S,E,G,\,\,"6,4","7,3",2023
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,TS PHE,4.0-32V,A-8,S,E,G,\,\,"6,4","7,3",2023
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,TURBO,4.0-32V,A-8,S,E,G,\,\,"5,5","7,2",2023
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,COUPE TURBO,4.0-32V,A-8,S,E,G,\,\,"5,5","7,2",2023
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,GT COUPE,4.0-32V,A-8,S,E,G,\,\,"5,7","7,4",2023
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,V6 (ano modelo 2024),3.0-24V,A-8,S,E,G,\,\,"6,9","8,5",2023
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,COUPE (ano modelo 2024),3.0-24V,A-8,S,E,G,\,\,"6,9","8,5",2023
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,S (ano modelo 2024),4.0-32V,A-8,S,E,G,\,\,"6,1","7,9",2023
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,S CP (ano modelo 2024),4.0-32V,A-8,S,E,G,\,\,"6,1","7,9",2023
+Utilitário Esportivo Grande 4x4,PORSCHE,CAYENNE,"GT COUPE
+(ano modelo 2024)",4.0-32V,A-8,S,E,G,\,\,"5,8","7,9",2023
+Utilitário Esportivo Grande 4x4,SUBARU,FORESTER,S MHEV,"2,0T - 16V",A,S,E,G,\,\,"12,0","12,2",2023
+Utilitário Esportivo Grande 4x4,SUBARU,XV,S MHEV,"2,0T - 16V",A,S,E,G,\,\,"12,1","12,3",2023
+Utilitário Esportivo Grande 4x4,VOLVO,C40,8 ULTIMATE,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,C40,8 PLUS,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,C40,8 CORE,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,C40,P8 RECHARGE,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,INSC EXPRES,2.0-16V,A-8,S,E,G,\,\,"9,0","9,1",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 EXCELLEN,2.0-16V,A-8,S,E,G,\,\,"9,0","9,1",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 INSCRIPT,2.0-16V,A-8,S,E,G,\,\,"9,0","9,1",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 MOMENTUM,2.0-16V,A-8,S,E,G,\,\,"9,0","9,1",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 POLESTAR,2.0-16V,A-8,S,E,G,\,\,"9,0","9,1",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 R-DESIGN,2.0-16V,A-8,S,E,G,\,\,"9,0","9,1",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 ULT DARK,2.0-16V,A-8,S,E,G,\,\,"9,0","9,1",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 ULTIMATE,2.0-16V,A-8,S,E,G,\,\,"9,0","9,1",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 PLUS,2.0-16V,A-8,S,E,G,\,\,"9,0","9,1",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90,T8 CORE,2.0-16V,A-8,S,E,G,\,\,"9,0","9,1",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 MOMENTUM,2.0-16V,A-8,S,E,G,\,\,"11,1","11,2",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 POLESTAR,2.0-16V,A-8,S,E,G,\,\,"11,1","11,2",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 INSCRIPT,2.0-16V,A-8,S,E,G,\,\,"11,1","11,2",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 R-DESIGN,2.0-16V,A-8,S,E,G,\,\,"11,1","11,2",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,INSC EXPRES,2.0-16V,A-8,S,E,G,\,\,"11,1","11,2",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 ULT DARK,2.0-16V,A-8,S,E,G,\,\,"11,1","11,2",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 ULTIMATE,2.0-16V,A-8,S,E,G,\,\,"11,1","11,2",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 PLUS,2.0-16V,A-8,S,E,G,\,\,"11,1","11,2",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC60,T8 CORE,2.0-16V,A-8,S,E,G,\,\,"11,1","11,2",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC40,RECHARGE PE,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC40,8 CORE,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC40,8 PLUS,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC40,8 ULTIMATE,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC40,P8 RECHARGE,ELÉTRICO,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,C40 (ano modelo 2024),8 ULTIMATE,Elétrico,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,C40 (ano modelo 2024),8 PLUS,Elétrico,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,C40 (ano modelo 2024),8 CORE,Elétrico,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,C40 (ano modelo 2024),P8 RECHARGE,Elétrico,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC40 (ano modelo 2024),RECHARGE PE,Elétrico,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC40 (ano modelo 2024),8 CORE,Elétrico,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC40 (ano modelo 2024),8 PLUS,Elétrico,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC40 (ano modelo 2024),8 ULTIMATE,Elétrico,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC40 (ano modelo 2024),P8 RECHARGE,Elétrico,A,S,E,E,\,\,\,\,2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90 (ano modelo 2024),INSC EXPRES,2.0-16V,A-8,S,E,G,\,\,"10,3","10,3",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90 (ano modelo 2024),T8 EXCELLEN,2.0-16V,A-8,S,E,G,\,\,"10,3","10,3",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90 (ano modelo 2024),T8 INSCRIPT,2.0-16V,A-8,S,E,G,\,\,"10,3","10,3",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90 (ano modelo 2024),T8 MOMENTUM,2.0-16V,A-8,S,E,G,\,\,"10,3","10,3",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90 (ano modelo 2024),T8 POLESTAR,2.0-16V,A-8,S,E,G,\,\,"10,3","10,3",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90 (ano modelo 2024),T8 R-DESIGN,2.0-16V,A-8,S,E,G,\,\,"10,3","10,3",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90 (ano modelo 2024),T8 ULT DARK,2.0-16V,A-8,S,E,G,\,\,"10,3","10,3",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90 (ano modelo 2024),T8 ULTIMATE,2.0-16V,A-8,S,E,G,\,\,"10,3","10,3",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90 (ano modelo 2024),T8 PLUS,2.0-16V,A-8,S,E,G,\,\,"10,3","10,3",2023
+Utilitário Esportivo Grande 4x4,VOLVO,XC90 (ano modelo 2024),T8 CORE,2.0-16V,A-8,S,E,G,\,\,"10,3","10,3",2023
+Fora de Estrada Compacto,JEEP,RENEGADE,S T2704X4 (CY23),1.3 16V T,A-9,S,E,F,"6,2","7,5","9,0","10,7",2023
+Fora de Estrada Compacto,JEEP,RENEGADE,TH T2704X4 (CY23),1.3 16V T,A-9,S,E,F,"6,2","7,5","9,0","10,7",2023
+Fora de Estrada Compacto,JEEP,RENEGADE,S T2704X4T (CY23),1.3 16V T,A-9,S,E,F,"6,2","7,5","9,0","10,7",2023
+Fora de Estrada Compacto,JEEP,WRANGLER,SAHARA,2.0-16V,A-8,S,E-H,G,\,\,"8,0","8,9",2023
+Fora de Estrada Compacto,SUZUKI,JIMNY SIERRA,4YOU ALLGRIP,1.5-16V,A - 4,S,E,G,\,\,"10,6","10,8",2023
+Fora de Estrada Compacto,SUZUKI,JIMNY SIERRA,4 SPORT ALLGRIP,1.5-16V,A - 4,S,E,G,\,\,"10,6","10,8",2023
+Fora de Estrada Compacto,SUZUKI,JIMNY SIERRA,4YOU ALLGRIP,1.5-16V,M - 5,S,E,G,\,\,"10,9","11,9",2023
+Fora de Estrada Compacto,SUZUKI,JIMNY SIERRA,4ALL ALLGRIP,1.5-16V,M - 5,S,E,G,\,\,"10,9","11,9",2023
+Fora de Estrada Compacto,SUZUKI,JIMNY SIERRA,4 STYLE ALLGRIP,1.5-16V,A - 4,S,E,G,\,\,"10,1","9,7",2023
+Fora de Estrada Compacto,SUZUKI,JIMNY SIERRA,4 EXPEDITION ALLGRIP,1.5-16V,A - 4,S,E,G,\,\,"9,5","9,1",2023
+Fora de Estrada Compacto,SUZUKI,JIMNY SIERRA,4ALL ALLGRIP,1.5-16V,M - 5,S,E,G,\,\,"10,9","11,9",2023
+Fora de Estrada Grande,CHEVROLET,TRAILBLAZER,LT D4A,2.8 - 16V,A-6,S,E,D,"(km/l)
+\","(km/l)
+\","(km/l)
+8,2","(km/l)
+10,3",2023
+Fora de Estrada Grande,CHEVROLET,TRAILBLAZER,PRE D4A,2.8 - 16V,A-6,S,E,D,\,\,"8,2","10,3",2023
+Fora de Estrada Grande,FORD,Bronco Sport,Wildtrak,2.0 - 16V,A-8,S,E,G,\,\,"8,6","10,5",2023
+Fora de Estrada Grande,JEEP,COMMANDER,OVERLAND TD380 (MY23),2.0 T,A-9,S,E,D,\,\,"10,2","13,2",2023
+Fora de Estrada Grande,JEEP,COMMANDER,LIMITED TD380 (MY23),2.0 T,A-9,S,E,D,\,\,"10,2","13,2",2023
+Fora de Estrada Grande,JEEP,COMPASS,TRAILHAWK TD (MY23),2.0 T,A-9,S,E,D,\,\,"10,5","13,3",2023
+Fora de Estrada Grande,JEEP,WRANGLER,UNLIMITED RUBICON,2.0-16V,A-8,S,E-H,G,\,\,"7,5","8,2",2023
+Fora de Estrada Grande,JEEP,WRANGLER,UNLIMITED SAHARA,2.0-16V,A-8,S,E-H,G,\,\,"7,9","8,8",2023
+Fora de Estrada Grande,JEEP,G CHEROKEE,4XE,2.0-16V T,A-8,S,E,G,\,\,"8,3","9,1",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 90,S,3.0-24V,A-8,S,E,D,\,\,"9,2","10,8",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 90,SE,3.0-24V,A-8,S,E,D,\,\,"9,2","10,8",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 90,HSE,3.0-24V,A-8,S,E,D,\,\,"9,2","10,8",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 90,SE XD,3.0-24V,A-8,S,E,D,\,\,"9,2","10,8",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 90,HSE XD,3.0-24V,A-8,S,E,D,\,\,"9,2","10,8",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110,7L,3.0-24V,A-8,S,E,D,\,\,"9,9","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110,SE,3.0-24V,A-8,S,E,D,\,\,"9,9","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110,SE 7L,3.0-24V,A-8,S,E,D,\,\,"9,9","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110,SE XD,3.0-24V,A-8,S,E,D,\,\,"9,9","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110,SE XD 7L,3.0-24V,A-8,S,E,D,\,\,"9,9","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110,HSE,3.0-24V,A-8,S,E,D,\,\,"9,9","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110,HSE 7L,3.0-24V,A-8,S,E,D,\,\,"9,9","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110,HSE XD,3.0-24V,A-8,S,E,D,\,\,"9,9","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110,HSE XD 7L,3.0-24V,A-8,S,E,D,\,\,"9,9","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110,X,3.0-24V,A-8,S,E,D,\,\,"9,9","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110,X 7L,3.0-24V,A-8,S,E,D,\,\,"9,9","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110,LE75TH,3.0-24V,A-8,S,E,D,\,\,"9,9","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110,S XD,3.0-24V,A-8,S,E,D,\,\,"9,9","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 110,S XD 7L,3.0-24V,A-8,S,E,D,\,\,"9,9","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 130,S,3.0-24V,A-8,S,E,D,\,\,"9,8","11,1",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 130,SE,3.0-24V,A-8,S,E,D,\,\,"9,8","11,1",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 130,HSE,3.0-24V,A-8,S,E,D,\,\,"9,8","11,1",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 130,S XD,3.0-24V,A-8,S,E,D,\,\,"9,8","11,1",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 130,SE XD,3.0-24V,A-8,S,E,D,\,\,"9,8","11,1",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 130,HSE XD,3.0-24V,A-8,S,E,D,\,\,"9,8","11,1",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 130,X,3.0-24V,A-8,S,E,D,\,\,"9,8","11,1",2023
+Fora de Estrada Grande,LAND ROVER,DEFENDER 130,LE,3.0-24V,A-8,S,E,D,\,\,"9,8","11,1",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY,D300 HSERD,3.0-24V,A-8,S,E,D,\,\,"9,5","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY,D300 LE,3.0-24V,A-8,S,E,D,\,\,"9,5","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY,D300 SERD,3.0-24V,A-8,S,E,D,\,\,"9,5","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY,D300 SRD,3.0-24V,A-8,S,E,D,\,\,"9,5","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY,D300 SE,3.0-24V,A-8,S,E,D,\,\,"9,5","11,4",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY SPORT,P250FF S,2.0-16V,A-9,S,E,F,"4,9","6,2","7,0","8,6",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY SPORT,P250FF S 7L,2.0-16V,A-9,S,E,F,"4,9","6,2","7,0","8,6",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY SPORT,P250FF SE,2.0-16V,A-9,S,E,F,"4,9","6,2","7,0","8,6",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY SPORT,P250FF SE 7L,2.0-16V,A-9,S,E,F,"4,9","6,2","7,0","8,6",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY SPORT,P250FF SE RD,2.0-16V,A-9,S,E,F,"4,9","6,2","7,0","8,6",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY SPORT,P250FF SERD7,2.0-16V,A-9,S,E,F,"4,9","6,2","7,0","8,6",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY SPORT,D200 S,2.0-16V,A-9,S,E,D,\,\,"10,7","12,9",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY SPORT,D200 S 7L,2.0-16V,A-9,S,E,D,\,\,"10,7","12,9",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY SPORT,D200 SE,2.0-16V,A-9,S,E,D,\,\,"10,7","12,9",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY SPORT,D200 SE RD,2.0-16V,A-9,S,E,D,\,\,"10,7","12,9",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY SPORT,D200 SE RD7L,2.0-16V,A-9,S,E,D,\,\,"10,7","12,9",2023
+Fora de Estrada Grande,LAND ROVER,DISCOVERY SPORT,D200 SE 7L,2.0-16V,A-9,S,E,D,\,\,"10,7","12,9",2023
+Fora de Estrada Grande,LAND ROVER,EVOQUE,P250FF HSERD,2.0-16V,A-9,S,E,F,"(km/l)
+5,4","(km/l)
+7,1","(km/l)
+8,2","(km/l)
+10,4",2023
+Fora de Estrada Grande,LAND ROVER,EVOQUE,P250FF S,2.0-16V,A-9,S,E,F,"5,4","7,1","8,2","10,4",2023
+Fora de Estrada Grande,LAND ROVER,EVOQUE,P250FF SE,2.0-16V,A-9,S,E,F,"5,4","7,1","8,2","10,4",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,D350,3.0-24V,A-8,S,E,D,\,\,"9,5","11,3",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,D350 AB,3.0-24V,A-8,S,E,D,\,\,"9,5","11,3",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,D350 HSE,3.0-24V,A-8,S,E,D,\,\,"9,5","11,3",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,D350 LE,3.0-24V,A-8,S,E,D,\,\,"9,5","11,3",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,D350 SE,3.0-24V,A-8,S,E,D,\,\,"9,5","11,3",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,D350 SV,3.0-24V,A-8,S,E,D,\,\,"9,5","11,3",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,P530,4.4-32V,A-8,S,E,G,\,\,"6,5","8,3",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,P530 AB,4.4-32V,A-8,S,E,G,\,\,"6,5","8,3",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,P530 HSE,4.4-32V,A-8,S,E,G,\,\,"6,5","8,3",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,P530 LE,4.4-32V,A-8,S,E,G,\,\,"6,5","8,3",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,P530 SE,4.4-32V,A-8,S,E,G,\,\,"6,5","8,3",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER,P530 SV,4.4-32V,A-8,S,E,G,\,\,"6,5","8,3",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER SPORT,3.0 TD HSE,3.0-24V,A-8,S,E,D,\,\,"9,7","11,6",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER SPORT,3.0 TD HSED,3.0-24V,A-8,S,E,D,\,\,"9,7","11,6",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER SPORT,3.0 TD SE,3.0-24V,A-8,S,E,D,\,\,"9,7","11,6",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER SPORT,D350 AB,3.0-24V,A-8,S,E,D,\,\,"9,1","11,6",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER SPORT,D350 HSED,3.0-24V,A-8,S,E,D,\,\,"9,1","11,6",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER SPORT,D350 LE,3.0-24V,A-8,S,E,D,\,\,"9,1","11,6",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER SPORT,D350 S,3.0-24V,A-8,S,E,D,\,\,"9,1","11,6",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER SPORT,D350 SD,3.0-24V,A-8,S,E,D,\,\,"9,1","11,6",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER SPORT,D350 SE,3.0-24V,A-8,S,E,D,\,\,"9,1","11,6",2023
+Fora de Estrada Grande,LAND ROVER,RANGE ROVER SPORT,D350 SED,3.0-24V,A-8,S,E,D,\,\,"9,1","11,6",2023
+Fora de Estrada Grande,LAND ROVER,VELAR,P340,3.0-24V,A-8,S,E,G,\,\,"7,8","9,9",2023
+Fora de Estrada Grande,LAND ROVER,VELAR,P340 SE,3.0-24V,A-8,S,E,G,\,\,"7,8","9,9",2023
+Fora de Estrada Grande,LAND ROVER,VELAR,P340 SE RDYN,3.0-24V,A-8,S,E,G,\,\,"7,8","9,9",2023
+Fora de Estrada Grande,LAND ROVER,VELAR,P340 HSE RDYN,3.0-24V,A-8,S,E,G,\,\,"7,8","9,9",2023
+Fora de Estrada Grande,LAND ROVER,VELAR,PHEV,2.0-16V,A-8,S,E,G,\,\,"8,6","9,4",2023
+Fora de Estrada Grande,LAND ROVER,VELAR,PHEV SE,2.0-16V,A-8,S,E,G,\,\,"8,6","9,4",2023
+Fora de Estrada Grande,LAND ROVER,VELAR,PHEV SE RDYN,2.0-16V,A-8,S,E,G,\,\,"8,6","9,4",2023
+Fora de Estrada Grande,LAND ROVER,VELAR,PHEV HSE RDYN,2.0-16V,A-8,S,E,G,\,\,"8,6","9,4",2023
+Fora de Estrada Grande,LAND ROVER,VELAR,PHEV S,2.0-16V,A-8,S,E,G,\,\,"8,6","9,4",2023
+Fora de Estrada Grande,LAND ROVER,VELAR,PHEVSRDYN,2.0-16V,A-8,S,E,G,\,\,"8,6","9,4",2023
+Fora de Estrada Grande,Mitsubishi,Pajero Sport,HPE,2.4-16V,A-8,S,H,D,\,\,"8,9","11,4",2023
+Fora de Estrada Grande,Mitsubishi,Pajero Sport,HPE-S,2.4-16V,A-8,S,H,D,\,\,"8,9","11,4",2023
+Fora de Estrada Grande,TOYOTA,SW4 DIESEL 4X4,SRX,2.8-16V,A-6,S,H,D,\,\,"9,8","11,2",2023
+Fora de Estrada Grande,TOYOTA,SW4 DIESEL 4X4,DIAMOND,2.8-16V,A-6,S,H,D,\,\,"9,8","11,2",2023
+Fora de Estrada Grande,TOYOTA,SW4 DIESEL 4X4,GRS,2.8-16V,A-6,S,H,D,\,\,"9,8","11,2",2023
+Fora de Estrada Grande,TOYOTA,SW4 DIESEL 4X4,GRS Power Up,2.8-16V,A-6,S,H,D,\,\,"9,7","11,0",2023
+Fora de Estrada Grande,TOYOTA,SW4 DIESEL 4X4,SRX Platinum,2.8-16V,A-6,S,H,D,\,\,"9,8","11,2",2023
+Minivan,CHEVROLET,SPIN,1.8L AT ACT7,1.8L -8V,A-6,S,E,F,"6,9","8,6","9,8","12,3",2023
+Minivan,CHEVROLET,SPIN,1.8L AT PREMIER,1.8L -8V,A-6,S,E,F,"6,9","8,6","9,8","12,3",2023
+Minivan,CHEVROLET,SPIN,1.8L AT LT7,1.8L -8V,A-6,S,E,F,"6,9","8,6","9,8","12,3",2023
+Minivan,CHEVROLET,SPIN,18L MT PREMIER,1.8L-8V,M-6,S,E,F,"7,5","8,9","10,8","12,8",2023
+Minivan,KIA,CARNIVAL,EX,3.5 - 24V,A-8,S,E,G,\,\,"7,3","9,9",2023
+Minivan,KIA,CARNIVAL,LX,3.5 - 24V,A-8,S,E,G,\,\,"7,3","9,9",2023
+Minivan,KIA,CARNIVAL,SX,3.5 - 24V,A-8,S,E,G,\,\,"7,3","9,9",2023
+Comercial,BYD,ET3,---,Elétrico,N.A.,S,E,E,(km\/l),(km\/l),(km\/l),(km\/l),2023
+Comercial,CITROEN,JUMPY,CARGO,1.5 T,M-6,S,E-H,D,\,\,"12,4","11,9",2023
+Comercial,CITROEN,JUMPY,VITRE,1.5 T,M-6,S,E-H,D,\,\,"12,4","11,9",2023
+Comercial,CITROEN,JUMPER,CARGOL2,2.2 T,M-6,S,H,D,\,\,"10,0","9,9",2023
+Comercial,CITROEN,JUMPER,CARGOPK,2.2 T,M-6,S,H,D,\,\,"10,0","9,9",2023
+Comercial,CITROEN,JUMPER,FURG PK,2.2 T,M-6,S,H,D,\,\,"10,0","9,9",2023
+Comercial,CITROEN,E-JUMPY,CARGO,ELÉTRICO,A-1,S,E-H,E,\,\,\,\,2023
+Comercial,FIAT,DUCATO,CARGO,2.0 T,M-6,S,H,D,\,\,"10,0","9,9",2023
+Comercial,FIAT,DUCATO,MAXICARGO,2.0 T,M-6,S,H,D,\,\,"10,0","9,9",2023
+Comercial,FIAT,DUCATO,MULTI 13M,2.0 T,M-6,S,H,D,\,\,"10,0","9,8",2023
+Comercial,FIAT,DUCATO,MB EXEC-17,2.0 T,M-6,S,H,D,\,\,"9,5","9,3",2023
+Comercial,FIAT,DUCATO,MB COMF-19,2.0 T,M-6,S,H,D,\,\,"9,5","9,3",2023
+Comercial,FIAT,E-SCUDO,CARGO,ELÉTRICO,A-1,S,E-H,E,\,\,\,\,2023
+Comercial,FIAT,FIORINO,ENDURANCE,1.4-8V,M-5,S,H,F,"8,1","8,4","11,7","12,4",2023
+Comercial,FIAT,FIORINO,WORKING,1.4-8V,M-5,S,H,F,"8,1","8,4","11,7","12,4",2023
+Comercial,FIAT,SCUDO,CARGO TD,1.5 T,M-6,S,E-H,D,\,\,"12,4","11,9",2023
+Comercial,FIAT,SCUDO,MULTI TD,1.5 T,M-6,S,E-H,D,\,\,"12,4","11,9",2023
+Comercial,FORD,Transit,350 F,2.0 - 16V,M-6,S,E,D,\,\,"10,0","9,2",2023
+Comercial,FORD,Transit,350 FL,2.0 - 16V,M-6,S,E,D,\,\,"10,0","9,2",2023
+Comercial,HYUNDAI,HR,HDB 4WD,"2,5 T 16V",M-6,S,H,D,\,\,"10,2","8,9",2023
+Comercial,KIA,BONGO K2500 4X2 SC,HD SC,2.5 - 16V,M-6,S,H,D,\,\,"10,4","10,1",2023
+Comercial,KIA,BONGO K2500 4X4 SC,HD SC 4WD,2.5 - 16V,M-6,S,H,D,\,\,"9,2","8,6",2023
+Comercial,Mercedes-Benz,315CDI STREET,Furgão,2.0-16V,M-6,S,H,D,\,\,"10,3","11,8",2023
+Comercial,Mercedes-Benz,315CDI STREET,Chassi,2.0-16V,M-6,S,H,D,\,\,"10,3","11,8",2023
+Comercial,PEUGEOT,EXPERT,CARGO,1.5 T,M-6,S,E-H,D,\,\,"12,4","11,9",2023
+Comercial,PEUGEOT,EXPERT,VITRE,1.5 T,M-6,S,E-H,D,\,\,"12,4","11,9",2023
+Comercial,PEUGEOT,BOXER,CARGO L2,2.2 T,M-6,S,H,D,\,\,"10,0","9,9",2023
+Comercial,PEUGEOT,BOXER,CARGO PK,2.2 T,M-6,S,H,D,\,\,"10,0","9,9",2023
+Comercial,PEUGEOT,BOXER,FURGAO PK,2.2 T,M-6,S,H,D,\,\,"10,0","9,9",2023
+Comercial,PEUGEOT,E-EXPERT,CARGO,ELÉTRICO,A-1,S,E-H,E,\,\,\,\,2023
+Comercial,PEUGEOT,PARTNER RAPID,BUSINS,1.4-8V,M-5,S,H,F,"8,1","8,4","11,7","12,4",2023
+Comercial,PEUGEOT,PARTNER RAPID,BUSIPK,1.4-8V,M-5,S,H,F,"8,1","8,4","11,7","12,4",2023
+Comercial,Renault,Master,Minibus,2.3-16V,M-6,S,E -H,D,\,\,"9,5","9,1",2023
+Comercial,Renault,Master,Chassis Cabine,2.3-16V,M-6,S,E -H,D,\,\,"10,3","9,3",2023
+Comercial,Renault,Master,Furgão Pró,2.3-16V,M-6,S,E -H,D,\,\,"10,1","9,8",2023
+Comercial,Renault,Master,Furgão,2.3-16V,M-6,S,E -H,D,\,\,"10,1","9,8",2023
+Comercial,Renault,Kangoo,MAX ZE,Elétrico,A,S,E-H,E,\,\,\,\,2023
+Comercial,Renault,Kangoo,MAXICAB,Elétrico,A,S,E-H,E,\,\,\,\,2023
+Comercial,Renault,E-KWID,CARGO,Elétrico,A,S,E,E,\,\,\,\,2023
+Picape Compacta,CHEVROLET,MONTANA,T AT LTZ,1.2T - 12 V,A-6,S,E,F,"7,7","9,3","11,1","13,3",2023
+Picape Compacta,CHEVROLET,MONTANA,T AT PR,1.2T - 12 V,A-6,S,E,F,"7,7","9,3","11,1","13,3",2023
+Picape Compacta,CHEVROLET,MONTANA,T,1.2T - 12 V,M-6,S,E,F,"8,3","9,6","12,0","13,6",2023
+Picape Compacta,CHEVROLET,MONTANA,T LT,1.2T - 12 V,M-6,S,E,F,"8,3","9,6","12,0","13,6",2023
+Picape Compacta,FIAT,STRADA,RANCH AT (MY23),1.3-8V,CVT-7,S,E,F,"8,8","9,8","12,5","13,3",2023
+Picape Compacta,FIAT,STRADA,VOLCANO AT (MY23),1.3-8V,CVT-7,S,E,F,"8,8","9,8","12,5","13,3",2023
+Picape Compacta,FIAT,STRADA,FREEDOM CS (MY23),1.3-8V,M-5,S,E,F,"8,9","10,4","12,9","14,7",2023
+Picape Compacta,FIAT,STRADA,ENDURANCE CD,1.4-8V,M-5,S,H,F,"8,4","9,2","11,9","13,3",2023
+Picape Compacta,FIAT,STRADA,ENDURANCE CS,1.4-8V,M-5,S,H,F,"8,4","9,2","11,9","13,3",2023
+Picape Compacta,FIAT,STRADA,FREEDOM CD13 (CY23),1.3-8V,M-5,S,E,F,"8,9","10,0","12,5","14,3",2023
+Picape Compacta,FIAT,STRADA,VOLCANO CD13 (CY23),1.3-8V,M-5,S,E,F,"8,9","10,0","12,5","14,3",2023
+Picape Compacta,FIAT,STRADA,RANCH T200AT,1.0-12V T,CVT-7,S,E,F,"8,3","9,4","12,1","13,2",2023
+Picape Compacta,FIAT,STRADA,ULTRA T200AT,1.0-12V T,CVT-7,S,E,F,"8,3","9,4","12,1","13,2",2023
+Picape Compacta,FIAT,STRADA,ENDURAN CS13,1.3-8V,M-5,S,E,F,"9,3","10,0","13,1","14,2",2023
+Picape Compacta,Renault,Oroch,Intense,1.3 - 16V,CVT,S,E -H,F,"7,4","7,8","10,5","11,0",2023
+Picape Compacta,Renault,Oroch,Iconic,1.3 - 16V,CVT,S,E -H,F,"7,4","7,8","10,5","11,0",2023
+Picape Compacta,Renault,Oroch,Outsider,1.3 - 16V,CVT,S,E -H,F,"7,4","7,8","10,5","11,0",2023
+Picape Compacta,Renault,Oroch,Intense16M,1.6 - 16V,M-6,S,E-H,F,"7,4","8,0","11,3","11,6",2023
+Picape Compacta,Renault,Oroch,PRO 16,1.6 - 16V,M-6,S,E-H,F,"7,4","8,0","11,3","11,6",2023
+Picape Compacta,VW,SAVEIRO,TRENDLINE SC,1.6-16V,M - 5,S,H,F,"8,1","9,0","11,7","12,8",2023
+Picape Compacta,VW,SAVEIRO,ROBUST SC,1.6-16V,M - 5,S,H,F,"8,1","9,0","11,7","12,8",2023
+Picape Compacta,VW,SAVEIRO,CROSS CD,1.6-16V,M - 5,S,H,F,"7,9","8,8","11,4","12,5",2023
+Picape Compacta,VW,SAVEIRO,ROBUST CD,1.6-16V,M - 5,S,H,F,"7,9","8,8","11,4","12,5",2023
+Picape Compacta,VW,SAVEIRO,CS ROBUST MF(MY24),1.6-16V,M - 5,S,H,F,"7,9","9,1","11,5","12,9",2023
+Picape Compacta,VW,SAVEIRO,CS TRENDLINE MF (MY24),1.6-16V,M - 5,S,H,F,"7,9","9,1","11,5","12,9",2023
+Picape Compacta,VW,SAVEIRO,CD ROBUST MF(MY24),1.6-16V,M - 5,S,H,F,"7,8","8,9","11,3","12,6",2023
+Picape Compacta,VW,SAVEIRO,CD EXTREME MF (MY24),1.6-16V,M - 5,S,H,F,"7,8","8,9","11,3","12,6",2023
+Picape,CHEVROLET,S10,HC DD4A,2.8 - 16V,A-6,S,E,D,\,\,"8,4","10,4",2023
+Picape,CHEVROLET,S10,LT DD4A,2.8 - 16V,A-6,S,E,D,\,\,"8,6","10,9",2023
+Picape,CHEVROLET,S10,LTZ DD4A,2.8 - 16V,A-6,S,E,D,\,\,"8,6","10,9",2023
+Picape,CHEVROLET,S10,LS DD4,2.8 - 16V,M-6,S,E,D,\,\,"9,3","10,8",2023
+Picape,CHEVROLET,S10,LS DS4,2.8 - 16V,M-6,S,E,D,\,\,"9,4","10,6",2023
+Picape,CHEVROLET,S10,LS DS4C,2.8 - 16V,M-6,S,E,D,\,\,"9,4","10,6",2023
+Picape,CHEVROLET,S10,Z71,2.8 - 16V,A-6,S,E,D,\,\,"8,3","10,0",2023
+Picape,CHEVROLET,S10,MID DD4A,2.8 - 16V,A-6,S,E,D,\,\,"8,6","10,9",2023
+Picape,CHEVROLET,S10,LT DD4,2.8 - 16V,M-6,S,E,D,\,\,"9,3","10,8",2023
+Picape,CHEVROLET,SILVERADO,HC,5.3 V8,A-10,S,E,G,\,\,"6,0","7,2",2023
+Picape,FIAT,TORO,RANCH AT9 4X4 (CY23),2.0 T,A-9,S,E,D,\,\,"10,5","13,0",2023
+Picape,FIAT,TORO,VOLCANO AT9 4X4 (CY23),2.0 T,A-9,S,E,D,\,\,"10,5","13,0",2023
+Picape,FIAT,TORO,ULTRA AT9 4X4 (CY23),2.0 T,A-9,S,E,D,\,\,"10,1","12,4",2023
+Picape,FIAT,TORO,FREEDOM AT9 4X4,2.0 T,A-9,S,E,D,\,\,"10,1","12,4",2023
+Picape,FIAT,TORO,VOLCANO TURBO (CY23),1.3 16V T,A-6,S,E,F,"6,6","8,0","9,5","11,2",2023
+Picape,FIAT,TORO,FREEDOM TURBO (OPT 31S) (CY23),1.3 16V T,A-6,S,E,F,"6,6","7,9","9,5","11,2",2023
+Picape,FIAT,TORO,FREEDOM TURBO (CY23),1.3 16V T,A-6,S,E,F,"6,6","7,9","9,5","11,2",2023
+Picape,FIAT,TORO,ENDUR T270 AT6,1.3 16V T,A-6,S,E,F,"6,7","8,3","9,6","11,7",2023
+Picape,FIAT,TORO,FREED T270 AT6 / VOLC T270 AT6,1.3 16V T,A-6,S,E,F,"6,6","8,0","9,4","11,1",2023
+Picape,FIAT,TORO,FREED T270 AT6 (OPT 4D7),1.3 16V T,A-6,S,E,F,"6,6","7,8","9,4","11,0",2023
+Picape,FORD,Maverick,XLT,2.0 GTDi,A-8,S,E,G,\,\,"8,8","11,1",2023
+Picape,FORD,Maverick,Lariat FX4,2.0 GTDi,A-8,S,E,G,\,\,"8,8","11,1",2023
+Picape,FORD,Maverick,Hibrido Lariat,2.5 FHEV,eCVT,S,E,G,\,\,"15,7","13,6",2023
+Picape,FORD,Ranger 4x4 CS,XL,2.2 - 16V,M-6,S,E,D,\,\,"10,4","10,7",2023
+Picape,FORD,Ranger 4x4 CD,XL,2.2 - 16V,M-6,S,E,D,\,\,"10,4","10,7",2023
+Picape,FORD,Ranger 4x2,XLS,2.2 - 16V,A-6,S,E,D,\,\,"9,5","10,7",2023
+Picape,FORD,Ranger 4x2,XLS Black,2.2 - 16V,A-6,S,E,D,\,\,"9,5","10,7",2023
+Picape,FORD,Ranger 4x4,XLS,2.2 - 16V,A-6,S,E,D,\,\,"9,1","10,2",2023
+Picape,FORD,Ranger 4x4,XL,3.2 - 20V,A-6,S,E,D,\,\,"8,6","9,6",2023
+Picape,FORD,Ranger 4x4,XLS,3.2 - 20V,A-6,S,E,D,\,\,"8,6","9,6",2023
+Picape,FORD,Ranger 4x4,XLT,3.2 - 20V,A-6,S,E,D,\,\,"8,6","9,6",2023
+Picape,FORD,Ranger 4x4,FX4,3.2 - 20V,A-6,S,E,D,\,\,"8,6","9,6",2023
+Picape,FORD,Ranger 4x4,STORM,3.2 - 20V,A-6,S,E,D,\,\,"8,6","9,6",2023
+Picape,FORD,Ranger 4x4,LTD,3.2 - 20V,A-6,S,E,D,\,\,"8,6","9,6",2023
+Picape,FORD,Nova Ranger 4x4,XL,2.0 - 16V,M-6,S,E,D,\,\,"10,2","11,0",2023
+Picape,FORD,Nova Ranger 4x4,XLS,2.0 - 16V,M-6,S,E,D,\,\,"10,2","11,0",2023
+Picape,FORD,Nova Ranger 4x2,XLS,2.0 - 16V,A-6,S,E,D,\,\,"10,1","12,4",2023
+Picape,FORD,Nova Ranger 4x4,XLS,2.0 - 16V,A-6,S,E,D,\,\,"10,0","11,5",2023
+Picape,FORD,Nova Ranger 4x4,XLS,3.0 V6 - 24V,A-10,,E,D,\,\,"8,9","10,2",2023
+Picape,FORD,Nova Ranger 4x4,XLT,3.0 V6 - 24V,A-10,,E,D,\,\,"8,9","10,2",2023
+Picape,FORD,Nova Ranger 4x4,LTD,3.0 V6 - 24V,A-10,,E,D,\,\,"8,9","10,2",2023
+Picape,FORD,Nova Ranger 4x4,LTD+,3.0 V6 - 24V,A-10,,E,D,\,\,"8,9","10,2",2023
+Picape,FORD,F150,Lariat,5.0 - 32V,A-10,S,E,G,\,\,"6,3","8,6",2023
+Picape,FORD,F150,Platinum,5.0 - 32V,A-10,S,E,G,\,\,"6,3","8,6",2023
+Picape,JAC,IEV330P,IEV330P,ELÉTRICO,A-1,S,E-H,E,\,\,\,\,2023
+Picape,JEEP,GLADIATOR,RUBICON,3.6-24V,A-8,S,E-H,G,\,\,"6,5","7,4",2023
+Picape,Mitsubishi,L200 Triton Outdoor,GLX,2.4-16V,M-6,S,H,D,\,\,"10,5","12,5",2023
+Picape,Mitsubishi,L200 Triton Outdoor,GLS,2.4-16V,A-5,S,H,D,\,\,"9,8","11,1",2023
+Picape,Mitsubishi,L200 Triton,GL,2.4-16V,M-6,S,H,D,\,\,"10,5","12,5",2023
+Picape,Mitsubishi,L200 Triton,GLS,2.4-16V,A-5,S,H,D,\,\,"9,8","11,1",2023
+Picape,Mitsubishi,L200 Triton,SAVANA,2.4-16V,A-5,S,H,D,\,\,"9,8","11,1",2023
+Picape,Mitsubishi,L200 Triton Sport,GLS,2.4-16V,M-6,S,H,D,\,\,"10,3","11,1",2023
+Picape,Mitsubishi,L200 Triton Sport,GLX,2.4-16V,M-6,S,H,D,\,\,"10,3","11,1",2023
+Picape,Mitsubishi,L200 Triton Sport,GL,2.4-16V,M-6,S,H,D,\,\,"10,3","11,1",2023
+Picape,Mitsubishi,L200 Triton Sport,GLS,2.4-16V,A-6,S,H,D,\,\,"9,3","10,3",2023
+Picape,Mitsubishi,L200 Triton Sport,HPE,2.4-16V,A-6,S,H,D,\,\,"9,3","10,3",2023
+Picape,Mitsubishi,L200 Triton Sport,HPE-S,2.4-16V,A-6,S,H,D,\,\,"9,3","10,3",2023
+Picape,Mitsubishi,L200 Triton Sport,SAVANA,2.4-16V,A-6,S,H,D,\,\,"9,3","10,3",2023
+Picape,Nissan,Frontier,S,2.3-16V,M-6,S,H,D,\,\,"9,5","10,9",2023
+Picape,Nissan,Frontier,ATK,2.3-16V,A-7,S,H,D,\,\,"9,1","11,0",2023
+Picape,Nissan,Frontier,PRO4X,2.3-16V,A-7,S,H,D,\,\,"9,1","11,0",2023
+Picape,Nissan,Frontier,SE,2.3-16V,A-7,S,H,D,\,\,"9,1","11,0",2023
+Picape,Nissan,Frontier,PLT,2.3-16V,A-7,S,H,D,\,\,"9,1","11,0",2023
+Picape,Nissan,Frontier,XE,2.3-16V,A-7,S,H,D,\,\,"9,1","11,0",2023
+Picape,Nissan,Frontier 24MY,S,2.3-16V,M-6,S,H,D,\,\,"10,0","10,9",2023
+Picape,Nissan,Frontier 24MY,ATK,2.3-16V,A-7,S,H,D,\,\,"9,1","11,0",2023
+Picape,Nissan,Frontier 24MY,PRO4X,2.3-16V,A-7,S,H,D,\,\,"9,1","11,0",2023
+Picape,Nissan,Frontier 24MY,SE,2.3-16V,A-7,S,H,D,\,\,"9,1","11,0",2023
+Picape,Nissan,Frontier 24MY,XE,2.3-16V,A-7,S,H,D,\,\,"9,3","10,9",2023
+Picape,Nissan,Frontier 24MY,PLT,2.3-16V,A-7,S,H,D,\,\,"9,3","10,9",2023
+Picape,RAM,1500,REBEL HEMI CC,5.7-16V,A-8,S,E-H,G,\,\,"5,4","6,8",2023
+Picape,RAM,CLASSIC,LARAMIE,5.7-16V,A-8,S,E,G,\,\,"5,2","6,4",2023
+Picape,RAM,CLASSIC,RT,5.7-16V,A-8,S,E,G,\,\,"5,2","6,4",2023
+Picape,RAM,1500,LIMITED HEMI,5.7-16V,A-8,S,E-H,G,\,\,"5,5","7,2",2023
+Picape,RAM,1500,LIMITED NIGHT EDITION,5.7-16V,A-8,S,E-H,G,\,\,"5,5","7,2",2023
+Picape,RAM,RAMPAGE,REBEL AT GAS,2.0-16V T,A-9,S,E,G,\,\,"7,9","9,7",2023
+Picape,RAM,RAMPAGE,RT GAS,2.0-16V T,A-9,S,E,G,\,\,"8,0","10,0",2023
+Picape,RAM,RAMPAGE,LARAMIE GAS,2.0-16V T,A-9,S,E,G,\,\,"7,8","9,7",2023
+Picape,RAM,RAMPAGE,LARAMIE DS,2.0 TD,A-9,S,E,D,\,\,"9,9","12,4",2023
+Picape,RAM,RAMPAGE,REBEL DS,2.0 TD,A-9,S,E,D,\,\,"9,8","12,4",2023
+Picape,TOYOTA,HILUX DIESEL 4X4,GRS (wide tread),2.8-16V,A-6,S,H,D,"(km/l)
+\","(km/l)
+\","(km/l)
+9,5","(km/l)
+10,7",2023
+Picape,TOYOTA,HILUX DIESEL 4X4,SRX Limited,2.8-16V,A-6,S,H,D,\,\,"10,1","11,3",2023
+Picape,TOYOTA,HILUX DIESEL 4X4,SRX,2.8-16V,A-6,S,H,D,\,\,"10,1","11,3",2023
+Picape,TOYOTA,HILUX DIESEL 4X4,SRV,2.8-16V,A-6,S,H,D,\,\,"10,1","11,3",2023
+Picape,TOYOTA,HILUX DIESEL 4X4,SR,2.8-16V,A-6,S,H,D,\,\,"10,1","11,3",2023
+Picape,TOYOTA,HILUX DIESEL 4X4,SC,2.8-16V,M-6,S,H,D,\,\,"10,4","11,6",2023
+Picape,TOYOTA,HILUX DIESEL 4X4,CC,2.8-16V,M-6,S,H,D,\,\,"10,4","11,6",2023
+Picape,TOYOTA,HILUX DIESEL 4X4,POWER PACK,2.8-16V,M-6,S,H,D,\,\,"10,3","11,8",2023
+Picape,TOYOTA,HILUX DIESEL 4X4,Conquest,2.8-16V,A-6,S,H,D,\,\,"10,1","11,3",2023
+Picape,TOYOTA,HILUX DIESEL 4X4,GRS,2.8-16V,A-6,S,H,D,\,\,"9,8","11,1",2023
+Picape,TOYOTA,HILUX DIESEL 4X4,SRX Plus,2.8-16V,A-6,S,H,D,\,\,"9,7","10,6",2023
+Picape,VW,AMAROK,V6 EXTREME CD,3.0-24V,A - 8,S,H,D,\,\,"9,0","9,7",2023
+Picape,VW,AMAROK,V6 COMFORTLINE CD,3.0-24V,A - 8,S,H,D,\,\,"9,0","9,7",2023
+Picape,VW,AMAROK,V6 HIGHLINE CD,3.0-24V,A - 8,S,H,D,\,\,"9,0","9,7",2023
+Esportivo,BMW,M3,Competition,3.0 - 24V,A-8,S,E,G,\,\,"7,3","9,4",2023
+Esportivo,BMW,M2,Coupe,3.0 - 24V,A-8,S,E,G,\,\,"7,5","9,2",2023
+Esportivo,BMW,M2,Coupe Track,3.0 - 24V,A-8,S,E,G,\,\,"7,5","9,2",2023
+Esportivo,CHEVROLET,CAMARO,2SS CONV,6.2L - 16V,A-10,S,E,G,\,\,"6,1","9,0",2023
+Esportivo,CHEVROLET,CAMARO,2SS,6.2L - 16V,A-10,S,E,G,\,\,"6,2","9,4",2023
+Esportivo,FERRARI,ROMA,--,3.9-32V,DCT-8,S,E,G,\,\,"6,9","8,3",2023
+Esportivo,FERRARI,PORTOFINO,M,3.9-32V,DCT-8,S,E,G,\,\,"6,7","8,4",2023
+Esportivo,FERRARI,F8,SPIDER,3.9-32V,DCT-7,S,E,G,\,\,"5,6","7,0",2023
+Esportivo,FERRARI,F8,TRIBUTO,3.9-32V,DCT-7,S,E,G,\,\,"5,6","7,0",2023
+Esportivo,FERRARI,296,GTB,3.0-24V,DCT-8,S,E,G,\,\,"6,3","8,4",2023
+Esportivo,FORD,Mustang,Mach 1,5.0 - 32V,A-10,S,E,G,\,\,"6,1","8,8",2023
+Esportivo,HONDA,CIVIC,TYPE-R,2.0T - 16V,M,S,E,G,\,\,"8,8","11,1",2023
+Esportivo,JAGUAR,F-TYPE,300RD CP,2.0-16V,A-8,S,E,G,\,\,"7,5","9,7",2023
+Esportivo,JAGUAR,F-TYPE,300RD CB,2.0-16V,A-8,S,E,G,\,\,"7,5","9,7",2023
+Esportivo,JAGUAR,F-TYPE (24 MY),300RD CP,2.0-16V,A-8,S,E,G,\,\,"8,8","11,0",2023
+Esportivo,JAGUAR,F-TYPE (24 MY),300RD CB,2.0-16V,A-8,S,E,G,\,\,"8,8","11,0",2023
+Esportivo,JAGUAR,F-TYPE (24 MY),300CB 75,2.0-16V,A-8,S,E,G,\,\,"8,8","11,0",2023
+Esportivo,JAGUAR,F-TYPE (24 MY),300CP 75,2.0-16V,A-8,S,E,G,\,\,"8,8","11,0",2023
+Esportivo,LAMBORGHINI,HURACAN,EVO SP,5.2-40V,DCT-7,S,E,G,\,\,"5,1","6,8",2023
+Esportivo,LAMBORGHINI,HURACAN,EVO CP,5.2-40V,DCT-7,S,E,G,\,\,"5,1","6,8",2023
+Esportivo,MCLAREN,ARTURA,----,3.0-24V,DCT-8,S,E,G,\,\,"6,6","8,3",2023
+Esportivo,PORSCHE,BOXSTER,GTS4.0,4.0-24V,DCT-7,S,E,G,\,\,"7,1","8,9",2023
+Esportivo,PORSCHE,BOXSTER,25 Anos,4.0-24V,DCT-7,S,E,G,\,\,"7,1","8,9",2023
+Esportivo,PORSCHE,BOXSTER,SPYDER,4.0-24V,DCT-7,S,E,G,\,\,"6,8","8,4",2023
+Esportivo,PORSCHE,BOXSTER,--,2.0-16V,DCT-7,S,E,G,\,\,"7,9","10,0",2023
+Esportivo,PORSCHE,BOXSTER,T,2.0-16V,DCT-7,S,E,G,\,\,"7,9","10,0",2023
+Esportivo,PORSCHE,BOXSTER,Style,2.0-16V,DCT-7,S,E,G,\,\,"7,9","10,0",2023
+Esportivo,PORSCHE,CAYMAN,GTS 4.0,4.0-24V,DCT-7,S,E,G,\,\,"7,1","8,9",2023
+Esportivo,PORSCHE,CAYMAN,GT4,4.0-24V,DCT-7,S,E,G,\,\,"6,8","8,4",2023
+Esportivo,PORSCHE,CAYMAN,--,2.0-16V,DCT-7,S,E,G,\,\,"7,9","10,0",2023
+Esportivo,PORSCHE,CAYMAN,T,2.0-16V,DCT-7,S,E,G,\,\,"7,9","10,0",2023
+Esportivo,PORSCHE,CAYMAN,Style,2.0-16V,DCT-7,S,E,G,\,\,"7,9","10,0",2023
+Esportivo,PORSCHE,CAYMAN,GT4 RS,4.0-24V,DCT-7,S,E,G,\,\,"5,6","7,1",2023
+Esportivo,PORSCHE,911,TURBO S,3.7-24V,DCT-8,S,E,G,\,\,"5,7","7,5",2023
+Esportivo,PORSCHE,911,TURBO S CA,3.7-24V,DCT-8,S,E,G,\,\,"5,7","7,5",2023
+Esportivo,PORSCHE,911,TURBO,3.7-24V,DCT-8,S,E,G,\,\,"6,1","7,9",2023
+Esportivo,PORSCHE,911,TURBO CAB,3.7-24V,DCT-8,S,E,G,\,\,"6,1","7,9",2023
+Esportivo,PORSCHE,911,CARRERA S,3.0-24V,DCT-8,S,E,G,\,\,"7,3","8,9",2023
+Esportivo,PORSCHE,911,CARRERA SC,3.0-24V,DCT-8,S,E,G,\,\,"7,3","8,9",2023
+Esportivo,PORSCHE,911,CARRERA GTS,3.0-24V,DCT-8,S,E,G,\,\,"6,8","8,6",2023
+Esportivo,PORSCHE,911,CARRERA GTS CA,3.0-24V,DCT-8,S,E,G,\,\,"6,9","8,7",2023
+Esportivo,PORSCHE,911,TARGA 4GTS,3.0-24V,DCT-8,S,E,G,\,\,"6,9","8,7",2023
+Esportivo,PORSCHE,911,TARGA 50Y,3.0-24V,DCT-8,S,E,G,\,\,"6,9","8,7",2023
+Esportivo,PORSCHE,911,CARRERA,3.0-24V,DCT-8,S,E,G,\,\,"7,0","9,9",2023
+Esportivo,PORSCHE,911,CARRERA C,3.0-24V,DCT-8,S,E,G,\,\,"7,0","9,9",2023
+Esportivo,PORSCHE,911,CARRERA T,3.0-24V,DCT-8,S,E,G,\,\,"7,0","9,9",2023
+Esportivo,PORSCHE,911,CARRERA 4 GTS,3.0-24V,DCT-8,S,E,G,\,\,"6,8","8,6",2023
+Esportivo,PORSCHE,911,GT3 RS,4.0-24V,DCT-7,S,E,G,\,\,"5,4","6,9",2023
+Esportivo,PORSCHE,911,TURBO (ano modelo 2024),3.7-24V,DCT-8,S,E,G,\,\,"5,5","7,8",2023
+Esportivo,PORSCHE,911,TURBO CAB (ano modelo 2024),3.7-24V,DCT-8,S,E,G,\,\,"5,5","7,8",2023
+Esportivo,PORSCHE,911,TURBO S (ano modelo 2024),3.7-24V,DCT-8,S,E,G,\,\,"5,4","7,6",2023
+Esportivo,PORSCHE,911,TURBO S CA (ano modelo 2024),3.7-24V,DCT-8,S,E,G,\,\,"5,4","7,6",2023
+Esportivo,PORSCHE,PANAMERA,4SEHS,2.9-24V,A-8,S,E,G,\,\,"7,5","8,1",2023
+Esportivo,PORSCHE,PANAMERA,4SEHY,2.9-24V,A-8,S,E,G,\,\,"7,5","8,1",2023
+Esportivo,PORSCHE,PANAMERA,TSEHY,4.0-32V,DCT-8,S,E,G,\,\,"6,6","7,2",2023
+Esportivo,PORSCHE,PANAMERA,4EHST,2.9-24V,DCT-8,S,E,G,\,\,"7,3","7,9",2023
+Esportivo,PORSCHE,PANAMERA,4EHYB,2.9-24V,DCT-8,S,E,G,\,\,"7,3","7,9",2023
+Esportivo,PORSCHE,TAYCAN,4S,ELÉTRICO,--,S,E,E,\,\,\,\,2023
+Esportivo,PORSCHE,TAYCAN,TURBO,ELÉTRICO,--,S,E,E,\,\,\,\,2023
+Esportivo,PORSCHE,TAYCAN,TURBO S,ELÉTRICO,--,S,E,E,\,\,\,\,2023
+Esportivo,PORSCHE,TAYCAN,--,ELÉTRICO,--,S,E,E,\,\,\,\,2023
+Esportivo,PORSCHE,TAYCAN,4CT,ELÉTRICO,--,S,E,E,\,\,\,\,2023
+Esportivo,PORSCHE,TAYCAN,4GTS,ELÉTRICO,--,S,E,E,\,\,\,\,2023
+Esportivo,PORSCHE,TAYCAN,4S CT,ELÉTRICO,--,S,E,E,\,\,\,\,2023

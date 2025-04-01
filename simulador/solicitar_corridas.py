@@ -33,7 +33,7 @@ async def obter_clientes(session: aiohttp.ClientSession):
             return []
 
 async def obter_coordenadas(session: aiohttp.ClientSession):
-    url = f"{API_URL}/mapas_rotas/selecionar_coordenadas_aleatorias?cidade={urllib.parse.quote(CIDADE)}"
+    url = f"{API_URL}/mapas_rotas/coordenadas_aleatorias?cidade={urllib.parse.quote(CIDADE)}"
     async with session.get(url, timeout=TIMEOUT) as response:
         if response.status == 200:
             return await response.json()

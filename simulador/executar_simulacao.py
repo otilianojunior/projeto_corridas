@@ -1,58 +1,50 @@
-import subprocess
 import argparse
+import time
+import asyncio
 
-parser = argparse.ArgumentParser(description="Executar simulação completa da API de Corridas")
-parser.add_argument("--motoristas", type=int, default=10, help="Quantidade de motoristas a serem cadastrados")
-parser.add_argument("--clientes", type=int, default=500, help="Quantidade de clientes a serem cadastrados")
-parser.add_argument("--corridas", type=int, default=20, help="Quantidade de corridas a serem solicitadas")
-parser.add_argument("--taxas", type=int, default=20, help="Quantidade de corridas a aplicar taxas")
+from simulador.inserir_carros import cadastrar_carros
+from simulador.inserir_motoristas import criar_motoristas
+from simulador.inserir_clientes import criar_clientes
+from simulador.solicitar_corridas import executar_solicitacoes_corrida
+from simulador.simular_taxas import executar_simulacao_taxas
 
-args = parser.parse_args()
 
-print("\n🚀 Iniciando simulação completa...")
+def main():
+    parser = argparse.ArgumentParser(description="Executar simulação completa da API de Corridas")
+    parser.add_argument("--carros", type=int, default=None, help="Quantidade de carros a serem cadastrados (None = todos)")
+    parser.add_argument("--motoristas", type=int, default=1000, help="Quantidade de motoristas a serem cadastrados")
+    parser.add_argument("--clientes", type=int, default=5000, help="Quantidade de clientes a serem cadastrados")
+    parser.add_argument("--corridas", type=int, default=200, help="Quantidade de corridas a serem solicitadas")
+    parser.add_argument("--taxas", type=int, default=5, help="Quantidade de corridas a aplicar taxas")
 
-# Inserir todos os carros do CSV
-def executar_insercao_carros():
-    print("\n🚗 Inserindo todos os carros do CSV...")
-    subprocess.run(["python", "simulador/inserir_carros.py"])
+    args = parser.parse_args()
 
-# Inserir clientes
-def executar_insercao_clientes():
-    print("\n👥 Inserindo clientes...")
-    subprocess.run([
-        "python", "simulador/inserir_clientes.py",
-        "--clientes", str(args.clientes)
-    ])
+    print("\n🚀 Iniciando simulação completa...\n")
+    inicio_geral = time.time()
 
-# Inserir motoristas
-def executar_insercao_motoristas():
+    print("🚗 Inserindo carros...")
+    carros_criados = cadastrar_carros(quantidade=args.carros)
+
     print("\n🧍 Inserindo motoristas...")
-    subprocess.run([
-        "python", "simulador/inserir_motoristas.py",
-        "--motoristas", str(args.motoristas)
-    ])
+    motoristas_criados = criar_motoristas(args.motoristas)
 
-# Solicitar corridas
-def executar_solicitacao_corridas():
+    print("\n👥 Inserindo clientes...")
+    clientes_criados = criar_clientes(args.clientes)
+
     print("\n🚕 Solicitando corridas...")
-    subprocess.run([
-        "python", "simulador/solicitar_corridas.py",
-        "--corridas", str(args.corridas)
-    ])
+    corridas_criadas = asyncio.run(executar_solicitacoes_corrida(args.corridas))
 
-# Aplicar taxas
-def executar_simulacao_taxas():
-    print("\n💸 Aplicando taxas...")
-    subprocess.run([
-        "python", "simulador/simular_taxas.py",
-        "--taxas", str(args.taxas)
-    ])
+    print("\n💸 Aplicando taxas nas corridas...")
+    corridas_taxadas = asyncio.run(executar_simulacao_taxas(args.taxas))
 
-# Executa a sequência completa
-executar_insercao_carros()
-executar_insercao_clientes()
-executar_insercao_motoristas()
-executar_solicitacao_corridas()
-executar_simulacao_taxas()
+    duracao_total = time.time() - inicio_geral
+    minutos, segundos = divmod(duracao_total, 60)
 
-print("\n✅ Simulação finalizada com sucesso!")
+    print("\n✅ Simulação finalizada com sucesso!")
+    print(f"✔️ Carros: {carros_criados}, Clientes: {clientes_criados}, Motoristas: {motoristas_criados}")
+    print(f"✔️ Corridas: {corridas_criadas}, Taxas aplicadas: {corridas_taxadas}")
+    print(f"⏱️ Tempo total: {int(minutos)} min {segundos:.2f} seg.\n")
+
+
+if __name__ == "__main__":
+    main()

@@ -17,7 +17,15 @@ async def obter_motoristas(session: aiohttp.ClientSession):
     url = f"{API_URL}/motoristas/listar/"
     async with session.get(url, timeout=TIMEOUT) as response:
         if response.status == 200:
-            return await response.json()
+            dados = await response.json()
+            # Garante que sempre retorna uma lista
+            if isinstance(dados, list):
+                return dados
+            elif isinstance(dados, dict):
+                return list(dados.values())
+            else:
+                print(f"⚠️ Resposta inesperada ao buscar motoristas: {dados}")
+                return []
         else:
             print(f"⚠️ Erro ao buscar motoristas: {response.status} - {await response.text()}")
             return []
@@ -66,7 +74,15 @@ async def solicitar_corrida(session: aiohttp.ClientSession, id_cliente: int):
             return False
 
         motoristas = await obter_motoristas(session)
-        id_motorista = random.choice(motoristas)["id"] if motoristas else None
+        if not motoristas:
+            print("⚠️ Nenhum motorista disponível.")
+            return False
+
+        try:
+            id_motorista = random.choice(motoristas)["id"]
+        except Exception as e:
+            print(f"⚠️ Erro ao escolher motorista: {e}")
+            return False
 
         corrida = {
             "cliente": {"id_cliente": id_cliente},
@@ -78,6 +94,8 @@ async def solicitar_corrida(session: aiohttp.ClientSession, id_cliente: int):
 
         url = f"{API_URL}/corridas/solicitar"
         async with session.post(url, json=corrida, timeout=TIMEOUT) as response:
+            if response.status != 201:
+                print(f"❌ Falha ao solicitar corrida (cliente {id_cliente}): {response.status} - {await response.text()}")
             return response.status == 201
 
 async def executar_solicitacoes_corrida(num_corridas: int):

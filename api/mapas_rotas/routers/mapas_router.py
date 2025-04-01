@@ -50,8 +50,8 @@ async def processar_no_grafo(node, grafo, nodes_data):
 async def gerar_mapa_interativo(cidade: str):
     """Gera o grafo da cidade e armazena informações de localização."""
     nome_cidade = unidecode(cidade.split(",")[0].strip().lower().replace(" ", "-"))
-    graphml_path = f"data/{nome_cidade}-map.graphml"
-    csv_path = f"data/{nome_cidade}-localizacoes.csv"
+    graphml_path = os.path.join("resources", f"{nome_cidade}-map.graphml")
+    csv_path = os.path.join("resources", f"{nome_cidade}-localizacoes.csv")
 
     if os.path.exists(graphml_path) and os.path.exists(csv_path):
         return {"message": "Arquivos existentes encontrados."}
@@ -78,7 +78,7 @@ async def gerar_mapa_interativo(cidade: str):
 async def coordenadas_aleatorias_para_rota(cidade: str):
     """Seleciona pontos de origem e destino aleatórios para uma cidade."""
     nome_cidade = unidecode(cidade.strip().lower().replace(" ", "-"))
-    csv_path = f"data/{nome_cidade}-localizacoes.csv"
+    csv_path = os.path.join("resources", f"{nome_cidade}-localizacoes.csv")
 
     if not os.path.exists(csv_path):
         raise HTTPException(status_code=404, detail="Arquivo de localizações não encontrado para a cidade especificada.")

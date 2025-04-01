@@ -12,7 +12,7 @@ class CarroModel(Base):
     motor = Column(String(255), nullable=True)
     versao = Column(String(255), nullable=True)
     transmissao = Column(String(255), nullable=True)
-    ar_cond = Column(String(255), nullable=True)
+    ar_condicionado = Column(String(255), nullable=True)
     direcao = Column(String(255), nullable=True)
     combustivel = Column(String(255), nullable=True)
     km_etanol_cidade = Column(Float, nullable=True)

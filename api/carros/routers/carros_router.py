@@ -18,7 +18,7 @@ class CarroCreate(BaseModel):
     motor: str
     versao: str
     transmissao: str
-    ar_cond: str
+    ar_condicionado: str
     direcao: str
     combustivel: Optional[str] = None
     km_etanol_cidade: Optional[float] = None  # Alterado para float
@@ -35,7 +35,7 @@ class CarroUpdate(BaseModel):
     motor: str
     versao: str
     transmissao: str
-    ar_cond: str
+    ar_condicionado: str
     direcao: str
     combustivel: str = None
     km_etanol_cidade: str = None
@@ -57,7 +57,7 @@ async def listar_carros(db: AsyncSession = Depends(get_db)):
     # Retorna os carros em formato JSON serializável
     return [{"id": c.id, "categoria": c.categoria, "marca": c.marca, "modelo": c.modelo,
              "motor": c.motor, "versao": c.versao, "transmissao": c.transmissao,
-             "ar_cond": c.ar_cond, "direcao": c.direcao, "combustivel": c.combustivel,
+             "ar_condicionado": c.ar_condicionado, "direcao": c.direcao, "combustivel": c.combustivel,
              "km_etanol_cidade": c.km_etanol_cidade, "km_etanol_estrada": c.km_etanol_estrada,
              "km_gasolina_cidade": c.km_gasolina_cidade, "km_gasolina_estrada": c.km_gasolina_estrada,
              "ano": c.ano} for c in carros]
@@ -74,7 +74,7 @@ async def criar_carro(carro: CarroCreate, db: AsyncSession = Depends(get_db)):
         (CarroModel.motor == carro.motor) &
         (CarroModel.versao == carro.versao) &
         (CarroModel.transmissao == carro.transmissao) &
-        (CarroModel.ar_cond == carro.ar_cond) &
+        (CarroModel.ar_condicionado == carro.ar_condicionado) &
         (CarroModel.direcao == carro.direcao) &
         (CarroModel.combustivel == carro.combustivel) &
         (CarroModel.km_etanol_cidade == carro.km_etanol_cidade) &
@@ -96,7 +96,7 @@ async def criar_carro(carro: CarroCreate, db: AsyncSession = Depends(get_db)):
             motor=carro.motor,
             versao=carro.versao,
             transmissao=carro.transmissao,
-            ar_cond=carro.ar_cond,
+            ar_condicionado=carro.ar_condicionado,
             direcao=carro.direcao,
             combustivel=carro.combustivel,
             km_etanol_cidade=carro.km_etanol_cidade,
@@ -118,7 +118,7 @@ async def criar_carro(carro: CarroCreate, db: AsyncSession = Depends(get_db)):
             "motor": novo_carro.motor,
             "versao": novo_carro.versao,
             "transmissao": novo_carro.transmissao,
-            "ar_cond": novo_carro.ar_cond,
+            "ar_condicionado": novo_carro.ar_condicionado,
             "direcao": novo_carro.direcao,
             "combustivel": novo_carro.combustivel,
             "km_etanol_cidade": novo_carro.km_etanol_cidade,
@@ -148,7 +148,7 @@ async def editar_carro(carro_id: int, carro: CarroUpdate, db: AsyncSession = Dep
         carro_existente.motor = carro.motor
         carro_existente.versao = carro.versao
         carro_existente.transmissao = carro.transmissao
-        carro_existente.ar_cond = carro.ar_cond
+        carro_existente.ar_condicionado = carro.ar_condicionado
         carro_existente.direcao = carro.direcao
         carro_existente.combustivel = carro.combustivel
         carro_existente.km_etanol_cidade = carro.km_etanol_cidade
@@ -168,7 +168,7 @@ async def editar_carro(carro_id: int, carro: CarroUpdate, db: AsyncSession = Dep
             "motor": carro_existente.motor,
             "versao": carro_existente.versao,
             "transmissao": carro_existente.transmissao,
-            "ar_cond": carro_existente.ar_cond,
+            "ar_condicionado": carro_existente.ar_condicionado,
             "direcao": carro_existente.direcao,
             "combustivel": carro_existente.combustivel,
             "km_etanol_cidade": carro_existente.km_etanol_cidade,

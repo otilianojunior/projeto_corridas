@@ -52,17 +52,26 @@ def criar_motoristas(total: int, status: str = "disponivel") -> int:
 
     return criados
 
+def run_inserir_motoristas(total: int, status: str = "disponivel") -> int:
+    """
+    Executa o processo de cadastro de motoristas, exibindo mensagens de acompanhamento e resumo.
+    Essa função pode ser chamada tanto diretamente quanto por outro módulo.
+    """
+    inicio = time.time()
+    print("\n🧍 Iniciando cadastro de motoristas...")
+    motoristas_criados = criar_motoristas(total, status)
+    tempo_total = time.time() - inicio
+    minutos, segundos = divmod(tempo_total, 60)
+
+    print("\n✅ Resumo do cadastro:")
+    print(f"✔️ {motoristas_criados}/{total} motoristas cadastrados com sucesso.")
+    print(f"⏱️ Tempo total: {int(minutos)} min {segundos:.2f} seg.")
+
+    return motoristas_criados
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Cadastro de motoristas na API")
     parser.add_argument("--motoristas", type=int, default=1, help="Quantidade de motoristas a serem cadastrados")
     args = parser.parse_args()
 
-    NUM_MOTORISTAS = args.motoristas
-
-    inicio = time.time()
-    print("\n🚗 Criando motoristas...")
-    motoristas_criados = criar_motoristas(NUM_MOTORISTAS)
-    tempo_total = time.time() - inicio
-    minutos, segundos = divmod(tempo_total, 60)
-    print(f"\n✔️ {motoristas_criados}/{NUM_MOTORISTAS} motoristas cadastrados.")
-    print(f"⏱️ Tempo total: {int(minutos)} min {segundos:.2f} seg.")
+    run_inserir_motoristas(total=args.motoristas)

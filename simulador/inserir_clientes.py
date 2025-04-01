@@ -20,6 +20,9 @@ def gerar_dados_cliente(status: str = "disponivel") -> dict:
     }
 
 def criar_clientes(total: int, status: str = "disponivel") -> int:
+    """
+    Cria clientes na API até atingir o total desejado.
+    """
     criados = 0
 
     while criados < total:
@@ -33,16 +36,26 @@ def criar_clientes(total: int, status: str = "disponivel") -> int:
 
     return criados
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Cadastro de clientes na API")
-    parser.add_argument("--clientes", type=int, default=5000, help="Quantidade de clientes a serem cadastrados")
-    args = parser.parse_args()
-
+def run_inserir_clientes(total: int, status: str = "disponivel") -> int:
+    """
+    Executa o processo de cadastro de clientes, exibindo mensagens de acompanhamento e resumo.
+    Essa função pode ser chamada tanto diretamente quanto por outro módulo.
+    """
     inicio = time.time()
-    print("\n👥 Criando clientes...")
-    clientes_criados = criar_clientes(args.clientes)
+    print("\n👥 Iniciando cadastro de clientes...")
+    clientes_criados = criar_clientes(total, status)
     tempo_total = time.time() - inicio
     minutos, segundos = divmod(tempo_total, 60)
 
-    print(f"\n✔️ {clientes_criados}/{args.clientes} clientes cadastrados.")
+    print("\n✅ Resumo do cadastro:")
+    print(f"✔️ {clientes_criados}/{total} clientes cadastrados com sucesso.")
     print(f"⏱️ Tempo total: {int(minutos)} min {segundos:.2f} seg.")
+
+    return clientes_criados
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Cadastro de clientes na API")
+    parser.add_argument("--clientes", type=int, default=1, help="Quantidade de clientes a serem cadastrados")
+    args = parser.parse_args()
+
+    run_inserir_clientes(total=args.clientes)

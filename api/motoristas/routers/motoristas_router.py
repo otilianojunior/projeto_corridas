@@ -1,15 +1,14 @@
 import re
 
+from carros.models.carro_model import CarroModel
+from core.dependencies import get_db
 from fastapi import APIRouter, Depends, HTTPException, status
+from motoristas.models.motorista_model import MotoristaModel
+from pydantic import BaseModel
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.orm import selectinload
-from pydantic import BaseModel
-
-from core.dependencies import get_db
-from carros.models.carro_model import CarroModel
-from motoristas.models.motorista_model import MotoristaModel
 
 router = APIRouter(prefix="/motoristas", tags=["Motoristas"])
 
@@ -42,29 +41,62 @@ async def listar_motoristas(db: AsyncSession = Depends(get_db)):
     if not motoristas:
         raise HTTPException(status_code=404, detail="Nenhum motorista cadastrado.")
 
-    return {
-        "total": len(motoristas),
-        "motoristas": [
-            {
-                "id": m.id,
-                "nome": m.nome,
-                "cpf": m.cpf,
-                "telefone": m.telefone,
-                "email": m.email,
-                "status": m.status,
-                "id_carro": m.id_carro,
-                "carro": {
-                    "id": m.carro.id if m.carro else None,
-                    "modelo": m.carro.modelo if m.carro else None,
-                    "combustivel": m.carro.combustivel if m.carro else None,
-                    "km_etanol_cidade": m.carro.km_etanol_cidade if m.carro else None,
-                    "km_gasolina_cidade": m.carro.km_gasolina_cidade if m.carro else None,
-                    "ano": m.carro.ano if m.carro else None,
-                }
+    return [
+        {
+            "id": m.id,
+            "nome": m.nome,
+            "cpf": m.cpf,
+            "telefone": m.telefone,
+            "email": m.email,
+            "status": m.status,
+            "id_carro": m.id_carro,
+            "carro": {
+                "id": m.carro.id if m.carro else None,
+                "modelo": m.carro.modelo if m.carro else None,
+                "combustivel": m.carro.combustivel if m.carro else None,
+                "km_etanol_cidade": m.carro.km_etanol_cidade if m.carro else None,
+                "km_gasolina_cidade": m.carro.km_gasolina_cidade if m.carro else None,
+                "ano": m.carro.ano if m.carro else None,
             }
-            for m in motoristas
-        ]
-    }
+        }
+        for m in motoristas
+    ]
+
+
+@router.get("/listar_disponiveis", summary="Listar motoristas disponíveis")
+async def listar_motoristas_disponiveis(db: AsyncSession = Depends(get_db)):
+    """Lista todos os motoristas disponíveis cadastrados na API, incluindo dados do carro."""
+    query = (
+        select(MotoristaModel)
+        .where(MotoristaModel.status == "disponivel")
+        .options(selectinload(MotoristaModel.carro))
+    )
+    result = await db.execute(query)
+    motoristas = result.scalars().all()
+
+    if not motoristas:
+        raise HTTPException(status_code=404, detail="Nenhum motorista disponível.")
+
+    return [
+        {
+            "id": m.id,
+            "nome": m.nome,
+            "cpf": m.cpf,
+            "telefone": m.telefone,
+            "email": m.email,
+            "status": m.status,
+            "id_carro": m.id_carro,
+            "carro": {
+                "id": m.carro.id if m.carro else None,
+                "modelo": m.carro.modelo if m.carro else None,
+                "combustivel": m.carro.combustivel if m.carro else None,
+                "km_etanol_cidade": m.carro.km_etanol_cidade if m.carro else None,
+                "km_gasolina_cidade": m.carro.km_gasolina_cidade if m.carro else None,
+                "ano": m.carro.ano if m.carro else None,
+            }
+        }
+        for m in motoristas
+    ]
 
 
 @router.post("/", status_code=status.HTTP_201_CREATED, summary="Criar motorista")

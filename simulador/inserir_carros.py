@@ -13,13 +13,13 @@ API_URL = "http://127.0.0.1:8000"
 # Caminho para o CSV contendo os dados dos carros
 ARQUIVO_CSV = "data/carros/dados_tratados_filtrado.csv"
 
+
 def verificar_ou_gerar_csv():
     """
-    Verifica se o CSV de carros existe. Caso contrário, executa os scripts necessários para gerar.
+    Verifica se o CSV de carros existe. Caso não exista, executa os scripts necessários para gerá-lo.
     """
     if not os.path.exists(ARQUIVO_CSV):
         print("📂 Arquivo CSV não encontrado. Gerando dados...")
-
         try:
             extrair_tabelas_pbev.processar_pdfs("data/carros")
             extrair_tabelas_pbev.extrair_tabela_2021("data/carros/PBEV-2021.pdf")
@@ -28,19 +28,23 @@ def verificar_ou_gerar_csv():
             print(f"❌ Erro ao gerar dados: {e}")
             exit(1)
 
+
 def gerar_dados_carro(row: pd.Series) -> dict:
-    row = row.where(pd.notna(row), None)  # substitui todos os NaNs por None
+    """
+    Converte uma linha do DataFrame em um dicionário, substituindo NaNs por None.
+    """
+    row = row.where(pd.notna(row), None)
     return row.to_dict()
+
 
 def cadastrar_carros(quantidade: int = None) -> int:
     """
-    Lê o CSV, envia os dados dos carros para a API e retorna a quantidade cadastrada com sucesso.
+    Lê o CSV, envia os dados dos carros para a API e retorna a quantidade de carros cadastrados com sucesso.
     """
     try:
         df_carros = pd.read_csv(ARQUIVO_CSV)
         if quantidade:
             df_carros = df_carros.head(quantidade)
-        total_carros = len(df_carros)
         total_criados = 0
 
         for _, row in df_carros.iterrows():
@@ -63,19 +67,30 @@ def cadastrar_carros(quantidade: int = None) -> int:
         print(f"❌ Erro inesperado: {str(e)}")
         return 0
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Inserir carros na API a partir de um CSV")
-    parser.add_argument("--carros", type=int, default=None, help="Quantidade de carros a serem cadastrados (padrão: todos)")
-    args = parser.parse_args()
 
+def run_inserir_carros(quantidade: int = None) -> int:
+    """
+    Executa o processo de verificação, cadastro de carros e imprime o resumo do processo.
+    Essa função pode ser chamada tanto quando o script é executado diretamente quanto por outro módulo.
+    """
     verificar_ou_gerar_csv()
 
     tempo_inicio = time.time()
-    print("\n🔄 Iniciando cadastro de carros...")
-    carros_cadastrados = cadastrar_carros(quantidade=args.carros)
+    print("\n🚗 Iniciando cadastro de carros...")
+    carros_cadastrados = cadastrar_carros(quantidade=quantidade)
     tempo_total = time.time() - tempo_inicio
     minutos, segundos = divmod(tempo_total, 60)
 
-    print("\n✅ Cadastro finalizado:")
+    print("\n✅ Resumo do cadastro:")
     print(f"✔️ {carros_cadastrados} carros cadastrados com sucesso.")
     print(f"⏱️ Tempo total: {int(minutos)} min {segundos:.2f} seg.")
+
+    return carros_cadastrados
+
+
+# Bloco de execução para quando o script é executado diretamente
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Inserir carros na API a partir de um CSV")
+    parser.add_argument("--carros",type=int,default=None,help="Quantidade padrão: todos)")
+    args = parser.parse_args()
+    run_inserir_carros(quantidade=args.carros)

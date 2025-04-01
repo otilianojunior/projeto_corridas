@@ -85,7 +85,7 @@ async def aplicar_taxas(session, corrida, corridas):
                 return False
 
 async def executar_simulacao_taxas(num_corridas: int):
-    print("\n🚀 Aplicando taxas nas corridas...")
+    print("\n💸 Aplicando taxas nas corridas...")
     inicio = time.time()
     async with aiohttp.ClientSession() as session:
         corridas = await obter_corridas(session)
@@ -101,7 +101,7 @@ async def executar_simulacao_taxas(num_corridas: int):
         fim = time.time() - inicio
         minutos, segundos = divmod(fim, 60)
 
-        print("\n✅ Resumo:")
+        print("\n✅ Resumo da aplicação de taxas:")
         print(f"✔️ {sum(resultados)}/{alvo} corridas com taxas aplicadas.")
         print(f"⏱️ Tempo total: {int(minutos)} min {segundos:.2f} seg.")
         print("\n🏁 Finalizado!")

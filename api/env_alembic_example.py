@@ -19,13 +19,13 @@ if config.config_file_name is not None:
 # target_metadata = mymodel.Base.metadata
 
 # noinspection PyUnresolvedReferences
-from clientes.models.ClienteModel import ClienteModel
+from carros.models.carro_model import CarroModel
 # noinspection PyUnresolvedReferences
-from carros.models.CarroModel import CarroModel
+from motoristas.models.motorista_model import MotoristaModel
 # noinspection PyUnresolvedReferences
-from motoristas.models.MotoristaModel import MotoristaModel
+from clientes.models.cliente_model import ClienteModel
 # noinspection PyUnresolvedReferences
-from corridas.models.CorridaModel import CorridaModel
+from corridas.models.corrida_model import CorridaModel
 
 from core.database import Base
 

@@ -14,18 +14,11 @@ MAX_CONCORRENTES = 5
 semaforo = asyncio.Semaphore(MAX_CONCORRENTES)
 
 async def obter_motoristas(session: aiohttp.ClientSession):
-    url = f"{API_URL}/motoristas/listar/"
+    url = f"{API_URL}/motoristas/listar_disponiveis/"
     async with session.get(url, timeout=TIMEOUT) as response:
         if response.status == 200:
             dados = await response.json()
-            # Garante que sempre retorna uma lista
-            if isinstance(dados, list):
-                return dados
-            elif isinstance(dados, dict):
-                return list(dados.values())
-            else:
-                print(f"⚠️ Resposta inesperada ao buscar motoristas: {dados}")
-                return []
+            return dados if isinstance(dados, list) else []
         else:
             print(f"⚠️ Erro ao buscar motoristas: {response.status} - {await response.text()}")
             return []
@@ -99,7 +92,7 @@ async def solicitar_corrida(session: aiohttp.ClientSession, id_cliente: int):
             return response.status == 201
 
 async def executar_solicitacoes_corrida(num_corridas: int):
-    print("\n🚀 Iniciando solicitações de corridas...")
+    print("\n🚕 Iniciando solicitações de corridas...")
     inicio = time.time()
 
     async with aiohttp.ClientSession() as session:
@@ -122,15 +115,15 @@ async def executar_solicitacoes_corrida(num_corridas: int):
         fim = time.time() - inicio
         minutos, segundos = divmod(fim, 60)
 
-        print("\n✅ Resumo da Simulação:")
+        print("\n✅ Resumo das solicitações:")
         print(f"✔️ {total}/{num_corridas} corridas solicitadas com sucesso.")
         print(f"⏱️ Tempo total: {int(minutos)} min {segundos:.2f} seg.")
-        print("\n🏁 Simulação concluída!")
         return total
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Simular solicitações de corridas")
-    parser.add_argument("--corridas", type=int, default=10, help="Número de corridas a serem solicitadas")
+    parser.add_argument("--corridas", type=int, default=1, help="Número de corridas a serem solicitadas")
     args = parser.parse_args()
 
     asyncio.run(executar_solicitacoes_corrida(args.corridas))
+

@@ -21,7 +21,8 @@ async def obter_nome_rua_bairro(coordenada):
     """Obtém nome da rua e bairro a partir das coordenadas."""
     geolocator = Nominatim(user_agent="mapa_interativo")
 
-    async def reverse_geocode():
+    # Defina a função como síncrona
+    def reverse_geocode():
         try:
             location = geolocator.reverse(coordenada, language='pt', exactly_one=True)
             if location:

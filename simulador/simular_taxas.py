@@ -113,7 +113,7 @@ async def aplicar_taxas_corrida(session, corrida, todas_corridas):
                 print(f"❌ Corrida {id_corrida} falhou: {status} - {texto}")
                 return False
 
-async def executar_simulacao_de_taxas(qtd_corridas: int):
+async def executar_simulacao_taxas(qtd_corridas: int):
     print("\n💸 Aplicando taxas nas corridas...")
     inicio = time.time()
     async with aiohttp.ClientSession() as session:
@@ -140,4 +140,4 @@ if __name__ == "__main__":
     parser.add_argument("--corridas", type=int, default=1, help="Quantidade de corridas a processar")
     argumentos = parser.parse_args()
 
-    asyncio.run(executar_simulacao_de_taxas(argumentos.corridas))
+    asyncio.run(executar_simulacao_taxas(argumentos.corridas))

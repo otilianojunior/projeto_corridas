@@ -16,40 +16,37 @@ from unidecode import unidecode
 
 router = APIRouter(prefix="/mapas_rotas", tags=["Mapas"])
 
-
 async def obter_nome_rua_bairro(coordenada):
     """Obtém nome da rua e bairro a partir das coordenadas."""
     geolocator = Nominatim(user_agent="mapa_interativo")
 
-    # Defina a função como síncrona
     def reverse_geocode():
         try:
             location = geolocator.reverse(coordenada, language='pt', exactly_one=True)
             if location:
                 address = location.raw.get("address", {})
                 return address.get("road", "Desconhecido"), address.get("suburb", "Desconhecido")
+            else:
+                return "Desconhecido", "Desconhecido"
         except Exception:
             return "Desconhecido", "Desconhecido"
 
     return await asyncio.to_thread(reverse_geocode)
-
 
 async def processar_no_grafo(node, grafo, nodes_data):
     """Processa um nó do grafo e adiciona os dados na lista compartilhada."""
     latitude = grafo.nodes[node]["y"]
     longitude = grafo.nodes[node]["x"]
     nome_rua, bairro = await obter_nome_rua_bairro((latitude, longitude))
-
     nodes_data["node_id"].append(node)
     nodes_data["latitude"].append(latitude)
     nodes_data["longitude"].append(longitude)
     nodes_data["nome_rua"].append(nome_rua)
     nodes_data["bairro"].append(bairro)
 
-
 @router.get("/gerar_mapa", status_code=status.HTTP_200_OK)
 async def gerar_mapa_interativo(cidade: str):
-    """Gera o grafo da cidade e armazena informações de localização."""
+    """Gera o grafo da cidade e armazena as informações de localização em um arquivo CSV."""
     nome_cidade = unidecode(cidade.split(",")[0].strip().lower().replace(" ", "-"))
     graphml_path = os.path.join("resources", f"{nome_cidade}-map.graphml")
     csv_path = os.path.join("resources", f"{nome_cidade}-localizacoes.csv")
@@ -62,9 +59,13 @@ async def gerar_mapa_interativo(cidade: str):
         await asyncio.to_thread(ox.save_graphml, grafo, filepath=graphml_path)
 
         nodes_data = {"node_id": [], "latitude": [], "longitude": [], "nome_rua": [], "bairro": []}
+        nodes = list(grafo.nodes)
 
-        tasks = [processar_no_grafo(node, grafo, nodes_data) for node in grafo.nodes]
-        await asyncio.gather(*tasks)
+        # Processa os nós em lotes de 2, aguardando 1 segundo entre cada lote
+        for i in range(0, len(nodes), 2):
+            tasks = [processar_no_grafo(node, grafo, nodes_data) for node in nodes[i:i+2]]
+            await asyncio.gather(*tasks)
+            await asyncio.sleep(1)
 
         df = pd.DataFrame(nodes_data)
         await asyncio.to_thread(df.to_csv, csv_path, index=False)
@@ -73,7 +74,6 @@ async def gerar_mapa_interativo(cidade: str):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao processar dados do mapa: {str(e)}")
-
 
 @router.get("/coordenadas_aleatorias", status_code=status.HTTP_200_OK)
 async def coordenadas_aleatorias_para_rota(cidade: str):
@@ -107,7 +107,6 @@ async def coordenadas_aleatorias_para_rota(cidade: str):
             "bairro": destino["bairro"]
         }
     }
-
 
 @router.get("/visualizar_corrida", status_code=status.HTTP_200_OK, summary="Visualizar mapa interativo de uma corrida")
 async def visualizar_mapa_de_corrida(corrida_id: int, db: Session = Depends(get_db)):

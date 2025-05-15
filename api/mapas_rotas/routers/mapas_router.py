@@ -1,85 +1,168 @@
 import asyncio
 import io
+import json
 import os
 
 import osmnx as ox
 import pandas as pd
+from core.dependencies import get_db
 from corridas.models.corrida_model import CorridaModel
 from fastapi import APIRouter, HTTPException, status, Depends
 from fastapi.responses import StreamingResponse
 from geopy.geocoders import Nominatim
 from mapas_rotas.services.visualizar_mapa import criar_mapa_interativo
-from core.dependencies import get_db
 from sqlalchemy.future import select
 from sqlalchemy.orm import Session
 from unidecode import unidecode
-
+from pathlib import Path
+from datetime import datetime, timedelta
 router = APIRouter(prefix="/mapas_rotas", tags=["Mapas"])
 
-async def obter_nome_rua_bairro(coordenada):
-    """Obtém nome da rua e bairro a partir das coordenadas."""
-    geolocator = Nominatim(user_agent="mapa_interativo")
 
-    def reverse_geocode():
+BASE_DIR = Path(__file__).resolve().parents[2] / "resources"
+BASE_DIR.mkdir(parents=True, exist_ok=True)
+
+def carregar_ou_baixar_grafo(cidade: str, caminho: str):
+    if os.path.exists(caminho):
+        print(f"Carregando grafo de '{caminho}'...")
+        grafo = ox.load_graphml(caminho)
+    else:
+        print("Baixando grafo da cidade...")
+        grafo = ox.graph_from_place(cidade, network_type="drive")
+        ox.save_graphml(grafo, filepath=caminho)
+        print(f"Grafo salvo em '{caminho}'.")
+    return grafo
+
+
+def extrair_dados(json_str: str):
+    try:
+        dados = json.loads(json_str)
+        endereco = dados.get("address", {})
+        return {
+            "rua": endereco.get("road"),
+            "bairro": endereco.get("suburb"),
+            "cep": endereco.get("postcode"),
+        }
+    except Exception:
+        return {"rua": None, "bairro": None, "cep": None}
+
+
+async def reverse_geocode(lat, lon, geolocator):
+    def _reverso():
         try:
-            location = geolocator.reverse(coordenada, language='pt', exactly_one=True)
-            if location:
-                address = location.raw.get("address", {})
-                return address.get("road", "Desconhecido"), address.get("suburb", "Desconhecido")
-            else:
-                return "Desconhecido", "Desconhecido"
-        except Exception:
-            return "Desconhecido", "Desconhecido"
+            location = geolocator.reverse((lat, lon), language='pt', timeout=10)
+            return json.dumps(location.raw, ensure_ascii=False) if location else ""
+        except Exception as e:
+            print(f"Erro geocodificação reversa: {e}")
+            return ""
+    return await asyncio.to_thread(_reverso)
 
-    return await asyncio.to_thread(reverse_geocode)
 
-async def processar_no_grafo(node, grafo, nodes_data):
-    """Processa um nó do grafo e adiciona os dados na lista compartilhada."""
-    latitude = grafo.nodes[node]["y"]
-    longitude = grafo.nodes[node]["x"]
-    nome_rua, bairro = await obter_nome_rua_bairro((latitude, longitude))
+async def processar_no_grafo(node, grafo, geolocator, nodes_data):
+    lat = grafo.nodes[node]["y"]
+    lon = grafo.nodes[node]["x"]
+    raw_data = await reverse_geocode(lat, lon, geolocator)
+
     nodes_data["node_id"].append(node)
-    nodes_data["latitude"].append(latitude)
-    nodes_data["longitude"].append(longitude)
-    nodes_data["nome_rua"].append(nome_rua)
-    nodes_data["bairro"].append(bairro)
+    nodes_data["latitude"].append(lat)
+    nodes_data["longitude"].append(lon)
+    nodes_data["raw_data"].append(raw_data)
+
 
 @router.get("/gerar_mapa", status_code=status.HTTP_200_OK)
-async def gerar_mapa_interativo(cidade: str):
-    """Gera o grafo da cidade e armazena as informações de localização em um arquivo CSV."""
+async def gerar_mapa(cidade: str):
+    """Gera grafo e CSVs (bruto e tratado) da cidade especificada."""
     nome_cidade = unidecode(cidade.split(",")[0].strip().lower().replace(" ", "-"))
-    graphml_path = os.path.join("resources", f"{nome_cidade}-map.graphml")
-    csv_path = os.path.join("resources", f"{nome_cidade}-localizacoes.csv")
+    os.makedirs(BASE_DIR, exist_ok=True)
 
-    if os.path.exists(graphml_path) and os.path.exists(csv_path):
-        return {"message": "Arquivos existentes encontrados."}
+    graphml_path = os.path.join(BASE_DIR, f"{nome_cidade}.graphml")
+    bruto_path = os.path.join(BASE_DIR, f"{nome_cidade}_enderecos_brutos.csv")
+    tratado_path = os.path.join(BASE_DIR, f"{nome_cidade}_enderecos_tratados.csv")
+
+    if os.path.exists(graphml_path) and os.path.exists(tratado_path):
+        return {
+            "message": "Arquivos existentes encontrados.",
+            "arquivos": {
+                "grafo": graphml_path,
+                "enderecos_tratados": tratado_path
+            }
+        }
 
     try:
-        grafo = await asyncio.to_thread(ox.graph_from_place, cidade, network_type="drive")
-        await asyncio.to_thread(ox.save_graphml, grafo, filepath=graphml_path)
+        inicio = datetime.now()
 
-        nodes_data = {"node_id": [], "latitude": [], "longitude": [], "nome_rua": [], "bairro": []}
+        grafo = await asyncio.to_thread(carregar_ou_baixar_grafo, cidade, graphml_path)
         nodes = list(grafo.nodes)
+        total_nodes = len(nodes)
+        total_lotes = total_nodes // 2 + (1 if total_nodes % 2 != 0 else 0)
 
-        # Processa os nós em lotes de 2, aguardando 1 segundo entre cada lote
-        for i in range(0, len(nodes), 2):
-            tasks = [processar_no_grafo(node, grafo, nodes_data) for node in nodes[i:i+2]]
+        print(f"Total de nós no grafo: {total_nodes}")
+        print(f"Iniciando processamento de {total_lotes} lotes com 2 nós por lote...")
+
+        fim_estimado = inicio + timedelta(seconds=total_lotes)
+        print(f"Previsão de término: {fim_estimado.strftime('%H:%M:%S')}")
+
+        geolocator = Nominatim(user_agent="mapa_interativo")
+
+        nodes_data = {
+            "node_id": [],
+            "latitude": [],
+            "longitude": [],
+            "raw_data": []
+        }
+
+        for i in range(0, total_nodes, 2):
+            lote = nodes[i:i+2]
+            print(f"Processando lote {i//2 + 1}/{total_lotes} - nós: {lote}")
+            tasks = [processar_no_grafo(node, grafo, geolocator, nodes_data) for node in lote]
             await asyncio.gather(*tasks)
             await asyncio.sleep(1)
 
-        df = pd.DataFrame(nodes_data)
-        await asyncio.to_thread(df.to_csv, csv_path, index=False)
+            if (i + 2) % 100 == 0 or (i + 2) >= total_nodes:
+                df_temp = pd.DataFrame(nodes_data)
+                await asyncio.to_thread(df_temp.to_csv, bruto_path, index=False, encoding='utf-8')
+                print(f"Progresso salvo em {bruto_path}")
 
-        return {"message": "Dados do mapa gerados com sucesso!"}
+        # Após o loop, garantir salvamento final
+        df_bruto = pd.DataFrame(nodes_data)
+        await asyncio.to_thread(df_bruto.to_csv, bruto_path, index=False, encoding='utf-8')
+        print(f"Endereços brutos salvos em {bruto_path}")
+
+        df_bruto['raw_data'] = df_bruto['raw_data'].astype(str)
+        dados_extraidos = df_bruto['raw_data'].apply(extrair_dados).apply(pd.Series)
+
+        df_final = pd.concat([df_bruto[["node_id", "latitude", "longitude"]], dados_extraidos], axis=1)
+        df_filtrado = df_final[~(df_final['rua'].isna() & df_final['bairro'].isna())]
+
+        await asyncio.to_thread(df_filtrado.to_csv, tratado_path, index=False, encoding='utf-8')
+        print(f"Endereços tratados salvos em {tratado_path}")
+
+        fim_real = datetime.now()
+        duracao = fim_real - inicio
+        minutos, segundos = divmod(duracao.total_seconds(), 60)
+
+        print(f"Tempo total de execução: {int(minutos)} minutos e {int(segundos)} segundos")
+
+        return {
+            "message": "Dados do mapa gerados com sucesso!",
+            "tempo_execucao": f"{int(minutos)} minutos e {int(segundos)} segundos",
+            "arquivos": {
+                "grafo": graphml_path,
+                "enderecos_brutos": bruto_path,
+                "enderecos_tratados": tratado_path
+            }
+        }
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao processar dados do mapa: {str(e)}")
+
+
 
 @router.get("/coordenadas_aleatorias", status_code=status.HTTP_200_OK)
 async def coordenadas_aleatorias_para_rota(cidade: str):
     """Seleciona pontos de origem e destino aleatórios para uma cidade."""
     nome_cidade = unidecode(cidade.strip().lower().replace(" ", "-"))
-    csv_path = os.path.join("resources", f"{nome_cidade}-localizacoes.csv")
+    csv_path = os.path.join(BASE_DIR, f"{nome_cidade}-localizacoes.csv")
 
     if not os.path.exists(csv_path):
         raise HTTPException(status_code=404, detail="Arquivo de localizações não encontrado para a cidade especificada.")
@@ -97,16 +180,17 @@ async def coordenadas_aleatorias_para_rota(cidade: str):
         "origem": {
             "latitude": origem["latitude"],
             "longitude": origem["longitude"],
-            "nome_rua": origem["nome_rua"],
+            "nome_rua": origem["rua"],
             "bairro": origem["bairro"]
         },
         "destino": {
             "latitude": destino["latitude"],
             "longitude": destino["longitude"],
-            "nome_rua": destino["nome_rua"],
+            "nome_rua": destino["rua"],
             "bairro": destino["bairro"]
         }
     }
+
 
 @router.get("/visualizar_corrida", status_code=status.HTTP_200_OK, summary="Visualizar mapa interativo de uma corrida")
 async def visualizar_mapa_de_corrida(corrida_id: int, db: Session = Depends(get_db)):

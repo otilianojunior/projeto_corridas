@@ -126,16 +126,24 @@ async def listar_motoristas_disponiveis(db: AsyncSession = Depends(get_db)):
 
 
 # Cria um novo motorista com os dados fornecidos e associa a um carro existente.
-@router.put("/{motorista_id}", summary="Editar motorista")
-async def editar_motorista(motorista_id: int, motorista: MotoristaUpdate, db: AsyncSession = Depends(get_db)):
+# Cria um novo motorista com os dados fornecidos e associa a um carro existente.
+@router.post("/", status_code=status.HTTP_201_CREATED, summary="Criar motorista", response_model=None)
+async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends(get_db)):
     motorista.cpf = re.sub(r"\D", "", motorista.cpf)
 
-    query = select(MotoristaModel).where(MotoristaModel.id == motorista_id)
+    query = select(MotoristaModel).where(
+        (MotoristaModel.cpf == motorista.cpf) |
+        (MotoristaModel.telefone == motorista.telefone) |
+        (MotoristaModel.email == motorista.email)
+    )
     result = await db.execute(query)
-    motorista_existente = result.scalars().first()
+    existing_motorista = result.scalars().first()
 
-    if not motorista_existente:
-        raise HTTPException(status_code=404, detail="Motorista não encontrado.")
+    if existing_motorista:
+        raise HTTPException(
+            status_code=400,
+            detail="Motorista com CPF, telefone ou email já cadastrado."
+        )
 
     carro_query = select(CarroModel).where(CarroModel.id == motorista.id_carro)
     carro_result = await db.execute(carro_query)
@@ -144,27 +152,30 @@ async def editar_motorista(motorista_id: int, motorista: MotoristaUpdate, db: As
     if not carro:
         raise HTTPException(status_code=400, detail="Carro não encontrado com o ID informado.")
 
-    try:
-        motorista_existente.nome = motorista.nome
-        motorista_existente.email = motorista.email
-        motorista_existente.telefone = motorista.telefone
-        motorista_existente.cpf = motorista.cpf
-        motorista_existente.status = motorista.status
-        motorista_existente.id_carro = motorista.id_carro
+    novo_motorista = MotoristaModel(
+        nome=motorista.nome,
+        email=motorista.email,
+        telefone=motorista.telefone,
+        cpf=motorista.cpf,
+        status=motorista.status,
+        id_carro=motorista.id_carro
+    )
 
+    try:
+        db.add(novo_motorista)
         await db.commit()
-        await db.refresh(motorista_existente)
+        await db.refresh(novo_motorista)
 
         return {
             "status": "OK",
             "motorista": {
-                "id": motorista_existente.id,
-                "nome": motorista_existente.nome,
-                "email": motorista_existente.email,
-                "telefone": motorista_existente.telefone,
-                "cpf": motorista_existente.cpf,
-                "status": motorista_existente.status,
-                "id_carro": motorista_existente.id_carro,
+                "id": novo_motorista.id,
+                "nome": novo_motorista.nome,
+                "email": novo_motorista.email,
+                "telefone": novo_motorista.telefone,
+                "cpf": novo_motorista.cpf,
+                "status": novo_motorista.status,
+                "id_carro": novo_motorista.id_carro,
                 "carro": {
                     "id": carro.id,
                     "marca": carro.marca,
@@ -172,10 +183,18 @@ async def editar_motorista(motorista_id: int, motorista: MotoristaUpdate, db: As
                 }
             }
         }
-
+    except IntegrityError as ie:
+        await db.rollback()
+        raise HTTPException(
+            status_code=400,
+            detail=f"Erro de integridade ao criar motorista: {str(ie.orig) if hasattr(ie, 'orig') else str(ie)}"
+        )
     except Exception as e:
         await db.rollback()
-        raise HTTPException(status_code=500, detail=f"Erro ao editar motorista: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Erro inesperado ao criar motorista: {str(e)}"
+        )
 
 
 # Atualiza os dados de um motorista existente com base no ID fornecido.

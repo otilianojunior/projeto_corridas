@@ -5,6 +5,7 @@ from core.dependencies import get_db
 from corridas.models.corrida_model import CorridaModel
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 
@@ -19,12 +20,12 @@ class ClienteCreate(BaseModel):
     cpf: str
 
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "nome": "João da Silva",
                 "email": "joao.silva@example.com",
                 "telefone": "(77) 99999-1234",
-                "cpf": "123.456.789-09"
+                "cpf": "12345678909"
             }
         }
 
@@ -37,12 +38,12 @@ class ClienteUpdate(BaseModel):
     cpf: str
 
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "nome": "João da Silva",
                 "email": "joao.silva@example.com",
                 "telefone": "(77) 99999-1234",
-                "cpf": "123.456.789-09"
+                "cpf": "12345678909"
             }
         }
 
@@ -134,7 +135,6 @@ async def criar_cliente(cliente: ClienteCreate, db: AsyncSession = Depends(get_d
 @router.put("/{cliente_id}", summary="Editar Cliente")
 async def editar_cliente(cliente_id: int, cliente: ClienteUpdate, db: AsyncSession = Depends(get_db)):
     """Edita os dados de um cliente existente."""
-    # Remove formatação do CPF
     cliente.cpf = validar_cpf(cliente.cpf)
 
     query = select(ClienteModel).where(ClienteModel.id == cliente_id)
@@ -153,33 +153,45 @@ async def editar_cliente(cliente_id: int, cliente: ClienteUpdate, db: AsyncSessi
         await db.commit()
         await db.refresh(cliente_existente)
 
-        return {"status": "OK", "cliente": {
-            "id": cliente_existente.id,
-            "nome": cliente_existente.nome,
-            "email": cliente_existente.email,
-            "telefone": cliente_existente.telefone,
-            "cpf": cliente_existente.cpf
-        }}
-    except Exception as e:
+        return {
+            "status": "OK",
+            "mensagem": "Cliente atualizado com sucesso.",
+            "cliente": {
+                "id": cliente_existente.id,
+                "nome": cliente_existente.nome,
+                "email": cliente_existente.email,
+                "telefone": cliente_existente.telefone,
+                "cpf": cliente_existente.cpf
+            }
+        }
+
+    except IntegrityError:
         await db.rollback()
-        raise HTTPException(status_code=500, detail=f"Erro ao editar cliente: {str(e)}")
+        raise HTTPException(status_code=400, detail="Dados já cadastrados.")
+
+    except Exception:
+        await db.rollback()
+        raise HTTPException(status_code=500, detail="Erro ao editar cliente.")
 
 
 # Rota para excluir um cliente do sistema.
-@router.delete("/{cliente_id}", summary="Excluir Cliente")
+
+# Rota para excluir um cliente do sistema.
+@router.delete("/{cliente_id}", summary="Excluir Cliente", status_code=status.HTTP_204_NO_CONTENT)
 async def excluir_cliente(cliente_id: int, db: AsyncSession = Depends(get_db)):
-    """Exclui um cliente da API."""
+    """Exclui um cliente do sistema."""
     query = select(ClienteModel).where(ClienteModel.id == cliente_id)
     result = await db.execute(query)
     cliente_existente = result.scalars().first()
 
     if not cliente_existente:
-        raise HTTPException(status_code=404, detail="Cliente não encontrado.")
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Cliente não encontrado.")
 
     try:
         await db.delete(cliente_existente)
         await db.commit()
-        return {"status": "OK", "mensagem": "Cliente excluído com sucesso."}
-    except Exception as e:
+        # 204 No Content: indica sucesso sem corpo na resposta
+        return
+    except Exception:
         await db.rollback()
-        raise HTTPException(status_code=500, detail=f"Erro ao excluir cliente: {str(e)}")
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Erro ao excluir cliente.")

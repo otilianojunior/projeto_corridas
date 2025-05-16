@@ -11,7 +11,7 @@ grafo_cache = {}
 # Utiliza cache para evitar carregamentos repetidos.
 def carregar_grafo(cidade):
     nome_cidade = unidecode(cidade.split(",")[0].strip().lower().replace(" ", "-"))
-    grafo_path = f"resources/{nome_cidade}-map.graphml"
+    grafo_path = f"resources/{nome_cidade}.graphml"
 
     if not os.path.exists(grafo_path):
         raise FileNotFoundError(f"Arquivo não encontrado. Execute a rota gerar_mapa primeiro.")

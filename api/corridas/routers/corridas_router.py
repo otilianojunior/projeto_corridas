@@ -310,58 +310,6 @@ async def finalizar_corrida(corrida_id: int, taxas: TaxasAtualizadas, db: AsyncS
     }
 
 
-# Rota para editar os dados de uma corrida existente.
-@router.put("/editar/{corrida_id}", summary="Editar Corrida")
-async def editar_corrida(corrida_id: int, corrida_update: CorridaUpdate, db: AsyncSession = Depends(get_db)):
-    """Edita os dados de uma corrida existente."""
-    query = select(CorridaModel).where(CorridaModel.id == corrida_id)
-    result = await db.execute(query)
-    corrida = result.scalars().first()
-
-    if not corrida:
-        raise HTTPException(status_code=404, detail="Corrida não encontrada.")
-
-    try:
-        corrida.origem_rua = corrida_update.origem_rua
-        corrida.origem_bairro = corrida_update.origem_bairro
-        corrida.origem_longitude = corrida_update.origem_longitude
-        corrida.origem_latitude = corrida_update.origem_latitude
-        corrida.destino_rua = corrida_update.destino_rua
-        corrida.destino_bairro = corrida_update.destino_bairro
-        corrida.destino_longitude = corrida_update.destino_longitude
-        corrida.destino_latitude = corrida_update.destino_latitude
-        corrida.horario_pedido = corrida_update.horario_pedido
-        corrida.id_cliente = corrida_update.id_cliente
-        corrida.id_motorista = corrida_update.id_motorista
-        corrida.distancia_km = corrida_update.distancia_km
-        corrida.cordenadas_rota = corrida_update.cordenadas_rota
-        corrida.status = corrida_update.status
-
-        await db.commit()
-        await db.refresh(corrida)
-
-        return {"status": "OK", "corrida": {
-            "id": corrida.id,
-            "origem_rua": corrida.origem_rua,
-            "origem_bairro": corrida.origem_bairro,
-            "origem_longitude": corrida.origem_longitude,
-            "origem_latitude": corrida.origem_latitude,
-            "destino_rua": corrida.destino_rua,
-            "destino_bairro": corrida.destino_bairro,
-            "destino_longitude": corrida.destino_longitude,
-            "destino_latitude": corrida.destino_latitude,
-            "horario_pedido": corrida.horario_pedido,
-            "id_cliente": corrida.id_cliente,
-            "id_motorista": corrida.id_motorista,
-            "distancia_km": corrida.distancia_km,
-            "cordenadas_rota": corrida.cordenadas_rota,
-            "status": corrida.status,
-        }}
-    except Exception as e:
-        await db.rollback()
-        raise HTTPException(status_code=500, detail=f"Erro ao editar corrida: {str(e)}")
-
-
 # Rota para excluir uma corrida da API.
 @router.delete("/excluir/{corrida_id}", summary="Excluir Corrida", status_code=status.HTTP_204_NO_CONTENT)
 async def excluir_corrida(corrida_id: int, db: AsyncSession = Depends(get_db)):

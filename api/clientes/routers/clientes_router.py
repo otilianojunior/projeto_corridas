@@ -175,8 +175,6 @@ async def editar_cliente(cliente_id: int, cliente: ClienteUpdate, db: AsyncSessi
 
 
 # Rota para excluir um cliente do sistema.
-
-# Rota para excluir um cliente do sistema.
 @router.delete("/{cliente_id}", summary="Excluir Cliente", status_code=status.HTTP_204_NO_CONTENT)
 async def excluir_cliente(cliente_id: int, db: AsyncSession = Depends(get_db)):
     """Exclui um cliente do sistema."""

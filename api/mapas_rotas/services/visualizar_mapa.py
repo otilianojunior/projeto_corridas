@@ -2,22 +2,8 @@ import folium
 from folium.plugins import Fullscreen
 
 
+# Cria um mapa interativo com a rota entre origem e destino, incluindo marcadores e linha da rota.
 def criar_mapa_interativo(origem, destino, coordenadas_rota, distancia_km, origem_info, destino_info):
-    """
-    Cria um mapa interativo com a rota entre origem e destino.
-
-    Parâmetros:
-    - origem: (latitude, longitude) da origem.
-    - destino: (latitude, longitude) do destino.
-    - coordenadas_rota: Lista de pontos da rota [(lat, lon), ...].
-    - distancia_km: Distância total da rota em quilômetros.
-    - origem_info: Dicionário com detalhes da origem (nome da rua, bairro).
-    - destino_info: Dicionário com detalhes do destino (nome da rua, bairro).
-
-    Retorna:
-    - HTML renderizado do mapa interativo.
-    """
-
     # Validação de entradas
     if not origem or not destino or not coordenadas_rota:
         raise ValueError("Coordenadas insuficientes para criar o mapa.")

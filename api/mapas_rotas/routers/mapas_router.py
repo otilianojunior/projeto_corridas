@@ -23,10 +23,8 @@ BASE_DIR = Path(__file__).resolve().parents[2] / "resources"
 BASE_DIR.mkdir(parents=True, exist_ok=True)
 
 
+# Carrega um grafo de um arquivo local se existir, ou baixa da internet e salva localmente.
 def carregar_ou_baixar_grafo(cidade: str, caminho: str):
-    """
-    Carrega um grafo de um arquivo local se existir, ou baixa da internet e salva localmente.
-    """
     if os.path.exists(caminho):
         print(f"Carregando grafo de '{caminho}'...")
         grafo = ox.load_graphml(caminho)
@@ -38,10 +36,8 @@ def carregar_ou_baixar_grafo(cidade: str, caminho: str):
     return grafo
 
 
+# Extrai informações de endereço (rua, bairro, CEP) de uma string JSON.
 def extrair_dados(json_str: str):
-    """
-    Extrai informações de endereço (rua, bairro, CEP) de uma string JSON.
-    """
     try:
         dados = json.loads(json_str)
         endereco = dados.get("address", {})
@@ -54,10 +50,8 @@ def extrair_dados(json_str: str):
         return {"rua": None, "bairro": None, "cep": None}
 
 
+# Realiza geocodificação reversa para obter informações de endereço a partir de coordenadas.
 async def reverse_geocode(lat, lon, geolocator):
-    """
-    Realiza geocodificação reversa para obter informações de endereço a partir de coordenadas.
-    """
     def _reverso():
         try:
             location = geolocator.reverse((lat, lon), language='pt', timeout=10)
@@ -69,10 +63,8 @@ async def reverse_geocode(lat, lon, geolocator):
     return await asyncio.to_thread(_reverso)
 
 
+#  Processa um nó do grafo para obter suas coordenadas e dados de endereço.
 async def processar_no_grafo(node, grafo, geolocator, nodes_data):
-    """
-    Processa um nó do grafo para obter suas coordenadas e dados de endereço.
-    """
     lat = grafo.nodes[node]["y"]
     lon = grafo.nodes[node]["x"]
     raw_data = await reverse_geocode(lat, lon, geolocator)
@@ -83,12 +75,9 @@ async def processar_no_grafo(node, grafo, geolocator, nodes_data):
     nodes_data["raw_data"].append(raw_data)
 
 
+# Gera um grafo da cidade especificada, salva dados brutos e tratados em CSVs.
 @router.get("/gerar_mapa", status_code=status.HTTP_200_OK)
 async def gerar_mapa(cidade: str):
-    """
-    Gera um grafo da cidade especificada, salva dados brutos e tratados em CSVs.
-    Retorna os caminhos dos arquivos gerados.
-    """
     nome_cidade = unidecode(cidade.split(",")[0].strip().lower().replace(" ", "-"))
     os.makedirs(BASE_DIR, exist_ok=True)
 
@@ -174,11 +163,9 @@ async def gerar_mapa(cidade: str):
         raise HTTPException(status_code=500, detail=f"Erro ao processar dados do mapa: {str(e)}")
 
 
+# Seleciona dois pontos aleatórios (origem e destino) de uma cidade para criar uma rota.
 @router.get("/coordenadas_aleatorias", status_code=status.HTTP_200_OK)
 async def coordenadas_aleatorias_para_rota(cidade: str):
-    """
-    Seleciona dois pontos aleatórios (origem e destino) de uma cidade para criar uma rota.
-    """
     nome_cidade = unidecode(cidade.strip().lower().replace(" ", "-"))
     csv_path = os.path.join(BASE_DIR, f"{nome_cidade}-localizacoes.csv")
 
@@ -211,11 +198,9 @@ async def coordenadas_aleatorias_para_rota(cidade: str):
     }
 
 
+# Gera e retorna um mapa interativo com a rota de uma corrida específica.
 @router.get("/visualizar_corrida", status_code=status.HTTP_200_OK, summary="Visualizar mapa interativo de uma corrida")
 async def visualizar_mapa_de_corrida(corrida_id: int, db: Session = Depends(get_db)):
-    """
-    Gera e retorna um mapa interativo com a rota de uma corrida específica.
-    """
     query = select(CorridaModel).filter(CorridaModel.id == corrida_id)
     result = await db.execute(query)
     corrida = result.scalars().first()

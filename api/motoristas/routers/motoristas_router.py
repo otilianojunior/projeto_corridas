@@ -13,6 +13,7 @@ from sqlalchemy.orm import selectinload
 router = APIRouter(prefix="/motoristas", tags=["Motoristas"])
 
 
+# Modelo de entrada para criação de motorista
 class MotoristaCreate(BaseModel):
     nome: str
     email: str
@@ -22,6 +23,7 @@ class MotoristaCreate(BaseModel):
     id_carro: int
 
 
+# Modelo de entrada para atualização de motorista
 class MotoristaUpdate(BaseModel):
     nome: str
     email: str
@@ -31,9 +33,9 @@ class MotoristaUpdate(BaseModel):
     id_carro: int
 
 
+# Lista todos os motoristas cadastrados, incluindo os dados do carro associado.
 @router.get("/listar", summary="Listar motoristas")
 async def listar_motoristas(db: AsyncSession = Depends(get_db)):
-    """Lista todos os motoristas cadastrados na API, incluindo dados do carro."""
     query = select(MotoristaModel).options(selectinload(MotoristaModel.carro))
     result = await db.execute(query)
     motoristas = result.scalars().all()
@@ -63,9 +65,9 @@ async def listar_motoristas(db: AsyncSession = Depends(get_db)):
     ]
 
 
+# Lista motoristas disponíveis (status 'disponivel'), incluindo os dados do carro associado.
 @router.get("/listar_disponiveis", summary="Listar motoristas disponíveis")
 async def listar_motoristas_disponiveis(db: AsyncSession = Depends(get_db)):
-    """Lista todos os motoristas disponíveis cadastrados na API, incluindo dados do carro."""
     query = (
         select(MotoristaModel)
         .where(MotoristaModel.status == "disponivel")
@@ -99,9 +101,9 @@ async def listar_motoristas_disponiveis(db: AsyncSession = Depends(get_db)):
     ]
 
 
+# Cria um novo motorista com os dados fornecidos e associa a um carro existente.
 @router.post("/", status_code=status.HTTP_201_CREATED, summary="Criar motorista")
 async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends(get_db)):
-    """Cria um novo motorista na API."""
     motorista.cpf = re.sub(r"\D", "", motorista.cpf)
 
     query = select(MotoristaModel).where(
@@ -170,9 +172,9 @@ async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends
         )
 
 
+# Atualiza os dados de um motorista existente com base no ID fornecido.
 @router.put("/{motorista_id}", summary="Editar motorista")
 async def editar_motorista(motorista_id: int, motorista: MotoristaUpdate, db: AsyncSession = Depends(get_db)):
-    """Edita os dados de um motorista existente."""
     motorista.cpf = re.sub(r"\D", "", motorista.cpf)
 
     query = select(MotoristaModel).where(MotoristaModel.id == motorista_id)
@@ -217,9 +219,9 @@ async def editar_motorista(motorista_id: int, motorista: MotoristaUpdate, db: As
         raise HTTPException(status_code=500, detail=f"Erro ao editar motorista: {str(e)}")
 
 
+# Exclui um motorista existente com base no ID fornecido.
 @router.delete("/{motorista_id}", summary="Excluir motorista")
 async def excluir_motorista(motorista_id: int, db: AsyncSession = Depends(get_db)):
-    """Exclui um motorista da API."""
     query = select(MotoristaModel).where(MotoristaModel.id == motorista_id)
     result = await db.execute(query)
     motorista = result.scalars().first()

@@ -11,6 +11,7 @@ allembic.ini
 
 # Ignorar diretórios de cache do Python
 cache/
+.pyc
 __pycache__
 **/__pycache__/
 

@@ -166,7 +166,7 @@ async def gerar_mapa(cidade: str):
 # Seleciona dois pontos aleatórios (origem e destino) de uma cidade para criar uma rota.
 @router.get("/coordenadas_aleatorias", status_code=status.HTTP_200_OK)
 async def coordenadas_aleatorias_para_rota(cidade: str):
-    nome_cidade = unidecode(cidade.strip().lower().replace(" ", "-"))
+    nome_cidade = unidecode(cidade.split(",")[0].strip().lower().replace(" ", "-"))
     csv_path = os.path.join(BASE_DIR, f"{nome_cidade}_enderecos_tratados.csv")
 
     if not os.path.exists(csv_path):

@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 import aiohttp
 
 API_URL = "http://127.0.0.1:8000"
-CIDADE = "Vitória da Conquista"
+CIDADE = "Vitória da Conquista, Bahia"
 TIMEOUT = 120
 MAX_CONCORRENTES = 5
 

@@ -18,6 +18,16 @@ class ClienteCreate(BaseModel):
     telefone: str
     cpf: str
 
+    class Config:
+        schema_extra = {
+            "example": {
+                "nome": "João da Silva",
+                "email": "joao.silva@example.com",
+                "telefone": "(77) 99999-1234",
+                "cpf": "123.456.789-09"
+            }
+        }
+
 
 # Modelo de entrada para edição de cliente
 class ClienteUpdate(BaseModel):
@@ -25,6 +35,16 @@ class ClienteUpdate(BaseModel):
     email: str
     telefone: str
     cpf: str
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "nome": "João da Silva",
+                "email": "joao.silva@example.com",
+                "telefone": "(77) 99999-1234",
+                "cpf": "123.456.789-09"
+            }
+        }
 
 
 # Função para validar o CPF, removendo formatação e verificando se contém 11 dígitos numéricos.

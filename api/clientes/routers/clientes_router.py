@@ -27,6 +27,7 @@ class ClienteUpdate(BaseModel):
     cpf: str
 
 
+# Função para validar o CPF, removendo formatação e verificando se contém 11 dígitos numéricos.
 def validar_cpf(cpf: str):
     """Remove formatação e valida CPF"""
     cpf_limpo = re.sub(r"\D", "", cpf)
@@ -35,6 +36,7 @@ def validar_cpf(cpf: str):
     return cpf_limpo
 
 
+# Rota para listar todos os clientes cadastrados no sistema.
 @router.get("/listar/", summary="Listar Clientes")
 async def listar_clientes(db: AsyncSession = Depends(get_db)):
     """Lista todos os clientes cadastrados na API"""
@@ -51,6 +53,7 @@ async def listar_clientes(db: AsyncSession = Depends(get_db)):
     ]
 
 
+# Rota para listar clientes que não possuem corridas ativas no momento.
 @router.get("/listar_sem_corrida/", summary="Listar Clientes sem corridas ativas")
 async def listar_clientes_sem_corrida(db: AsyncSession = Depends(get_db)):
     """Lista clientes que não possuem corridas ativas"""
@@ -72,6 +75,7 @@ async def listar_clientes_sem_corrida(db: AsyncSession = Depends(get_db)):
     ]
 
 
+# Rota para criar um novo cliente no sistema.
 @router.post("/", status_code=status.HTTP_201_CREATED, summary="Criar Cliente")
 async def criar_cliente(cliente: ClienteCreate, db: AsyncSession = Depends(get_db)):
     """Cria um novo cliente na API"""
@@ -106,6 +110,7 @@ async def criar_cliente(cliente: ClienteCreate, db: AsyncSession = Depends(get_d
     }}
 
 
+# Rota para editar os dados de um cliente existente.
 @router.put("/{cliente_id}", summary="Editar Cliente")
 async def editar_cliente(cliente_id: int, cliente: ClienteUpdate, db: AsyncSession = Depends(get_db)):
     """Edita os dados de um cliente existente."""
@@ -140,6 +145,7 @@ async def editar_cliente(cliente_id: int, cliente: ClienteUpdate, db: AsyncSessi
         raise HTTPException(status_code=500, detail=f"Erro ao editar cliente: {str(e)}")
 
 
+# Rota para excluir um cliente do sistema.
 @router.delete("/{cliente_id}", summary="Excluir Cliente")
 async def excluir_cliente(cliente_id: int, db: AsyncSession = Depends(get_db)):
     """Exclui um cliente da API."""

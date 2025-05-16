@@ -5,26 +5,27 @@ from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
+# Carrega as variáveis de ambiente do arquivo .env
 load_dotenv()
 
-# 🔄 Configuração do banco de dados a partir do .env
+# Configuração do banco de dados a partir das variáveis de ambiente
 user = os.getenv("SQLALCHEMY_USER")
 password = os.getenv("SQLALCHEMY_PASSWORD")
 host = os.getenv("SQLALCHEMY_HOST")
 database = os.getenv("SQLALCHEMY_DATABASE")
 
-# 🔥 Alterando para conexão assíncrona
+# Define a URL de conexão assíncrona com o banco de dados MySQL
 SQLALCHEMY_DATABASE_URL = f"mysql+aiomysql://{user}:{password}@{host}/{database}"
 
-# 🚀 Criando o engine assíncrono
+# Cria o engine assíncrono para interagir com o banco de dados
 engine = create_async_engine(SQLALCHEMY_DATABASE_URL, echo=False)
 
-# 🔄 Criando a sessão assíncrona
+# Configura o gerenciador de sessões assíncronas
 SessionLocal = sessionmaker(
     bind=engine,
     class_=AsyncSession,
     expire_on_commit=False,
 )
 
-# 📌 Base declarativa para os modelos
+# Define a base declarativa para os modelos ORM
 Base = declarative_base()

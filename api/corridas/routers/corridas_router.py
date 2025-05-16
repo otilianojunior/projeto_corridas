@@ -110,6 +110,7 @@ class CorridaUpdate(BaseModel):
     status: str
 
 
+# Rota para listar todas as corridas, independente do status.
 @router.get("/listar", summary="Listar todas as corridas")
 async def listar_todas_corridas(db: AsyncSession = Depends(get_db)):
     """Lista todas as corridas, independente do status."""
@@ -145,8 +146,7 @@ async def listar_todas_corridas(db: AsyncSession = Depends(get_db)):
     }
 
 
-# Rotas existentes
-
+# Rota para listar todas as corridas disponíveis no status 'solicitado'.
 @router.get("/listar_disponiveis", summary="Listar corridas disponíveis")
 async def listar_corridas_disponiveis(db: AsyncSession = Depends(get_db)):
     """Lista todas as corridas disponíveis no status 'solicitado'"""
@@ -179,6 +179,7 @@ async def listar_corridas_disponiveis(db: AsyncSession = Depends(get_db)):
     }
 
 
+# Rota para solicitar uma nova corrida.
 @router.post("/solicitar", response_model=CorridaResponse, status_code=status.HTTP_201_CREATED,
              summary="Solicitar nova corrida")
 async def solicitar_corrida(corrida_data: CorridaCreate, db: AsyncSession = Depends(get_db)):
@@ -262,6 +263,7 @@ async def solicitar_corrida(corrida_data: CorridaCreate, db: AsyncSession = Depe
         )
 
 
+# Rota para aplicar taxas e finalizar uma corrida.
 @router.put("/finalizar_corrida/{corrida_id}", status_code=status.HTTP_200_OK,
             summary="Aplicar taxas e finalizar corrida")
 async def finalizar_corrida(corrida_id: int, taxas: TaxasAtualizadas, db: AsyncSession = Depends(get_db)):
@@ -308,6 +310,7 @@ async def finalizar_corrida(corrida_id: int, taxas: TaxasAtualizadas, db: AsyncS
     }
 
 
+# Rota para editar os dados de uma corrida existente.
 @router.put("/editar/{corrida_id}", summary="Editar Corrida")
 async def editar_corrida(corrida_id: int, corrida_update: CorridaUpdate, db: AsyncSession = Depends(get_db)):
     """Edita os dados de uma corrida existente."""
@@ -359,6 +362,7 @@ async def editar_corrida(corrida_id: int, corrida_update: CorridaUpdate, db: Asy
         raise HTTPException(status_code=500, detail=f"Erro ao editar corrida: {str(e)}")
 
 
+# Rota para excluir uma corrida da API.
 @router.delete("/excluir/{corrida_id}", summary="Excluir Corrida", status_code=status.HTTP_204_NO_CONTENT)
 async def excluir_corrida(corrida_id: int, db: AsyncSession = Depends(get_db)):
     """Exclui uma corrida da API."""

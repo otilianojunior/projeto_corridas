@@ -1,4 +1,5 @@
 import os
+
 import networkx as nx
 import osmnx as ox
 from unidecode import unidecode
@@ -6,7 +7,8 @@ from unidecode import unidecode
 # Carregar grafo de cidade uma vez (armazenando no cache)
 grafo_cache = {}
 
-
+# Função para carregar o grafo de uma cidade a partir de um arquivo GraphML.
+# Utiliza cache para evitar carregamentos repetidos.
 def carregar_grafo(cidade):
     nome_cidade = unidecode(cidade.split(",")[0].strip().lower().replace(" ", "-"))
     grafo_path = f"resources/{nome_cidade}-map.graphml"
@@ -20,7 +22,8 @@ def carregar_grafo(cidade):
 
     return grafo_cache[nome_cidade]
 
-
+# Função para calcular a rota mais curta entre dois pontos (latitude e longitude) em uma cidade.
+# Retorna a rota, as coordenadas da rota e a distância total em quilômetros.
 def calcular_rota_mais_curta(cidade, origem_latitude, origem_longitude, destino_latitude, destino_longitude):
     grafo = carregar_grafo(cidade)
 

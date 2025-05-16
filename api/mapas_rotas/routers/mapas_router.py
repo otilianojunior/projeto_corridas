@@ -2,6 +2,8 @@ import asyncio
 import io
 import json
 import os
+from datetime import datetime, timedelta
+from pathlib import Path
 
 import osmnx as ox
 import pandas as pd
@@ -14,15 +16,17 @@ from mapas_rotas.services.visualizar_mapa import criar_mapa_interativo
 from sqlalchemy.future import select
 from sqlalchemy.orm import Session
 from unidecode import unidecode
-from pathlib import Path
-from datetime import datetime, timedelta
-router = APIRouter(prefix="/mapas_rotas", tags=["Mapas"])
 
+router = APIRouter(prefix="/mapas_rotas", tags=["Mapas"])
 
 BASE_DIR = Path(__file__).resolve().parents[2] / "resources"
 BASE_DIR.mkdir(parents=True, exist_ok=True)
 
+
 def carregar_ou_baixar_grafo(cidade: str, caminho: str):
+    """
+    Carrega um grafo de um arquivo local se existir, ou baixa da internet e salva localmente.
+    """
     if os.path.exists(caminho):
         print(f"Carregando grafo de '{caminho}'...")
         grafo = ox.load_graphml(caminho)
@@ -35,6 +39,9 @@ def carregar_ou_baixar_grafo(cidade: str, caminho: str):
 
 
 def extrair_dados(json_str: str):
+    """
+    Extrai informações de endereço (rua, bairro, CEP) de uma string JSON.
+    """
     try:
         dados = json.loads(json_str)
         endereco = dados.get("address", {})
@@ -48,6 +55,9 @@ def extrair_dados(json_str: str):
 
 
 async def reverse_geocode(lat, lon, geolocator):
+    """
+    Realiza geocodificação reversa para obter informações de endereço a partir de coordenadas.
+    """
     def _reverso():
         try:
             location = geolocator.reverse((lat, lon), language='pt', timeout=10)
@@ -55,10 +65,14 @@ async def reverse_geocode(lat, lon, geolocator):
         except Exception as e:
             print(f"Erro geocodificação reversa: {e}")
             return ""
+
     return await asyncio.to_thread(_reverso)
 
 
 async def processar_no_grafo(node, grafo, geolocator, nodes_data):
+    """
+    Processa um nó do grafo para obter suas coordenadas e dados de endereço.
+    """
     lat = grafo.nodes[node]["y"]
     lon = grafo.nodes[node]["x"]
     raw_data = await reverse_geocode(lat, lon, geolocator)
@@ -71,7 +85,10 @@ async def processar_no_grafo(node, grafo, geolocator, nodes_data):
 
 @router.get("/gerar_mapa", status_code=status.HTTP_200_OK)
 async def gerar_mapa(cidade: str):
-    """Gera grafo e CSVs (bruto e tratado) da cidade especificada."""
+    """
+    Gera um grafo da cidade especificada, salva dados brutos e tratados em CSVs.
+    Retorna os caminhos dos arquivos gerados.
+    """
     nome_cidade = unidecode(cidade.split(",")[0].strip().lower().replace(" ", "-"))
     os.makedirs(BASE_DIR, exist_ok=True)
 
@@ -112,8 +129,8 @@ async def gerar_mapa(cidade: str):
         }
 
         for i in range(0, total_nodes, 2):
-            lote = nodes[i:i+2]
-            print(f"Processando lote {i//2 + 1}/{total_lotes} - nós: {lote}")
+            lote = nodes[i:i + 2]
+            print(f"Processando lote {i // 2 + 1}/{total_lotes} - nós: {lote}")
             tasks = [processar_no_grafo(node, grafo, geolocator, nodes_data) for node in lote]
             await asyncio.gather(*tasks)
             await asyncio.sleep(1)
@@ -157,15 +174,17 @@ async def gerar_mapa(cidade: str):
         raise HTTPException(status_code=500, detail=f"Erro ao processar dados do mapa: {str(e)}")
 
 
-
 @router.get("/coordenadas_aleatorias", status_code=status.HTTP_200_OK)
 async def coordenadas_aleatorias_para_rota(cidade: str):
-    """Seleciona pontos de origem e destino aleatórios para uma cidade."""
+    """
+    Seleciona dois pontos aleatórios (origem e destino) de uma cidade para criar uma rota.
+    """
     nome_cidade = unidecode(cidade.strip().lower().replace(" ", "-"))
     csv_path = os.path.join(BASE_DIR, f"{nome_cidade}-localizacoes.csv")
 
     if not os.path.exists(csv_path):
-        raise HTTPException(status_code=404, detail="Arquivo de localizações não encontrado para a cidade especificada.")
+        raise HTTPException(status_code=404,
+                            detail="Arquivo de localizações não encontrado para a cidade especificada.")
 
     df_nodes = await asyncio.to_thread(pd.read_csv, csv_path)
     df_nodes_filtrado = df_nodes[df_nodes["bairro"] != "Desconhecido"]
@@ -194,7 +213,9 @@ async def coordenadas_aleatorias_para_rota(cidade: str):
 
 @router.get("/visualizar_corrida", status_code=status.HTTP_200_OK, summary="Visualizar mapa interativo de uma corrida")
 async def visualizar_mapa_de_corrida(corrida_id: int, db: Session = Depends(get_db)):
-    """Gera e retorna um mapa interativo com a rota de uma corrida."""
+    """
+    Gera e retorna um mapa interativo com a rota de uma corrida específica.
+    """
     query = select(CorridaModel).filter(CorridaModel.id == corrida_id)
     result = await db.execute(query)
     corrida = result.scalars().first()

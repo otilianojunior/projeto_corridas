@@ -1,6 +1,7 @@
 import folium
 from folium.plugins import Fullscreen
 
+
 def criar_mapa_interativo(origem, destino, coordenadas_rota, distancia_km, origem_info, destino_info):
     """
     Cria um mapa interativo com a rota entre origem e destino.

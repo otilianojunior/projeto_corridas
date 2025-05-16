@@ -1,15 +1,20 @@
-import requests
+import argparse
 import random
 import time
-import argparse
+
+import requests
 from faker import Faker
 
 API_URL = "http://127.0.0.1:8000"
 fake = Faker("pt_BR")
 
+
+# Formata o número de CPF removendo caracteres especiais.
 def formatar_cpf(cpf: str) -> str:
     return cpf.replace(".", "").replace("-", "")
 
+
+# Gera dados fictícios para um motorista utilizando o Faker.
 def gerar_dados_motorista(status: str = "disponivel") -> dict:
     return {
         "nome": fake.name(),
@@ -19,6 +24,8 @@ def gerar_dados_motorista(status: str = "disponivel") -> dict:
         "status": status
     }
 
+
+# Realiza a criação dos motoristas na API com validações.
 def criar_motoristas(total: int, status: str = "disponivel") -> int:
     criados = 0
     tentativas = 0
@@ -52,11 +59,9 @@ def criar_motoristas(total: int, status: str = "disponivel") -> int:
 
     return criados
 
+
+# Executa todo o processo de cadastro de motoristas com análise de resultados.
 def run_inserir_motoristas(total: int, status: str = "disponivel") -> int:
-    """
-    Executa o processo de cadastro de motoristas, exibindo mensagens de acompanhamento e resumo.
-    Essa função pode ser chamada tanto diretamente quanto por outro módulo.
-    """
     inicio = time.time()
     print("\n🧍 Iniciando cadastro de motoristas...")
     motoristas_criados = criar_motoristas(total, status)
@@ -68,6 +73,7 @@ def run_inserir_motoristas(total: int, status: str = "disponivel") -> int:
     print(f"⏱️ Tempo total: {int(minutos)} min {segundos:.2f} seg.")
 
     return motoristas_criados
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Cadastro de motoristas na API")

@@ -4,6 +4,7 @@ import pandas as pd
 import pdfplumber
 
 
+# Remove duplicatas nos nomes das colunas de uma tabela.
 def remover_duplicatas_colunas(colunas):
     ocorrencias = {}
     resultado = []
@@ -20,6 +21,7 @@ def remover_duplicatas_colunas(colunas):
     return resultado
 
 
+# Extrai tabelas padrão do PDF, ajustando colunas e inserindo metadados adicionais.
 def extrair_tabelas_padrão(caminho_pdf: str, ano: int) -> pd.DataFrame:
     tabelas = []
 
@@ -36,14 +38,14 @@ def extrair_tabelas_padrão(caminho_pdf: str, ano: int) -> pd.DataFrame:
     return pd.concat(tabelas, ignore_index=True) if tabelas else pd.DataFrame()
 
 
+# Salva um DataFrame em um arquivo CSV.
 def salvar_como_csv(df: pd.DataFrame, caminho_csv: str):
-    """Salva um DataFrame como arquivo CSV."""
     df.to_csv(caminho_csv, index=False)
     print(f"[✔] CSV gerado: {caminho_csv}")
 
 
+# Processa PDFs em um diretório para diferentes anos e extrai tabelas padrão.
 def processar_pdfs(caminho_diretorio: str = "./", anos: range = range(2015, 2026)):
-    """Processa todos os PDFs da pasta (exceto 2021)."""
     for ano in anos:
         if ano == 2021:
             continue
@@ -65,8 +67,8 @@ def processar_pdfs(caminho_diretorio: str = "./", anos: range = range(2015, 2026
             print(f"[!] Nenhuma tabela encontrada em {nome_pdf}")
 
 
+# Extrai e salva a tabela específica do PDF de 2021, com uma estrutura diferente.
 def extrair_tabela_2021(caminho_pdf: str, caminho_csv: str = "data/carros/tabela_pbev_2021.csv") -> pd.DataFrame:
-    """Extrai e salva a tabela do PDF de 2021, que tem estrutura diferente."""
     dados = []
 
     with pdfplumber.open(caminho_pdf) as pdf:
@@ -84,6 +86,7 @@ def extrair_tabela_2021(caminho_pdf: str, caminho_csv: str = "data/carros/tabela
     return df
 
 
+# Ponto de entrada principal para processamento dos PDFs e extração específica para 2021.
 if __name__ == "__main__":
     processar_pdfs()
     extrair_tabela_2021("PBEV-2021.pdf")

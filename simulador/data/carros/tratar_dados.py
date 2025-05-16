@@ -1,6 +1,9 @@
 import os
+
 import pandas as pd
 
+
+# Trata dados de acordo com o modelo 1, selecionando e ajustando colunas específicas.
 def tratar_modelo_1(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
     df = pd.read_csv(caminho_entrada, skiprows=3)
     if df.shape[1] > 25:
@@ -18,6 +21,7 @@ def tratar_modelo_1(caminho_entrada: str, caminho_saida: str = None) -> pd.DataF
         df.to_csv(caminho_saida, index=False)
     return df
 
+# Trata dados de acordo com o modelo 2, com ajustes em colunas específicas.
 def tratar_modelo_2(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
     df = pd.read_csv(caminho_entrada, skiprows=3)
     if df.shape[1] > 25:
@@ -35,6 +39,7 @@ def tratar_modelo_2(caminho_entrada: str, caminho_saida: str = None) -> pd.DataF
         df.to_csv(caminho_saida, index=False)
     return df
 
+# Trata dados do modelo 3, ajustando colunas e fixando o ano.
 def tratar_modelo_3(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
     df = pd.read_csv(caminho_entrada, skiprows=14)
     colunas = [df.columns[i] for i in [0, 1, 2, 3, 4, 5, 6, 7, 9, 16, 17, 18, 19]]
@@ -50,6 +55,7 @@ def tratar_modelo_3(caminho_entrada: str, caminho_saida: str = None) -> pd.DataF
         df.to_csv(caminho_saida, index=False)
     return df
 
+# Trata dados do modelo 4, ajustando para a estrutura específica.
 def tratar_modelo_4(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
     df = pd.read_csv(caminho_entrada, skiprows=2)
     colunas = [df.columns[i] for i in [0, 1, 2, 3, 4, 6, 7, 8, 9, 17, 18, 19, 20, 29]]
@@ -65,6 +71,7 @@ def tratar_modelo_4(caminho_entrada: str, caminho_saida: str = None) -> pd.DataF
         df.to_csv(caminho_saida, index=False)
     return df
 
+# Trata dados do modelo 5, ajustando colunas e formatos.
 def tratar_modelo_5(caminho_entrada: str, caminho_saida: str = None) -> pd.DataFrame:
     df = pd.read_csv(caminho_entrada, skiprows=3)
     colunas = [df.columns[i] for i in [0, 1, 2, 3, 4, 6, 7, 8, 9, 17, 18, 19, 20, 29]]
@@ -80,7 +87,7 @@ def tratar_modelo_5(caminho_entrada: str, caminho_saida: str = None) -> pd.DataF
         df.to_csv(caminho_saida, index=False)
     return df
 
-
+# Une múltiplos arquivos CSV em um único DataFrame.
 def unir_tabelas(arquivos: list, caminho_saida: str = "dados_tratados.csv") -> pd.DataFrame:
     tabelas = []
     for caminho in arquivos:
@@ -99,7 +106,7 @@ def unir_tabelas(arquivos: list, caminho_saida: str = "dados_tratados.csv") -> p
     print(f"[✔] Arquivo unido salvo em: {caminho_saida} ({len(tabela_final)} linhas)")
     return tabela_final
 
-
+# Padroniza dados específicos, como combustível e transmissão.
 def padronizar_dados(df: pd.DataFrame, caminho_saida: str = "data/carros/dados_tratados.csv") -> pd.DataFrame:
     df = df[~df['combustivel'].str.upper().isin(["E", "ELÉTRICO"])]
 
@@ -139,7 +146,7 @@ def padronizar_dados(df: pd.DataFrame, caminho_saida: str = "data/carros/dados_t
     print(f"[✔] Arquivo padronizado salvo em: {caminho_saida} ({len(df)} linhas)")
     return df
 
-
+# Converte valores e ajusta campos textuais do DataFrame.
 def tratar_valores(df: pd.DataFrame) -> pd.DataFrame:
     colunas_km = [
         'km_etanol_cidade', 'km_etanol_estrada',
@@ -154,21 +161,21 @@ def tratar_valores(df: pd.DataFrame) -> pd.DataFrame:
         'transmissao', 'ar_condicionado', 'direcao', 'combustivel'
     ]
     for coluna in colunas_texto:
-        df.loc[:,coluna] = df[coluna].astype(str).str.replace(r'\n', '', regex=True)
-        df.loc[:,coluna] = df[coluna].str.replace(r'\xad', '', regex=True)
-        df.loc[:,coluna] = df[coluna].str.strip().str.lower()
+        df.loc[:, coluna] = df[coluna].astype(str).str.replace(r'\n', '', regex=True)
+        df.loc[:, coluna] = df[coluna].str.replace(r'\xad', '', regex=True)
+        df.loc[:, coluna] = df[coluna].str.strip().str.lower()
 
-    df.loc[:,'transmissao'] = df['transmissao'].fillna('n/d')
-    df.loc[:,'ar_condicionado'] = df['ar_condicionado'].fillna('n/d')
-    df.loc[:,'direcao'] = df['direcao'].fillna('não informado')
+    df.loc[:, 'transmissao'] = df['transmissao'].fillna('n/d')
+    df.loc[:, 'ar_condicionado'] = df['ar_condicionado'].fillna('n/d')
+    df.loc[:, 'direcao'] = df['direcao'].fillna('não informado')
 
-    df.loc[:,'marca'] = df['marca'].replace('vw', 'volkswagen')
+    df.loc[:, 'marca'] = df['marca'].replace('vw', 'volkswagen')
 
     return df
 
-
+# Filtra modelos específicos e salva o resultado.
 def filtrar_modelos(df: pd.DataFrame, modelos: list,
-    caminho_saida: str = "data/carros/dados_tratados_filtrado.csv") -> pd.DataFrame:
+                    caminho_saida: str = "data/carros/dados_tratados_filtrado.csv") -> pd.DataFrame:
     df_filtrado = df[df['modelo'].isin(modelos)]
     df_filtrado.to_csv(caminho_saida, index=False)
     print(f"[✔] Arquivo filtrado salvo em: {caminho_saida} ({len(df_filtrado)} linhas)")

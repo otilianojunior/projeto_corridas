@@ -1,8 +1,9 @@
-import requests
-import pandas as pd
-import time
 import argparse
 import os
+import time
+
+import pandas as pd
+import requests
 
 # Importações diretas dos scripts de geração de dados
 from data.carros import extrair_tabelas_pbev, tratar_dados
@@ -14,10 +15,8 @@ API_URL = "http://127.0.0.1:8000"
 ARQUIVO_CSV = "data/carros/dados_tratados_filtrado.csv"
 
 
+# Verifica se o arquivo CSV de carros existe ou gera os dados necessários.
 def verificar_ou_gerar_csv():
-    """
-    Verifica se o CSV de carros existe. Caso não exista, executa os scripts necessários para gerá-lo.
-    """
     if not os.path.exists(ARQUIVO_CSV):
         print("📂 Arquivo CSV não encontrado. Gerando dados...")
         try:
@@ -29,18 +28,14 @@ def verificar_ou_gerar_csv():
             exit(1)
 
 
+# Converte uma linha do DataFrame em um dicionário, substituindo valores NaN por None.
 def gerar_dados_carro(row: pd.Series) -> dict:
-    """
-    Converte uma linha do DataFrame em um dicionário, substituindo NaNs por None.
-    """
     row = row.where(pd.notna(row), None)
     return row.to_dict()
 
 
+# Processa linhas do CSV e envia os dados para a API, retornando o número de carros cadastrados.
 def cadastrar_carros(quantidade: int = None) -> int:
-    """
-    Lê o CSV, envia os dados dos carros para a API e retorna a quantidade de carros cadastrados com sucesso.
-    """
     try:
         df_carros = pd.read_csv(ARQUIVO_CSV)
         if quantidade:
@@ -68,11 +63,8 @@ def cadastrar_carros(quantidade: int = None) -> int:
         return 0
 
 
+# Executa o processo de cadastro de carros, exibindo mensagens e resultados do processo.
 def run_inserir_carros(quantidade: int = None) -> int:
-    """
-    Executa o processo de verificação, cadastro de carros e imprime o resumo do processo.
-    Essa função pode ser chamada tanto quando o script é executado diretamente quanto por outro módulo.
-    """
     verificar_ou_gerar_csv()
 
     tempo_inicio = time.time()
@@ -91,6 +83,6 @@ def run_inserir_carros(quantidade: int = None) -> int:
 # Bloco de execução para quando o script é executado diretamente
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Inserir carros na API a partir de um CSV")
-    parser.add_argument("--carros",type=int,default=None,help="Quantidade padrão: todos)")
+    parser.add_argument("--carros", type=int, default=None, help="Quantidade padrão: todos)")
     args = parser.parse_args()
     run_inserir_carros(quantidade=args.carros)

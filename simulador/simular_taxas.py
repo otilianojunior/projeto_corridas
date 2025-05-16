@@ -1,10 +1,11 @@
+import argparse
 import asyncio
-import aiohttp
 import random
 import time
-import argparse
-from decimal import Decimal
 from datetime import datetime
+from decimal import Decimal
+
+import aiohttp
 
 API_URL = "http://0.0.0.0:8000"
 TIMEOUT = 120
@@ -13,8 +14,8 @@ MAX_CONCORRENTES = 5
 semaforo = asyncio.Semaphore(MAX_CONCORRENTES)
 
 
+# Simula aplicação de taxas em corridas, considerando condições como horário de pico.
 def obter_taxas_por_nivel(nivel: int) -> dict:
-    # Valores em porcentagem para taxas (ex.: 0.10 representa 10%)
     niveis = {
         1: {"taxa_manutencao": 0.10, "taxa_limpeza": 0.00, "taxa_pico": 0.00, "taxa_noturna": 0.00,
             "taxa_excesso_corridas": 0.00},
@@ -26,13 +27,13 @@ def obter_taxas_por_nivel(nivel: int) -> dict:
             "taxa_excesso_corridas": 0.40},
         5: {"taxa_manutencao": 0.30, "taxa_limpeza": 1.00, "taxa_pico": 0.70, "taxa_noturna": 0.50,
             "taxa_excesso_corridas": 0.50},
-        # Para cancelamento (nível 6), mantemos a lógica fixa (valores absolutos)
         6: {"taxa_manutencao": 1.00, "taxa_cancelamento": 4.00, "taxa_limpeza": 0.00, "taxa_pico": 0.00,
             "taxa_noturna": 0.00, "taxa_excesso_corridas": 0.00}
     }
     return niveis.get(nivel, niveis[3])
 
 
+# Define lógica para horários de pico.
 def horario_pico(horario: str) -> bool:
     try:
         data_hora = datetime.strptime(horario, "%Y-%m-%dT%H:%M:%S.%f%z")
@@ -46,6 +47,7 @@ def horario_pico(horario: str) -> bool:
     )
 
 
+# Avalia se o horário está no período noturno.
 def eh_horario_noturno(horario: str) -> bool:
     data_hora = datetime.strptime(horario, "%Y-%m-%dT%H:%M:%S")
     hora = data_hora.time()
@@ -53,10 +55,12 @@ def eh_horario_noturno(horario: str) -> bool:
                                                                                                  "%H:%M:%S").time()
 
 
+# Verifica se há excesso de corridas no horário informado.
 def excesso_de_corridas(horario: str, corridas) -> bool:
     return sum(1 for corrida in corridas if corrida["horario_pedido"] == horario) > 10
 
 
+# Lista corridas disponíveis através da API.
 async def listar_corridas_disponiveis(session):
     url = f"{API_URL}/corridas/listar_disponiveis"
     async with session.get(url, timeout=TIMEOUT) as resposta:
@@ -66,12 +70,13 @@ async def listar_corridas_disponiveis(session):
         return []
 
 
+# Calcula tarifa base por quilômetro considerando consumo.
 async def calcular_tarifa_base_por_km(consumo) -> Decimal:
     preco_combustivel = Decimal("6")
-    # Retorna o valor base por km (sem acréscimo de taxas)
     return preco_combustivel / Decimal(str(consumo)) + Decimal("0.50")
 
 
+# Aplica taxas a uma corrida seguindo regras específicas.
 async def aplicar_taxas_corrida(session, corrida, todas_corridas):
     async with semaforo:
         id_corrida = corrida["id"]
@@ -84,7 +89,6 @@ async def aplicar_taxas_corrida(session, corrida, todas_corridas):
             "km_etanol_cidade", 10)
 
         if nivel_taxa == 6:
-            # Para cancelamento, mantemos a lógica fixa
             taxas_aplicadas = {
                 "taxa_manutencao": Decimal(str(taxas["taxa_manutencao"])),
                 "taxa_cancelamento": Decimal(str(taxas.get("taxa_cancelamento", 0)))
@@ -94,12 +98,10 @@ async def aplicar_taxas_corrida(session, corrida, todas_corridas):
             preco_por_km = preco_total
         else:
             tarifa_base = await calcular_tarifa_base_por_km(consumo)
-            # Inicialmente, aplicamos as taxas fixas (manutenção e limpeza)
             taxas_aplicadas = {
                 "taxa_manutencao": Decimal(str(taxas["taxa_manutencao"])),
                 "taxa_limpeza": Decimal(str(taxas["taxa_limpeza"]))
             }
-            # Acrescenta taxas condicionais se as condições forem atendidas
             if horario_pico(horario_pedido):
                 taxas_aplicadas["taxa_pico"] = Decimal(str(taxas["taxa_pico"]))
             if eh_horario_noturno(horario_pedido):
@@ -108,10 +110,8 @@ async def aplicar_taxas_corrida(session, corrida, todas_corridas):
                 taxas_aplicadas["taxa_excesso_corridas"] = Decimal(str(taxas["taxa_excesso_corridas"]))
 
             soma_percentual = sum(taxas_aplicadas.values())
-            # Atualiza o preço por km: tarifa_base multiplicada pelo fator (1 + soma dos percentuais)
             preco_por_km = tarifa_base * (1 + soma_percentual)
             preco_total = preco_por_km * distancia
-            # O valor do motorista é calculado sem repassar a porcentagem da taxa de manutenção
             valor_motorista = round(
                 ((preco_por_km - (tarifa_base * taxas_aplicadas["taxa_manutencao"])) * distancia) * Decimal("0.95"), 2)
 
@@ -134,6 +134,7 @@ async def aplicar_taxas_corrida(session, corrida, todas_corridas):
                 return False
 
 
+# Executa a simulação da aplicação de taxas.
 async def executar_simulacao_taxas(qtd_corridas: int):
     print("\n💸 Aplicando taxas nas corridas...")
     inicio = time.time()

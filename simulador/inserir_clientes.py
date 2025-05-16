@@ -1,15 +1,20 @@
-import requests
+import argparse
 import random
 import time
-import argparse
+
+import requests
 from faker import Faker
 
 API_URL = "http://127.0.0.1:8000"
 fake = Faker("pt_BR")
 
+
+# Formata o número de CPF removendo caracteres especiais.
 def formatar_cpf(cpf: str) -> str:
     return cpf.replace(".", "").replace("-", "")
 
+
+# Gera dados fictícios para um cliente utilizando a biblioteca Faker.
 def gerar_dados_cliente(status: str = "disponivel") -> dict:
     return {
         "nome": fake.name(),
@@ -19,10 +24,10 @@ def gerar_dados_cliente(status: str = "disponivel") -> dict:
         "status": status
     }
 
+
+# Realiza a criação de clientes na API até atingir o total desejado.
 def criar_clientes(total: int, status: str = "disponivel") -> int:
-    """
-    Cria clientes na API até atingir o total desejado.
-    """
+
     criados = 0
 
     while criados < total:
@@ -36,11 +41,10 @@ def criar_clientes(total: int, status: str = "disponivel") -> int:
 
     return criados
 
+
+# Executa o processo de cadastro de clientes com dados gerados aleatoriamente.
 def run_inserir_clientes(total: int, status: str = "disponivel") -> int:
-    """
-    Executa o processo de cadastro de clientes, exibindo mensagens de acompanhamento e resumo.
-    Essa função pode ser chamada tanto diretamente quanto por outro módulo.
-    """
+
     inicio = time.time()
     print("\n👥 Iniciando cadastro de clientes...")
     clientes_criados = criar_clientes(total, status)
@@ -52,6 +56,7 @@ def run_inserir_clientes(total: int, status: str = "disponivel") -> int:
     print(f"⏱️ Tempo total: {int(minutos)} min {segundos:.2f} seg.")
 
     return clientes_criados
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Cadastro de clientes na API")

@@ -22,6 +22,18 @@ class MotoristaCreate(BaseModel):
     status: str
     id_carro: int
 
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "nome": "João da Silva",
+                "email": "joao.silva@email.com",
+                "telefone": "11999999999",
+                "cpf": "12345678901",
+                "status": "ativo",
+                "id_carro": 1
+            }
+        }
+
 
 # Modelo de entrada para atualização de motorista
 class MotoristaUpdate(BaseModel):
@@ -31,6 +43,18 @@ class MotoristaUpdate(BaseModel):
     cpf: str
     status: str
     id_carro: int
+
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "nome": "João da Silva",
+                "email": "joao.silva@email.com",
+                "telefone": "11999999999",
+                "cpf": "12345678901",
+                "status": "ativo",
+                "id_carro": 1
+            }
+        }
 
 
 # Lista todos os motoristas cadastrados, incluindo os dados do carro associado.
@@ -102,23 +126,16 @@ async def listar_motoristas_disponiveis(db: AsyncSession = Depends(get_db)):
 
 
 # Cria um novo motorista com os dados fornecidos e associa a um carro existente.
-@router.post("/", status_code=status.HTTP_201_CREATED, summary="Criar motorista")
-async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends(get_db)):
+@router.put("/{motorista_id}", summary="Editar motorista")
+async def editar_motorista(motorista_id: int, motorista: MotoristaUpdate, db: AsyncSession = Depends(get_db)):
     motorista.cpf = re.sub(r"\D", "", motorista.cpf)
 
-    query = select(MotoristaModel).where(
-        (MotoristaModel.cpf == motorista.cpf) |
-        (MotoristaModel.telefone == motorista.telefone) |
-        (MotoristaModel.email == motorista.email)
-    )
+    query = select(MotoristaModel).where(MotoristaModel.id == motorista_id)
     result = await db.execute(query)
-    existing_motorista = result.scalars().first()
+    motorista_existente = result.scalars().first()
 
-    if existing_motorista:
-        raise HTTPException(
-            status_code=400,
-            detail="Motorista com CPF, telefone ou email já cadastrado."
-        )
+    if not motorista_existente:
+        raise HTTPException(status_code=404, detail="Motorista não encontrado.")
 
     carro_query = select(CarroModel).where(CarroModel.id == motorista.id_carro)
     carro_result = await db.execute(carro_query)
@@ -127,30 +144,27 @@ async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends
     if not carro:
         raise HTTPException(status_code=400, detail="Carro não encontrado com o ID informado.")
 
-    novo_motorista = MotoristaModel(
-        nome=motorista.nome,
-        email=motorista.email,
-        telefone=motorista.telefone,
-        cpf=motorista.cpf,
-        status=motorista.status,
-        id_carro=motorista.id_carro
-    )
-
     try:
-        db.add(novo_motorista)
+        motorista_existente.nome = motorista.nome
+        motorista_existente.email = motorista.email
+        motorista_existente.telefone = motorista.telefone
+        motorista_existente.cpf = motorista.cpf
+        motorista_existente.status = motorista.status
+        motorista_existente.id_carro = motorista.id_carro
+
         await db.commit()
-        await db.refresh(novo_motorista)
+        await db.refresh(motorista_existente)
 
         return {
             "status": "OK",
             "motorista": {
-                "id": novo_motorista.id,
-                "nome": novo_motorista.nome,
-                "email": novo_motorista.email,
-                "telefone": novo_motorista.telefone,
-                "cpf": novo_motorista.cpf,
-                "status": novo_motorista.status,
-                "id_carro": novo_motorista.id_carro,
+                "id": motorista_existente.id,
+                "nome": motorista_existente.nome,
+                "email": motorista_existente.email,
+                "telefone": motorista_existente.telefone,
+                "cpf": motorista_existente.cpf,
+                "status": motorista_existente.status,
+                "id_carro": motorista_existente.id_carro,
                 "carro": {
                     "id": carro.id,
                     "marca": carro.marca,
@@ -158,18 +172,10 @@ async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends
                 }
             }
         }
-    except IntegrityError as ie:
-        await db.rollback()
-        raise HTTPException(
-            status_code=400,
-            detail=f"Erro de integridade ao criar motorista: {str(ie.orig) if hasattr(ie, 'orig') else str(ie)}"
-        )
+
     except Exception as e:
         await db.rollback()
-        raise HTTPException(
-            status_code=500,
-            detail=f"Erro inesperado ao criar motorista: {str(e)}"
-        )
+        raise HTTPException(status_code=500, detail=f"Erro ao editar motorista: {str(e)}")
 
 
 # Atualiza os dados de um motorista existente com base no ID fornecido.
@@ -220,7 +226,7 @@ async def editar_motorista(motorista_id: int, motorista: MotoristaUpdate, db: As
 
 
 # Exclui um motorista existente com base no ID fornecido.
-@router.delete("/{motorista_id}", summary="Excluir motorista")
+@router.delete("/{motorista_id}", status_code=status.HTTP_204_NO_CONTENT, summary="Excluir motorista")
 async def excluir_motorista(motorista_id: int, db: AsyncSession = Depends(get_db)):
     query = select(MotoristaModel).where(MotoristaModel.id == motorista_id)
     result = await db.execute(query)
@@ -232,7 +238,7 @@ async def excluir_motorista(motorista_id: int, db: AsyncSession = Depends(get_db
     try:
         await db.delete(motorista)
         await db.commit()
-        return {"status": "OK", "mensagem": "Motorista excluído com sucesso."}
+        # 204 No Content -> não retorna nada
     except Exception as e:
         await db.rollback()
         raise HTTPException(status_code=500, detail=f"Erro ao excluir motorista: {str(e)}")

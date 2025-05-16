@@ -11,7 +11,7 @@ from sqlalchemy.future import select
 router = APIRouter(prefix="/carros", tags=["Carros"])
 
 
-# 📌 Modelo de entrada para criação e edição de carro
+# Modelo de entrada para criação e edição de carro
 class CarroCreate(BaseModel):
     categoria: str
     marca: str
@@ -49,7 +49,7 @@ class CarroCreate(BaseModel):
         }
 
 
-# 📌 Modelo de entrada para edição de carro
+# Modelo de entrada para edição de carro
 class CarroUpdate(BaseModel):
     categoria: str
     marca: str
@@ -59,15 +59,15 @@ class CarroUpdate(BaseModel):
     transmissao: str
     ar_condicionado: str
     direcao: str
-    combustivel: str = None
-    km_etanol_cidade: str = None
-    km_etanol_estrada: str = None
-    km_gasolina_cidade: str = None
-    km_gasolina_estrada: str = None
+    combustivel: Optional[str] = None
+    km_etanol_cidade: Optional[float] = None  # ✅ correto
+    km_etanol_estrada: Optional[float] = None
+    km_gasolina_cidade: Optional[float] = None
+    km_gasolina_estrada: Optional[float] = None
     ano: Optional[int] = None
 
 
-# 📌 Rota para listar todos os carros cadastrados
+# Rota para listar todos os carros cadastrados
 @router.get("/listar/", summary="Listar Carros")
 async def listar_carros(db: AsyncSession = Depends(get_db)):
     """Lista todos os carros cadastrados na API"""
@@ -87,14 +87,9 @@ async def listar_carros(db: AsyncSession = Depends(get_db)):
              "ano": c.ano} for c in carros]
 
 
-# 📌 Rota para criar um novo carro
+# Rota para criar um novo carro
 @router.post("/", status_code=status.HTTP_201_CREATED, summary="Criar Carro")
 async def criar_carro(carro: CarroCreate, db: AsyncSession = Depends(get_db)):
-    """
-    Cria um novo carro na API, evitando duplicidade exata:
-    - Campos `None` são comparados com `.is_(None)`
-    - Campos numéricos podem ser arredondados para evitar imprecisões
-    """
 
     filtros = [
         CarroModel.categoria == carro.categoria,
@@ -185,7 +180,7 @@ async def criar_carro(carro: CarroCreate, db: AsyncSession = Depends(get_db)):
     }
 
 
-# 📌 Rota para editar os dados de um carro existente
+# Rota para editar os dados de um carro existente
 @router.put("/{carro_id}", status_code=status.HTTP_200_OK, summary="Editar Carro")
 async def editar_carro(carro_id: int, carro: CarroUpdate, db: AsyncSession = Depends(get_db)):
     """Edita os dados de um carro existente"""
@@ -238,13 +233,12 @@ async def editar_carro(carro_id: int, carro: CarroUpdate, db: AsyncSession = Dep
         raise HTTPException(status_code=500, detail=f"Erro ao editar carro: {str(e)}")
 
 
-# 📌 Rota para excluir um carro existente
+# Rota para excluir um carro existente
 @router.delete("/{carro_id}", status_code=status.HTTP_204_NO_CONTENT, summary="Excluir Carro")
 async def excluir_carro(carro_id: int, db: AsyncSession = Depends(get_db)):
     """Exclui um carro da API"""
-    # Busca o carro pelo ID e o remove do banco de dados
     query = select(CarroModel).where(CarroModel.id == carro_id)
-    result = await db.execute(query)  # 🔄 Agora é assíncrono
+    result = await db.execute(query)
     carro_existente = result.scalars().first()
 
     if not carro_existente:
@@ -252,8 +246,8 @@ async def excluir_carro(carro_id: int, db: AsyncSession = Depends(get_db)):
 
     try:
         await db.delete(carro_existente)
-        await db.commit()  # 🔄 Agora é assíncrono
-
-        return {"status": "OK", "mensagem": "Carro excluído com sucesso."}
+        await db.commit()
+        return  # 👈 nada deve ser retornado
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao excluir carro: {str(e)}")
+

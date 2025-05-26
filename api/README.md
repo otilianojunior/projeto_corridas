@@ -72,11 +72,15 @@ bash alembic init alembic
 ini sqlalchemy.url = mysql+mysqldb://root:12345678@localhost/db_corridas
 
 - Aplique as migrações para criar as tabelas no banco de dados:
-bash alembic upgrade head
+```bash
+alembic upgrade head
+```
 
 Caso adicione alterações ao modelo, gere novas migrações e aplique novamente:
-bash alembic revision --autogenerate -m "Descrição das modificações" alembic upgrade head
-
+```bash
+bash alembic revision --autogenerate -m "Descrição da mudança"
+alembic upgrade head
+```
 ---
 
 ## 🚀 Executando o Projeto

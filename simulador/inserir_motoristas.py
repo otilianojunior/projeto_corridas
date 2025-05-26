@@ -77,7 +77,7 @@ def run_inserir_motoristas(total: int, status: str = "disponivel") -> int:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Cadastro de motoristas na API")
-    parser.add_argument("--motoristas", type=int, default=1, help="Quantidade de motoristas a serem cadastrados")
+    parser.add_argument("--motoristas", type=int, default=200, help="Quantidade de motoristas a serem cadastrados")
     args = parser.parse_args()
 
     run_inserir_motoristas(total=args.motoristas)

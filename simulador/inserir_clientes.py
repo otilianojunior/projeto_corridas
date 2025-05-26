@@ -60,7 +60,7 @@ def run_inserir_clientes(total: int, status: str = "disponivel") -> int:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Cadastro de clientes na API")
-    parser.add_argument("--clientes", type=int, default=1, help="Quantidade de clientes a serem cadastrados")
+    parser.add_argument("--clientes", type=int, default=200, help="Quantidade de clientes a serem cadastrados")
     args = parser.parse_args()
 
     run_inserir_clientes(total=args.clientes)

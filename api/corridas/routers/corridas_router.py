@@ -86,7 +86,7 @@ class CorridaResponse(BaseModel):
     id_cliente: int
     id_motorista: int
     distancia_km: float
-    cordenadas_rota: str
+    coordenadas_rota: str
 
     class Config:
         from_attributes = True
@@ -106,7 +106,7 @@ class CorridaUpdate(BaseModel):
     id_cliente: int
     id_motorista: int
     distancia_km: float
-    cordenadas_rota: str
+    coordenadas_rota: str
     status: str
 
 
@@ -138,7 +138,7 @@ async def listar_todas_corridas(db: AsyncSession = Depends(get_db)):
                 "id_cliente": corrida.id_cliente,
                 "id_motorista": corrida.id_motorista,
                 "distancia_km": corrida.distancia_km,
-                "coordenadas_rota": corrida.cordenadas_rota,
+                "coordenadas_rota": corrida.coordenadas_rota,
                 "status": corrida.status,
             }
             for corrida in corridas
@@ -244,7 +244,7 @@ async def solicitar_corrida(corrida_data: CorridaCreate, db: AsyncSession = Depe
             destino_longitude=destino.longitude,
             destino_latitude=destino.latitude,
             horario_pedido=corrida_data.horario_pedido,
-            cordenadas_rota="|".join([f"{lat},{lon}" for lat, lon in coordenadas_rota]),
+            coordenadas_rota="|".join([f"{lat},{lon}" for lat, lon in coordenadas_rota]),
             distancia_km=distancia_km,
             status='solicitado',
             id_cliente=id_cliente,

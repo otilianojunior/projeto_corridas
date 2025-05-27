@@ -12,8 +12,8 @@ from simulador.solicitar_corridas import executar_solicitacoes_corrida
 # Função principal para executar a simulação completa de forma sequencial.
 def main():
     parser = argparse.ArgumentParser(description="Executar simulação completa da API de Corridas")
-    parser.add_argument("--carros", type=int, default=0, help="Quantidade de carros a serem cadastrados (None = todos)")
-    parser.add_argument("--motoristas", type=int, default=2, help="Quantidade de motoristas a serem cadastrados")
+    parser.add_argument("--carros", type=int, default=10, help="Quantidade de carros a serem cadastrados (None = todos)")
+    parser.add_argument("--motoristas", type=int, default=5, help="Quantidade de motoristas a serem cadastrados")
     parser.add_argument("--clientes", type=int, default=2, help="Quantidade de clientes a serem cadastrados")
     parser.add_argument("--corridas", type=int, default=2, help="Quantidade de corridas a serem solicitadas")
     parser.add_argument("--taxas", type=int, default=2, help="Quantidade de corridas a aplicar taxas")

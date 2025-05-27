@@ -126,7 +126,6 @@ async def listar_motoristas_disponiveis(db: AsyncSession = Depends(get_db)):
 
 
 # Cria um novo motorista com os dados fornecidos e associa a um carro existente.
-# Cria um novo motorista com os dados fornecidos e associa a um carro existente.
 @router.post("/", status_code=status.HTTP_201_CREATED, summary="Criar motorista", response_model=None)
 async def criar_motorista(motorista: MotoristaCreate, db: AsyncSession = Depends(get_db)):
     motorista.cpf = re.sub(r"\D", "", motorista.cpf)

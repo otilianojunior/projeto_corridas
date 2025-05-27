@@ -172,6 +172,7 @@ async def executar_simulacao_taxas(qtd_corridas: int):
         amostra = random.sample(corridas, qtd_alvo)
         tarefas = [aplicar_taxas_corrida(session, corrida, corridas) for corrida in amostra]
         resultados = await asyncio.gather(*tarefas)
+        taxas_aplicadas = sum(resultados)
 
         tempo_total = time.time() - inicio
         minutos, segundos = divmod(tempo_total, 60)
@@ -180,7 +181,7 @@ async def executar_simulacao_taxas(qtd_corridas: int):
         print(f"✔️ {sum(resultados)}/{qtd_alvo} corridas com taxas aplicadas.")
         print(f"⏱️ Tempo total: {int(minutos)} min {segundos:.2f} seg.")
         print("\n🏁 Finalizado!")
-        return resultados
+        return taxas_aplicadas
 
 
 

@@ -13,10 +13,10 @@ from simulador.solicitar_corridas import executar_solicitacoes_corrida
 def main():
     parser = argparse.ArgumentParser(description="Executar simulação completa da API de Corridas")
     parser.add_argument("--carros", type=int, default=0, help="Quantidade de carros a serem cadastrados (None = todos)")
-    parser.add_argument("--motoristas", type=int, default=20, help="Quantidade de motoristas a serem cadastrados")
-    parser.add_argument("--clientes", type=int, default=20, help="Quantidade de clientes a serem cadastrados")
-    parser.add_argument("--corridas", type=int, default=20, help="Quantidade de corridas a serem solicitadas")
-    parser.add_argument("--taxas", type=int, default=50, help="Quantidade de corridas a aplicar taxas")
+    parser.add_argument("--motoristas", type=int, default=2, help="Quantidade de motoristas a serem cadastrados")
+    parser.add_argument("--clientes", type=int, default=2, help="Quantidade de clientes a serem cadastrados")
+    parser.add_argument("--corridas", type=int, default=2, help="Quantidade de corridas a serem solicitadas")
+    parser.add_argument("--taxas", type=int, default=2, help="Quantidade de corridas a aplicar taxas")
     args = parser.parse_args()
 
     print("\n🚀 Iniciando simulação completa...\n")

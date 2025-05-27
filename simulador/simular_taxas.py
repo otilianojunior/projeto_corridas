@@ -128,10 +128,10 @@ async def aplicar_taxas_corrida(session, corrida, todas_corridas):
             texto = await resposta.text()
             if status == 200:
                 print(f"✅ Corrida {id_corrida} finalizada: R$ {preco_total:.2f} (Nível {nivel_taxa})")
-                return True
+                return 1
             else:
                 print(f"❌ Corrida {id_corrida} falhou: {status} - {texto}")
-                return False
+                return 0
 
 
 # Executa a simulação da aplicação de taxas.
@@ -148,6 +148,7 @@ async def executar_simulacao_taxas(qtd_corridas: int):
         amostra = random.sample(corridas, qtd_alvo)
         tarefas = [aplicar_taxas_corrida(session, corrida, corridas) for corrida in amostra]
         resultados = await asyncio.gather(*tarefas)
+        corridas_taxadas = int(sum(resultados) / qtd_alvo)
 
         tempo_total = time.time() - inicio
         minutos, segundos = divmod(tempo_total, 60)
@@ -156,6 +157,9 @@ async def executar_simulacao_taxas(qtd_corridas: int):
         print(f"✔️ {sum(resultados)}/{qtd_alvo} corridas com taxas aplicadas.")
         print(f"⏱️ Tempo total: {int(minutos)} min {segundos:.2f} seg.")
         print("\n🏁 Finalizado!")
+        return corridas_taxadas
+
+
 
 
 if __name__ == "__main__":

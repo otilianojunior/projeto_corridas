@@ -54,9 +54,7 @@ def cadastrar_carros(quantidade: int = None) -> int:
             if response.status_code == 201:
                 total_criados += 1
             elif response.status_code == 422:
-                print(f"⚠️ Erro de validação no cadastro para o carro: {carro.get('modelo', 'desconhecido')}")
-            else:
-                print(f"❌ Erro ao tentar criar carro {carro.get('modelo', 'desconhecido')} (status: {response.status_code})")
+                pass
 
         return total_criados
 

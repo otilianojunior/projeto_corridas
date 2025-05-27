@@ -46,7 +46,6 @@ async def obter_coordenadas(session: aiohttp.ClientSession):
         if response.status == 200:
             return await response.json()
         else:
-            print(f"⚠️ Erro ao buscar coordenadas: {response.status} - {await response.text()}")
             return None
 
 

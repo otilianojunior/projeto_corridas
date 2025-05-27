@@ -14,23 +14,29 @@ MAX_CONCORRENTES = 5
 semaforo = asyncio.Semaphore(MAX_CONCORRENTES)
 
 
-# Simula aplicação de taxas em corridas, considerando condições como horário de pico.
-def obter_taxas_por_nivel(nivel: int) -> dict:
+# Aplica taxas contínuas dentro do intervalo de cada nível.
+def obter_taxas_por_nivel_continuo(nivel: int) -> dict:
     niveis = {
-        1: {"taxa_manutencao": 0.10, "taxa_limpeza": 0.00, "taxa_pico": 0.00, "taxa_noturna": 0.00,
-            "taxa_excesso_corridas": 0.00},
-        2: {"taxa_manutencao": 0.10, "taxa_limpeza": 0.20, "taxa_pico": 0.15, "taxa_noturna": 0.30,
-            "taxa_excesso_corridas": 0.20},
-        3: {"taxa_manutencao": 0.15, "taxa_limpeza": 0.50, "taxa_pico": 0.30, "taxa_noturna": 0.35,
-            "taxa_excesso_corridas": 0.30},
-        4: {"taxa_manutencao": 0.20, "taxa_limpeza": 0.70, "taxa_pico": 0.50, "taxa_noturna": 0.40,
-            "taxa_excesso_corridas": 0.40},
-        5: {"taxa_manutencao": 0.30, "taxa_limpeza": 1.00, "taxa_pico": 0.70, "taxa_noturna": 0.50,
-            "taxa_excesso_corridas": 0.50},
-        6: {"taxa_manutencao": 1.00, "taxa_cancelamento": 4.00, "taxa_limpeza": 0.00, "taxa_pico": 0.00,
-            "taxa_noturna": 0.00, "taxa_excesso_corridas": 0.00}
+        1: {"taxa_manutencao": (0.08, 0.12), "taxa_limpeza": (0.00, 0.05), "taxa_pico": (0.00, 0.05),
+            "taxa_noturna": (0.00, 0.05), "taxa_excesso_corridas": (0.00, 0.05)},
+        2: {"taxa_manutencao": (0.09, 0.12), "taxa_limpeza": (0.15, 0.25), "taxa_pico": (0.12, 0.18),
+            "taxa_noturna": (0.28, 0.32), "taxa_excesso_corridas": (0.18, 0.22)},
+        3: {"taxa_manutencao": (0.13, 0.17), "taxa_limpeza": (0.45, 0.55), "taxa_pico": (0.28, 0.32),
+            "taxa_noturna": (0.33, 0.37), "taxa_excesso_corridas": (0.28, 0.32)},
+        4: {"taxa_manutencao": (0.18, 0.22), "taxa_limpeza": (0.65, 0.75), "taxa_pico": (0.48, 0.52),
+            "taxa_noturna": (0.38, 0.42), "taxa_excesso_corridas": (0.38, 0.42)},
+        5: {"taxa_manutencao": (0.28, 0.32), "taxa_limpeza": (0.95, 1.05), "taxa_pico": (0.68, 0.72),
+            "taxa_noturna": (0.48, 0.52), "taxa_excesso_corridas": (0.48, 0.52)},
+        6: {"taxa_manutencao": (0.95, 1.05), "taxa_cancelamento": (3.8, 4.2)}
     }
-    return niveis.get(nivel, niveis[3])
+
+    nivel_config = niveis.get(nivel, niveis[6])
+
+    # Para cada taxa, sorteia um valor dentro do intervalo (mínimo, máximo)
+    return {
+        chave: round(random.uniform(valor[0], valor[1]), 4) if isinstance(valor, tuple) else valor
+        for chave, valor in nivel_config.items()
+    }
 
 
 # Define lógica para horários de pico.
@@ -83,7 +89,7 @@ async def aplicar_taxas_corrida(session, corrida, todas_corridas):
         distancia = Decimal(str(corrida["distancia_km"]))
         horario_pedido = corrida["horario_pedido"]
         nivel_taxa = random.randint(1, 6)
-        taxas = obter_taxas_por_nivel(nivel_taxa)
+        taxas = obter_taxas_por_nivel_continuo(nivel_taxa)
         combustivel = (corrida.get("combustivel") or "").lower()
         consumo = corrida.get("km_gasolina_cidade", 10) if combustivel in ["gasolina", "flex"] else corrida.get(
             "km_etanol_cidade", 10)
@@ -98,10 +104,15 @@ async def aplicar_taxas_corrida(session, corrida, todas_corridas):
             preco_por_km = preco_total
         else:
             tarifa_base = await calcular_tarifa_base_por_km(consumo)
+
+            # Aplicação da nova lógica da taxa de manutenção como valor fixo por km
+            taxa_manutencao_fixa = Decimal(str(taxas["taxa_manutencao"]))
+
             taxas_aplicadas = {
-                "taxa_manutencao": Decimal(str(taxas["taxa_manutencao"])),
+                "taxa_manutencao": taxa_manutencao_fixa,
                 "taxa_limpeza": Decimal(str(taxas["taxa_limpeza"]))
             }
+
             if horario_pico(horario_pedido):
                 taxas_aplicadas["taxa_pico"] = Decimal(str(taxas["taxa_pico"]))
             if eh_horario_noturno(horario_pedido):
@@ -109,11 +120,24 @@ async def aplicar_taxas_corrida(session, corrida, todas_corridas):
             if excesso_de_corridas(horario_pedido, todas_corridas):
                 taxas_aplicadas["taxa_excesso_corridas"] = Decimal(str(taxas["taxa_excesso_corridas"]))
 
-            soma_percentual = sum(taxas_aplicadas.values())
-            preco_por_km = tarifa_base * (1 + soma_percentual)
+            # Soma apenas das taxas percentuais (limpeza, pico, noturna, excesso)
+            taxas_percentuais = sum([
+                taxas_aplicadas.get("taxa_limpeza", Decimal(0)),
+                taxas_aplicadas.get("taxa_pico", Decimal(0)),
+                taxas_aplicadas.get("taxa_noturna", Decimal(0)),
+                taxas_aplicadas.get("taxa_excesso_corridas", Decimal(0))
+            ])
+
+            # Cálculo do preço por km:
+            preco_por_km = tarifa_base * (1 + taxas_percentuais) + taxa_manutencao_fixa
+
+            # Preço total pela distância
             preco_total = preco_por_km * distancia
+
+            # Valor do motorista (95% sobre o valor base menos a taxa de manutenção)
             valor_motorista = round(
-                ((preco_por_km - (tarifa_base * taxas_aplicadas["taxa_manutencao"])) * distancia) * Decimal("0.95"), 2)
+                ((preco_por_km - taxa_manutencao_fixa) * distancia) * Decimal("0.95"), 2
+            )
 
         payload = {
             **{k: float(v) for k, v in taxas_aplicadas.items()},
@@ -148,7 +172,6 @@ async def executar_simulacao_taxas(qtd_corridas: int):
         amostra = random.sample(corridas, qtd_alvo)
         tarefas = [aplicar_taxas_corrida(session, corrida, corridas) for corrida in amostra]
         resultados = await asyncio.gather(*tarefas)
-        corridas_taxadas = int(sum(resultados) / qtd_alvo)
 
         tempo_total = time.time() - inicio
         minutos, segundos = divmod(tempo_total, 60)
@@ -157,7 +180,7 @@ async def executar_simulacao_taxas(qtd_corridas: int):
         print(f"✔️ {sum(resultados)}/{qtd_alvo} corridas com taxas aplicadas.")
         print(f"⏱️ Tempo total: {int(minutos)} min {segundos:.2f} seg.")
         print("\n🏁 Finalizado!")
-        return corridas_taxadas
+        return resultados
 
 
 

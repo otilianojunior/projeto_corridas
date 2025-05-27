@@ -138,7 +138,7 @@ async def listar_todas_corridas(db: AsyncSession = Depends(get_db)):
                 "id_cliente": corrida.id_cliente,
                 "id_motorista": corrida.id_motorista,
                 "distancia_km": corrida.distancia_km,
-                "cordenadas_rota": corrida.cordenadas_rota,
+                "coordenadas_rota": corrida.cordenadas_rota,
                 "status": corrida.status,
             }
             for corrida in corridas

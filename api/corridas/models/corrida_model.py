@@ -16,7 +16,7 @@ class CorridaModel(Base):
     destino_longitude = Column(Numeric(11, 6), nullable=False)
     destino_latitude = Column(Numeric(11, 6), nullable=False)
     distancia_km = Column(Numeric(10, 2), nullable=False)
-    cordenadas_rota = Column(Text, nullable=False)
+    coordenadas_rota = Column(Text, nullable=False)
     horario_pedido = Column(DateTime, nullable=False)
     taxa_noturna = Column(String(255), nullable=True)
     taxa_manutencao = Column(String(255), nullable=True)

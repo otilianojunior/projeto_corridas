@@ -100,7 +100,7 @@ async def aplicar_taxas_corrida(session, corrida, todas_corridas):
                 "taxa_cancelamento": Decimal(str(taxas.get("taxa_cancelamento", 0)))
             }
             preco_total = taxas_aplicadas["taxa_manutencao"] + taxas_aplicadas["taxa_cancelamento"]
-            valor_motorista = round((preco_total - taxas_aplicadas["taxa_manutencao"]) * Decimal("0.95"), 2)
+            valor_motorista = round((preco_total - taxas_aplicadas["taxa_manutencao"]) * Decimal("0.78"), 2)
             preco_por_km = preco_total
         else:
             tarifa_base = await calcular_tarifa_base_por_km(consumo)
@@ -136,7 +136,7 @@ async def aplicar_taxas_corrida(session, corrida, todas_corridas):
 
             # Valor do motorista (95% sobre o valor base menos a taxa de manutenção)
             valor_motorista = round(
-                ((preco_por_km - taxa_manutencao_fixa) * distancia) * Decimal("0.95"), 2
+                ((preco_por_km - taxa_manutencao_fixa) * distancia) * Decimal("0.78"), 2
             )
 
         payload = {

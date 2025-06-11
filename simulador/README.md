@@ -1,10 +1,10 @@
-# 🚀 Documentação do Simulador de Corridas
+# Documentação do Simulador de Corridas
 
 Este projeto contém um simulador completo para gerenciar uma API de corridas, incluindo cadastramento de carros, motoristas, clientes, solicitação de corridas e aplicação de taxas.
 
 ---
 
-## 📂 Estrutura dos Arquivos
+## Estrutura dos Arquivos
 
 ### **1. `executar_simulacao.py`**
 Esta é a entrada principal do simulador. Ele organiza e executa todas as etapas da simulação de forma sequencial:
@@ -73,7 +73,7 @@ Introduz taxas adicionais (ex.: taxa noturna, taxa de manutenção, etc.) em cor
 
 ---
 
-## 🔧 Modelos
+## Modelos
 
 Os modelos representam a estrutura de dados armazenada no banco de dados.
 
@@ -92,7 +92,7 @@ O modelo `CorridaModel` mapeia os dados de uma corrida, incluindo:
 
 ---
 
-## 🌐 Rotas da API
+## Rotas da API
 
 ### **Arquivo: `carros_router.py`**
 Define as operações relacionadas aos carros na API (CRUD):
@@ -103,7 +103,7 @@ Define as operações relacionadas aos carros na API (CRUD):
 
 ---
 
-## 🗃️ Outras Partes Importantes
+## Outras Partes Importantes
 
 ### **1. `dependencies.py`**
 Fornece a dependência para obter uma instância do banco de dados (sessões assíncronas usando SQLAlchemy).
@@ -113,7 +113,7 @@ Arquivo de inicialização do pacote utilizado para organização do projeto.
 
 ---
 
-## 🛠️ Como Executar
+## Como Executar
 
 ### **Passo 1: Configuração do Ambiente**
 1. Clone o repositório:

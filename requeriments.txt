@@ -20,10 +20,6 @@ pydantic~=2.9.2
 starlette~=0.41.0
 python-dotenv==1.0.1
 
-# TESTES
-pytest==8.3.3
-httpx==0.27.2
-
 #TOOLS
 alembic==1.14.1
 

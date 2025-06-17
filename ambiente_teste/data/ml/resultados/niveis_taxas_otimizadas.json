@@ -1,0 +1,37 @@
+{
+    "1": {
+        "taxa_manutencao": 0.3188,
+        "taxa_limpeza": 0.9522,
+        "taxa_pico": 0.7003,
+        "taxa_noturna": 0.592,
+        "taxa_excesso_corridas": 0.4464
+    },
+    "2": {
+        "taxa_manutencao": 0.3157,
+        "taxa_limpeza": 0.9513,
+        "taxa_pico": 0.7001,
+        "taxa_noturna": 0.389,
+        "taxa_excesso_corridas": 0.3278
+    },
+    "3": {
+        "taxa_manutencao": 0.3152,
+        "taxa_limpeza": 0.9513,
+        "taxa_pico": 0.7133,
+        "taxa_noturna": 0.4473,
+        "taxa_excesso_corridas": 0.4282
+    },
+    "4": {
+        "taxa_manutencao": 0.318,
+        "taxa_limpeza": 0.9514,
+        "taxa_pico": 0.7008,
+        "taxa_noturna": 0.3916,
+        "taxa_excesso_corridas": 0.4559
+    },
+    "5": {
+        "taxa_manutencao": 0.316,
+        "taxa_limpeza": 0.9521,
+        "taxa_pico": 0.7004,
+        "taxa_noturna": 0.3569,
+        "taxa_excesso_corridas": 0.5923
+    }
+}

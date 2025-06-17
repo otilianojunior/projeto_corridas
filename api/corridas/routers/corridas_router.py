@@ -27,6 +27,22 @@ class TaxasAtualizadas(BaseModel):
     preco_total: float
     nivel_taxa: int
 
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "taxa_noturna": 2.5,
+                "taxa_manutencao": 1.0,
+                "taxa_pico": 3.0,
+                "taxa_excesso_corridas": 0.5,
+                "taxa_limpeza": 1.0,
+                "taxa_cancelamento": 0.0,
+                "preco_km": 5.5,
+                "valor_motorista": 20.0,
+                "preco_total": 30.0,
+                "nivel_taxa": 3
+            }
+        }
+
 
 # Modelos Pydantic para requisições e respostas
 class Endereco(BaseModel):

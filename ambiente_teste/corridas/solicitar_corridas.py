@@ -105,13 +105,13 @@ async def solicitar_corrida(session: aiohttp.ClientSession, id_cliente: int):
 
 # Executa um conjunto de solicitações de corrida em paralelo.
 async def executar_solicitacoes_corrida(num_corridas: int):
-    print("\n🚕 Iniciando solicitações de corridas...")
+    print("Iniciando solicitações de corridas:")
     inicio = time.time()
 
     async with aiohttp.ClientSession() as session:
         clientes = await obter_clientes(session)
         if not clientes:
-            print("⚠️ Nenhum cliente disponível. Abortando...")
+            print("Nenhum cliente disponível. Abortando...")
             return 0
 
         total = 0

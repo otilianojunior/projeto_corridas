@@ -2,11 +2,11 @@ import argparse
 import asyncio
 import time
 
-from simulador.inserir_carros import run_inserir_carros
-from simulador.inserir_clientes import run_inserir_clientes
-from simulador.inserir_motoristas import run_inserir_motoristas
-from simulador.simular_taxas import executar_simulacao_taxas
-from simulador.solicitar_corridas import executar_solicitacoes_corrida
+from ambiente_teste.cadastro.inserir_carros import run_inserir_carros
+from ambiente_teste.cadastro.inserir_clientes import run_inserir_clientes
+from ambiente_teste.cadastro.inserir_motoristas import run_inserir_motoristas
+from ambiente_teste.corridas.aplicar_taxas import executar_simulacao_taxas
+from ambiente_teste.corridas.solicitar_corridas import executar_solicitacoes_corrida
 
 
 # Função principal para executar a simulação completa de forma sequencial.

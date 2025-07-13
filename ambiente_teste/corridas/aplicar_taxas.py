@@ -19,15 +19,20 @@ corridas_disponiveis_global = []
 
 
 # Carrega os níveis de taxas otimizadas a partir de um arquivo JSON
-def carregar_niveis_taxas_otimizadas(caminho: str = "../data/ml/resultados/niveis_taxas_otimizadas.json") -> dict:
-    caminho_arquivo = Path(caminho)
-    if not caminho_arquivo.exists():
-        raise FileNotFoundError(f"Arquivo não encontrado: {caminho_arquivo.resolve()}")
-    with open(caminho_arquivo, "r", encoding="utf-8") as f:
+def carregar_niveis_taxas_otimizadas(caminho: str = None) -> dict:
+    if caminho is None:
+        caminho = Path(__file__).resolve().parent.parent / "data/ml/resultados/niveis_taxas_otimizadas.json"
+    else:
+        caminho = Path(caminho).resolve()
+
+    if not caminho.exists():
+        raise FileNotFoundError(f"Arquivo não encontrado: {caminho}")
+
+    with open(caminho, "r", encoding="utf-8") as f:
         niveis = json.load(f)
 
     # Adiciona nível 6 (personalizado) com apenas taxa de manutenção e cancelamento
-    nivel_6 = {
+    niveis["6"] = {
         "taxa_manutencao": 1.0,
         "taxa_limpeza": 0.0,
         "taxa_pico": 0.0,
@@ -35,7 +40,6 @@ def carregar_niveis_taxas_otimizadas(caminho: str = "../data/ml/resultados/nivei
         "taxa_excesso_corridas": 0.0,
         "taxa_cancelamento": 4.0
     }
-    niveis["6"] = nivel_6
     return niveis
 
 
@@ -87,7 +91,7 @@ async def listar_corridas_disponiveis(session):
 # Calcula o valor da tarifa base por km com base no consumo do veículo
 async def calcular_tarifa_base_por_km(consumo) -> Decimal:
     preco_combustivel = Decimal("6")  # valor fixo do combustível
-    return preco_combustivel / Decimal(str(consumo)) + Decimal("0.50")
+    return preco_combustivel / Decimal(str(consumo)) + Decimal("0.60")
 
 
 # Aplica as taxas a uma corrida específica e envia o resultado via API
@@ -100,7 +104,7 @@ async def aplicar_taxas_corrida(session, todas_corridas):
         id_corrida = corrida["id"]
         distancia = Decimal(str(corrida["distancia_km"]))
         horario_pedido = corrida["horario_pedido"]
-        nivel_taxa = random.randint(1, 6)
+        nivel_taxa = 6 if random.random() < 0.10 else random.randint(1, 5)
         taxas = obter_taxas_por_nivel_continuo(nivel_taxa)
 
         combustivel = (corrida.get("combustivel") or "").lower()

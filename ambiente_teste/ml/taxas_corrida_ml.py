@@ -1,9 +1,13 @@
 import pandas as pd
 import numpy as np
 import json
+import time
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from pathlib import Path
+
+# Início da contagem de tempo
+inicio_execucao = time.time()
 
 # Carregar os dados simulados
 df = pd.read_csv("../data/ml/brutos/dataset_treino.csv")
@@ -40,16 +44,17 @@ def gerar_taxa(intervalo):
 
 # Intervalos possíveis
 intervalos_taxas = {
-    "taxa_manutencao": (0.30, 0.40),
-    "taxa_limpeza": (0.95, 1.15),
-    "taxa_pico": (0.70, 0.80),
-    "taxa_noturna": (0.30, 0.60),
-    "taxa_excesso_corridas": (0.30, 0.60)
+    "taxa_manutencao": (0.25, 0.35),
+    "taxa_limpeza": (0.85, 1.0),
+    "taxa_pico": (0.65, 0.70),
+    "taxa_noturna": (0.25, 0.35),
+    "taxa_excesso_corridas": (0.25, 0.35)
 }
 
-# Simular configurações
+quantidade_simulacoes = 1000000
 top_configs = []
-for _ in range(1000000):
+
+for _ in range(quantidade_simulacoes):
     config = {k: gerar_taxa(v) for k, v in intervalos_taxas.items()}
     preco_estimado = modelo.predict(pd.DataFrame([config]))[0]
     resultado = {
@@ -84,4 +89,11 @@ caminho_saida.parent.mkdir(parents=True, exist_ok=True)
 with open(caminho_saida, "w") as f:
     json.dump(niveis, f, indent=4)
 
-print(f"\n✅ Níveis salvos em: {caminho_saida}")
+# Fim da contagem de tempo
+fim_execucao = time.time()
+tempo_total = fim_execucao - inicio_execucao
+
+# Exibir informações finais
+print(f"\n Níveis salvos em: {caminho_saida}")
+print(f"\n Tempo total de execução: {tempo_total:.2f} segundos")
+print(f" Total de simulações realizadas: {quantidade_simulacoes}")

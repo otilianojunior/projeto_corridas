@@ -220,20 +220,7 @@ async def visualizar_mapa_de_corrida(corrida_id: int, db: Session = Depends(get_
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Erro ao processar coordenadas da rota: {str(e)}")
 
-    html_conteudo = criar_mapa_interativo(
-        origem=(corrida.origem_latitude, corrida.origem_longitude),
-        destino=(corrida.destino_latitude, corrida.destino_longitude),
-        coordenadas_rota=coordenadas_rota,
-        distancia_km=corrida.distancia_km,
-        origem_info={
-            "nome_rua": corrida.origem_rua,
-            "bairro": corrida.origem_bairro
-        },
-        destino_info={
-            "nome_rua": corrida.destino_rua,
-            "bairro": corrida.destino_bairro
-        }
-    )
+    html_conteudo = criar_mapa_interativo(corrida, coordenadas_rota)
 
     stream = io.StringIO(html_conteudo)
     headers = {"Content-Disposition": f"attachment; filename=mapa-corrida-{corrida_id}.html"}
